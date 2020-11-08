@@ -8,50 +8,63 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type LibraryGridView}">
-                    <DockPanel Background="{TemplateBinding Background}"
+                    <Border BorderBrush="{DynamicResource PanelSeparatorBrush}">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="BorderThickness" Value="20,20,20,20" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
+                                        <Setter Property="BorderBrush" Value="{DynamicResource HighlightGlyphBrush}" />
+                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <DockPanel Background="{TemplateBinding Background}"
                                d:DesignWidth="1280" d:DesignHeight="960"
                                d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
-                        <GridViewGameOverview x:Name="PART_ControlGameView"
+                            <GridViewGameOverview x:Name="PART_ControlGameView"
                                               Width="{Settings GrdiDetailsWitdh}"
-                                              DockPanel.Dock="{Settings GridViewDetailsPosition}" />                   
-                        <Grid DockPanel.Dock="Left">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <ExtendedListBox x:Name="PART_ListGames" Padding="5"
+                                              DockPanel.Dock="{Settings GridViewDetailsPosition}" />
+                            <Grid DockPanel.Dock="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <ExtendedListBox x:Name="PART_ListGames" Padding="5"
                                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                              ScrollViewer.PanningMode="VerticalOnly"
                                              ItemContainerStyle="{DynamicResource GridViewItemStyle}"
                                              SelectionMode="Extended"
                                              DockPanel.Dock="Left"
                                              BorderThickness="0">
-                                <ExtendedListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <GameListItem Style="{StaticResource GridViewItemTemplate}" />
-                                    </DataTemplate>
-                                </ExtendedListBox.ItemTemplate>
-                            </ExtendedListBox>
-                            <TextBlock FontSize="{StaticResource FontSizeLarge}" Margin="0,40,0,0"
+                                    <ExtendedListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <GameListItem Style="{StaticResource GridViewItemTemplate}" />
+                                        </DataTemplate>
+                                    </ExtendedListBox.ItemTemplate>
+                                </ExtendedListBox>
+                                <TextBlock FontSize="{StaticResource FontSizeLarge}" Margin="0,40,0,0"
                                        Text="{DynamicResource LOCNoItemsFound}" TextWrapping="Wrap"                                      
                                        TextAlignment="Center" HorizontalAlignment="Center">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-                                        <Setter Property="Visibility" Value="Collapsed" />
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Items.Count, ElementName=PART_ListGames, Mode=OneWay}" Value="0">
-                                                <Setter Property="Visibility" Value="Visible" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
-                            <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="1">
-                                <Label Content="{DynamicResource LOCZoomLabel}" Margin="10,0,10,0"/>
-                                <SliderWithPopup x:Name="PART_SliderZoom" />
-                            </StackPanel>
-                        </Grid>
-                    </DockPanel>
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Items.Count, ElementName=PART_ListGames, Mode=OneWay}" Value="0">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="1">
+                                    <Label Content="{DynamicResource LOCZoomLabel}" Margin="10,0,10,0"/>
+                                    <SliderWithPopup x:Name="PART_SliderZoom" />
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

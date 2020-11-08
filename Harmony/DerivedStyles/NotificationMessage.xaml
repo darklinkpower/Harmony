@@ -10,12 +10,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Style="{StaticResource HighlightBorder}" Background="{DynamicResource ButtonBackgroundBrush}"
+                    <Border Style="{StaticResource HighlightBorder}" Background="{DynamicResource GlyphBrush}"
                             d:DataContext="{x:Static DesignMainViewModel.DesignNotificationIntance}">
                         <TextBlock Text="{Binding Text}"
                                    Style="{DynamicResource BaseTextBlockStyle}"
                                    Margin="6" TextWrapping="Wrap"
-                                   MinHeight="38" />
+                                   MinHeight="38" Foreground="{DynamicResource TextBrushDark}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

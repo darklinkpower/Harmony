@@ -20,8 +20,8 @@
                             <RowDefinition Height="Auto" x:Name="RowDefinition0" />
                             <RowDefinition Height="*" x:Name="RowDefinition1" />
                         </Grid.RowDefinitions>
-                        <Border x:Name="HeaderBorder" Background="{DynamicResource ControlBackgroundBrush}"
-                                BorderThickness="0,0,0,1" BorderBrush="{DynamicResource NormalBorderBrush}">
+                        <Border x:Name="HeaderBorder" Background="Transparent"
+                                BorderThickness="0,0,0,0" BorderBrush="{DynamicResource NormalBorderBrush}">
                             <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Panel.ZIndex="1" Width="Auto" Height="Auto"
                                       KeyboardNavigation.TabIndex="1" RenderTransformOrigin="0.5,0.5">
                                 <TabPanel.LayoutTransform>
@@ -44,7 +44,7 @@
                         </Border>
                         <Border x:Name="ContentPanel" Grid.Column="0" Grid.Row="1"
                                 KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2"
-                                KeyboardNavigation.TabNavigation="Local" Background="{DynamicResource ControlBackgroundBrush}">
+                                KeyboardNavigation.TabNavigation="Local" Background="Transparent">
                             <ContentPresenter x:Name="PART_SelectedContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                               ContentSource="SelectedContent" />
                         </Border>
@@ -151,20 +151,20 @@
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource HighlightGlyphBrush}" TargetName="SelectedBorder" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />
+                            <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
+                        </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="TextContent"/>
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="SelectedBorder" />
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />
                             <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />
-                            <Setter Property="BorderThickness" Value="1,1,1,2" TargetName="SelectedBorder" />
-                            <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedBorder" />
+                            <Setter Property="BorderThickness" Value="0,0,0,2" TargetName="SelectedBorder" />
                             <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
                         </Trigger>
                     </ControlTemplate.Triggers>

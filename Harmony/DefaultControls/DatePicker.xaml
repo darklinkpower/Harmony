@@ -17,56 +17,62 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             BorderBrush="{TemplateBinding BorderBrush}">
-                        <DockPanel Name="PART_Root" LastChildFill="True" >
+                        <DockPanel Name="PART_Root" LastChildFill="True" Margin="0,0,0,5">
                             <Button x:Name="PART_PreviousButton" DockPanel.Dock="Left"
                                     FontWeight="Bold" FontFamily="Marlett" Padding="4,2,4,2"
                                     Content="3" Focusable="False" BorderThickness="0"
+                                    FontSize="24"
                                     Background="Transparent"/>
                             <Button x:Name="PART_NextButton" DockPanel.Dock="Right"
                                     FontWeight="Bold" FontFamily="Marlett" Padding="4,2,4,2"
                                     Content="4" BorderThickness="0"
                                     Focusable="False"
+                                    FontSize="24"
                                     Background="Transparent"/>
                             <Button x:Name="PART_HeaderButton" DockPanel.Dock="Top"
                                     Padding="2" Height="30" Focusable="False"
                                     BorderThickness="0" Background="Transparent"/>
-                            <Grid>
-                                <Grid x:Name="PART_MonthView" Visibility="Visible">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
+                            <Border Background="{DynamicResource ButtonBackgroundBrush}"
+                                    CornerRadius="{DynamicResource ControlCornerRadius}"
+                                    Margin="0,0,0,20">
+                                <Grid>
+                                    <Grid x:Name="PART_MonthView" Visibility="Visible">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                </Grid>
-                                <Grid x:Name="PART_YearView"  Visibility="Hidden">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                    </Grid>
+                                    <Grid x:Name="PART_YearView"  Visibility="Hidden">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                    </Grid>
                                 </Grid>
-                            </Grid>
+                            </Border>
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -126,7 +132,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type CalendarDayButton}">
-                    <Border Background="Transparent">
+                    <Border x:Name="DayBorder"  Background="Transparent" CornerRadius="{DynamicResource ControlCornerRadius}">
                         <ContentPresenter
                         Content="{TemplateBinding ContentControl.Content}"
                         ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
@@ -144,7 +150,8 @@
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="DayBorder"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
@@ -189,13 +196,13 @@
                     <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{DynamicResource ControlCornerRadius}"
-                            Padding="{TemplateBinding Padding}">
+                            Padding="{TemplateBinding Padding}" Background="{DynamicResource ButtonBackgroundBrush}">
                         <DockPanel>
                             <Popup x:Name="PART_Popup" StaysOpen="False"
                                    AllowsTransparency="True" Placement="Bottom"
                                    PlacementTarget="{Binding ElementName=PART_TextBox}" />
                             <ToggleButton x:Name="PART_Button" DockPanel.Dock="Right" Content="🗓"
-                                          BorderThickness="0" Padding="5,0,5,0"
+                                          BorderThickness="0" Padding="5,0,5,0" Background="Transparent"
                                           IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
                             <DatePickerTextBox x:Name="PART_TextBox" DockPanel.Dock="Left"
                                                Background="Transparent" BorderThickness="0"/>

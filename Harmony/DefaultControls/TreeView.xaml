@@ -15,8 +15,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeView}">
-                    <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
-                            CornerRadius="{DynamicResource ControlCornerRadius}">
+                    <Border BorderThickness="0,0,1,0" BorderBrush="{DynamicResource HighlightGlyphBrush}"
+                            CornerRadius="1">
                         <ScrollViewer Focusable="False" Padding="4"
                                       HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
                                       VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
@@ -31,9 +31,10 @@
     <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
-        <Setter Property="Padding" Value="0,2,4,2" />
-        <Setter Property="Margin" Value="0,1,0,0" />
+        <Setter Property="Padding" Value="0,2,30,2" />
+        <Setter Property="Margin" Value="0,3,0,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeViewItem}">
@@ -51,12 +52,22 @@
                                                     <ControlTemplate TargetType="{x:Type ToggleButton}">
                                                         <Grid>
                                                             <Viewbox x:Name="IsExpandedPath" Visibility="Visible" >
-                                                                <TextBlock Text="4" FontFamily="Marlett" Foreground="{DynamicResource TextBrush}"
-                                                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                <TextBlock Text=">" FontFamily="MS Gothic" Foreground="{DynamicResource TextBrush}"
+                                                                           HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,10,0" FontWeight="Bold" />
                                                             </Viewbox>
                                                             <Viewbox x:Name="ExpandPath" Visibility="Collapsed" >
-                                                                <TextBlock Text="6" FontFamily="Marlett" Foreground="{DynamicResource TextBrush}"
-                                                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                <TextBlock Text=">" FontFamily="MS Gothic" Foreground="{DynamicResource TextBrush}"
+                                                                           HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,10,0"
+                                                                           RenderTransformOrigin="0.5,0.5" >
+                                                                    <TextBlock.RenderTransform>
+                                                                        <TransformGroup>
+                                                                            <ScaleTransform/>
+                                                                            <SkewTransform/>
+                                                                            <RotateTransform Angle="90"/>
+                                                                            <TranslateTransform/>
+                                                                        </TransformGroup>
+                                                                    </TextBlock.RenderTransform>
+                                                                </TextBlock>
                                                             </Viewbox>
                                                         </Grid>
                                                         <ControlTemplate.Triggers>

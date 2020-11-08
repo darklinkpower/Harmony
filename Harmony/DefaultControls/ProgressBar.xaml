@@ -8,7 +8,7 @@
 
     <Style TargetType="{x:Type ProgressBar}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource HoverBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
         <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
         <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}"/>
         <Setter Property="Template">

@@ -12,6 +12,7 @@
                     <Border BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}"
+                            CornerRadius="{DynamicResource MainMenuCornerRadius}"
                             Grid.IsSharedSizeScope="True">
                         <ItemsPresenter />
                     </Border>

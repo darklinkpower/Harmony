@@ -20,6 +20,7 @@
                             <Border Background="Transparent">
                                 <Grid Width="18" Height="18">
                                     <Ellipse x:Name="BulletBorder" Width="18" Height="18"
+                                            Fill="{DynamicResource ControlBackgroundBrush}"
                                             Stroke="{DynamicResource NormalBorderBrush}"
                                             StrokeThickness="{DynamicResource EllipseBorderThickness}" />
                                     <Viewbox x:Name="CheckIcon" Visibility="Collapsed" >
@@ -35,7 +36,7 @@
                     </BulletDecorator>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="CheckIcon" />
+                            <Setter Property="Fill" Value="{DynamicResource GlyphBrush}" TargetName="BulletBorder" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Stroke" Value="{DynamicResource GlyphBrush}" TargetName="BulletBorder" />

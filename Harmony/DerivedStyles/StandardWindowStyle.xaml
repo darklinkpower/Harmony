@@ -9,12 +9,12 @@
 
     <Style x:Key="StandardWindowStyle" TargetType="WindowBase">
         <Setter Property="Background" Value="{DynamicResource WindowBackgourndBrush}" />
-        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
         <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="25" CornerRadius="0" ResizeBorderThickness="4"
+                <WindowChrome CaptionHeight="25" CornerRadius="20" ResizeBorderThickness="10"
                               NonClientFrameEdges ="None" UseAeroCaptionButtons="False" GlassFrameThickness="0"/>
             </Setter.Value>
         </Setter>

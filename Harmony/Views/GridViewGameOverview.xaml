@@ -75,22 +75,39 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Button Name="PART_ButtonPlayAction" Grid.Column="0"
-                                            Height="40" Style="{DynamicResource PlayButton}" />
+                                            Height="40" Style="{DynamicResource PlayButtonViews}"/>
                                     <Button Name="PART_ButtonContextAction"
-                                            Height="40" Grid.Column="0" />
+                                            Height="40" Grid.Column="0" Style="{DynamicResource ContextButtonViews}"/>
                                     <Button Name="PART_ButtonMoreActions"
                                             Content="{DynamicResource LOCMoreAction}"
-                                            Height="40" Grid.Column="1" Margin="10,0,0,0" />
+                                            Height="40" Grid.Column="1" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}"/>
                                     <Button x:Name="PART_ButtonEditGame" Grid.Column="2"
                                             Margin="10,0,5,0" Height="40" Focusable="False"
-                                            Content="&#xeded;" FontFamily="{DynamicResource FontIcoFont}">
+                                            Content="&#xeded;" FontFamily="{DynamicResource FontIcoFont}" >
                                         <Button.Style>
                                             <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                                                <Setter Property="Visibility" Value="Hidden" />
+                                                <Setter Property="Opacity" Value="0.1" />
                                                 <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=Grid}}"  Value="True">
-                                                        <Setter Property="Visibility" Value="Visible" />
-                                                    </DataTrigger>
+                                                    <Trigger Property="IsMouseOver" Value="true">
+                                                        <Trigger.EnterActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <DoubleAnimation 
+                                                                        Storyboard.TargetProperty="(Button.Opacity)" 
+                                                                        To="1" Duration="0:0:0.5" />
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.EnterActions>
+                                                        <Trigger.ExitActions>
+                                                            <BeginStoryboard>
+                                                                <Storyboard>
+                                                                    <DoubleAnimation 
+                                                                        Storyboard.TargetProperty="(Button.Opacity)" 
+                                                                        To="0.1" Duration="0:0:0.5" />
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </Trigger.ExitActions>
+                                                    </Trigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </Button.Style>
@@ -118,6 +135,10 @@
                                                     RowCount="21" AutoLayoutColumns="2">
                                                 <Grid.Resources>
                                                     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+                                                    <Style TargetType="Label">
+                                                        <Setter Property="FontWeight" Value="Bold"/>
+                                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                    </Style>
                                                 </Grid.Resources>
 
                                                 <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}" />
@@ -191,8 +212,8 @@
                                         <StackPanel Name="PART_ElemNotes" DockPanel.Dock="Top"
                                                     Margin="5,0,5,15">
                                             <TextBlock Text="{DynamicResource LOCNotesLabel}"
-                                                       Style="{DynamicResource BaseTextBlockStyle}" />
-                                            <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
+                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
                                             <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
@@ -202,8 +223,8 @@
                                         <StackPanel Name="PART_ElemDescription" DockPanel.Dock="Top"
                                                     Margin="5,0,5,0">
                                             <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
-                                                       Style="{DynamicResource BaseTextBlockStyle}" />
-                                            <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
+                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
                                             <HtmlTextView Name="PART_HtmlDescription"
                                                           HtmlFontSize="{DynamicResource FontSize}"
                                                           HtmlFontFamily="{DynamicResource FontFamily}"

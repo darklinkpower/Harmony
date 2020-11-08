@@ -7,7 +7,7 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type Separator}">
-        <Setter Property="Background" Value="{DynamicResource NormalBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PanelSeparatorBrush}" />
         <Setter Property="Margin" Value="0,2,0,2" />
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Template">

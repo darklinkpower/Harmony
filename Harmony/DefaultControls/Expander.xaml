@@ -19,17 +19,26 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="+" x:Name="UpArrow"
+                            <TextBlock Text=">" x:Name="UpArrow"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                        Style="{DynamicResource BaseTextBlockStyle}"
                                        Foreground="{DynamicResource GlyphBrush}" FontSize="18" MinWidth="20" FontWeight="Bold" Margin="5,0,5,0"
-                                       Grid.Column="0" TextAlignment="Center" />
-                            <TextBlock Text="-" x:Name="DownArrow"
+                                       Grid.Column="0" TextAlignment="Center" FontFamily="MS UI Gothic" />
+                            <TextBlock Text=">" x:Name="DownArrow"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
                                        Style="{DynamicResource BaseTextBlockStyle}"
                                        Foreground="{DynamicResource GlyphBrush}" FontSize="18" MinWidth="20" FontWeight="Bold" Margin="5,0,5,0"
                                        Visibility="Collapsed"
-                                       Grid.Column="0" TextAlignment="Center"/>
+                                       Grid.Column="0" TextAlignment="Center" FontFamily="MS UI Gothic" RenderTransformOrigin="0.5,0.5">
+                                <TextBlock.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
                             <ContentPresenter Grid.Column="1" VerticalAlignment="Center"
                                               SnapsToDevicePixels="True" HorizontalAlignment="Stretch" RecognizesAccessKey="True"  />
                         </Grid>

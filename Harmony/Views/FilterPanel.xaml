@@ -13,9 +13,12 @@
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderThickness" Value="1,0,0,0" />
-                                <Style.Triggers>                                    
+                                <Style.Triggers>
                                     <DataTrigger Binding="{Settings FilterPanelPosition}" Value="Left">
-                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
+                                        <Setter Property="BorderThickness" Value="20,20,0,20" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Settings FilterPanelPosition}" Value="Right">
+                                        <Setter Property="BorderThickness" Value="0,20,20,20" />
                                     </DataTrigger>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderThickness" Value="0" />
@@ -100,13 +103,17 @@
                                     <!--Platform-->
                                     <Label Name="PART_ElemPlatformLabel" Content="{StaticResource LOCPlatformTitle}"
                                        Style="{StaticResource FilterLabel}"/>
-                                    <FilterSelectionBox x:Name="PART_FilterPlatform" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterPlatform" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Library-->
                                     <Label Name="PART_ElemLibraryLabel" Content="{StaticResource LOCLibrary}" 
-                                       Style="{StaticResource FilterLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterLibrary" />
-
+                                        Style="{StaticResource FilterLabel}" />
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterLibrary" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Name-->
                                     <Label Name="PART_ElemNameLabel" Content="{StaticResource LOCNameLabel}"
                                        Style="{StaticResource FilterLabel}" />
@@ -115,102 +122,142 @@
                                     <!--Genre-->
                                     <Label Name="PART_ElemGenreLabel" Content="{StaticResource LOCGenreLabel}"
                                        Style="{StaticResource FilterLabel}"/>
-                                    <FilterSelectionBox x:Name="PART_FilterGenre" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterGenre" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--ReleaseYear-->
                                     <Label Name="PART_ElemReleaseYearLabel" Content="{StaticResource LOCGameReleaseYearTitle}"
                                        Style="{StaticResource FilterLabel}"/>
-                                    <FilterStringSelectionBox x:Name="PART_FilterReleaseYear" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterStringSelectionBox x:Name="PART_FilterReleaseYear" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Developer-->
                                     <Label Name="PART_ElemDeveloperLabel" Content="{StaticResource LOCDeveloperLabel}"
                                        Style="{StaticResource FilterLabel}"/>
-                                    <FilterSelectionBox x:Name="PART_FilterDeveloper" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterDeveloper" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Publisher-->
                                     <Label Name="PART_ElemPublisherLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCPublisherLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterPublisher" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterPublisher" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Category-->
                                     <Label Name="PART_ElemCategoryLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCCategoryLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterCategory" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterCategory" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Features-->
                                     <Label Name="PART_ElemFeatureLabel" Style="{StaticResource FilterLabel}" 
                                        Content="{DynamicResource LOCFeatureLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterFeature" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterFeature" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Tag-->
                                     <Label Name="PART_ElemTagLabel" Style="{StaticResource FilterLabel}" 
                                        Content="{DynamicResource LOCTagLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterTag" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterTag" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--PlayTime-->
                                     <Label Name="PART_ElemPlayTimeLabel" Style="{StaticResource FilterLabel}" 
                                        Content="{DynamicResource LOCTimePlayed}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterPlayTime" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterPlayTime" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--CompletionStatus-->
                                     <Label Name="PART_ElemCompletionStatusLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCCompletionStatus}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterCompletionStatus" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterCompletionStatus" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Series-->
                                     <Label Name="PART_ElemSeriesLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCSeriesLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterSeries" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterSeries" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Region-->
                                     <Label Name="PART_ElemRegionLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCRegionLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterRegion" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterRegion" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Source-->
                                     <Label Name="PART_ElemSourceLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCSourceLabel}"/>
-                                    <FilterSelectionBox x:Name="PART_FilterSource" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterSource" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--AgeRating-->
                                     <Label Name="PART_ElemAgeRatingLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCAgeRatingLabel}" />
-                                    <FilterSelectionBox x:Name="PART_FilterAgeRating" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterSelectionBox x:Name="PART_FilterAgeRating" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Version-->
                                     <Label Name="PART_ElemVersionLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCVersionLabel}" />
-                                    <SearchBox x:Name="PART_FilterVersion" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <SearchBox x:Name="PART_FilterVersion" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--UserScore-->
                                     <Label Name="PART_ElemUserScoreLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCUserScore}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterUserScore" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterUserScore" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--CommunityScore-->
                                     <Label Name="PART_ElemCommunityScoreLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCCommunityScore}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterCommunityScore" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterCommunityScore" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--CriticScore-->
                                     <Label Name="PART_ElemCriticScoreLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCCriticScore}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterCriticScore" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterCriticScore" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--LastActivity-->
                                     <Label Name="PART_ElemLastActivityLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCGameLastActivityTitle}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterLastActivity" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterLastActivity" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Added-->
                                     <Label Name="PART_ElemAddedLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCDateAddedLabel}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterAdded" />
-
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterAdded" Margin="0"/>
+                                    </Border>
+                                    
                                     <!--Modified-->
                                     <Label Name="PART_ElemModifiedLabel" Style="{StaticResource FilterLabel}"
                                        Content="{DynamicResource LOCDateModifiedLabel}" />
-                                    <FilterEnumSelectionBox x:Name="PART_FilterModified" />
+                                    <Border Background="{DynamicResource ButtonBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" Margin="10,2,10,2">
+                                        <FilterEnumSelectionBox x:Name="PART_FilterModified" Margin="0"/>
+                                    </Border>
                                 </StackPanel>
                             </ScrollViewer>
                         </DockPanel>

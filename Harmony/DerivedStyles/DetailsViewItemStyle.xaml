@@ -5,15 +5,15 @@
         <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
                         <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                                        BorderThickness="5,0,0,0" BorderBrush="{DynamicResource GlyphBrush}"/>
+                                                        BorderThickness="4,0,0,0" BorderBrush="{DynamicResource GlyphBrush}"/>
                         <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                                        BorderThickness="5,0,0,0" BorderBrush="{DynamicResource GlyphBrush}"/>
+                                                        BorderThickness="5,0,0,0" BorderBrush="{DynamicResource HoverBrush}"/>
                         <Border Padding="{TemplateBinding Padding}" Background="Transparent">
                             <ContentPresenter />
                         </Border>
@@ -25,11 +25,13 @@
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
                         </DataTrigger>                        
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
-                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
-                        </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource HighlightGlyphBrush}" TargetName="SelectedRectangle" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="SelectedRectangle" />
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
                             <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
                         </Trigger>

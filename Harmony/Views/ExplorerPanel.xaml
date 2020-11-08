@@ -16,7 +16,10 @@
                                 <Setter Property="BorderThickness" Value="1,0,0,0" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings ExplorerPanelPosition}" Value="Left">
-                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
+                                        <Setter Property="BorderThickness" Value="20,20,0,20" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Settings ExplorerPanelPosition}" Value="Right">
+                                        <Setter Property="BorderThickness" Value="0,20,20,20" />
                                     </DataTrigger>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderThickness" Value="0" />
@@ -29,7 +32,7 @@
                                   DockPanel.Dock="Top" Margin="5,8,5,8" />
                             <ListBox Name="PART_SelectItems"
                                  DockPanel.Dock="Top" Margin="5,0,5,8"                                      
-                                 BorderThickness="0"
+                                 BorderThickness="0" Background="Transparent"
                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                             </ListBox>
                         </DockPanel>

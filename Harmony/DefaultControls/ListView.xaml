@@ -15,7 +15,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
                     <Grid Margin="1">
-                        <Border Padding="5,3,5,3" Style="{DynamicResource HighlightBorder}" BorderThickness="1" Background="Transparent">
+                        <Border Padding="5,3,5,3" Style="{DynamicResource HighlightBorder}" BorderThickness="1" Background="{DynamicResource ControlBackgroundBrush}" CornerRadius="0">
                             <TextBlock Style="{DynamicResource BaseTextBlockStyle}">
                                 <ContentPresenter VerticalAlignment="Center" />
                             </TextBlock>
@@ -103,7 +103,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListView}">
                     <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
-                            Background="{DynamicResource ControlBackgroundBrush}" CornerRadius="{DynamicResource ControlCornerRadius}">
+                            Background="Transparent" CornerRadius="0">
                         <ScrollViewer Style="{DynamicResource {x:Static GridView.GridViewScrollViewerStyleKey}}">
                             <ItemsPresenter />
                         </ScrollViewer>
