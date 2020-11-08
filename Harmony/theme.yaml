@@ -1,5 +1,10 @@
 ThemeApiVersion: 1.9.0
-Id: Super Clear ModeTry2_1b013f6d-9670-49b4-a56b-b7a3ea079219
-Name: Super Clear ModeTry2
-Author: Your Name Here
-Version: 1.0
+Id: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
+Name: Harmony
+Author: darklinkpower
+Version: 0.91
+Links:
+    - Name: Github
+      Url: https://github.com/darklinkpower/Harmony
+    - Name: Playnite Forums thread
+      Url: https://playnite.link/forum/thread-457.html
