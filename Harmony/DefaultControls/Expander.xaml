@@ -19,25 +19,46 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
+                            <Grid.Resources>
+                                <Style TargetType="TextBlock" x:Name="Rotation">
+                                    <Setter Property="RenderTransform">
+                                        <Setter.Value>
+                                            <RotateTransform/>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}"  Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="RenderTransform.Angle"
+                                                            To="90"
+                                                            Duration="0:0:0.1">
+                                                        </DoubleAnimation>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="RenderTransform.Angle"
+                                                            To="0"
+                                                            Duration="0:0:0.1">
+                                                        </DoubleAnimation>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Resources>
                             <TextBlock Text=">" x:Name="UpArrow"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                                       Style="{DynamicResource BaseTextBlockStyle}"
-                                       Foreground="{DynamicResource GlyphBrush}" FontSize="18" MinWidth="20" FontWeight="Bold" Margin="5,0,5,0"
-                                       Grid.Column="0" TextAlignment="Center" FontFamily="MS UI Gothic" />
-                            <TextBlock Text=">" x:Name="DownArrow"
-                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                       Style="{DynamicResource BaseTextBlockStyle}"
-                                       Foreground="{DynamicResource GlyphBrush}" FontSize="18" MinWidth="20" FontWeight="Bold" Margin="5,0,5,0"
-                                       Visibility="Collapsed"
+                                       FontSize="18" MinWidth="20" FontWeight="Bold" Margin="5,0,5,0"
                                        Grid.Column="0" TextAlignment="Center" FontFamily="MS UI Gothic" RenderTransformOrigin="0.5,0.5">
-                                <TextBlock.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="90"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </TextBlock.RenderTransform>
                             </TextBlock>
                             <ContentPresenter Grid.Column="1" VerticalAlignment="Center"
                                               SnapsToDevicePixels="True" HorizontalAlignment="Stretch" RecognizesAccessKey="True"  />
@@ -45,8 +66,6 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Visibility" TargetName="DownArrow" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="UpArrow" Value="Collapsed" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Opacity" Value="0.75" />
