@@ -60,7 +60,7 @@
                                 </TextBlock>
                                 <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="1">
                                     <Label Content="{DynamicResource LOCZoomLabel}" Margin="10,0,10,0"/>
-                                    <SliderWithPopup x:Name="PART_SliderZoom" />
+                                    <SliderWithPopup x:Name="PART_SliderZoom" Width="200"/>
                                 </StackPanel>
                             </Grid>
                         </DockPanel>
