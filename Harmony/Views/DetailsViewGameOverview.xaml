@@ -451,8 +451,8 @@
                                                                 Style="{DynamicResource BaseTextBlockStyle}" />
                                                         <Separator Background="{DynamicResource HighlightGlyphBrush}" />
                                                         <StackPanel Name="PART_Achievements_ProgressBar" Margin="0,10,0,0"/>
-                                                        <StackPanel x:Name="PART_Achievements_ListCompactLocked" Background="{DynamicResource ButtonBackgroundBrush}" Margin="0,10,0,0"/>
                                                         <StackPanel x:Name="PART_Achievements_ListCompactUnlocked" Background="{DynamicResource ButtonBackgroundBrush}" Margin="0,10,0,0"/>
+                                                        <StackPanel x:Name="PART_Achievements_ListCompactLocked" Background="{DynamicResource ButtonBackgroundBrush}" Margin="0,10,0,0"/>
                                                         <StackPanel x:Name="PART_Achievements_List" Height="250" Background="{DynamicResource ButtonBackgroundBrush}" Margin="0,10,0,0"/>
                                                     </StackPanel>
 
