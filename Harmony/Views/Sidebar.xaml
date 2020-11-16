@@ -9,7 +9,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Sidebar}">
                     <Border BorderThickness="0,0,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
-                            x:Name="BorderContentHolder">
+                            x:Name="BorderContentHolder" Background="{DynamicResource MainPanelBackgroundBrush}">
                         <DockPanel x:Name="DockContentHolder">                            
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
                                     Width="40" Height="40" Margin="3,0,0,5"
