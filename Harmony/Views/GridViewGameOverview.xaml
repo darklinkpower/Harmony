@@ -217,7 +217,7 @@
                                             <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
-                                                     Margin="-1,0,-1,0" Padding="0"/>
+                                                     Margin="-1,0,-1,0" Padding="0" Background="Transparent"/>
                                         </StackPanel>
 
                                         <StackPanel Name="PART_ElemDescription" DockPanel.Dock="Top"

@@ -515,7 +515,7 @@
                                                 <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
-                                                     Margin="-1,5,-1,5" Padding="0"/>
+                                                     Margin="-1,5,-1,5" Padding="0" Background="Transparent"/>
                                             </StackPanel>
 
                                             <StackPanel Name="PART_ElemDescription">
