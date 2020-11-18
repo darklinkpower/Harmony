@@ -40,8 +40,8 @@
                             <SearchBox x:Name="PART_TextMainSearch"
                                         Margin="5,6,0,6" DockPanel.Dock="Left"
                                         WindowChrome.IsHitTestVisibleInChrome="True"
-                                        Width="{Settings DetailsListWitdh}" />                      
-
+                                        Width="{Settings DetailsListWitdh}" />
+                            
                             <Border x:Name="PART_ElemViewMenu" Background="Transparent"
                                     DockPanel.Dock="Left" Margin="10,6,0,6" Width="35"
                                     WindowChrome.IsHitTestVisibleInChrome="True"
@@ -89,24 +89,35 @@
                                 </CheckBox.Style>
                             </CheckBox>
                             
-                            <Border Background="Transparent"
-                                    WindowChrome.IsHitTestVisibleInChrome="True" 
-                                    Padding="0" BorderThickness="1" Margin="10,6,0,6" 
-                                    DockPanel.Dock="Left" Style="{DynamicResource HighlightBorder}">
-                                <Button Name="PART_ButtonSteamFriends"
-                                    Margin="5,0,5,0"
-                                    Background="Transparent"
-                                    Foreground="{DynamicResource GlyphBrush}"
-                                    Padding="0" BorderThickness="0"
-                                    ToolTip="{DynamicResource LOCSteamFriendsTooltip}">
-                                    <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
-                                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                </Button>
-                            </Border>
+                            <Button Name="PART_ButtonSteamFriends"
+                                    WindowChrome.IsHitTestVisibleInChrome="True"
+                                    ToolTip="{DynamicResource LOCSteamFriendsTooltip}"
+                                    Margin="10,6,0,6">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                        <Setter Property="Background" Value="Transparent" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate>
+                                                    <Border Style="{DynamicResource HighlightBorder}"
+                                                        Background="{TemplateBinding Background}">
+                                                        <Grid>
+                                                            <TextBlock Text="&#xecf9;" FontFamily="{StaticResource FontIcoFont}" FontSize="24"
+                                                                       Foreground="{TemplateBinding Foreground}"
+                                                                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
+                                                        </Grid>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
 
                             <CheckBox x:Name="PART_ToggleNotifications"
-                                      WindowChrome.IsHitTestVisibleInChrome="True"
-                                      DockPanel.Dock="Left" Margin="10,6,0,6" MinWidth="35">
+                                        WindowChrome.IsHitTestVisibleInChrome="True"
+                                        DockPanel.Dock="Left" Margin="10,6,0,6" MinWidth="35">
                                 <CheckBox.Style>
                                     <Style TargetType="CheckBox">
                                         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
@@ -118,16 +129,16 @@
                                                             Background="{TemplateBinding Background}">
                                                         <Grid>
                                                             <TextBlock Text="&#xeea3;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24"
-                                                                           Foreground="{TemplateBinding Foreground}"
-                                                                           HorizontalAlignment="Center" Margin="5,0,6,0"/>
+                                                                       Foreground="{TemplateBinding Foreground}"
+                                                                       HorizontalAlignment="Center" Margin="5,0,6,0"/>
                                                             <Border CornerRadius="3" Width="15" Height="15"
-                                                                        Margin="15,0,0,2"
-                                                                        HorizontalAlignment="Left"
-                                                                        VerticalAlignment="Bottom"
-                                                                        Background="#C85429">
+                                                                    Margin="15,0,0,2"
+                                                                    HorizontalAlignment="Left"
+                                                                    VerticalAlignment="Bottom"
+                                                                    Background="#C85429">
                                                                 <TextBlock Text="{Api Notifications.Count}" FontSize="12"                                                               
-                                                                               Foreground="{DynamicResource TextBrush}"
-                                                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                           Foreground="{DynamicResource TextBrush}"
+                                                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                             </Border>
                                                         </Grid>
                                                     </Border>
