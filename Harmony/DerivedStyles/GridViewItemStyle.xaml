@@ -19,7 +19,7 @@
                     <Grid Background="{DynamicResource GridItemBackgroundBrush}"
                           Margin="{Settings ItemSpacingMargin}"
                           x:Name="ItemGrid">
-                        <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3"/>
+                        <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3" CornerRadius="{DynamicResource GridViewSelectionBorderCornerRadius}"/>
                         <ContentPresenter />
                     </Grid>
                     <ControlTemplate.Triggers>

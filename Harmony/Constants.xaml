@@ -17,7 +17,11 @@
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
-
+    <CornerRadius x:Key="GridViewCoverCornerRadius">50</CornerRadius><!--5-->
+    <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">0,0,0,0</CornerRadius><!--5,5,0,0-->
+    <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,0,0</CornerRadius><!--0,0,5,5-->
+    <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">0</CornerRadius><!--7-->
+    
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
     <Color x:Key="TextColor">#f2f2f2</Color>
@@ -32,7 +36,7 @@
     <Color x:Key="PopupBackgroundColor">#2f3543</Color>
     <Color x:Key="PopupBorderColor">#262c38</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
-    <Color x:Key="GridItemBackgroundColor">#2f3543</Color>
+    <Color x:Key="GridItemBackgroundColor">Transparent</Color>
     <Color x:Key="PanelSeparatorColor">#474f5c</Color>
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
     
@@ -70,9 +74,6 @@
     <LinearGradientBrush x:Key="WindowBackgourndBrush" StartPoint="0.5,0" EndPoint="0.5,1">
         <GradientStop Color="{DynamicResource MainColor}" Offset="0.0" />
         <GradientStop Color="{DynamicResource MainColor}" Offset="1.0" />
-        <!--<GradientStop Color="#1d1c22" Offset="0"/>>-->
-        <!--<GradientStop Color="#18191d" Offset="0.4"/>-->
-        <!--<GradientStop Color="{DynamicResource MainColorDark}" Offset="0.4"/>-->
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.6" EndPoint="0.5,1">

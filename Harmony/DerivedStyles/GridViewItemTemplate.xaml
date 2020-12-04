@@ -14,6 +14,7 @@
 
                             <Grid Width="{Settings GridItemWidth}"
                               Height="{Settings GridItemHeight}">
+                                <Border Name="Mask" Background="White" CornerRadius="{DynamicResource GridViewCoverCornerRadius}" BorderThickness="1"/>
                                 <Image Name="PART_ImageCover"
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                    HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -37,21 +38,34 @@
                                                 Content="&#xef4f;" FontFamily="{StaticResource FontIcoFont}" />
                                     </StackPanel>
                                 </Viewbox>
+                                <Grid.OpacityMask>
+                                    <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                </Grid.OpacityMask>
                             </Grid>
-                            <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
+                            <Border x:Name="ShowGameNameBorder" CornerRadius="{DynamicResource GridViewShowGameNameCornerRadius}" Background="Transparent">
+                                <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
                                    Foreground="{DynamicResource TextBrush}"
                                    Style="{DynamicResource BaseTextBlockStyle}"                                                                   
                                    TextAlignment="Center" TextTrimming="CharacterEllipsis"
                                    VerticalAlignment="Center"
                                    Padding="2,5,2,5" Grid.Row="1" Grid.Column="0"
                                    Width="{Settings GridItemWidth}" 
-                                   Visibility="{Settings ShowNamesUnderCovers}" Background="{DynamicResource GlyphBrush}"/>
+                                   Visibility="{Settings ShowNamesUnderCovers}"/>
+                            </Border>
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
+                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Settings ShowGridItemBackground}" Value="True" />
+                                <Condition Binding="{Settings ShowNamesUnderCovers}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverGridBackgroundDisabledCornerRadius}" TargetName="Mask" />
+                        </MultiDataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="True">
                             <Setter Property="Background" Value="{DynamicResource CoversButtonsBrush}" TargetName="BorderMouseOver" />
                         </DataTrigger>
@@ -76,9 +90,6 @@
                             <Setter Property="Visibility" Value="Visible" TargetName="BorderMouseOver"/>
                             <Setter Property="Visibility" Value="Visible" TargetName="GameControls"/>
                         </Trigger>
-                        <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="False">
-                            <Setter Property="Background" Value="Transparent" TargetName="ShowGameName" />
-                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
