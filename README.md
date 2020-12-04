@@ -21,9 +21,9 @@ Playnite forum thread: https://playnite.link/forum/thread-457.html
 - Full support for features available in the default Playnite Desktop themes
 - Theme design based around using different Playnite settings
   - **Minimalistic:** Layout borders in settings enabled
-![BordersDetailsBackground](https://i.imgur.com/jjGuS6y.jpeg)
+![BordersDetailsBackground](https://i.imgur.com/MIrOQ7j.png)
   - **Normal:** Layout borders in settings enabled and Backgrond image for details view enabled in settings
-![BordersDetailsNoBackground](https://i.imgur.com/MIrOQ7j.png)
+![BordersDetailsNoBackground](https://i.imgur.com/jjGuS6y.jpeg)
   - **Clean:** Layout borders in settings disabled and game background in Window enabled in settings
 ![NoBordersDetailsWindowBackground](https://i.imgur.com/D3OgCr0.jpeg)
 - Optional full support for external extensions:
