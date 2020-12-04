@@ -17,10 +17,11 @@
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
-    <CornerRadius x:Key="GridViewCoverCornerRadius">50</CornerRadius><!--5-->
+    <CornerRadius x:Key="GridViewCoverCornerRadius">0</CornerRadius><!--5-->
     <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">0,0,0,0</CornerRadius><!--5,5,0,0-->
     <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,0,0</CornerRadius><!--0,0,5,5-->
     <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">0</CornerRadius><!--7-->
+    <CornerRadius x:Key="DetailsViewCoverCornerRadius">0</CornerRadius><!--5-->
     
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>

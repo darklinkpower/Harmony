@@ -49,11 +49,20 @@
 
                                     <DockPanel Margin="0,20,0,15" MaxWidth="1024" Grid.Row="1"
                                            Background="Transparent">
-                                        <Image Name="PART_ImageCover" VerticalAlignment="Bottom"
-                                            DockPanel.Dock="Right"
+                                        <Grid VerticalAlignment="Bottom" DockPanel.Dock="Right">
+                                            <Grid.Effect>
+                                                <DropShadowEffect ShadowDepth="0" Direction="0" BlurRadius="8" Opacity="0.4"/>
+                                            </Grid.Effect>
+                                            <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}"/>
+                                            <Image Name="PART_ImageCover" 
                                             Height="{Settings GameDetailsCoverHeight}"
                                             StretchDirection="Both" Stretch="Uniform"
-                                            RenderOptions.BitmapScalingMode="Fant" />
+                                            RenderOptions.BitmapScalingMode="Fant" >
+                                            </Image>
+                                            <Grid.OpacityMask>
+                                                <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                            </Grid.OpacityMask>
+                                        </Grid>
                                         <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Left">
                                             <DockPanel>
                                                 <Image Name="PART_ImageIcon" MaxHeight="48" MaxWidth="48"
