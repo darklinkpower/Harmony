@@ -10,13 +10,18 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Style="{StaticResource HighlightBorder}" Background="{DynamicResource GlyphBrush}"
-                            d:DataContext="{x:Static DesignMainViewModel.DesignNotificationIntance}">
+                    <Border x:Name="NotificationMessageBorder" d:DataContext="{x:Static DesignMainViewModel.DesignNotificationIntance}"
+                        Style="{DynamicResource HighlightBorder}" Background="{DynamicResource GlyphBrush}" BorderThickness="0">
                         <TextBlock Text="{Binding Text}"
                                    Style="{DynamicResource BaseTextBlockStyle}"
                                    Margin="6" TextWrapping="Wrap"
                                    MinHeight="38" Foreground="{DynamicResource TextBrushDark}"/>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource GlyphHighlightLightBrush}" TargetName="NotificationMessageBorder"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

@@ -34,7 +34,8 @@
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">#2f3543</Color>
     <Color x:Key="PanelSeparatorColor">#474f5c</Color>
-
+    <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
+    
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#2f3543" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
@@ -53,6 +54,7 @@
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
+    <SolidColorBrush x:Key="GlyphHighlightLightBrush" Color="{DynamicResource GlyphHighlightLightColor}" />
 
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
