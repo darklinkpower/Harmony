@@ -40,6 +40,38 @@
                                     </FadeImage.ImageOpacityMask>
                                 </FadeImage>
 
+                                <TextBlock Name="LogoPath" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Collapsed">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Text">
+                                                <Setter.Value>
+                                                    <MultiBinding StringFormat="{}{0}{1}{2}{3}">
+                                                        <Binding RelativeSource="{RelativeSource Self}" Path="Tag" />
+                                                        <Binding Source="\ExtraMetadata\games\"/>
+                                                        <Binding Path="Game.Id"/>
+                                                        <Binding Source="\logo.png" />
+                                                    </MultiBinding>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <Image Name="LogoImage" Grid.ZIndex="1" MaxWidth="{DynamicResource DetailsViewLogoMaxWidth}" MaxHeight="{DynamicResource DetailsViewLogoMaxHeight}" 
+                                Visibility="{DynamicResource DetailsViewLogoVisibility}" Margin="40" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
+                                HorizontalAlignment="Center" VerticalAlignment="Top"
+                                StretchDirection="DownOnly" Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                    <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text, Converter={StaticResource ImageStringToImageConverter}}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+
                                 <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}"/>

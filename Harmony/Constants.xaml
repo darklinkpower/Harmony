@@ -2,6 +2,15 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
+    <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
+    <sys:Double x:Key="DetailsViewLogoMaxHeight">150</sys:Double>
+    <sys:Double x:Key="DetailsViewLogoMaxWidth">400</sys:Double>
+    <Visibility x:Key="DetailsViewLogoVisibility">Visible</Visibility>
+    <sys:Double x:Key="GridViewLogoMaxHeight">80</sys:Double>
+    <sys:Double x:Key="GridViewLogoMaxWidth">400</sys:Double>
+    <Visibility x:Key="GridViewLogoVisibility">Visible</Visibility>
+    
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
     <sys:Double x:Key="FontSizeLarge">15</sys:Double>
