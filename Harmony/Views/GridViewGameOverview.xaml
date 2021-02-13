@@ -56,7 +56,23 @@
                                     </Style>
                                 </DockPanel.Style>
 
-                                <DockPanel DockPanel.Dock="Top">
+                            <DockPanel DockPanel.Dock="Top" Tag="{DynamicResource GridViewLogoVisibility}">
+                                <Grid Tag="{DynamicResource GridViewLogoVisibility}">
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Style.Setters>
+                                                <Setter Property="Height" Value="0"/>
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="Visible">
+                                                    <Setter Property="Height" Value="{DynamicResource GridViewLogoMaxHeight}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=LogoImage, Path=Source}" Value="{x:Null}">
+                                                    <Setter Property="Height" Value="0"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
                                     <TextBlock Name="LogoPath" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Collapsed">
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">
@@ -74,9 +90,9 @@
                                         </TextBlock.Style>
                                     </TextBlock>
                                     <Image Name="LogoImage" Grid.ZIndex="1" MaxWidth="{DynamicResource GridViewLogoMaxWidth}" MaxHeight="{DynamicResource GridViewLogoMaxHeight}" 
-                                           Visibility="{DynamicResource GridViewLogoVisibility}" Margin="20,5,20,5" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
-                                           HorizontalAlignment="Center" VerticalAlignment="Top"
-                                           StretchDirection="DownOnly" Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                        Visibility="{DynamicResource GridViewLogoVisibility}" Margin="20,5,20,5" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant"
+                                        HorizontalAlignment="Center" VerticalAlignment="Top"
+                                        StretchDirection="DownOnly" Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
                                         <Image.Style>
                                             <Style TargetType="Image">
                                                 <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}"/>
@@ -88,7 +104,8 @@
                                             </Style>
                                         </Image.Style>
                                     </Image>
-                                </DockPanel>
+                                </Grid>
+                            </DockPanel>
                                 
                                 <DockPanel DockPanel.Dock="Top">
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
