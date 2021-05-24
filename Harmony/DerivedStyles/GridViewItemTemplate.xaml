@@ -14,7 +14,6 @@
 
                             <Grid Width="{Settings GridItemWidth}"
                               Height="{Settings GridItemHeight}">
-                                <Border Name="Mask" Background="White" CornerRadius="{DynamicResource GridViewCoverCornerRadius}" BorderThickness="1"/>
                                 <Image Name="PART_ImageCover"
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                    HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -38,11 +37,8 @@
                                                 Content="&#xef4f;" FontFamily="{StaticResource FontIcoFont}" />
                                     </StackPanel>
                                 </Viewbox>
-                                <Grid.OpacityMask>
-                                    <VisualBrush Visual="{Binding ElementName=Mask}"/>
-                                </Grid.OpacityMask>
                             </Grid>
-                            <Border x:Name="ShowGameNameBorder" CornerRadius="{DynamicResource GridViewShowGameNameCornerRadius}" Background="Transparent">
+                            <Border x:Name="ShowGameNameBorder" Background="Transparent">
                                 <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
                                    Foreground="{DynamicResource TextBrush}"
                                    Style="{DynamicResource BaseTextBlockStyle}"                                                                   
@@ -64,7 +60,6 @@
                                 <Condition Binding="{Settings ShowGridItemBackground}" Value="True" />
                                 <Condition Binding="{Settings ShowNamesUnderCovers}" Value="True" />
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverGridBackgroundDisabledCornerRadius}" TargetName="Mask" />
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="True">
                             <Setter Property="Background" Value="{DynamicResource CoversButtonsBrush}" TargetName="BorderMouseOver" />

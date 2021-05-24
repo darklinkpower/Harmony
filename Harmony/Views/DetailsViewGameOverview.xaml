@@ -250,13 +250,9 @@
                                         <Grid.Effect>
                                             <DropShadowEffect ShadowDepth="0" Direction="0" BlurRadius="8" Opacity="0.4" />
                                         </Grid.Effect>
-                                        <Border Name="Mask" Background="White" CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}" />
                                         <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
                                                    StretchDirection="Both" Stretch="Uniform" 
                                                    RenderOptions.BitmapScalingMode="Fant" />
-                                        <Grid.OpacityMask>
-                                            <VisualBrush Visual="{Binding ElementName=Mask}" />
-                                        </Grid.OpacityMask>
                                     </Grid>
                                     <!--#regionend-->
                                 </Grid>
