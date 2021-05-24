@@ -119,10 +119,10 @@
                                                     <Setter Property="MediaElement.Source" Value="{Binding ElementName=VideoTrailerPath, Path=Text}" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding ElementName=VideoPlaybackToggleButton,Path=IsChecked}" Value="False">
-                                                    <Setter Property="MediaElement.Source" Value="{x:Null}" />
+                                                    <Setter Property="MediaElement.Source" Value="" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding ElementName=PART_ControlGameView, Path=IsVisible}" Value="False">
-                                                    <Setter Property="MediaElement.Source" Value="{x:Null}" />
+                                                    <Setter Property="MediaElement.Source" Value="" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding ElementName=VideoAudioToggleButton,Path=IsChecked}" Value="True">
                                                     <DataTrigger.EnterActions>
