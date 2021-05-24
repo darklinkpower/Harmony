@@ -1,4 +1,4 @@
-# Harmony
+# Harmony ![DownloadCount](https://img.shields.io/github/downloads/darklinkpower/Harmony/total.svg)
 Clean theme with modern design for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode
 
 Playnite forum thread: https://playnite.link/forum/thread-457.html
