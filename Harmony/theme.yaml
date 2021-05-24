@@ -9,11 +9,14 @@ Links:
     - Name: Playnite Forums thread
       Url: https://playnite.link/forum/thread-457.html
 Constants:
-    - DetailsViewLogoMaxHeight(100,600): Maximum height of logos in Details View
-    - DetailsViewLogoMaxWidth(100,600): Maximum width of logos in Details View
-    - DetailsViewLogoVisibility: Visibility of logos in Details View
-    - GridViewLogoMaxHeight(50,600): Maximum height of logos in Grid View
-    - GridViewLogoMaxWidth(100,600): Maximum width of logos in Grid View
-    - GridViewLogoVisibility: Visibility of logos in Grid View
-    - UseAbsoluteExtraMetadataPath: Use absolute path to your Playnite config folder for Extra Metadata support.
-    - ExtraMetadataPath: Path used by extra metadata. End backlash must no be used.
+    - DetailsViewLogoAreMediaControlsDisplayed: Details View - Are Media Controls Displayed
+    - DetailsViewIsVideoPlayedByDefault: Details View - Video is played automatically
+    - DetailsViewIsLogoCoverFaded: Details View - Logo and cover are faded by default
+    - DetailsViewIsVideoTrailerDefault: Details View - Default video is Trailer
+    - DetailsViewIsLogoVisible: Details View - Logo is displayed
+    - DetailsViewIsLogoOnLeft: Details View - Logo is placed on the left
+    - DetailsViewLogoHeight(100,250): Details View - Height of logos
+    - DetailsViewDetailsIconsVisibility: Details View - Visibility of icons in details
+    - GridViewIsLogoVisible: Grid View - Logo is displayed
+    - GridViewLogoHeight(100,200): Grid View - Height of logos
+    - GridViewDetailsIconsVisibility: Grid View - Visibility of icons in details

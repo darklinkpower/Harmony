@@ -2,14 +2,24 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <!--Theme settings region start-->
+    <sys:Boolean x:Key="DetailsViewIsVideoPlayedByDefault">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsVideoTrailerDefault">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsLogoCoverFaded">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewLogoAreMediaControlsDisplayed">True</sys:Boolean>
+    <sys:Double x:Key="DetailsViewLogoHeight">100</sys:Double>
+    <sys:Boolean x:Key="DetailsViewIsLogoVisible">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewIsLogoOnLeft">True</sys:Boolean>
+    <Visibility x:Key="DetailsViewDetailsIconsVisibility">Collapsed</Visibility>
+    <sys:Double x:Key="GridViewLogoHeight">100</sys:Double>
+    <sys:Boolean x:Key="GridViewIsLogoVisible">True</sys:Boolean>
+    <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
+    <!--region end-->
+
+    <!--Extra Metadata Path values start-->
     <sys:Boolean x:Key="UseAbsoluteExtraMetadataPath">false</sys:Boolean>
     <sys:String x:Key="ExtraMetadataPath">..\..\..\..</sys:String>
-    <sys:Double x:Key="DetailsViewLogoMaxHeight">150</sys:Double>
-    <sys:Double x:Key="DetailsViewLogoMaxWidth">400</sys:Double>
-    <Visibility x:Key="DetailsViewLogoVisibility">Visible</Visibility>
-    <sys:Double x:Key="GridViewLogoMaxHeight">80</sys:Double>
-    <sys:Double x:Key="GridViewLogoMaxWidth">400</sys:Double>
-    <Visibility x:Key="GridViewLogoVisibility">Visible</Visibility>
+    <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
