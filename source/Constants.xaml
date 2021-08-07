@@ -6,7 +6,7 @@
     <sys:Boolean x:Key="DetailsViewIsVideoPlayedByDefault">False</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsVideoTrailerDefault">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsLogoCoverFaded">False</sys:Boolean>
-    <sys:Boolean x:Key="DetailsViewLogoAreMediaControlsDisplayed">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewLogoAreMediaControlsDisplayed">False</sys:Boolean>
     <sys:Double x:Key="DetailsViewLogoHeight">100</sys:Double>
     <sys:Boolean x:Key="DetailsViewIsLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewIsLogoOnLeft">True</sys:Boolean>
