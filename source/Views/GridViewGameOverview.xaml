@@ -9,7 +9,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GridViewGameOverview}">
-                    <Border Padding="10,0,5,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                    <Border Padding="10,0,5,10" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                         <Border.Style>
                             <Style TargetType="Border">
