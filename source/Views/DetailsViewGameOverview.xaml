@@ -670,7 +670,7 @@
                                                         </Style>
                                                     </StackPanel.Style>
                                                     <TextBlock Text="Unlocked Achievements" Margin="0,15,0,5"
-                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                                               FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                                     <Separator Background="{DynamicResource HighlightGlyphBrush}" />
                                                     <StackPanel x:Name="PART_Achievements_ListCompactUnlocked"/>
                                                 </StackPanel>
@@ -686,7 +686,7 @@
                                                         </Style>
                                                     </StackPanel.Style>
                                                     <TextBlock Text="Locked Achievements" Margin="0,15,0,5"
-                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                                               FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                                     <Separator Background="{DynamicResource HighlightGlyphBrush}" />
                                                     <StackPanel x:Name="PART_Achievements_ListCompactLocked"/>
                                                 </StackPanel>
@@ -789,11 +789,11 @@
                                                                         <Image Stretch="UniformToFill">
                                                                             <Image.Style>
                                                                                 <Style TargetType="{x:Type Image}">
-                                                                                    <Setter Property="Source" Value="{Binding ImageUnlocked}"/>
+                                                                                    <Setter Property="Source" Value="{Binding ImageUnlocked, Converter={StaticResource ImageStringToImageConverter}}" />
                                                                                     <Style.Triggers>
                                                                                         <!-- Achievement is Locked -->
                                                                                         <DataTrigger Binding="{Binding DateUnlocked}" Value="{x:Static sys:DateTime.MinValue}">
-                                                                                            <Setter Property="Source" Value="{Binding ImageLocked}" />
+                                                                                            <Setter Property="Source" Value="{Binding ImageLocked, Converter={StaticResource ImageStringToImageConverter}}" />
                                                                                         </DataTrigger>
                                                                                     </Style.Triggers>
                                                                                 </Style>
@@ -821,7 +821,7 @@
                                                                                     <ToolTip Content="{Binding Name}"></ToolTip>
                                                                                 </TextBlock.ToolTip>
                                                                             </TextBlock>
-                                                                            <TextBlock Grid.Column="1" TextAlignment="Right" Text="{Binding DateUnlocked, StringFormat={}{0:MM/dd/yyyy}}"  Foreground="{DynamicResource TextBrush}" >
+                                                                            <TextBlock Grid.Column="1" TextAlignment="Right" Text="{Binding DateUnlocked, StringFormat={}{0:dd/MM/yyyy}}"  Foreground="{DynamicResource TextBrush}" >
                                                                                 <TextBlock.Style>
                                                                                     <Style>
                                                                                         <Style.Triggers>
