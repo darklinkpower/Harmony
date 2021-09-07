@@ -1,5 +1,11 @@
 AddonId: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
 Packages:
+  - Version: 2.0.1
+    RequiredApiVersion: 1.0.0
+    ReleaseDate: 2020-09-07
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.0-beta.1/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_0_1.pthm
+    Changelog:
+      - Minor fix
   - Version: 2.0
     RequiredApiVersion: 1.0.0
     ReleaseDate: 2020-09-07
