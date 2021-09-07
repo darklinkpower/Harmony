@@ -359,7 +359,7 @@
                                             </Viewbox>
                                             <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
-                                                <TextBlock Name="PART_TextCompletionStatus"/>
+                                                <Button Name="PART_ButtonCompletionStatus"/>
                                             </StackPanel>
                                         </DockPanel>
                                         <DockPanel>
@@ -501,7 +501,7 @@
                                                         <TextBlock Text="{DynamicResource LOCGamePlatformTitle}" />
                                                     </StackPanel>
                                                 </Label>
-                                                <Button Name="PART_ButtonPlatform" VerticalAlignment="Center" />
+                                                <ItemsControl Name="PART_ItemsPlatforms" />
                                                 <Label Name="PART_ElemCategories" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
@@ -555,7 +555,7 @@
                                                         <TextBlock Text="{DynamicResource LOCAgeRatingLabel}" />
                                                     </StackPanel>
                                                 </Label>
-                                                <Button Name="PART_ButtonAgeRating" VerticalAlignment="Center" />
+                                                <ItemsControl Name="PART_ItemsAgeRatings" />
                                                 <Label Name="PART_ElemSeries" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEEEF;" Style="{StaticResource Icon}" 
@@ -564,7 +564,7 @@
                                                         <TextBlock Text="{DynamicResource LOCSeriesLabel}" />
                                                     </StackPanel>
                                                 </Label>
-                                                <Button Name="PART_ButtonSeries" VerticalAlignment="Center" />
+                                                <ItemsControl Name="PART_ItemsSeries" />
                                                 <Label Name="PART_ElemRegion" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xF02C;" Style="{StaticResource Icon}" 
@@ -573,7 +573,7 @@
                                                         <TextBlock Text="{DynamicResource LOCRegionLabel}" />
                                                     </StackPanel>
                                                 </Label>
-                                                <Button Name="PART_ButtonRegion" VerticalAlignment="Center" />
+                                                <ItemsControl Name="PART_ItemsRegions" />
                                                 <Label Name="PART_ElemVersion" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEFD1;" Style="{StaticResource Icon}" 

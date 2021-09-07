@@ -43,6 +43,9 @@
                                             <GameListItem Style="{StaticResource GridViewItemTemplate}" />
                                         </DataTemplate>
                                     </ExtendedListBox.ItemTemplate>
+                                    <ExtendedListBox.GroupStyle>
+                                        <GroupStyle ContainerStyle="{StaticResource GridViewGroupStyle}"/>
+                                    </ExtendedListBox.GroupStyle>
                                 </ExtendedListBox>
                                 <TextBlock FontSize="{StaticResource FontSizeLarge}" Margin="0,40,0,0"
                                        Text="{DynamicResource LOCNoItemsFound}" TextWrapping="Wrap"                                      
