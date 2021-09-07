@@ -28,7 +28,7 @@
                                       d:DesignWidth="1280"
                                       d:DesignHeight="1550"
                                       d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
-                            <Grid>
+                            <Grid Margin="0,0,0,20">
                                 <!--#region TextBlock property sources-->
                                 <TextBlock Name="VideoSelection" Foreground="White" Visibility="Collapsed">
                                     <TextBlock.Style>
@@ -283,7 +283,7 @@
                                                 </TextBlock>
                                             </DockPanel>
                                             <DockPanel Margin="0,15,0,0">
-                                                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
+                                                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" DockPanel.Dock="Left">
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="*" />
                                                         <ColumnDefinition Width="*" />
@@ -292,12 +292,16 @@
                                                     <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Height="40" Style="{DynamicResource ContextButtonViews}" />
                                                     <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonMoreActions" Content="{DynamicResource LOCMoreAction}" FontFamily="{DynamicResource FontIcoFont}" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
                                                 </Grid>
-                                                <Button Grid.Column="2" x:Name="PART_ButtonEditGame" Content="&#xEDED;" VerticalAlignment="Top" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" Style="{DynamicResource MoreActionButtonViews}" />
+                                                <Button DockPanel.Dock="Left" x:Name="PART_ButtonEditGame" Content="&#xEDED;" VerticalAlignment="Top" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" />
+                                                <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Height="40" MinWidth="40" VerticalAlignment="Top" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                                        Visibility="{PluginStatus Plugin=playnite-screenshotsvisualizer-plugin, Status=Installed}"/>
+                                                <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                                        Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}" />
                                                 <ToggleButton FontSize="40" x:Name="MediaControlsDisplayToggleButton" 
-                                                        Style="{DynamicResource MediaControlsDisplayToggleButton}" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                                        Style="{DynamicResource MediaControlsDisplayToggleButton}" Margin="10,0,0,0" VerticalAlignment="Top" DockPanel.Dock="Left"
                                                         IsChecked="{DynamicResource DetailsViewLogoAreMediaControlsDisplayed}"/>
 
-                                                <DockPanel>
+                                                <DockPanel VerticalAlignment="Top">
                                                     <DockPanel.Style>
                                                         <Style TargetType="DockPanel">
                                                             <Setter Property="Visibility" Value="Collapsed"/>
@@ -390,8 +394,8 @@
                                                             <TextBlock Text="{DynamicResource Sc_TotalString}"/>
                                                         </DockPanel>
                                                         <ProgressBar x:Name="progressBar" FontSize="10" Visibility="{Binding Visibility, ElementName=label, Mode=OneWay}" Margin="5,0,0,0"
-                                                                Maximum="{DynamicResource Sc_TotalDouble}" Value="{DynamicResource Sc_UnlockedDouble}" HorizontalAlignment="Left"
-                                                                Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10"  Style="{DynamicResource RoundedProgressBar}">
+                                                            Maximum="{DynamicResource Sc_TotalDouble}" Value="{DynamicResource Sc_UnlockedDouble}" HorizontalAlignment="Left"
+                                                            Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10"  Style="{DynamicResource RoundedProgressBar}">
                                                             <ProgressBar.Resources>
                                                                 <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
                                                                     <Setter Property="Background" Value="{DynamicResource NormalBrushDark}"/>
@@ -400,7 +404,7 @@
                                                                         <Setter.Value>
                                                                             <ControlTemplate TargetType="{x:Type ProgressBar}">
                                                                                 <Border BorderThickness="{TemplateBinding BorderThickness}"
-                                                                                    CornerRadius="{DynamicResource ControlCornerRadius}">
+								                                                CornerRadius="{DynamicResource ControlCornerRadius}">
                                                                                     <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                                                                                         <Rectangle Fill="{TemplateBinding Background}" RadiusY="4" RadiusX="4"/>
                                                                                         <Rectangle x:Name="PART_Track" Margin="0" RadiusY="4" RadiusX="4"/>
@@ -421,28 +425,15 @@
                                                 </StackPanel>
                                             </DockPanel>
 
-                                            <DockPanel Tag="{DynamicResource Htlb_HasData}" Margin="20,0,0,0">
-                                                <DockPanel.Style>
-                                                    <Style TargetType="DockPanel">
-                                                        <Setter Property="Control.Visibility" Value="Visible"/>
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </DockPanel.Style>
+                                            <DockPanel Tag="{DynamicResource Htlb_HasData}" Margin="20,0,0,0" Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}" >
                                                 <Viewbox Stretch="Uniform" Height="30">
                                                     <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
-                                                        v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
-                                                        h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
+                                                    v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
+                                                    h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
                                                 </Viewbox>
                                                 <StackPanel Height="50" Margin="10,0,0,0" VerticalAlignment="Center">
                                                     <Label Content="HowLongToBeat" />
-                                                    <StackPanel Name="PART_hltbProgressBar" Width="310" Height="25" HorizontalAlignment="Left"/>
+                                                    <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center" Width="310" HorizontalAlignment="Left"/>
                                                 </StackPanel>
                                             </DockPanel>
                                         </DockPanel>
@@ -715,21 +706,13 @@
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#region ScreenshotsVisualizer-->
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}" Tag="{DynamicResource Ssv_HasData}">
-                                                <TabItem.Style>
-                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                        <Setter Property="Control.Visibility" Value="Visible" />
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </TabItem.Style>
-                                                <StackPanel Margin="0,16,0,0" Name="PART_SsvSinglePicture"/>
+                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}"
+                                                 Visibility="{PluginStatus Plugin=playnite-screenshotsvisualizer-plugin, Status=Installed}" >
+                                                <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}">
+                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginSinglePicture" Margin="0,10,20,0" />
+                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,20,0" />
+                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="400"/>
+                                                </StackPanel>
                                             </TabItem>
                                             <!--#endregion -->
                                             <!--#region SuccessStory-->
@@ -845,36 +828,11 @@
                                             </TabItem>
                                             <!--#endregion-->
                                             <!--#region GameActivity-->
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameActivityTitle}" Tag="{DynamicResource Ga_HasData}">
-                                                <TabItem.Style>
-                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                        <Setter Property="Control.Visibility" Value="Visible" />
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </TabItem.Style>
-                                                <StackPanel Tag="{DynamicResource Ga_HasData}" Orientation="Vertical" Background="{TemplateBinding Background}">
-                                                    <StackPanel.Style>
-                                                        <Style>
-                                                            <Setter Property="Control.Visibility" Value="Visible" />
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                    <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                    <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </StackPanel.Style>
-                                                    <StackPanel Name="PART_GameActivity_Graphic" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
-                                                    <StackPanel Name="PART_GameActivity_GraphicLog" HorizontalAlignment="Stretch" Margin="0,40,0,0"/>
+                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameActivityTitle}"
+                                                 Visibility="{PluginStatus Plugin=playnite-gameactivity-plugin, Status=Installed}" >
+                                                <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}">
+                                                    <ContentControl x:Name="GameActivity_PluginButton" />
+                                                    <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,5,0,0" />
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#endregion-->
