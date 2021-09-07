@@ -36,5 +36,3 @@ Playnite forum thread: https://playnite.link/forum/thread-457.html
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_03.jpg)
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_04.jpg)
-
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_05.jpg)
