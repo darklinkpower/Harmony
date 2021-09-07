@@ -567,7 +567,7 @@
                                             <TextBlock Text="{DynamicResource LOCSsvTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
-                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,10,20,0" MaxWidth="150" HorizontalAlignment="Left"/>
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,10,20,0" MaxWidth="150" Height="40" HorizontalAlignment="Left"/>
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginSinglePicture" Margin="0,10,20,0" />
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,20,0" />
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="200"/>
