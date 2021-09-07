@@ -30,8 +30,7 @@
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
-                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="Border" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

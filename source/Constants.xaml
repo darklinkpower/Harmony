@@ -78,6 +78,7 @@
     <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
     <SolidColorBrush x:Key="GlyphHighlightLightBrush" Color="{DynamicResource GlyphHighlightLightColor}" />
+    <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource MainColorDark}" />
 
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
