@@ -57,9 +57,12 @@
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderThickness" Value="1,0,0,0" />
-                                <Style.Triggers>                                    
+                                <Style.Triggers>
                                     <DataTrigger Binding="{Settings FilterPanelPosition}" Value="Left">
-                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
+                                        <Setter Property="BorderThickness" Value="20,20,0,20" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Settings FilterPanelPosition}" Value="Right">
+                                        <Setter Property="BorderThickness" Value="0,20,20,20" />
                                     </DataTrigger>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderThickness" Value="0" />
