@@ -1,0 +1,22 @@
+ThemeApiVersion: 1.9.0
+Id: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
+Name: Harmony
+Author: darklinkpower
+Version: 1.23
+Links:
+    - Name: GitHub
+      Url: https://github.com/darklinkpower/Harmony
+    - Name: Playnite Forums thread
+      Url: https://playnite.link/forum/thread-457.html
+Constants:
+    - DetailsViewLogoAreMediaControlsDisplayed: Details View - Are Media Controls Displayed
+    - DetailsViewIsVideoPlayedByDefault: Details View - Video is played automatically
+    - DetailsViewIsLogoCoverFaded: Details View - Logo and cover are faded by default
+    - DetailsViewIsVideoTrailerDefault: Details View - Default video is Trailer
+    - DetailsViewIsLogoVisible: Details View - Logo is displayed
+    - DetailsViewIsLogoOnLeft: Details View - Logo is placed on the left
+    - DetailsViewLogoHeight(100,250): Details View - Height of logos
+    - DetailsViewDetailsIconsVisibility: Details View - Visibility of icons in details
+    - GridViewIsLogoVisible: Grid View - Logo is displayed
+    - GridViewLogoHeight(100,200): Grid View - Height of logos
+    - GridViewDetailsIconsVisibility: Grid View - Visibility of icons in details

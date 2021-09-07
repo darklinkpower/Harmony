@@ -41,30 +41,26 @@
         <ResourceDictionary Source="DefaultControls/ToggleButton.xaml" />
         <ResourceDictionary Source="DefaultControls/ToolTip.xaml" />
         <ResourceDictionary Source="DefaultControls/TreeView.xaml" />
-        <ResourceDictionary Source="DefaultControls/DataGrid.xaml" />
         <!--Custom Controls-->
         <ResourceDictionary Source="CustomControls/ExtendedListBox.xaml" />
         <ResourceDictionary Source="CustomControls/ExtendedListView.xaml" />
-        <ResourceDictionary Source="CustomControls/ExtendedDataGrid.xaml" />
         <ResourceDictionary Source="CustomControls/GameMenu.xaml" />
         <ResourceDictionary Source="CustomControls/GameGroupMenu.xaml" />
         <ResourceDictionary Source="CustomControls/HtmlTextView.xaml" />
+        <ResourceDictionary Source="CustomControls/MainMenu.xaml" />
         <ResourceDictionary Source="CustomControls/TrayContextMenu.xaml" />
-        <ResourceDictionary Source="CustomControls/NumericBoxes.xaml" />
+        <ResourceDictionary Source="CustomControls/NullableIntBox.xaml" />
+        <ResourceDictionary Source="CustomControls/NumericBox.xaml" />
+        <ResourceDictionary Source="CustomControls/ViewSettingsMenu.xaml" />
         <ResourceDictionary Source="CustomControls/SliderEx.xaml" />
         <ResourceDictionary Source="CustomControls/ExpanderEx.xaml" />
         <ResourceDictionary Source="CustomControls/WindowBase.xaml" />
         <ResourceDictionary Source="CustomControls/SidebarItem.xaml" />
-        <ResourceDictionary Source="CustomControls/ComboBoxList.xaml" />
-        <ResourceDictionary Source="CustomControls/FilterSelectionBox.xaml" />
-        <ResourceDictionary Source="CustomControls/SearchBox.xaml" />
-        <ResourceDictionary Source="CustomControls/TopPanelItem.xaml" />
         <!--Derived Styles-->
         <ResourceDictionary Source="DerivedStyles/TextBlockGameScore.xaml" />
         <ResourceDictionary Source="DerivedStyles/PropertyItemButton.xaml" />
         <ResourceDictionary Source="DerivedStyles/DetailsScrollViewer.xaml" />
         <ResourceDictionary Source="DerivedStyles/Simplebutton.xaml" />
-        <ResourceDictionary Source="DerivedStyles/GridViewGroupStyle.xaml" />
         <ResourceDictionary Source="DerivedStyles/GridViewItemStyle.xaml" />
         <ResourceDictionary Source="DerivedStyles/GridViewItemTemplate.xaml" />
         <ResourceDictionary Source="DerivedStyles/DetailsViewItemTemplate.xaml" />
@@ -82,8 +78,8 @@
         <!--Views-->
         <ResourceDictionary Source="Views/Sidebar.xaml" />
         <ResourceDictionary Source="Views/ExplorerPanel.xaml" />
-        <ResourceDictionary Source="Views/FilterPanelView.xaml" />
-        <ResourceDictionary Source="Views/TopPanel.xaml" />
+        <ResourceDictionary Source="Views/FilterPanel.xaml" />
+        <ResourceDictionary Source="Views/MainPanel.xaml" />
         <ResourceDictionary Source="Views/NotificationPanel.xaml" />
         <ResourceDictionary Source="Views/DetailsViewGameOverview.xaml" />
         <ResourceDictionary Source="Views/GridViewGameOverview.xaml" />
