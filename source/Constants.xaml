@@ -35,6 +35,7 @@
     <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">20</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GeneralMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
 
@@ -94,6 +95,18 @@
         <GradientStop Color="{DynamicResource MainColor}" Offset="1.0" />
     </LinearGradientBrush>
 
+    <Color x:Key="TopPanelItemBackgroundColor">#2e2c2f</Color>
+    <Color x:Key="TopPanelItemHoverBackgroundColor">#424242</Color>
+    <Color x:Key="TopPanelSearchBoxBackgroundColor">#2e2c2f</Color>
+    <Color x:Key="TopPanelFilterToggleBackgroundColor">#2e2c2f</Color>
+
+    <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
+    <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
+    <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />
+    <SolidColorBrush x:Key="TopPanelFilterToggleBackgroundBrush" Color="{DynamicResource TopPanelFilterToggleBackgroundColor}" />
+
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" Opacity="0.4"/>
+    
     <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.6" EndPoint="0.5,1">
         <GradientStop Color="#00000000" Offset="0.0" />
         <GradientStop Color="#D9000000" Offset="1.0" />
