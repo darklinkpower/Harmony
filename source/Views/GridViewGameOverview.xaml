@@ -549,72 +549,39 @@
                                         </TabControl>
 
                                         <!--#region HowLongToBeat-->
-                                        <StackPanel Tag="{DynamicResource Htlb_HasData}" DockPanel.Dock="Top"
-                                                    Margin="5,15,5,0">
-                                            <StackPanel.Style>
-                                                <Style TargetType="StackPanel">
-                                                    <Setter Property="Control.Visibility" Value="Visible"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
+                                        <StackPanel DockPanel.Dock="Top"
+                                                    Margin="5,15,5,0" Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}">
                                             <TextBlock Text="HowLongToBeat"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
-                                            <StackPanel Name="PART_hltbProgressBar" Height="25"/>
+                                            <DockPanel>
+                                                <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center"/>
+                                                <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
+                                            </DockPanel>
                                         </StackPanel>
                                         <!--#endregion -->
 
                                         <!--#region ScreenshotsVisualizer-->
-                                        <StackPanel Tag="{DynamicResource Ssv_HasData}" DockPanel.Dock="Top"
+                                        <StackPanel DockPanel.Dock="Top" Visibility="{PluginStatus Plugin=playnite-screenshotsvisualizer-plugin, Status=Installed}"
                                                     Margin="5,15,5,0">
-                                            <StackPanel.Style>
-                                                <Style TargetType="StackPanel">
-                                                    <Setter Property="Control.Visibility" Value="Visible"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCSsvTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
-                                            <StackPanel Margin="0,16,0,0" Name="PART_SsvSinglePicture"/>
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,10,20,0" MaxWidth="150" HorizontalAlignment="Left"/>
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginSinglePicture" Margin="0,10,20,0" />
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,20,0" />
+                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="200"/>
                                         </StackPanel>
                                         <!--#endregion -->
 
                                         <!--#region GameActivity-->
-                                        <StackPanel Tag="{DynamicResource Ga_HasData}" DockPanel.Dock="Top"
+                                        <StackPanel DockPanel.Dock="Top" Visibility="{PluginStatus Plugin=playnite-gameactivity-plugin, Status=Installed}"
                                                     Margin="5,15,5,0">
-                                            <StackPanel.Style>
-                                                <Style TargetType="StackPanel">
-                                                    <Setter Property="Control.Visibility" Value="Visible"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                            <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
-                                            <StackPanel Name="PART_GameActivity_Graphic" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
-                                            <StackPanel Name="PART_GameActivity_GraphicLog" HorizontalAlignment="Stretch" Margin="0,40,0,0"/>
+                                            <ContentControl x:Name="GameActivity_PluginButton" />
+                                            <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,5,0,0" />
                                         </StackPanel>
                                         <!--#endregion -->
 
