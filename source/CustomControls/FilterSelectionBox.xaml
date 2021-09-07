@@ -70,9 +70,9 @@
         </Border>
     </ControlTemplate>
 
-    <Style x:Key="FilterSelectionBoxItemStyle" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
+    <!--<Style x:Key="FilterSelectionBoxItemStyle" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
         <Setter Property="Padding" Value="5" />
-    </Style>
+    </Style>-->
 
     <Style TargetType="{x:Type FilterEnumSelectionBox}">
         <Setter Property="SnapsToDevicePixels" Value="True" />

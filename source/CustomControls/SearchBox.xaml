@@ -10,12 +10,12 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type SearchBox}">
                     <Grid>
+                        <TextBox x:Name="PART_TextInpuText"
+                                 VerticalContentAlignment="Center" Padding="5,0,25,0"/>
                         <ContentControl x:Name="PART_SeachIcon"
                                         ContentTemplate="{DynamicResource SearchTextIconTemplate}"
                                         VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"
                                         Foreground="{DynamicResource TextBrushDarker}" />
-                        <TextBox x:Name="PART_TextInpuText"
-                                 VerticalContentAlignment="Center" Padding="5,0,25,0"/>
                         <ContentControl x:Name="PART_ClearTextIcon"
                                         ContentTemplate="{DynamicResource ClearTextIconTemplate}" 
                                         FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0" 

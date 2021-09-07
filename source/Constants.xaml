@@ -38,7 +38,7 @@
     <CornerRadius x:Key="GeneralMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
-
+    <CornerRadius x:Key="TopPanelItemsCornerRadius">12</CornerRadius>
     <Thickness x:Key="SidebarItemPadding">8</Thickness>
     
     <Color x:Key="BlackColor">#FF000000</Color>
@@ -96,10 +96,10 @@
         <GradientStop Color="{DynamicResource MainColor}" Offset="1.0" />
     </LinearGradientBrush>
 
-    <Color x:Key="TopPanelItemBackgroundColor">#2e2c2f</Color>
-    <Color x:Key="TopPanelItemHoverBackgroundColor">#424242</Color>
+    <Color x:Key="TopPanelItemBackgroundColor">Transparent</Color>
+    <Color x:Key="TopPanelItemHoverBackgroundColor">Transparent</Color>
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#2e2c2f</Color>
-    <Color x:Key="TopPanelFilterToggleBackgroundColor">#2e2c2f</Color>
+    <Color x:Key="TopPanelFilterToggleBackgroundColor">Transparent</Color>
 
     <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />

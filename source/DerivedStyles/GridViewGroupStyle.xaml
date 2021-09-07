@@ -33,6 +33,7 @@
                                     </TextBlock.Style>
                                 </TextBlock>
                                 <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat=({0})}"
+                                           Foreground="{DynamicResource GlyphBrush}"
                                            VerticalAlignment="Center" HorizontalAlignment="Left"
                                            Style="{DynamicResource BaseTextBlockStyle}"
                                            DockPanel.Dock="Left" TextAlignment="Center"
