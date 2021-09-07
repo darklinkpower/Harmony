@@ -24,6 +24,7 @@ Playnite forum thread: https://playnite.link/forum/thread-457.html
 - HowLongToBeat data: via custom integration of the [HowLongToBeat](https://github.com/Lacro59/playnite-howlongtobeat-plugin) extension.
 - Game statistics: via custom integration of the [GameActivity](https://github.com/Lacro59/playnite-gameactivity-plugin) extension.
 - Screenshots: via custom integration of the [ScreenshotsVisualizer](https://github.com/Lacro59/playnite-screenshotsvisualizer-plugin) extension.
+- Duplicate copies handling: via custom integration of the [DuplicateHider](https://github.com/felixkmh/DuplicateHider) extension.
 - Logos: download of logos for use in the theme via [Extra Metadata Tools](https://playnite.link/forum/thread-575.html) extension.
 - Videos: download of trailer and microtrailer videos for use in the theme via [Extra Metadata Tools Video](https://playnite.link/forum/thread-575.html) extension.
   
@@ -36,5 +37,3 @@ Playnite forum thread: https://playnite.link/forum/thread-457.html
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_03.jpg)
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_04.jpg)
-
-![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_05.jpg)
