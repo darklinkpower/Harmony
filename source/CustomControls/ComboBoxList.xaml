@@ -68,11 +68,9 @@
         </Border>
     </ControlTemplate>
 
-    <!--There's a rare bug that causes the checkbox to not inherit the style. It's all Playnite's fault, but Crow being Crow says it's a bug in WPF
-    when we all know WPF doesn't have bugs...sigh...-->
-    <!--<Style x:Key="ComboBoxListItemStyle" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
+    <Style x:Key="ComboBoxListItemStyle" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">
         <Setter Property="Padding" Value="5" />
-    </Style>-->
+    </Style>
     
     <Style TargetType="{x:Type ComboBoxList}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
