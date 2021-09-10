@@ -87,7 +87,7 @@
         <Setter Property="Focusable" Value="False" />
         <Setter Property="Margin" Value="10,6,0,6" />
         <Setter Property="Padding" Value="9,0,9,0" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Template">
             <Setter.Value>
