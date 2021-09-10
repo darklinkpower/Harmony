@@ -1,0 +1,12 @@
+Constants:
+    - DetailsViewLogoAreMediaControlsDisplayed: Details View - Are Media Controls Displayed
+    - DetailsViewIsVideoPlayedByDefault: Details View - Video is played automatically
+    - DetailsViewIsLogoCoverFaded: Details View - Logo and cover are faded by default
+    - DetailsViewIsVideoTrailerDefault: Details View - Default video is Trailer
+    - DetailsViewIsLogoVisible: Details View - Logo is displayed
+    - DetailsViewIsLogoOnLeft: Details View - Logo is placed on the left
+    - DetailsViewLogoHeight(100,250): Details View - Height of logos
+    - DetailsViewDetailsIconsVisibility: Details View - Visibility of icons in details
+    - GridViewIsLogoVisible: Grid View - Logo is displayed
+    - GridViewLogoHeight(100,200): Grid View - Height of logos
+    - GridViewDetailsIconsVisibility: Grid View - Visibility of icons in details 
