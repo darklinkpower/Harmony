@@ -417,10 +417,11 @@
                                                      Margin="-1,0,-1,0" Padding="0" Background="Transparent"/>
                                         </StackPanel>
 
-                                        <TabControl Margin="0,0,5,0" DockPanel.Dock="Top">
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameDescriptionTitle}">
-                                                <StackPanel Margin="0,16,0,0" Name="PART_ElemDescription" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
-                                                    <HtmlTextView Name="PART_HtmlDescription"
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,0,5,15">
+                                            <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
+                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
+                                            <HtmlTextView Name="PART_HtmlDescription"
                                                         Margin="0,5,0,5"
                                                         HtmlFontSize="{DynamicResource FontSize}"
                                                         HtmlFontFamily="{DynamicResource FontFamily}"
@@ -428,155 +429,83 @@
                                                         LinkForeground="{DynamicResource GlyphColor}"                                      
                                                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                                         ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-                                                </StackPanel>
-                                            </TabItem>
-                                            <!--#region SuccessStory-->
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSuccessStoryAchievements}" Tag="{DynamicResource Sc_HasData}">
-                                                <TabItem.Style>
-                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                        <Setter Property="Control.Visibility" Value="Visible" />
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </TabItem.Style>
-                                                <StackPanel Tag="{DynamicResource Sc_HasData}" Orientation="Vertical" Background="{TemplateBinding Background}">
-                                                    <StackPanel.Style>
-                                                        <Style>
-                                                            <Setter Property="Control.Visibility" Value="Visible" />
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="{x:Null}">
-                                                                    <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
-                                                                    <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </StackPanel.Style>
-                                                    <StackPanel x:Name="PART_Achievements_ProgressBar" Margin="0,10,0,0"/>
-                                                    <Separator Background="{DynamicResource HighlightGlyphBrush}" />
-                                                    <!--#region Custom Success Story List Start -->
-                                                    <ListBox ItemsSource="{DynamicResource Sc_ListAchievements}">
-                                                        <ListBox.ItemContainerStyle>
-                                                            <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
-                                                                <Setter Property="Focusable" Value="False"/>
-                                                            </Style>
-                                                        </ListBox.ItemContainerStyle>
-                                                        <ListBox.Template>
-                                                            <ControlTemplate>
-                                                                <ItemsPresenter>
+                                        </StackPanel>
 
-                                                                </ItemsPresenter>
-                                                            </ControlTemplate>
-                                                        </ListBox.Template>
-                                                        <ListBox.ItemTemplate>
-                                                            <DataTemplate>
-                                                                <Grid Margin="0,5" Height="65">
-                                                                    <Grid.ColumnDefinitions>
-                                                                        <ColumnDefinition Width="58" />
-                                                                        <ColumnDefinition Width="*" />
-                                                                    </Grid.ColumnDefinitions>
 
-                                                                    <StackPanel Grid.Column="0" Height="48" Width="48" VerticalAlignment="Top" Margin="0,5,0,0">
-                                                                        <Image Stretch="UniformToFill" >
-                                                                            <Image.Style>
-                                                                                <Style TargetType="{x:Type Image}">
-                                                                                    <Setter Property="Source" Value="{Binding ImageUnlocked, Converter={StaticResource ImageStringToImageConverter}}"/>
-                                                                                    <Style.Triggers>
-                                                                                        <!-- Achievement is Locked -->
-                                                                                        <DataTrigger Binding="{Binding DateUnlocked}" Value="{x:Static sys:DateTime.MinValue}">
-                                                                                            <Setter Property="Source" Value="{Binding ImageLocked, Converter={StaticResource ImageStringToImageConverter}}" />
-                                                                                        </DataTrigger>
-                                                                                    </Style.Triggers>
-                                                                                </Style>
-                                                                            </Image.Style>
-                                                                        </Image>
-                                                                    </StackPanel>
-                                                                    <Grid Grid.Column="1" Margin="10,0,0,0">
-                                                                        <Grid.ColumnDefinitions>
-                                                                            <ColumnDefinition Width="*" />
-                                                                        </Grid.ColumnDefinitions>
-
-                                                                        <Grid.RowDefinitions>
-                                                                            <RowDefinition Height="auto" />
-                                                                            <RowDefinition Height="*" />
-                                                                        </Grid.RowDefinitions>
-
-                                                                        <Grid Grid.Row="0">
-                                                                            <Grid.ColumnDefinitions>
-                                                                                <ColumnDefinition Width="*" />
-                                                                                <ColumnDefinition Width="Auto" />
-                                                                            </Grid.ColumnDefinitions>
-
-                                                                            <TextBlock Grid.Column="0" Text="{Binding Name}" Foreground="{DynamicResource TextBrush}" TextTrimming="CharacterEllipsis">
-                                                                                <TextBlock.ToolTip>
-                                                                                    <ToolTip Content="{Binding Name}"></ToolTip>
-                                                                                </TextBlock.ToolTip>
-                                                                            </TextBlock>
-                                                                            <TextBlock Grid.Column="1" TextAlignment="Right" Text="{Binding DateUnlocked, StringFormat={}{0:dd/MM/yyyy}}"  Foreground="{DynamicResource TextBrush}" Margin="10,0,0,0">
-                                                                                <TextBlock.Style>
-                                                                                    <Style>
-                                                                                        <Style.Triggers>
-                                                                                            <DataTrigger Binding="{Binding DateUnlocked}" Value="{x:Static sys:DateTime.MinValue}">
-                                                                                                <Setter Property="Control.Visibility" Value="Collapsed"/>
-                                                                                            </DataTrigger>
-                                                                                        </Style.Triggers>
-                                                                                    </Style>
-                                                                                </TextBlock.Style>
-                                                                            </TextBlock>
-                                                                        </Grid>
-                                                                        <TextBlock Grid.Row="1" Text="{Binding Description}" VerticalAlignment="Top" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource TextBrushDarker}" >
-                                                                            <TextBlock.ToolTip>
-                                                                                <ToolTip Content="{Binding Description}"></ToolTip>
-                                                                            </TextBlock.ToolTip>
-                                                                        </TextBlock>
-                                                                        <ProgressBar Height="16" Grid.Row="2" Minimum="0" Maximum="100" Value="{Binding Percent}" />
-                                                                    </Grid>
-                                                                </Grid>
-                                                            </DataTemplate>
-                                                        </ListBox.ItemTemplate>
-                                                    </ListBox>
-                                                    <!--#endregion -->
-                                                </StackPanel>
-                                            </TabItem>
-                                            <!--#endregion-->
-                                        </TabControl>
+                                        <!--#region SuccessStory-->
+                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
+                                                    Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
+                                            <StackPanel.Style>
+                                                <Style TargetType="{x:Type StackPanel}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </StackPanel.Style>
+                                            <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource BaseTextBlockStyle}"
+                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                            <DockPanel Margin="0,10,0,0">
+                                                <ContentControl DockPanel.Dock="Left" x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center"/>
+                                                <ContentControl x:Name="SuccessStory_PluginProgressBar" Margin="5,5,20,0" VerticalAlignment="Center" Height="28" />
+                                            </DockPanel>
+                                            <ContentControl x:Name="SuccessStory_PluginCompactUnlocked" Margin="0,10,20,0" />
+                                            <ContentControl x:Name="SuccessStory_PluginCompactLocked" Margin="0,10,20,0" />
+                                            <ContentControl x:Name="SuccessStory_PluginUserStats" Margin="0,10,20,0" />
+                                            <ContentControl x:Name="SuccessStory_PluginChart" Margin="0,10,20,0" />
+                                        </StackPanel>
+                                        <!--#endregion -->
 
                                         <!--#region HowLongToBeat-->
-                                        <StackPanel DockPanel.Dock="Top"
-                                                    Margin="5,15,5,0" Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
+                                                    Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}">
                                             <TextBlock Text="HowLongToBeat"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
                                             <DockPanel>
-                                                <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center"/>
+                                                <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" VerticalAlignment="Center"/>
                                                 <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
                                             </DockPanel>
                                         </StackPanel>
                                         <!--#endregion -->
 
                                         <!--#region ScreenshotsVisualizer-->
-                                        <StackPanel DockPanel.Dock="Top" Visibility="{PluginStatus Plugin=playnite-screenshotsvisualizer-plugin, Status=Installed}"
-                                                    Margin="5,15,5,0">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
+                                                    Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                            <StackPanel.Style>
+                                                <Style TargetType="{x:Type StackPanel}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCSsvTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
-                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,10,20,0" MaxWidth="150" Height="40" HorizontalAlignment="Left"/>
+                                            <!--<ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="0,10,20,0" MaxWidth="150" Height="40" HorizontalAlignment="Left"/>-->
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginSinglePicture" Margin="0,10,20,0" />
                                             <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,20,0" />
-                                            <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="200"/>
                                         </StackPanel>
                                         <!--#endregion -->
-
                                         <!--#region GameActivity-->
-                                        <StackPanel DockPanel.Dock="Top" Visibility="{PluginStatus Plugin=playnite-gameactivity-plugin, Status=Installed}"
-                                                    Margin="5,15,5,0">
+                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
+                                                    Tag="{PluginSettings Plugin=GameActivity, Path=HasData}">
+                                            <StackPanel.Style>
+                                                <Style TargetType="{x:Type StackPanel}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
@@ -584,7 +513,6 @@
                                             <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,5,0,0" />
                                         </StackPanel>
                                         <!--#endregion -->
-
                                     </DockPanel>
                                 </ScrollViewer>
                             </DockPanel>
