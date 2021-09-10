@@ -13,3 +13,17 @@ Packages:
     Changelog:
       - Playnite 9 support
       - DuplicateHider Extension support
+  - Version: 2.1
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-09-09
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.1/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_1.pthm
+    Changelog:
+      - Details View - Add SuccessStory, SystemChecker and CheckLocalizations plugins support
+      - Details View - Add SuccessStory achievements summary
+      - Details View - Fix Completion status button style
+      - Details View - Fix notes tab showing when game doesn't have notes
+      - Details View - Fix certain plugin elements showing when games don't have data
+      - Grid View - Add SuccessStory support
+      - Grid View - Fix certain plugin elements showing when games don't have data
+      - Top panel - Change foreground color of inactive items
+      - Misc fixes and improvements
