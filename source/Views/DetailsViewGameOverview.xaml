@@ -39,9 +39,7 @@
                                         </RadialGradientBrush>
                                     </FadeImage.ImageOpacityMask>
                                 </FadeImage>
-
-                                <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" MaxWidth="1024" VerticalAlignment="Top"/>
-
+                                
                                 <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" />
@@ -73,7 +71,7 @@
                                                     </TextBlock.Effect>
                                                 </TextBlock>
                                             </DockPanel>
-                                            <DockPanel Margin="0,15,0,0">
+                                            <DockPanel Margin="0,15,0,0" LastChildFill="False">
                                                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" DockPanel.Dock="Left">
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="*" />
@@ -528,6 +526,13 @@
                                                 </StackPanel>
                                             </TabItem>
 
+                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="Video"
+                                                 Visibility="{PluginStatus Plugin=ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429, Status=Installed}">
+                                                <StackPanel Margin="0,16,0,0">
+                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" MaxWidth="1024" VerticalAlignment="Top"/>
+                                                </StackPanel>
+                                            </TabItem>
+                                            
                                             <!--#region SuccessStory-->
                                             <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSuccessStoryAchievements}"
                                                  Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
