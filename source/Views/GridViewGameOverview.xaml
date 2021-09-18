@@ -56,19 +56,19 @@
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
-                                <Grid DockPanel.Dock="Top" Visibility="{PluginStatus Plugin=ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429, Status=Installed}">
+                                <Grid DockPanel.Dock="Top" Tag="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos}">
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
                                     <Border Padding="10,5,10,10" Height="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxHeight}" MaxWidth="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxWidth}">
                                         <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
-                                        <Border.Style>
-                                            <Style TargetType="Border">
-                                                <Setter Property="Visibility" Value="Collapsed" />
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos}" Value="True">
-                                                        <Setter Property="Visibility" Value="Visible" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Border.Style>
                                     </Border>
                                 </Grid>
                                 <DockPanel DockPanel.Dock="Top">
