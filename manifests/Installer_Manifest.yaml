@@ -27,3 +27,11 @@ Packages:
       - Grid View - Fix certain plugin elements showing when games don't have data
       - Top panel - Change foreground color of inactive items
       - Misc fixes and improvements
+  - Version: 2.2
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-09-18
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.2/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_2.pthm
+    Changelog:
+      - 'Details View: Fix plugin butttons using all available width'
+      - 'Details View: Add logo and video support using Extra Metadata Loader extension'
+      - 'Grid View: Add logo support using Extra Metadata Loader extension'
