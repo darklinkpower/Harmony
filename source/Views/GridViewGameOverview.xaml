@@ -476,6 +476,15 @@
                                             <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,5,0,0" />
                                         </StackPanel>
                                         <!--#endregion -->
+                                        <!--#region ReviewViewer-->
+                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
+                                                    Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}">
+                                            <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
+                                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                            <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,0,5"/>
+                                        </StackPanel>
+                                        <!--#endregion -->
                                     </DockPanel>
                                 </ScrollViewer>
                             </DockPanel>
