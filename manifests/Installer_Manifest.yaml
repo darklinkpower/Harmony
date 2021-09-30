@@ -35,3 +35,15 @@ Packages:
       - 'Details View: Fix plugin butttons using all available width'
       - 'Details View: Add logo and video support using Extra Metadata Loader extension'
       - 'Grid View: Add logo support using Extra Metadata Loader extension'
+  - Version: 2.3
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-09-30
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.3/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_3.pthm
+    Changelog:
+      - 'Update to changes in Playnite 9 stable release'
+      - 'Top Panel: View button show toggle state'
+      - 'Details View: Add Review Viewer extension support'
+      - 'Details View: Fix all text inside tabs having bold font weight'
+      - 'Grid View: Add Review Viewer extension support'
+      - 'Grid View: Fix details items displaying in wrong order'
+      - 'List View: Group count styling'
