@@ -272,10 +272,10 @@
                                                         <TextBlock Text="" Style="{StaticResource Icon}" 
                                                                FontFamily="{StaticResource FontIcoFont}" 
                                                                Visibility="{DynamicResource GridViewDetailsIconsVisibility}" />
-                                                        <ItemsControl Name="PART_ItemsAgeRatings" />
+                                                        <TextBlock Text="{DynamicResource LOCAgeRatingLabel}" />
                                                     </StackPanel>
                                                 </Label>
-                                                <Button Name="PART_ButtonAgeRating" VerticalAlignment="Center" />
+                                                <ItemsControl Name="PART_ItemsAgeRatings" />
 
                                                 <Label Name="PART_ElemSeries" >
                                                     <StackPanel Orientation="Horizontal">
