@@ -594,6 +594,17 @@
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#endregion-->
+                                            <!--#region ReviewViewer-->
+                                            <TabItem Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}" >
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
+                                                <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+                                                    <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,0,5" FontWeight="Normal"/>
+                                                </StackPanel>
+                                            </TabItem>
+                                            <!--#endregion-->
                                         </TabControl>
                                     </DockPanel>
                                 </Grid>
