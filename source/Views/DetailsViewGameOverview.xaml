@@ -39,7 +39,7 @@
                                         </RadialGradientBrush>
                                     </FadeImage.ImageOpacityMask>
                                 </FadeImage>
-                                
+
                                 <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="{Settings CalculatedGameDetailsIndentation}" />
@@ -492,7 +492,11 @@
                                             <!--#endregion-->
                                         </StackPanel>
                                         <TabControl Margin="10,4,0,0" Style="{DynamicResource TabControlDetailsView}">
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameDescriptionTitle}">
+                                            <TabItem>
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
                                                 <StackPanel Margin="0,16,0,0" Name="PART_ElemDescription">
                                                     <HtmlTextView Name="PART_HtmlDescription"
                                                         Margin="0,5,0,5"
@@ -504,7 +508,11 @@
                                                         ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                                                 </StackPanel>
                                             </TabItem>
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCNotesLabel}">
+                                            <TabItem>
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCNotesLabel}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Visible" />
@@ -526,16 +534,32 @@
                                                 </StackPanel>
                                             </TabItem>
 
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="Video"
-                                                 Visibility="{PluginStatus Plugin=ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429, Status=Installed}">
+                                            <TabItem Tag="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable}">
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
+                                                <TabItem.Style>
+                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                                <Setter Property="Control.Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TabItem.Style>
                                                 <StackPanel Margin="0,16,0,0">
                                                     <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" MaxWidth="1024" VerticalAlignment="Top"/>
                                                 </StackPanel>
                                             </TabItem>
-                                            
+
                                             <!--#region SuccessStory-->
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSuccessStoryAchievements}"
-                                                 Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
+                                            <TabItem Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
@@ -558,8 +582,11 @@
                                             <!--#endregion-->
 
                                             <!--#region ScreenshotsVisualizer-->
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCSsvTitle}"
-                                                 Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                            <TabItem Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCSsvTitle}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
@@ -577,8 +604,11 @@
                                             <!--#endregion -->
 
                                             <!--#region GameActivity-->
-                                            <TabItem FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Header="{DynamicResource LOCGameActivityTitle}"
-                                                 Tag="{PluginSettings Plugin=GameActivity, Path=HasData}" >
+                                            <TabItem Tag="{PluginSettings Plugin=GameActivity, Path=HasData}" >
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
