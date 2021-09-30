@@ -59,6 +59,7 @@
         <ResourceDictionary Source="CustomControls/FilterSelectionBox.xaml" />
         <ResourceDictionary Source="CustomControls/SearchBox.xaml" />
         <ResourceDictionary Source="CustomControls/TopPanelItem.xaml" />
+        <ResourceDictionary Source="CustomControls/PathSelectionBox.xaml" />
         <!--Derived Styles-->
         <ResourceDictionary Source="DerivedStyles/TextBlockGameScore.xaml" />
         <ResourceDictionary Source="DerivedStyles/PropertyItemButton.xaml" />
@@ -70,6 +71,7 @@
         <ResourceDictionary Source="DerivedStyles/DetailsViewItemTemplate.xaml" />
         <ResourceDictionary Source="DerivedStyles/DetailsViewGroupStyle.xaml" />
         <ResourceDictionary Source="DerivedStyles/DetailsViewItemStyle.xaml" />
+        <ResourceDictionary Source="DerivedStyles/ListViewGroupStyle.xaml" />
         <ResourceDictionary Source="DerivedStyles/StandardWindowStyle.xaml" />
         <ResourceDictionary Source="DerivedStyles/WindowBarButton.xaml" />
         <ResourceDictionary Source="DerivedStyles/BottomButton.xaml" />
