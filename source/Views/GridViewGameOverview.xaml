@@ -56,18 +56,18 @@
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
-                                <Grid DockPanel.Dock="Top" Tag="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos}">
+                                <Grid DockPanel.Dock="Top">
                                     <Grid.Style>
                                         <Style TargetType="Grid">
                                             <Setter Property="Visibility" Value="Collapsed" />
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogosa, TargetNullValue=False}" Value="True">
                                                     <Setter Property="Visibility" Value="Visible" />
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
                                     </Grid.Style>
-                                    <Border Padding="10,5,10,10" Height="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxHeight}" MaxWidth="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxWidth}">
+                                    <Border Padding="10,5,10,10" Height="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxHeight, TargetNullValue=0}" MaxWidth="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxWidth, TargetNullValue=0}">
                                         <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
                                     </Border>
                                 </Grid>
@@ -396,13 +396,12 @@
 
 
                                         <!--#region SuccessStory-->
-                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
-                                                    Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
+                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                     <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                        <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, TargetNullValue=False}" Value="True">
                                                             <Setter Property="Visibility" Value="Visible" />
                                                         </DataTrigger>
                                                     </Style.Triggers>
@@ -424,7 +423,7 @@
 
                                         <!--#region HowLongToBeat-->
                                         <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
-                                                    Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}">
+                                                    Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed, TargetNullValue={x:Static Visibility.Collapsed}}">
                                             <TextBlock Text="HowLongToBeat"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
@@ -436,13 +435,12 @@
                                         <!--#endregion -->
 
                                         <!--#region ScreenshotsVisualizer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
-                                                    Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                     <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                        <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, TargetNullValue=False}" Value="True">
                                                             <Setter Property="Visibility" Value="Visible" />
                                                         </DataTrigger>
                                                     </Style.Triggers>
@@ -457,13 +455,12 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region GameActivity-->
-                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
-                                                    Tag="{PluginSettings Plugin=GameActivity, Path=HasData}">
+                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                     <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                        <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, TargetNullValue=False}" Value="True">
                                                             <Setter Property="Visibility" Value="Visible" />
                                                         </DataTrigger>
                                                     </Style.Triggers>
@@ -478,7 +475,7 @@
                                         <!--#endregion -->
                                         <!--#region ReviewViewer-->
                                         <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
-                                                    Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}">
+                                                    Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed, TargetNullValue={x:Static Visibility.Collapsed}}">
                                             <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>

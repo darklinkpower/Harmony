@@ -6,7 +6,6 @@
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Collapsed</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
     <!--region end-->
-
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>

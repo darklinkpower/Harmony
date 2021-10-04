@@ -83,13 +83,12 @@
                                                 </Grid>
                                                 <Button DockPanel.Dock="Left" x:Name="PART_ButtonEditGame" Content="&#xEDED;" VerticalAlignment="Top" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" />
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0"
-                                                            Height="40" MaxWidth="150" DockPanel.Dock="Left"
-                                                            Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                                            Height="40" MaxWidth="150" DockPanel.Dock="Left">
                                                     <ContentControl.Style>
                                                         <Style TargetType="ContentControl">
                                                             <Setter Property="Visibility" Value="Collapsed" />
                                                             <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                                <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, TargetNullValue=False}" Value="True">
                                                                     <Setter Property="Visibility" Value="Visible" />
                                                                 </DataTrigger>
                                                             </Style.Triggers>
@@ -97,7 +96,7 @@
                                                     </ContentControl.Style>
                                                 </ContentControl>
                                                 <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed}" />
+                                                            Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed, TargetNullValue={x:Static Visibility.Collapsed}}" />
                                                 <ContentControl x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left" >
                                                     <ContentControl.Style>
                                                         <Style TargetType="ContentControl">
@@ -110,13 +109,12 @@
                                                         </Style>
                                                     </ContentControl.Style>
                                                 </ContentControl>
-                                                <ContentControl x:Name="GameActivity_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
-                                                            Tag="{PluginSettings Plugin=GameActivity, Path=HasData}" >
+                                                <ContentControl x:Name="GameActivity_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left">
                                                     <ContentControl.Style>
                                                         <Style TargetType="ContentControl">
                                                             <Setter Property="Visibility" Value="Visible" />
                                                             <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                                <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, TargetNullValue=False}" Value="True">
                                                                     <Setter Property="Visibility" Value="Visible" />
                                                                 </DataTrigger>
                                                             </Style.Triggers>
@@ -167,12 +165,12 @@
                                             </StackPanel>
                                         </DockPanel>
                                         <DockPanel>
-                                            <DockPanel Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}" Margin="0,0,20,0">
+                                            <DockPanel Margin="0,0,20,0">
                                                 <DockPanel.Style>
                                                     <Style TargetType="{x:Type DockPanel}">
                                                         <Setter Property="Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, TargetNullValue=False}" Value="True">
                                                                 <Setter Property="Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -186,12 +184,12 @@
                                                     <Label Content="{DynamicResource LOCSuccessStoryAchievements}" />
                                                     <DockPanel>
                                                         <DockPanel MinWidth="40">
-                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked}"/>
+                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked, TargetNullValue='-'}"/>
                                                             <TextBlock Text="/"/>
-                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Total}"/>
+                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Total, TargetNullValue='-'}"/>
                                                         </DockPanel>
                                                         <ProgressBar x:Name="progressBar" FontSize="10" Visibility="{Binding Visibility, ElementName=label, Mode=OneWay}" Margin="5,0,0,0"
-                                                            Maximum="{PluginSettings Plugin=SuccessStory, Path=Total}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked}" HorizontalAlignment="Left"
+                                                            Maximum="{PluginSettings Plugin=SuccessStory, Path=Total, TargetNullValue=0}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked, TargetNullValue=0}" HorizontalAlignment="Left"
                                                             Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
                                                             <ProgressBar.Resources>
                                                                 <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
@@ -222,12 +220,12 @@
                                                 </StackPanel>
                                             </DockPanel>
 
-                                            <DockPanel Tag="{PluginSettings Plugin=HowLongToBeat, Path=HasData}" Margin="20,0,0,0" >
+                                            <DockPanel Margin="20,0,0,0" >
                                                 <DockPanel.Style>
                                                     <Style TargetType="{x:Type DockPanel}">
                                                         <Setter Property="Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData, TargetNullValue=False}" Value="True">
                                                                 <Setter Property="Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -534,7 +532,7 @@
                                                 </StackPanel>
                                             </TabItem>
 
-                                            <TabItem Tag="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable}">
+                                            <TabItem>
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}"
                                                                FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
@@ -543,7 +541,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, TargetNullValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -555,7 +553,7 @@
                                             </TabItem>
 
                                             <!--#region SuccessStory-->
-                                            <TabItem Tag="{PluginSettings Plugin=SuccessStory, Path=HasData}">
+                                            <TabItem>
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}"
                                                                FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
@@ -564,7 +562,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, TargetNullValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -582,7 +580,7 @@
                                             <!--#endregion-->
 
                                             <!--#region ScreenshotsVisualizer-->
-                                            <TabItem Tag="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData}">
+                                            <TabItem>
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCSsvTitle}"
                                                                FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
@@ -591,20 +589,20 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, TargetNullValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
                                                 </TabItem.Style>
                                                 <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}" Margin="0,15,0,0">
-                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500" Background="Red"/>
+                                                    <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshotsVertical" Margin="0,10,20,0" Height="500"/>
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#endregion -->
 
                                             <!--#region GameActivity-->
-                                            <TabItem Tag="{PluginSettings Plugin=GameActivity, Path=HasData}" >
+                                            <TabItem>
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
                                                                FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
@@ -613,7 +611,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, TargetNullValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
