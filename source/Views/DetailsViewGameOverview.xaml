@@ -88,21 +88,31 @@
                                                         <Style TargetType="ContentControl">
                                                             <Setter Property="Visibility" Value="Collapsed" />
                                                             <Style.Triggers>
-                                                                <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, TargetNullValue=False}" Value="True">
+                                                                <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=False}" Value="True">
                                                                     <Setter Property="Visibility" Value="Visible" />
                                                                 </DataTrigger>
                                                             </Style.Triggers>
                                                         </Style>
                                                     </ContentControl.Style>
                                                 </ContentControl>
-                                                <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
-                                                            Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed, TargetNullValue={x:Static Visibility.Collapsed}}" />
+                                                <ContentControl x:Name="HowLongToBeat_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left">
+                                                    <ContentControl.Style>
+                                                        <Style TargetType="ContentControl">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{PluginSettings Plugin=HowLongToBeat, Path=EnableIntegrationButton, FallbackValue=False}" Value="True">
+                                                                    <Setter Property="Visibility" Value="Visible" />
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </ContentControl.Style>
+                                                </ContentControl>
                                                 <ContentControl x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left" >
                                                     <ContentControl.Style>
                                                         <Style TargetType="ContentControl">
-                                                            <Setter Property="Visibility" Value="Visible" />
+                                                            <Setter Property="Visibility" Value="Collapsed" />
                                                             <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                                <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=EnableIntegrationButton, FallbackValue=False}" Value="True">
                                                                     <Setter Property="Visibility" Value="Visible" />
                                                                 </DataTrigger>
                                                             </Style.Triggers>
@@ -114,7 +124,7 @@
                                                         <Style TargetType="ContentControl">
                                                             <Setter Property="Visibility" Value="Visible" />
                                                             <Style.Triggers>
-                                                                <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, TargetNullValue=False}" Value="True">
+                                                                <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=False}" Value="True">
                                                                     <Setter Property="Visibility" Value="Visible" />
                                                                 </DataTrigger>
                                                             </Style.Triggers>
@@ -170,7 +180,7 @@
                                                     <Style TargetType="{x:Type DockPanel}">
                                                         <Setter Property="Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, TargetNullValue=False}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=False}" Value="True">
                                                                 <Setter Property="Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -184,12 +194,12 @@
                                                     <Label Content="{DynamicResource LOCSuccessStoryAchievements}" />
                                                     <DockPanel>
                                                         <DockPanel MinWidth="40">
-                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked, TargetNullValue='-'}"/>
+                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Unlocked, FallbackValue='-'}"/>
                                                             <TextBlock Text="/"/>
-                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Total, TargetNullValue='-'}"/>
+                                                            <TextBlock Text="{PluginSettings Plugin=SuccessStory, Path=Total, FallbackValue='-'}"/>
                                                         </DockPanel>
-                                                        <ProgressBar x:Name="progressBar" FontSize="10" Visibility="{Binding Visibility, ElementName=label, Mode=OneWay}" Margin="5,0,0,0"
-                                                            Maximum="{PluginSettings Plugin=SuccessStory, Path=Total, TargetNullValue=0}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked, TargetNullValue=0}" HorizontalAlignment="Left"
+                                                        <ProgressBar x:Name="progressBar" FontSize="10" Margin="5,0,0,0"
+                                                            Maximum="{PluginSettings Plugin=SuccessStory, Path=Total, FallbackValue=0}" Value="{PluginSettings Plugin=SuccessStory, Path=Unlocked, FallbackValue=0}" HorizontalAlignment="Left"
                                                             Background="{DynamicResource TextBrush}" Foreground="{DynamicResource GlyphBrush}" Width="60" Height="10" Style="{DynamicResource RoundedProgressBar}">
                                                             <ProgressBar.Resources>
                                                                 <Style x:Key="RoundedProgressBar" TargetType="ProgressBar">
@@ -225,7 +235,7 @@
                                                     <Style TargetType="{x:Type DockPanel}">
                                                         <Setter Property="Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData, TargetNullValue=False}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData, FallbackValue=False}" Value="True">
                                                                 <Setter Property="Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -541,7 +551,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, TargetNullValue=False}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -562,7 +572,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, TargetNullValue=False}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -589,7 +599,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, TargetNullValue=False}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=ScreenshotsVisualizer, Path=HasData, FallbackValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
@@ -611,7 +621,7 @@
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
                                                         <Setter Property="Control.Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, TargetNullValue=False}" Value="True">
+                                                            <DataTrigger Binding="{PluginSettings Plugin=GameActivity, Path=HasData, FallbackValue=False}" Value="True">
                                                                 <Setter Property="Control.Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
