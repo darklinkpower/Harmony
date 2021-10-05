@@ -77,12 +77,14 @@
     <Style TargetType="{x:Type FilterEnumSelectionBox}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Height" Value="24" />
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template" Value="{DynamicResource FilterSelectionBoxTemplate}" />
     </Style>
     
     <Style TargetType="{x:Type FilterStringSelectionBox}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Height" Value="24" />
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template" Value="{DynamicResource FilterSelectionBoxTemplate}" />
     </Style>
 

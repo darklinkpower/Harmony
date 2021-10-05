@@ -5,11 +5,13 @@
         <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="FontSize" Value="15" />
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GroupItem}">
                     <ExpanderEx BorderThickness="0" SaveGameGroupId="{Binding Name, Mode=OneWay}"
-                                IsExpanded="True" Background="Transparent" Padding="10">
+                                IsExpanded="True" Background="Transparent" Padding="10"
+                                Cursor="Hand">
                         <ExpanderEx.Header>                            
                             <DockPanel Background="Transparent">
                                 <DockPanel.ContextMenu>

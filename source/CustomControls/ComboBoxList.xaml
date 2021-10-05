@@ -7,7 +7,7 @@
                 CornerRadius="{DynamicResource ControlCornerRadius}"
                 Style="{DynamicResource HighlightBorder}"
                 Background="{DynamicResource ControlBackgroundBrush}"
-                x:Name="Root">
+                x:Name="Root" Cursor="Hand">
             <Grid>
                 <DockPanel>
                     <Viewbox Margin="0,0,2,0" DockPanel.Dock="Right">

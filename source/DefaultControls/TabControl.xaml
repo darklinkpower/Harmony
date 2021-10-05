@@ -195,7 +195,7 @@
                                 SnapsToDevicePixels="True"
                                 BorderThickness="0,0,0,2" BorderBrush="{DynamicResource GlyphBrush}"/>
                         <TextBlock x:Name="TextContent" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
-                                   Foreground="{TemplateBinding Foreground}">
+                                   Foreground="{TemplateBinding Foreground}" Cursor="Hand">
                             <ContentPresenter x:Name="ContentSite" RecognizesAccessKey="True" ContentSource="Header"
                                               HorizontalAlignment="Center" Margin="5" VerticalAlignment="Center" />
                         </TextBlock>
