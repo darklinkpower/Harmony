@@ -115,7 +115,7 @@
                     <Grid>
                         <Border x:Name="IconBackground" CornerRadius="8" Background="{DynamicResource OpaqueGrayHighlightBrush}" Opacity="0.0" Visibility="Hidden">
                         </Border>
-                        <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="Fant" Margin="3" Opacity="0.3"/>
+                        <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="Fant" Margin="3" Opacity="0.95"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
