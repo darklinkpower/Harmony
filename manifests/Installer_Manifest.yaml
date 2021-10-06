@@ -47,3 +47,11 @@ Packages:
       - 'Grid View: Add Review Viewer extension support'
       - 'Grid View: Fix details items displaying in wrong order'
       - 'List View: Group count styling'
+  - Version: 2.4
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-10-06
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.4/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_4.pthm
+    Changelog:
+     - 'General: Use hand cursor for different controls and items'
+     - 'Grid View: Increase opacity of Duplicated Hider extension icons'
+     - 'Minor fixes and improvements'
