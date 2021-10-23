@@ -56,13 +56,16 @@
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
-                                <Grid DockPanel.Dock="Top">
+                                <Grid DockPanel.Dock="Top" Tag="{DynamicResource GridViewAllowUseOfLogos}">
                                     <Grid.Style>
                                         <Style TargetType="Grid">
-                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Setter Property="Visibility" Value="Visible" />
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos, FallbackValue=False}" Value="True">
-                                                    <Setter Property="Visibility" Value="Visible" />
+                                                <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos, FallbackValue=False}" Value="false">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="false" >
+                                                    <Setter Property="Visibility" Value="Collapsed" />
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>

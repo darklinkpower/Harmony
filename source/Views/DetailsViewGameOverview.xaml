@@ -50,7 +50,10 @@
                                     </Grid.RowDefinitions>
                                     <Grid MaxWidth="1024" Grid.Row="1">
                                         <!--#region Logo & Cover Image-->
-                                        <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
+                                        <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl"
+                                                    Margin="20,20,30,20"
+                                                    Tag="{DynamicResource DetailsViewAllowUseOfLogos}" 
+                                                    Style="{DynamicResource ControlPanelBoolTagToVisibility}"/>
                                         <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                             <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
                                                        StretchDirection="Both" Stretch="Uniform" 
@@ -652,5 +655,14 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="ControlPanelBoolTagToVisibility">
+        <Setter Property="Visibility" Value="Visible" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=true}" Value="false" >
+                <Setter Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
