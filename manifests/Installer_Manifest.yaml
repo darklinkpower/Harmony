@@ -55,3 +55,11 @@ Packages:
      - 'General: Use hand cursor for different controls and items'
      - 'Grid View: Increase opacity of Duplicated Hider extension icons'
      - 'Minor fixes and improvements'
+  - Version: 2.5
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-10-24
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.5/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_5.pthm
+    Changelog:
+      - 'DetailsView: Fix text in horizontal details being cut when font is too large'
+      - 'Details View: Add ThemeModifier variable to configure if Extra Metadata Loader logos can be used in the view'
+      - 'Grid View: Add ThemeModifier variable to configure if Extra Metadata Loader logos can be used in the view'
