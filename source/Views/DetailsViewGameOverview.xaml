@@ -643,6 +643,27 @@
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#endregion-->
+                                            <!--#region NewsViewer-->
+                                            <TabItem>
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
+                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                </TabItem.Header>
+                                                <TabItem.Style>
+                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=False}" Value="True">
+                                                                <Setter Property="Control.Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TabItem.Style>
+                                                <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+                                                    <ContentControl x:Name="NewsViewer_NewsViewerControl" Margin="0,5,0,5" FontWeight="Normal"/>
+                                                </StackPanel>
+                                            </TabItem>
+                                            <!--#endregion-->
                                         </TabControl>
                                     </DockPanel>
                                 </Grid>
