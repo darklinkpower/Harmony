@@ -63,3 +63,10 @@ Packages:
       - 'DetailsView: Fix text in horizontal details being cut when font is too large'
       - 'Details View: Add ThemeModifier variable to configure if Extra Metadata Loader logos can be used in the view'
       - 'Grid View: Add ThemeModifier variable to configure if Extra Metadata Loader logos can be used in the view'
+  - Version: 2.6
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2021-11-09
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.6/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_6.pthm
+    Changelog:
+      - 'Details View: Added support for "News Viewer" extension'
+      - 'Grid View: Fix missing cover show option not showing in grid view when configured'
