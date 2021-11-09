@@ -19,7 +19,7 @@
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                    HorizontalAlignment="Center" VerticalAlignment="Center"
                                    Stretch="{Settings CoverArtStretch}" />
-                                <Border Background="{DynamicResource ButtonBackgroundBrush}" x:Name="TextGameName" Visibility="Collapsed">
+                                <Border Background="#99000000" x:Name="TextGameName" Visibility="Collapsed">
                                     <TextBlock Text="{Binding DisplayName}"
                                            TextWrapping="Wrap" Margin="5"
                                            Style="{StaticResource BaseTextBlockStyle}"
