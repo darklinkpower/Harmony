@@ -29,16 +29,33 @@
                                       d:DesignHeight="1550"
                                       d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                             <Grid Margin="0,0,0,20">
-                                <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top">
-                                    <FadeImage.ImageOpacityMask>
-                                        <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                            <RadialGradientBrush.GradientStops>
-                                                <GradientStop Color="Black" Offset="0.3" />
-                                                <GradientStop Color="Transparent" Offset="1" />
-                                            </RadialGradientBrush.GradientStops>
-                                        </RadialGradientBrush>
-                                    </FadeImage.ImageOpacityMask>
-                                </FadeImage>
+                                
+                                <Border>
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                    <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                        <FadeImage.ImageOpacityMask>
+                                            <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                                <RadialGradientBrush.GradientStops>
+                                                    <GradientStop Color="Black" Offset="0.3" />
+                                                    <GradientStop Color="Transparent" Offset="1" />
+                                                </RadialGradientBrush.GradientStops>
+                                            </RadialGradientBrush>
+                                        </FadeImage.ImageOpacityMask>
+                                    </FadeImage>
+                                </Border>
+
+                                <!-- BackgroundChanger plugin background -->
+                                <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
+                                                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
                                 <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                     <Grid.RowDefinitions>
