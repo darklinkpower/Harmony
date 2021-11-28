@@ -83,3 +83,11 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.7/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_8.pthm
     Changelog:
       - 'Style filter ComboBox'
+  - Version: 2.9
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2021-11-28
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.9/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_9.pthm
+    Changelog:
+      - 'Details View: Fix background image not showing when BackgroundChanger extension is enabled but control is disabled in settings'
+      - 'Grid View: Add support for ExtraMetadataLoader video player control'
+      - 'Grid View: Add support for NewsViewer extension control'
