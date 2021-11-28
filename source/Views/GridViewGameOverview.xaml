@@ -372,6 +372,7 @@
                                             </GridEx>
                                         </StackPanel>
 
+                                        <!--#region ExtraMetadataLoader Video Control-->
                                         <StackPanel Name="VideoFeed" DockPanel.Dock="Top"
                                                     Margin="5,0,5,15">
                                             <StackPanel.Style>
@@ -392,6 +393,7 @@
                                             <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
                                             <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" />
                                         </StackPanel>
+                                        <!--#endregion -->
                                         
                                         <StackPanel Name="PART_ElemNotes" DockPanel.Dock="Top"
                                                     Margin="5,0,5,15">
@@ -479,7 +481,7 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region GameActivity-->
-                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
@@ -498,12 +500,31 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region ReviewViewer-->
-                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0"
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
                                                     Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed, FallbackValue={x:Static Visibility.Collapsed}}">
                                             <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
                                             <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,0,5"/>
+                                        </StackPanel>
+                                        <!--#endregion -->
+
+                                        <!--#region NewsViewer-->
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,0,5,15">
+                                            <StackPanel.Style>
+                                                <Style TargetType="StackPanel">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </StackPanel.Style>
+                                            <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
+                                                       Style="{DynamicResource BaseTextBlockStyle}" />
+                                            <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
+                                            <ContentControl x:Name="NewsViewer_NewsViewerControl" />
                                         </StackPanel>
                                         <!--#endregion -->
                                     </DockPanel>
