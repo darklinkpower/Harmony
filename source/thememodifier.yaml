@@ -1,5 +1,7 @@
 Constants:
-    - DetailsViewDetailsIconsVisibility: 'Details View: Visibility of icons in details'
-    - GridViewDetailsIconsVisibility: 'Grid View: Visibility of icons in details'
-    - DetailsViewAllowUseOfLogos: 'Details View: Allow use of Extra Metadata Loader logos'
-    - GridViewAllowUseOfLogos: 'Grid View: Allow use of Extra Metadata Loader logos'
+    - "Details View"
+    - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
+    - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
+    - "Grid View"
+    - GridViewDetailsIconsVisibility: 'Visibility of icons in details'
+    - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
