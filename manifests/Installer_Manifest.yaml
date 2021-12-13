@@ -98,3 +98,9 @@ Packages:
     Changelog:
       - 'General: Adjustments to ThemeModifier variable names'
       - 'Details View: Add support for ExtraMetadataLoader extension alternative video player'
+  - Version: 2.11
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2021-12-12
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.11/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_11.pthm
+    Changelog:
+      - 'Details View: Fix Background changer extension background fade not correctly applying'
