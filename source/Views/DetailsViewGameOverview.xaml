@@ -29,75 +29,87 @@
                                       d:DesignHeight="1550"
                                       d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                             <Grid Margin="0,0,0,20">
-                                <Grid>
-                                    <Border Panel.ZIndex="99">
-                                        <Border.Style>
-                                            <Style TargetType="Border">
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableVideoPlayer, FallbackValue=False}" Value="False">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Border.Style>
-                                        <Border.OpacityMask>
+
+                                <!-- Background Image -->
+                                <WrapPanel>
+                                    <WrapPanel.Style>
+                                        <Style TargetType="{x:Type WrapPanel}">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True" />
+                                                        <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableBackgroundImage, FallbackValue=False}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableAlternativeDetailsVideoPlayer, FallbackValue=False}" Value="True" />
+                                                        <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsVideoPlaying, FallbackValue=False}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </WrapPanel.Style>
+                                    <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                        <FadeImage.ImageOpacityMask>
                                             <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
                                                 <RadialGradientBrush.GradientStops>
                                                     <GradientStop Color="Black" Offset="0.3" />
                                                     <GradientStop Color="Transparent" Offset="1" />
                                                 </RadialGradientBrush.GradientStops>
                                             </RadialGradientBrush>
-                                        </Border.OpacityMask>
-                                        <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
-                                    </Border>
-                                    <Grid>
-                                        <Grid.Style>
-                                            <Style TargetType="Grid">
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <Style.Triggers>
-                                                    <MultiDataTrigger>
-                                                        <MultiDataTrigger.Conditions>
-                                                            <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableAlternativeDetailsVideoPlayer, FallbackValue=False}" Value="True" />
-                                                            <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsVideoPlaying, FallbackValue=False}" Value="True" />
-                                                        </MultiDataTrigger.Conditions>
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </MultiDataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Grid.Style>
-                                        <Border>
-                                            <Border.Style>
-                                                <Style TargetType="{x:Type Border}">
-                                                    <Setter Property="Visibility" Value="Visible" />
-                                                    <Style.Triggers>
-                                                        <MultiDataTrigger>
-                                                            <MultiDataTrigger.Conditions>
-                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True" />
-                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableBackgroundImage, FallbackValue=False}" Value="True" />
-                                                            </MultiDataTrigger.Conditions>
-                                                            <Setter Property="Visibility" Value="Collapsed" />
-                                                        </MultiDataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Border.Style>
-                                            <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top">
-                                                <FadeImage.OpacityMask>
-                                                    <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                                        <RadialGradientBrush.GradientStops>
-                                                            <GradientStop Color="Black" Offset="0.3" />
-                                                            <GradientStop Color="Transparent" Offset="1" />
-                                                        </RadialGradientBrush.GradientStops>
-                                                    </RadialGradientBrush>
-                                                </FadeImage.OpacityMask>
-                                            </FadeImage>
-                                        </Border>
+                                        </FadeImage.ImageOpacityMask>
+                                    </FadeImage>
+                                </WrapPanel>
 
-                                        <!-- BackgroundChanger plugin background -->
-                                        <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
-                                                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                                    </Grid>
-                                </Grid>
+                                <!-- BackgroundChanger plugin background -->
+                                <WrapPanel>
+                                    <WrapPanel.Style>
+                                        <Style TargetType="{x:Type WrapPanel}">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableAlternativeDetailsVideoPlayer, FallbackValue=False}" Value="True" />
+                                                        <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsVideoPlaying, FallbackValue=False}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </WrapPanel.Style>
+                                    <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
+                                                HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                </WrapPanel>
+
+                                <!-- ExtraMetadataLoader alternative video player -->
+                                <WrapPanel>
+                                    <WrapPanel.Style>
+                                        <Style TargetType="{x:Type WrapPanel}">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsAnyVideoAvailable, FallbackValue=False}" Value="True">
+                                                    <Setter Property="Control.Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableVideoPlayer, FallbackValue=False}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </WrapPanel.Style>
+                                    <WrapPanel.OpacityMask>
+                                        <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
+                                            <RadialGradientBrush.GradientStops>
+                                                <GradientStop Color="Black" Offset="0.3" />
+                                                <GradientStop Color="Transparent" Offset="1" />
+                                            </RadialGradientBrush.GradientStops>
+                                        </RadialGradientBrush>
+                                    </WrapPanel.OpacityMask>
+                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
+                                </WrapPanel>
 
                                 <Grid HorizontalAlignment="Stretch" Margin="20,0,20,0">
                                     <Grid.RowDefinitions>
