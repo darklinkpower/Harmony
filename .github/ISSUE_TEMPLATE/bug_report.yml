@@ -22,7 +22,7 @@ body:
       description: If it''s not clear from the description how to reproduce the issue please add clear steps to reproduce the behavior.
     validations:
       required: false
-  - type: input
+  - type: textarea
     attributes:
       label: Extensions log
       description: "If the issue is a crash, you can attach Playnite's Extensions.log file. It is located in Playnite's installation directory in the portable version or in %AppData%\\Playnite (Can be pasted in Explorer) in the installed version"
