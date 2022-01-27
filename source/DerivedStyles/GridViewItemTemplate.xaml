@@ -27,10 +27,33 @@
                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                                 <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
-                                <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
-                                    <Border CornerRadius="8" Background="{DynamicResource OpaqueGrayHighlightBrush}" Opacity="0.2"/>
-                                    <ContentControl x:Name="DuplicateHider_SourceSelector1" RenderOptions.BitmapScalingMode="Fant" Visibility="Visible" MaxHeight="25"/>
-                                </Grid>
+                                <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
+                                    <TextBlock Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
+                                                   Opacity="0.75" FontSize="16"
+                                                   Margin="3,0,0,0"
+                                                   VerticalAlignment="Center"
+                                                   DockPanel.Dock="Right"
+                                                   FontFamily="{DynamicResource FontIcoFont}"
+                                                   Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock" >
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                <Style.Triggers>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Favorite}" Value="True" />
+                                                            <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Visibility" Value="Visible" />
+                                                    </MultiDataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <Border DockPanel.Dock="Right" CornerRadius="8" Background="{DynamicResource OpaqueGrayHighlightBrush}">
+                                        <ContentControl x:Name="DuplicateHider_SourceSelector1" RenderOptions.BitmapScalingMode="Fant" Visibility="Visible" MaxHeight="25"/>
+                                    </Border>
+                                </DockPanel>
                                 <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Center"
                                          Name="GameControls"  Visibility="Collapsed">
                                     <StackPanel Orientation="Horizontal">
