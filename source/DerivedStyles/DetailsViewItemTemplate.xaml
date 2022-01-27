@@ -11,6 +11,27 @@
                     <Border Name="PART_PanelHost" Padding="10,3,0,3" Background="Transparent"
                             d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                         <DockPanel>
+                            <TextBlock Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
+                                       Margin="3,0,6,0"
+                                       VerticalAlignment="Center"
+                                       DockPanel.Dock="Right"
+                                       FontFamily="{DynamicResource FontIcoFont}"
+                                       Tag="{DynamicResource DetailsViewLibraryGameShowFavorite}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock" >
+                                        <Setter Property="Visibility" Value="Collapsed" />
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding Favorite}" Value="True" />
+                                                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="Visibility" Value="Visible" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                             <ContentControl x:Name="DuplicateHider_SourceSelector" 
                                     Visibility="Collapsed" 
                                     HorizontalAlignment="Right"

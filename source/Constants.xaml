@@ -7,6 +7,7 @@
     <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
     <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>

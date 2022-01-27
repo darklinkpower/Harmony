@@ -2,6 +2,7 @@ Constants:
     - "Details View"
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
+    - DetailsViewLibraryGameShowFavorite: 'Show favorites icon in game list'
     - "Grid View"
     - GridViewDetailsIconsVisibility: 'Visibility of icons in details'
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
