@@ -112,3 +112,10 @@ Packages:
       - 'Details View: Increase opacity of icons of uninstalled games'
       - 'Details View: Show favorites icon in game list for games marked as favorite. Can be enabled or disabled via ThemeModifier extension'
       - 'Grid View: Show favorites icon in game covers for games marked as favorite. Can be enabled or disabled via ThemeModifier extension'
+  - Version: 2.13
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-02-28
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.13/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_13.pthm
+    Changelog:
+      - 'DetailsView: Added ThemeModifier extension option to adjust the maximum width of game details'
+      - 'DetailsView: Added ThemeModifier extension option to adjust visibility of game name'
