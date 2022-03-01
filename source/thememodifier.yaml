@@ -1,5 +1,6 @@
 Constants:
     - "Details View"
+    - DetailsViewGameNameVisibility: 'Visibility of game name in details'
     - DetailsViewDetailsMaxWidth(1024,1600): 'Maximum width of details'
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
