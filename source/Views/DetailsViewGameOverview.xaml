@@ -119,7 +119,7 @@
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
-                                    <Grid MaxWidth="1024" Grid.Row="1">
+                                    <Grid MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="1">
                                         <!--#region Logo & Cover Image-->
                                         <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl"
                                                     Tag="{DynamicResource DetailsViewAllowUseOfLogos}" 
@@ -131,7 +131,7 @@
                                         </Grid>
                                         <!--#regionend-->
                                     </Grid>
-                                    <DockPanel Margin="0,20,0,15" MaxWidth="1024" Grid.Row="2" Background="Transparent">
+                                    <DockPanel Margin="0,20,0,15" MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="2" Background="Transparent">
                                         <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Left">
                                             <DockPanel>
                                                 <Image Name="PART_ImageIcon" MaxHeight="48" MaxWidth="48" DockPanel.Dock="Left" 
@@ -209,7 +209,7 @@
                                             </DockPanel>
                                         </StackPanel>
                                     </DockPanel>
-                                    <DockPanel MaxWidth="1024" Grid.Row="3" MinHeight="90">
+                                    <DockPanel MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="3" MinHeight="90">
                                         <DockPanel.Resources>
                                             <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                             <Style TargetType="Label">
@@ -324,7 +324,7 @@
                                             </StackPanel>
                                         </DockPanel>
                                     </DockPanel>
-                                    <DockPanel MaxWidth="1024" Grid.Row="4">
+                                    <DockPanel MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="4">
                                         <StackPanel DockPanel.Dock="Left" Width="300" Margin="2,0,0,0">
                                             <StackPanel.Resources>
                                                 <Style TargetType="ItemsControl">
@@ -635,7 +635,7 @@
                                                     </Style>
                                                 </TabItem.Style>
                                                 <StackPanel Margin="0,16,0,0">
-                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" MaxWidth="1024" VerticalAlignment="Top"/>
+                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" VerticalAlignment="Top"/>
                                                 </StackPanel>
                                             </TabItem>
 
