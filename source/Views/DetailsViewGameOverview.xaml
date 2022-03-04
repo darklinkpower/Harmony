@@ -378,7 +378,7 @@
                                                 <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
                                             </StackPanel.Resources>
                                             <!--#region Game Details-->
-                                            <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
+                                            <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" />
                                             <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="21" AutoLayoutColumns="2" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                                 <Grid.Resources>
@@ -613,8 +613,7 @@
                                         <TabControl Margin="10,4,0,0" Style="{DynamicResource TabControlDetailsView}">
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <StackPanel Margin="0,16,0,0" Name="PART_ElemDescription">
                                                     <HtmlTextView Name="PART_HtmlDescription"
@@ -629,8 +628,7 @@
                                             </TabItem>
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCNotesLabel}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -655,8 +653,7 @@
 
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -682,8 +679,7 @@
                                             <!--#region SuccessStory-->
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCSuccessStoryAchievements}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -709,8 +705,7 @@
                                             <!--#region ScreenshotsVisualizer-->
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCSsvTitle}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCSsvTitle}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -731,8 +726,7 @@
                                             <!--#region GameActivity-->
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCGameActivityTitle}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCGameActivityTitle}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -752,8 +746,7 @@
                                             <!--#region ReviewViewer-->
                                             <TabItem Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}" >
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <StackPanel Orientation="Vertical" Margin="0,15,0,0">
                                                     <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,0,5" FontWeight="Normal"/>
@@ -763,8 +756,7 @@
                                             <!--#region NewsViewer-->
                                             <TabItem>
                                                 <TabItem.Header>
-                                                    <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
-                                                               FontSize="{DynamicResource FontSizeLarge}" FontWeight="Bold"/>
+                                                    <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <TabItem.Style>
                                                     <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -792,7 +784,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="ContentControl" x:Key="ControlPanelBoolTagToVisibility">
+    <Style TargetType="ContentControl" >
         <Setter Property="Visibility" Value="Visible" />
         <Style.Triggers>
             <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=true}" Value="false" >
@@ -800,4 +792,16 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
+
+    <Style TargetType="TextBlock" x:Key="DetailsViewTabHeaderStyle">
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type TabItem}}}" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="FontWeight" Value="Normal" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
 </ResourceDictionary>
