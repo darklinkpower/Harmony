@@ -126,3 +126,17 @@ Packages:
     Changelog:
       - 'DetailsView: Removed ThemeModifier extension option to adjust game name visibility and added ThemeModifier extension option to display game name if logo is visible or not.'
       - 'GridView: Added ThemeModifier extension option to display game name if logo is visible or not'
+  - Version: 2.15
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-04
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.15/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_15.pthm
+    Changelog:
+      - 'DetailsView: Apply slight dropshadow effect to game cover image and icon in details'
+      - 'DetailsView: Change text color in game list depending on the game state'
+      - 'DetailsView: Change text color of selected tab'
+      - 'DetailsView: Slightly darken background image to improve readibility of elements in foreground'
+      - 'General: Changed background color of bottom button in edit window'
+      - 'GridView: Adjustments to distance between sections in details'
+      - 'GridView: Fix Hltb data grid text color (No log)'
+      - 'GridView: Prevent video section from changing height while ExtraMetadataLoader extension video is loading'
+      - 'GridView: Show HowLongToBeat extension data grid with game data. Can be enabled or disabled with ThemeModifier extension.'
