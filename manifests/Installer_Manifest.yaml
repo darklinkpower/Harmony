@@ -119,3 +119,10 @@ Packages:
     Changelog:
       - 'DetailsView: Added ThemeModifier extension option to adjust the maximum width of game details'
       - 'DetailsView: Added ThemeModifier extension option to adjust visibility of game name'
+  - Version: 2.14
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-03
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.14/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_14.pthm
+    Changelog:
+      - 'DetailsView: Removed ThemeModifier extension option to adjust game name visibility and added ThemeModifier extension option to display game name if logo is visible or not.'
+      - 'GridView: Added ThemeModifier extension option to display game name if logo is visible or not'
