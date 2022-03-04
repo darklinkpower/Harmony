@@ -24,17 +24,27 @@
                             <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
-                        </DataTrigger>                        
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewNotInstalledForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsLaunching}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsInstalling}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsUninstalling}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsLaunchingForegroundBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsRunning}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource LibraryDetailsViewIsRunningForegroundBrush}" />
+                        </DataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
                             <Setter Property="BorderBrush" Value="{DynamicResource HighlightGlyphBrush}" TargetName="SelectedRectangle" />
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="SelectedRectangle" />
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
-                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

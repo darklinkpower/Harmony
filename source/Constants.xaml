@@ -116,4 +116,7 @@
     </LinearGradientBrush>
 
     <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
+    <SolidColorBrush x:Key="LibraryDetailsViewNotInstalledForegroundBrush" Color="#a3aab9" />
+    <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#26b7ff" />
+    <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#adff2f" />
 </ResourceDictionary>
