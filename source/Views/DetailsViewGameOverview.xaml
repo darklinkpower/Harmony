@@ -143,7 +143,11 @@
                                         <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                             <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
                                                        StretchDirection="Both" Stretch="Uniform" 
-                                                       RenderOptions.BitmapScalingMode="Fant" />
+                                                       RenderOptions.BitmapScalingMode="Fant">
+                                                <Image.Effect>
+                                                    <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
+                                                </Image.Effect>
+                                            </Image>
                                         </Grid>
                                         <!--#regionend-->
                                     </Grid>
@@ -151,7 +155,11 @@
                                         <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Left">
                                             <DockPanel>
                                                 <Image Name="PART_ImageIcon" MaxHeight="48" MaxWidth="48" DockPanel.Dock="Left" 
-                                                       Margin="0,0,10,0" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="Fant" />
+                                                       Margin="0,0,10,0" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="Fant">
+                                                    <Image.Effect>
+                                                        <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20"/>
+                                                    </Image.Effect>
+                                                </Image>
                                                 <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
                                                            DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
                                                            Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}"
