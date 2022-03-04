@@ -392,7 +392,7 @@
 
                                         <!--#region ExtraMetadataLoader Video Control-->
                                         <StackPanel Name="VideoFeed" DockPanel.Dock="Top"
-                                                    Margin="5,0,5,15">
+                                                    Margin="5,25,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="StackPanel">
                                                     <Setter Property="Visibility" Value="Visible" />
@@ -420,7 +420,7 @@
                                         <!--#endregion -->
                                         
                                         <StackPanel Name="PART_ElemNotes" DockPanel.Dock="Top"
-                                                    Margin="5,0,5,15">
+                                                    Margin="5,25,5,0">
                                             <TextBlock Text="{DynamicResource LOCNotesLabel}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
@@ -430,7 +430,7 @@
                                                      Margin="-1,0,-1,0" Padding="0" Background="Transparent"/>
                                         </StackPanel>
 
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,0,5,15">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
                                             <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
@@ -446,7 +446,7 @@
 
 
                                         <!--#region SuccessStory-->
-                                        <StackPanel DockPanel.Dock="Top"  Margin="5,15,5,0">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
@@ -472,7 +472,7 @@
                                         <!--#endregion -->
 
                                         <!--#region HowLongToBeat-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0"
                                                     Visibility="{PluginStatus Plugin=playnite-howlongtobeat-plugin, Status=Installed, FallbackValue={x:Static Visibility.Collapsed}}">
                                             <TextBlock Text="HowLongToBeat"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
@@ -485,7 +485,7 @@
                                         <!--#endregion -->
 
                                         <!--#region ScreenshotsVisualizer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
@@ -505,7 +505,7 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region GameActivity-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,0">
                                             <StackPanel.Style>
                                                 <Style TargetType="{x:Type StackPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
@@ -524,7 +524,7 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region ReviewViewer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,15,5,0"
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,15"
                                                     Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed, FallbackValue={x:Static Visibility.Collapsed}}">
                                             <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
@@ -534,7 +534,7 @@
                                         <!--#endregion -->
 
                                         <!--#region NewsViewer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,0,5,15">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,15">
                                             <StackPanel.Style>
                                                 <Style TargetType="StackPanel">
                                                     <Setter Property="Visibility" Value="Collapsed" />
