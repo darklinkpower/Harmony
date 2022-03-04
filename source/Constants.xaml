@@ -112,4 +112,6 @@
         <GradientStop Color="#00000000" Offset="0.0" />
         <GradientStop Color="#D9000000" Offset="1.0" />
     </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
 </ResourceDictionary>
