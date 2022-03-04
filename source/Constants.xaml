@@ -46,6 +46,7 @@
     <Color x:Key="GlyphColor">#4fe3c0</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color><!---->
     <Color x:Key="HighlightGlyphColor">#324f53</Color>
+    <Color x:Key="BottomButtonHighlightColor">#90f0d9</Color>
     <Color x:Key="PopupBackgroundColor">#2f3543</Color>
     <Color x:Key="PopupBorderColor">#262c38</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
@@ -63,6 +64,7 @@
     <SolidColorBrush x:Key="NormalBorderBrush" Color="Transparent" />
     <SolidColorBrush x:Key="HoverBrush" Color="{DynamicResource HighlightGlyphColor}" />
     <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="BottomButtonHighlightBrush" Color="{DynamicResource BottomButtonHighlightColor}" />
     <SolidColorBrush x:Key="HighlightGlyphBrush" Color="{DynamicResource HighlightGlyphColor}" />
     <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource PopupBorderColor}" />
     <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
