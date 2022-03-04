@@ -9,4 +9,5 @@ Constants:
     - GridViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - GridViewDetailsIconsVisibility: 'Visibility of icons in details'
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
+    - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon in game covers'

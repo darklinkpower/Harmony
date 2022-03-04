@@ -481,6 +481,66 @@
                                                 <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" VerticalAlignment="Center"/>
                                                 <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
                                             </DockPanel>
+                                            <GridEx Name="HltbDataGrid" ColumnCount="2"
+                                                    Margin="0,15,0,0"
+                                                    AutoLayoutColumns="2" RowCount="6"
+                                                    Tag="{DynamicResource GridViewShowHltbDataGrid}">
+                                                <GridEx.Style>
+                                                    <Style>
+                                                        <Setter Property="Control.Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{PluginSettings Plugin=HowLongToBeat, Path=HasData, FallbackValue=False}" Value="True" />
+                                                                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag, FallbackValue=False}" Value="True" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="Control.Visibility" Value="Visible" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </GridEx.Style>
+                                                <Label Content="{DynamicResource LOCHowLongToBeatMainStory}"
+                                                       Style="{DynamicResource HltbGridLabelStyle}"
+                                                       Visibility="{Binding ElementName=MainStoryFormat, Path=Visibility}" />
+                                                <TextBlock Name="MainStoryFormat"
+                                                           Style="{DynamicResource HltbGridTextStyle}"
+                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=MainStoryFormat, FallbackValue=--}"/>
+
+                                                <Label Content="{DynamicResource LOCHowLongToBeatMainExtra}"
+                                                       Style="{DynamicResource HltbGridLabelStyle}"
+                                                       Visibility="{Binding ElementName=MainExtraFormat, Path=Visibility}" />
+                                                <TextBlock Name="MainExtraFormat"
+                                                           Style="{DynamicResource HltbGridTextStyle}"
+                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=MainExtraFormat, FallbackValue=--}"/>
+
+                                                <Label Content="{DynamicResource LOCHowLongToBeatCompletionist}"
+                                                       Style="{DynamicResource HltbGridLabelStyle}"
+                                                       Visibility="{Binding ElementName=CompletionistFormat, Path=Visibility}" />
+                                                <TextBlock Name="CompletionistFormat"
+                                                           Style="{DynamicResource HltbGridTextStyle}"
+                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=CompletionistFormat, FallbackValue=--}"/>
+
+                                                <Label Content="{DynamicResource LOCHowLongToBeatSolo}"
+                                                       Style="{DynamicResource HltbGridLabelStyle}"
+                                                       Visibility="{Binding ElementName=SoloFormat, Path=Visibility}" />
+                                                <TextBlock Name="SoloFormat"
+                                                           Style="{DynamicResource HltbGridTextStyle}"
+                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=SoloFormat, FallbackValue=--}"/>
+
+                                                <Label Content="{DynamicResource LOCHowLongToBeatCoOp}"
+                                                       Style="{DynamicResource HltbGridLabelStyle}"
+                                                       Visibility="{Binding ElementName=CoOpFormat, Path=Visibility}" />
+                                                <TextBlock Name="CoOpFormat"
+                                                           Style="{DynamicResource HltbGridTextStyle}"
+                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=CoOpFormat, FallbackValue=--}"/>
+
+                                                <Label Content="{DynamicResource LOCHowLongToBeatVs}"
+                                                       Style="{DynamicResource HltbGridLabelStyle}"
+                                                       Visibility="{Binding ElementName=VsFormat, Path=Visibility}" />
+                                                <TextBlock Name="VsFormat"
+                                                           Style="{DynamicResource HltbGridTextStyle}"
+                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=VsFormat, FallbackValue=--}"/>
+                                            </GridEx>
                                         </StackPanel>
                                         <!--#endregion -->
 
