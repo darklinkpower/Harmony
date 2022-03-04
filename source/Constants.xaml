@@ -4,7 +4,8 @@
 
     <!--Theme settings region start-->
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
-    <Visibility x:Key="DetailsViewGameNameVisibility">Visible</Visibility>
+    <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <Visibility x:Key="DetailsViewDetailsIconsVisibility">Collapsed</Visibility>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Collapsed</Visibility>
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>

@@ -56,7 +56,8 @@
                                         </Style.Triggers>
                                     </Style>
                                 </DockPanel.Style>
-                                <Grid DockPanel.Dock="Top" Tag="{DynamicResource GridViewAllowUseOfLogos}">
+                                <Grid x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
+                                      DockPanel.Dock="Top" Tag="{DynamicResource GridViewAllowUseOfLogos}">
                                     <Grid.Style>
                                         <Style TargetType="Grid">
                                             <Setter Property="Visibility" Value="Visible" />
@@ -79,7 +80,24 @@
                                            RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0" />
                                     <TextBlock Text="{Binding Game.DisplayName}" FontSize="{DynamicResource FontSizeLarger}"
                                                TextWrapping="Wrap" DockPanel.Dock="Left"
+                                               Tag="{DynamicResource GridViewDisplayGameNameIfLogoVisible}"
                                                VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Visible" />
+                                                <Style.Triggers>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="False" />
+                                                            <Condition Binding="{Binding ElementName=ExtraMetadataLoader_LogoLoaderControlGrid, Path=Visibility}" Value="Visible" />
+                                                            <Condition Binding="{Binding ElementName=ExtraMetadataLoader_LogoLoaderControl, Path=Visibility, FallbackValue=Collapsed}" Value="Visible" />
+                                                            <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsLogoAvailable, FallbackValue=False}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </MultiDataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
                                         <TextBlock.Effect>
                                             <DropShadowEffect ShadowDepth="3"/>
                                         </TextBlock.Effect>

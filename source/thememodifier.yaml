@@ -1,11 +1,12 @@
 Constants:
     - "Details View"
-    - DetailsViewGameNameVisibility: 'Visibility of game name in details'
+    - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,1600): 'Maximum width of details'
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - DetailsViewLibraryGameShowFavorite: 'Show favorites icon in game list'
     - "Grid View"
+    - GridViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - GridViewDetailsIconsVisibility: 'Visibility of icons in details'
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon in game covers'
