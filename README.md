@@ -20,20 +20,26 @@ I make extensions and themes to learn, have fun and to give to the community so 
 - Different aesthetic of other available themes available by default in Playnite and created by the community.
 - Achieve features that are not available by default on Playnite via community extensions
 
-## Installation 
-1. Download the latest packaged `pthm` theme file from the [Releases page.](https://github.com/darklinkpower/Harmony/releases/latest)
-2. Open it to automatically install on Playnite or drag and drop it to the main Playnite window to start installation.
+## Installation
+Option A: Click the `Download` button in the [addon database entry here](https://playnite.link/addons.html#Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047) to start the install process.
+
+Option B: Download the latest packaged `pthm` theme file from the [Releases page](https://github.com/darklinkpower/Harmony/releases/latest) and open it.
+
+Option C: Download from the Addons browser in Playnite.
 
 ## Functionalities and features
 - Full support for features available in the default Playnite Desktop themes
-- Customization: Customization of certain aspects of the theme can be done via custom integration of the [ThemeModifier](https://github.com/Lacro59/playnite-thememodifier-plugin) extension.
-- Achievements: via custom integration of the [SuccessStory](https://github.com/Lacro59/playnite-successstory-plugin) extension.
-- HowLongToBeat data: via custom integration of the [HowLongToBeat](https://github.com/Lacro59/playnite-howlongtobeat-plugin) extension.
-- Game statistics: via custom integration of the [GameActivity](https://github.com/Lacro59/playnite-gameactivity-plugin) extension.
-- Screenshots: via custom integration of the [ScreenshotsVisualizer](https://github.com/Lacro59/playnite-screenshotsvisualizer-plugin) extension.
-- Duplicate copies handling: via custom integration of the [DuplicateHider](https://github.com/felixkmh/DuplicateHider) extension.
-- Logos: download of logos for use in the theme via [Extra Metadata Tools](https://playnite.link/forum/thread-575.html) extension.
-- Videos: download of trailer and microtrailer videos for use in the theme via [Extra Metadata Tools Video](https://playnite.link/forum/thread-575.html) extension.
+- Customization: Customization of certain aspects of the theme can be done via custom integration of the [ThemeModifier](https://playnite.link/addons.html#playnite-thememodifier-plugin) extension.
+- Achievements: via custom integration of the [SuccessStory](https://playnite.link/addons.html#playnite-successstory-plugin) extension.
+- Alternative background images: via custom integration of the [BackgroundChanger](https://playnite.link/addons.html#playnite-backgroundchanger-plugin) extension.
+- HowLongToBeat data: via custom integration of the [HowLongToBeat](https://playnite.link/addons.html#playnite-howlongtobeat-plugin) extension.
+- Game statistics: via custom integration of the [GameActivity](https://playnite.link/addons.html#playnite-gameactivity-plugin) extension.
+- Screenshots: via custom integration of the [ScreenshotsVisualizer](https://playnite.link/addons.html#playnite-screenshotsvisualizer-plugin) extension.
+- Duplicate copies handling: via custom integration of the [DuplicateHider](https://playnite.link/addons.html#felixkmh_DuplicateHider_Plugin) extension.
+- Logos: download of logos for use in the theme via [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
+- Videos: download of trailer and microtrailer videos for use in the theme via [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
+- Game news: via custom integration of the [News Viewer](https://playnite.link/addons.html#NewsViewer_15e03ffe-90f6-4e8e-bd4d-94514777481d) extension.
+- Game reviews: via custom integration of the [Review Viewer](https://playnite.link/addons.html#playnite-screenshotsvisualizer-plugin) extension.
   
   
 ## Screenshots
