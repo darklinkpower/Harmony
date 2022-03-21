@@ -10,4 +10,5 @@ Constants:
     - GridViewDetailsIconsVisibility: 'Visibility of icons in details'
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid'
+    - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon in game covers'

@@ -13,6 +13,7 @@
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
     <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
