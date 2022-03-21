@@ -140,3 +140,9 @@ Packages:
       - 'GridView: Fix Hltb data grid text color (No log)'
       - 'GridView: Prevent video section from changing height while ExtraMetadataLoader extension video is loading'
       - 'GridView: Show HowLongToBeat extension data grid with game data. Can be enabled or disabled with ThemeModifier extension.'
+  - Version: 2.16
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-21
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.16/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_16.pthm
+    Changelog:
+      - 'Grid View: Added ThemeModifier option to enable cover highlight animation (Same as Helium Theme). Disabled by default.'
