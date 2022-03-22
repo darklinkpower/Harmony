@@ -27,6 +27,10 @@
                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Border>
                                 <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
+                                <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
+                                        Style="{DynamicResource AnimatedCoverShineBackground}" />
+                                <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed"
+                                           Tag="{DynamicResource GridViewEnableCoverShineAnimation}" />
                                 <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
                                     <TextBlock Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
                                                    Opacity="0.75" FontSize="16"
@@ -79,6 +83,13 @@
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=EnableHighlightAnimation, Path=Tag}" Value="True" />
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Tag" Value="True" TargetName="ShineBackground" />
+                        </MultiDataTrigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
                             <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="ShowGameNameBorder" />
@@ -118,7 +129,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    
     <Style
         x:Key="DuplicateHider_IconContentControlStyle1"
         BasedOn="{StaticResource {x:Type ContentControl}}"
