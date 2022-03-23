@@ -611,11 +611,11 @@
                                             <!--#endregion-->
                                         </StackPanel>
                                         <TabControl Margin="10,4,0,0" Style="{DynamicResource TabControlDetailsView}">
-                                            <TabItem>
+                                            <TabItem Name="PART_ElemDescription">
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
-                                                <StackPanel Margin="0,16,0,0" Name="PART_ElemDescription">
+                                                <StackPanel Margin="0,16,0,0">
                                                     <HtmlTextView Name="PART_HtmlDescription"
                                                         Margin="0,5,0,5"
                                                         HtmlFontSize="{DynamicResource FontSize}"
@@ -626,24 +626,12 @@
                                                         ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                                                 </StackPanel>
                                             </TabItem>
-                                            <TabItem>
+                                            
+                                            <TabItem Name="PART_ElemNotes">
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
-                                                <TabItem.Style>
-                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                        <Setter Property="Control.Visibility" Value="Visible" />
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding Game.Notes}" Value="{x:Null}">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding Game.Notes}" Value="">
-                                                                <Setter Property="Control.Visibility" Value="Collapsed" />
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </TabItem.Style>
-                                                <StackPanel Margin="0,16,0,0" Name="PART_ElemNotes">
+                                                <StackPanel Margin="0,16,0,0">
                                                     <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
