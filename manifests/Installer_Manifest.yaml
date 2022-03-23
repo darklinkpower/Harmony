@@ -152,3 +152,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.17/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_17.pthm
     Changelog:
       - 'Grid View: Fix highlight animation applying to game name area when using horizontal aspect ratios'
+  - Version: 2.18
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-23
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.18/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_18.pthm
+    Changelog:
+      - 'Details View: Fix description tab header still displaying in cases when it should not'
+      - 'Grid View: Fix description section header still displaying in cases when it should not'
