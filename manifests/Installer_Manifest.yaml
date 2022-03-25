@@ -159,3 +159,9 @@ Packages:
     Changelog:
       - 'Details View: Fix description tab header still displaying in cases when it should not'
       - 'Grid View: Fix description section header still displaying in cases when it should not'
+  - Version: 2.19
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-24
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.19/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_19.pthm
+    Changelog:
+      - 'Details View: Add support for cover control of BackgroundChanger extension'
