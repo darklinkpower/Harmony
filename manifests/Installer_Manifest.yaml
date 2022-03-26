@@ -165,3 +165,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.19/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_19.pthm
     Changelog:
       - 'Details View: Add support for cover control of BackgroundChanger extension'
+  - Version: 2.20
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-25
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.20/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_20.pthm
+    Changelog:
+      - 'Grid View: Fix covers being darkened on hover when option to darken uninstalled games is disabled'
