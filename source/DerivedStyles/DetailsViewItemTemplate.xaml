@@ -43,24 +43,7 @@
                             <Image Name="PART_ImageIcon"
                                    Height="{Settings DetailsViewListIconSize}"
                                    RenderOptions.BitmapScalingMode="Fant"
-                                   DockPanel.Dock="Left" Margin="0,0,8,0" >
-                                <Image.Style>
-                                    <Style TargetType="{x:Type Image}">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding IsInstalled}" Value="False">
-                                                <Setter Property="Opacity" Value="0.60" />
-                                            </DataTrigger>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Effect">
-                                                    <Setter.Value>
-                                                        <DropShadowEffect Color="Black"  Opacity="1"/>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Image.Style>
-                            </Image>
+                                   DockPanel.Dock="Left" Margin="0,0,8,0" />
                             <TextBlock Text="{Binding DisplayName}" TextTrimming="CharacterEllipsis" x:Name="DisplayName"
                                        VerticalAlignment="Center" DockPanel.Dock="Left">
                             </TextBlock>
