@@ -137,9 +137,25 @@
                                     </Grid.RowDefinitions>
                                     <Grid MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="1">
                                         <!--#region Logo & Cover Image-->
-                                        <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl"
-                                                        Tag="{DynamicResource DetailsViewAllowUseOfLogos}" 
-                                                        Style="{DynamicResource ControlPanelBoolTagToVisibility}"/>
+                                        <Border x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
+                                            Height="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxHeight, FallbackValue=0}"
+                                            Tag="{DynamicResource DetailsViewAllowUseOfLogos}">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableLogos, FallbackValue=False}" Value="false">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="false" >
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+                                            <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
+                                        </Border>
+                                        
                                         <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                             <Border>
                                                 <Border.Style>
