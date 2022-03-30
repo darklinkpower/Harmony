@@ -171,3 +171,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.20/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_20.pthm
     Changelog:
       - 'Grid View: Fix covers being darkened on hover when option to darken uninstalled games is disabled'
+  - Version: 2.21
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-30
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.21/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_21.pthm
+    Changelog:
+      - 'Details View: Fix logos area height being inconsistent when Covers are disabled'
