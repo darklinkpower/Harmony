@@ -137,9 +137,12 @@
                                     </Grid.RowDefinitions>
                                     <Grid MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="1">
                                         <!--#region Logo & Cover Image-->
+                                        
                                         <Border x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
-                                            Height="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxHeight, FallbackValue=0}"
-                                            Tag="{DynamicResource DetailsViewAllowUseOfLogos}">
+                                                VerticalAlignment="Stretch"
+                                                HorizontalAlignment="Stretch"
+                                                MinHeight="{PluginSettings Plugin=ExtraMetadataLoader, Path=LogoMaxHeight, FallbackValue=0}"
+                                                Tag="{DynamicResource DetailsViewAllowUseOfLogos}">
                                             <Border.Style>
                                                 <Style TargetType="Border">
                                                     <Setter Property="Visibility" Value="Visible" />
