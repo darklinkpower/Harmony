@@ -177,3 +177,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.21/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_21.pthm
     Changelog:
       - 'Details View: Fix logos area height being inconsistent when Covers are disabled'
+  - Version: 2.22
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-03-30
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.22/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_22.pthm
+    Changelog:
+      - 'Details View: Fix Extra Metadata Loader extension logo vertical setting not working correctly'
