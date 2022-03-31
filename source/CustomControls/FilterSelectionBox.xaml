@@ -6,6 +6,7 @@
         <Border BorderThickness="{DynamicResource ControlBorderThickness}"
                 CornerRadius="{DynamicResource ControlCornerRadius}"
                 Style="{DynamicResource HighlightBorder}"
+                Cursor="Hand"
                 Background="{DynamicResource ControlBackgroundBrush}"
                 x:Name="Root">
             <Grid>
@@ -40,6 +41,7 @@
                     </ToggleButton.Style>
                 </ToggleButton>
                 <TextBox x:Name="PART_TextFilterInput" BorderThickness="0"
+                         Background="Transparent"
                          VerticalAlignment="Center" Margin="1,0,30,0"/>
                 <Button x:Name="PART_ButtonClearFilter"
                         Margin="0,0,20,0" FontSize="18"

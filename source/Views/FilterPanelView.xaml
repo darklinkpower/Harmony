@@ -6,10 +6,9 @@
 
     <Style x:Key="FilterPanelCheckBox" TargetType="CheckBox" BasedOn="{StaticResource {x:Type CheckBox}}">
         <Setter Property="Margin" Value="8,2,6,8" />
-        <Setter Property="Background" Value="Transparent" />
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="{StaticResource False}">
-                <Setter Property="Opacity" Value="0.6" />
+                <Setter Property="Opacity" Value="0.70" />
             </Trigger>
         </Style.Triggers>
     </Style>
