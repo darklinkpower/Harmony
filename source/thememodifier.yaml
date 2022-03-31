@@ -1,4 +1,6 @@
 Constants:
+    - "Library"
+    - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'
     - "Details View"
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,1600): 'Maximum width of details'
