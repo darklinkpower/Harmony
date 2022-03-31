@@ -14,6 +14,7 @@
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
+    <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
     <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
@@ -56,7 +57,7 @@
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
 
-    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#2f3543" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#e6303644" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
@@ -120,4 +121,10 @@
     <SolidColorBrush x:Key="LibraryDetailsViewNotInstalledForegroundBrush" Color="#a3aab9" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#26b7ff" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#adff2f" />
+
+    <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
+    <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="1"/>
+    <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="0.5"/>
 </ResourceDictionary>
