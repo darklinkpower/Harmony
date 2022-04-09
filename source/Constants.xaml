@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
 
     <!--Theme settings region start-->
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
@@ -124,7 +125,7 @@
 
     <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
     <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
-                    Opacity="1"/>
-    <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
-                    Opacity="0.5"/>
+                    Opacity="1" popt:Freeze="True"/>
+    <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/white_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="0.5" popt:Freeze="True"/>
 </ResourceDictionary>
