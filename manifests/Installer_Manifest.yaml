@@ -191,3 +191,12 @@ Packages:
       - 'CheckBox: Fix some checkboxes not being completely square'
       - 'General: Add transparency to controls background'
       - 'Library: Use noise opacity layer. Enabled by default, can be disabled with ThemeModifier extension'
+  - Version: 2.24
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-27
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.24/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_24.pthm
+    Changelog:
+      - 'Filters Panel: Use hand cursor for filter selection box buttons'
+      - 'Grid View: Added library banners to covers. Disabled by default. Can be enabled with option in ThemeModifier extension. Includes option to configure the banner opacity.'
+      - 'Grid View: Fix separators colors not being consistent'
+      - 'SearchBox: Use hand mouse for text clear button'
