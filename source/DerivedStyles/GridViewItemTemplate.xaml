@@ -17,8 +17,199 @@
                               Height="{Settings GridItemHeight}">
                                 <Image Name="PART_ImageCover"
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
-                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   HorizontalAlignment="Center" VerticalAlignment="Top"
                                    Stretch="{Settings CoverArtStretch}" />
+
+                                <Image VerticalAlignment="Top" HorizontalAlignment="Center"
+                                           RenderOptions.BitmapScalingMode="Fant"
+                                           Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
+                                           Stretch="Uniform" StretchDirection="Both" Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Source" Value="{x:Null}" />
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="402674cd-4af6-4886-b6ec-0e695bfa0688" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource AmazonGamesLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="e3c26a3d-d695-4cb7-a769-5ff7612c7edd" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource BattleNetLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="0e2e793e-e0dd-4447-835c-c44a1fd506ec" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource BethesdaLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="00000002-dbd1-46c6-b5d0-b1ba559d10e4" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource EpicLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="aebe8b7c-6dc3-4a66-af31-e7375c6b5e9e" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource GogLibraryBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="00000001-ebb2-4eec-abcb-7c89937a42bb" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource ItchioLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="85dd7072-2f20-4e76-a007-41035e390724" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource OriginLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="cb91dfc9-b977-43bf-8e70-55f46e410fab" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource SteamLibraryBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="c2f038e5-8b92-4877-91f1-da9094155fc5" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource UplayLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="96e8c4bc-ec5c-4c8b-87e7-18ee5a690626" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource HumbleLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource XboxLibraryBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="e4ac81cb-1b1a-4ec9-8639-9a9633989a71" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource PSNLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="88409022-088a-4de8-805a-fdbac291f00a" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource RockstarLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="d407a620-5953-4ca4-a25c-8194c8559381" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource JastUsaLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="5f2dfd12-5f13-46fe-bcdd-64eb53ace26a" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource NvidiaGeForceNowLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="5befaf7a-a0af-4ce2-992c-bc048d94e71b" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource XCloudLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="f7da6eb0-17d7-497c-92fd-347050914954" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource IndieGalaLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="2366fb38-bf25-45ea-9a78-dcc797ee83c3" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource ImporterForAnilistBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="317a5e2e-eac1-48bc-adb3-fb9e321afd3f" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource RiotBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="00000000-0000-0000-0000-000000000000" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource PlayniteLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="e4ac81cb-1b1a-4ec9-8639-9a9633989a72" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource NintendoLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="77346dd6-b0cc-4F7d-80f0-c1d138ccae58" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource OculusLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                                
                                 <Border Background="#99000000" x:Name="TextGameName" Visibility="Collapsed">
                                     <TextBlock Text="{Binding DisplayName}"
                                            TextWrapping="Wrap" Margin="5"
