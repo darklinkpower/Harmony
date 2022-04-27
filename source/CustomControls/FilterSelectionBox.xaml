@@ -6,7 +6,6 @@
         <Border BorderThickness="{DynamicResource ControlBorderThickness}"
                 CornerRadius="{DynamicResource ControlCornerRadius}"
                 Style="{DynamicResource HighlightBorder}"
-                Cursor="Hand"
                 Background="{DynamicResource ControlBackgroundBrush}"
                 x:Name="Root">
             <Grid>
@@ -23,6 +22,7 @@
                                Margin="5,0,0,0"/>
                 </DockPanel>
                 <ToggleButton x:Name="MainToggle"
+                              Cursor="Hand"
                               BorderThickness="0" Focusable="False"
                               HorizontalContentAlignment="Stretch"
                               Background="Transparent">
