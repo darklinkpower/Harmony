@@ -18,7 +18,7 @@
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
 
-                                <Image Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+                                <Image x:Name="LibraryBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
                                        Stretch="Uniform" StretchDirection="Both" Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}">
@@ -207,7 +207,29 @@
                                         </Style>
                                     </Image.Style>
                                 </Image>
-
+                                
+                                <Image Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+                                           RenderOptions.BitmapScalingMode="Fant"
+                                           Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
+                                           Stretch="Uniform" StretchDirection="Both" Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Source" Value="{x:Null}" />
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding ElementName=LibraryBanner, Path=Visibility}" Value="Collapsed" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource UnknownLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                                
                                 <Image Name="PART_ImageCover" Grid.Row="1" Height="{Settings GridItemHeight}"
                                        RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                        HorizontalAlignment="Center" VerticalAlignment="Top"

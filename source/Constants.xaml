@@ -153,5 +153,6 @@
     <BitmapImage x:Key="RiotBannerBitmap" UriSource="{ThemeFile 'Images/Banners/317a5e2e-eac1-48bc-adb3-fb9e321afd3f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="NintendoLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/e4ac81cb-1b1a-4ec9-8639-9a9633989a72.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="OculusLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/77346dd6-b0cc-4F7d-80f0-c1d138ccae58.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="UnknownLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/UnknownLibrary.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     
 </ResourceDictionary>
