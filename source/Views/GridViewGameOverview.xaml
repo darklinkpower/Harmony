@@ -408,7 +408,7 @@
                                             </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCExtra_Metadata_Loader_VideoLabel}"
                                                        Style="{DynamicResource BaseTextBlockStyle}" />
-                                            <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
                                             <Grid Margin="0,15,0,0">
                                                 <!--Rectangle used to expand the panel while the video loads-->
                                                 <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
@@ -608,7 +608,7 @@
                                             </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}"
                                                        Style="{DynamicResource BaseTextBlockStyle}" />
-                                            <Separator Background="{DynamicResource PanelSeparatorBrush}" Margin="0,5,0,5" />
+                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
                                             <ContentControl x:Name="NewsViewer_NewsViewerControl" />
                                         </StackPanel>
                                         <!--#endregion -->
