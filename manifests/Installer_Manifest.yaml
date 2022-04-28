@@ -208,3 +208,9 @@ Packages:
       - 'GridView: Added library banners for Groupees and Legacy Games library plugin because Jeshibu was angry at me :('
       - 'GridView: Library banners moved to top of cover images'
       - 'GridView: Show generic library banner for games with a library that does not have a specific banner'
+  - Version: 2.26
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-28
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.26/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_26.pthm
+    Changelog:
+      - 'GridView: Fix favorites and DuplicateHider icons placement and hover darkening background being inconsistent if Library Banners are enabled'
