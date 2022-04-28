@@ -200,3 +200,11 @@ Packages:
       - 'Grid View: Added library banners to covers. Disabled by default. Can be enabled with option in ThemeModifier extension. Includes option to configure the banner opacity.'
       - 'Grid View: Fix separators colors not being consistent'
       - 'SearchBox: Use hand mouse for text clear button'
+  - Version: 2.25
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-27
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.25/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_25.pthm
+    Changelog:
+      - 'GridView: Added library banners for Groupees and Legacy Games library plugin because Jeshibu was angry at me :('
+      - 'GridView: Library banners moved to top of cover images'
+      - 'GridView: Show generic library banner for games with a library that does not have a specific banner'
