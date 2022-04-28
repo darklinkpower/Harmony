@@ -203,6 +203,22 @@
                                                     <Setter Property="Source" Value="{StaticResource OculusLibraryBannerBitmap}" />
                                                     <Setter Property="Visibility" Value="Visible" />
                                                 </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="34c3178f-6e1d-4e27-8885-99d4f031b168" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource LegacyGamesLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding PluginId}" Value="42ff71aa-34dc-4b12-86b6-1328136c958f" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource GroupeesLibraryBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
                                             </Style.Triggers>
                                         </Style>
                                     </Image.Style>
