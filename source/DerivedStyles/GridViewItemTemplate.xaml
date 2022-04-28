@@ -250,7 +250,7 @@
                                        RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                        HorizontalAlignment="Center" VerticalAlignment="Top"
                                        Stretch="{Settings CoverArtStretch}" />
-                                
+
                                 <Grid Grid.RowSpan="2">
                                     <Border Background="#99000000" x:Name="TextGameName" Visibility="Collapsed">
                                         <TextBlock Text="{Binding DisplayName}"
@@ -260,11 +260,14 @@
                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
                                     <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
-                                    <Border Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
                                     <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
                                             Style="{DynamicResource AnimatedCoverShineBackground}" />
                                     <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed"
                                                Tag="{DynamicResource GridViewEnableCoverShineAnimation}" />
+                                </Grid>
+                                
+                                <Grid Grid.Row="1" Height="{Settings GridItemHeight}">
+                                    <Border Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
                                     <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
                                         <TextBlock Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
                                                    Opacity="0.75" FontSize="16"
