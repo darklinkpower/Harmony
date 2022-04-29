@@ -14,5 +14,5 @@ Constants:
     - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid'
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon in game covers'
-    - GridViewCoverDisplayLibraryBanner: 'Show game library banner on cover'
+    - GridViewCoverDisplayLibraryBanner: 'Show game platforms and library banners on covers'
     - GridViewCoverLibraryBannerOpacity(0.5, 1.0): 'Opacity of library banner'
