@@ -214,3 +214,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.26/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_26.pthm
     Changelog:
       - 'GridView: Fix favorites and DuplicateHider icons placement and hover darkening background being inconsistent if Library Banners are enabled'
+  - Version: 2.27
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-04-29
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.27/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_27.pthm
+    Changelog:
+      - 'GridView: Implemented banners for game platform. Special thanks to the Playnite community for making these banners'
