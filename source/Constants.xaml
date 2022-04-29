@@ -158,30 +158,30 @@
     <BitmapImage x:Key="MicrosoftMsx2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX2.png'}" popt:Freeze="True" CacheOption="OnLoad" />
 
     <!--PluginId Banners-->
-    <BitmapImage x:Key="PlayniteLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/00000000-0000-0000-0000-000000000000.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="AmazonGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/402674cd-4af6-4886-b6ec-0e695bfa0688.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="BattleNetLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/e3c26a3d-d695-4cb7-a769-5ff7612c7edd.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="BethesdaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/0e2e793e-e0dd-4447-835c-c44a1fd506ec.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="EpicLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/00000002-dbd1-46c6-b5d0-b1ba559d10e4.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="GogLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/aebe8b7c-6dc3-4a66-af31-e7375c6b5e9e.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="ItchioLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/00000001-ebb2-4eec-abcb-7c89937a42bb.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="OriginLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/85dd7072-2f20-4e76-a007-41035e390724.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="SteamLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/cb91dfc9-b977-43bf-8e70-55f46e410fab.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="UplayLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/c2f038e5-8b92-4877-91f1-da9094155fc5.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="HumbleLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/96e8c4bc-ec5c-4c8b-87e7-18ee5a690626.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="XboxLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="PSNLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/e4ac81cb-1b1a-4ec9-8639-9a9633989a71.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="RockstarLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/88409022-088a-4de8-805a-fdbac291f00a.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="JastUsaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/d407a620-5953-4ca4-a25c-8194c8559381.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="NvidiaGeForceNowLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/5f2dfd12-5f13-46fe-bcdd-64eb53ace26a.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="XCloudLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/5befaf7a-a0af-4ce2-992c-bc048d94e71b.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="IndieGalaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/f7da6eb0-17d7-497c-92fd-347050914954.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="ImporterForAnilistBannerBitmap" UriSource="{ThemeFile 'Images/Banners/2366fb38-bf25-45ea-9a78-dcc797ee83c3.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="RiotBannerBitmap" UriSource="{ThemeFile 'Images/Banners/317a5e2e-eac1-48bc-adb3-fb9e321afd3f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="NintendoLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/e4ac81cb-1b1a-4ec9-8639-9a9633989a72.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="OculusLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/77346dd6-b0cc-4F7d-80f0-c1d138ccae58.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="LegacyGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/34c3178f-6e1d-4e27-8885-99d4f031b168.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="GroupeesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/42ff71aa-34dc-4b12-86b6-1328136c958f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="PlayniteLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000000-0000-0000-0000-000000000000.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="AmazonGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/402674cd-4af6-4886-b6ec-0e695bfa0688.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="BattleNetLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e3c26a3d-d695-4cb7-a769-5ff7612c7edd.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="BethesdaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/0e2e793e-e0dd-4447-835c-c44a1fd506ec.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="EpicLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000002-dbd1-46c6-b5d0-b1ba559d10e4.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="GogLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/aebe8b7c-6dc3-4a66-af31-e7375c6b5e9e.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="ItchioLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000001-ebb2-4eec-abcb-7c89937a42bb.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="OriginLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/85dd7072-2f20-4e76-a007-41035e390724.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SteamLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/cb91dfc9-b977-43bf-8e70-55f46e410fab.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="UplayLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/c2f038e5-8b92-4877-91f1-da9094155fc5.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="HumbleLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/96e8c4bc-ec5c-4c8b-87e7-18ee5a690626.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="XboxLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="PSNLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e4ac81cb-1b1a-4ec9-8639-9a9633989a71.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="RockstarLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/88409022-088a-4de8-805a-fdbac291f00a.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="JastUsaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/d407a620-5953-4ca4-a25c-8194c8559381.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NvidiaGeForceNowLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/5f2dfd12-5f13-46fe-bcdd-64eb53ace26a.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="XCloudLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/5befaf7a-a0af-4ce2-992c-bc048d94e71b.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="IndieGalaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/f7da6eb0-17d7-497c-92fd-347050914954.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="ImporterForAnilistBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/2366fb38-bf25-45ea-9a78-dcc797ee83c3.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="RiotBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/317a5e2e-eac1-48bc-adb3-fb9e321afd3f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NintendoLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e4ac81cb-1b1a-4ec9-8639-9a9633989a72.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="OculusLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/77346dd6-b0cc-4F7d-80f0-c1d138ccae58.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="LegacyGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/34c3178f-6e1d-4e27-8885-99d4f031b168.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="GroupeesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/42ff71aa-34dc-4b12-86b6-1328136c958f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="UnknownLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/UnknownLibrary.png'}" popt:Freeze="True" CacheOption="OnLoad" />
 
     <sys:String x:Key="NoneString" popt:Freeze="True">None</sys:String>
