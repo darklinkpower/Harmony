@@ -152,6 +152,42 @@
     <BitmapImage x:Key="NintendoGameboyPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_gameboy.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="NintendoDsPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_ds.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="SonyPlaystation3PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation3.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="Apple2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/apple_2.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="MacintoshPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/macintosh.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SonyPlaystation4PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation4.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SonyPlaystation5PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation5.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SonyPlaystationVitaPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_vita.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="XboxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox.jpg'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="3DOPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/3do.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="AdobeFlashPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/adobe_flash.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="AmstradCPCPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/amstrad_cpc.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="Atari2600PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_2600.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="Atari5200PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_5200.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="Atari7800PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_7800.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="AtariJaguarPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_jaguar.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="AtariLynxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_lynx.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="BandaiWonderSwanPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/bandai_wonderswan.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="BandaiWonderSwanColorPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/bandai_wonderswan_color.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="ColecoVisionPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/coleco_vision.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="Commodore64PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/commodore_64.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="MattelIntellivisionPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/mattel_intellivision.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NECPCFXPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_pcfx.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NECSuperGrafxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_supergrafx.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NECTurboGrafx16PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_turbografx_16.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NECTurboGrafxCDPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_turbografx_cd.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NintendoFamicomDiskPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_famicom_disk.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NintendoVirtualBoyPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_virtualboy.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="PCDOSPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/pc_dos.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="Sega32xPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_32x.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SegaDreamcastPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_dreamcast.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SegaGameGearPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_gamegear.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SegaMasterSystemPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_mastersystem.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SegaSaturnPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_saturn.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SinclairZXSpectrumPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sinclair_zxspectrum.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SNKNeoGeoPocketPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/snk_neogeopocket.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SNKNeoGeoPocketColorPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/snk_neogeopocket_color.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="VectrexPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/vectrex.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="XboxSeriesPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox_series.png'}" popt:Freeze="True" CacheOption="OnLoad" />
 
     <!--Platform Name Banners-->
     <BitmapImage x:Key="MicrosoftMsxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX.png'}" popt:Freeze="True" CacheOption="OnLoad" />
