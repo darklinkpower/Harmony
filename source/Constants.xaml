@@ -215,7 +215,7 @@
     <BitmapImage x:Key="ImporterForAnilistBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/2366fb38-bf25-45ea-9a78-dcc797ee83c3.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="RiotBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/317a5e2e-eac1-48bc-adb3-fb9e321afd3f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="NintendoLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e4ac81cb-1b1a-4ec9-8639-9a9633989a72.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    <BitmapImage x:Key="OculusLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/77346dd6-b0cc-4F7d-80f0-c1d138ccae58.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="OculusLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/77346dd6-b0cc-4f7d-80f0-c1d138ccae58.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="LegacyGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/34c3178f-6e1d-4e27-8885-99d4f031b168.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="GroupeesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/42ff71aa-34dc-4b12-86b6-1328136c958f.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="UnknownLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/UnknownLibrary.png'}" popt:Freeze="True" CacheOption="OnLoad" />

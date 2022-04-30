@@ -361,7 +361,7 @@
                                                 <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="e4ac81cb-1b1a-4ec9-8639-9a9633989a72">
                                                     <Setter Property="Source" Value="{StaticResource NintendoLibraryBannerBitmap}" />
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="77346dd6-b0cc-4F7d-80f0-c1d138ccae58">
+                                                <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="77346dd6-b0cc-4f7d-80f0-c1d138ccae58">
                                                     <Setter Property="Source" Value="{StaticResource OculusLibraryBannerBitmap}" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="34c3178f-6e1d-4e27-8885-99d4f031b168">
