@@ -226,3 +226,14 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.28/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_28.pthm
     Changelog:
       - 'GridView: Added additional platform banners (By NatParable)'
+  - Version: 2.29
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-05-04
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.29/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_29.pthm
+    Changelog:
+      - 'DetailsView: Hide Reviews Viewer extension tab for games not from Steam or PC games'
+      - 'GridView: Added additional platform banners (By NatParable)'
+      - 'GridView: Fix Oculus library banner not displaying'
+      - 'GridView: Hide Reviews Viewer section for games not from Steam or PC games'
+      - 'GridView: PC games without a library plugin banner will use a PC platform banner'
+      - 'GridView: Reduce memory used by banner images'
