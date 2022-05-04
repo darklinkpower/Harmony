@@ -585,8 +585,17 @@
                                         </StackPanel>
                                         <!--#endregion -->
                                         <!--#region ReviewViewer-->
-                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,15"
-                                                    Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed, FallbackValue={x:Static Visibility.Collapsed}}">
+                                        <StackPanel DockPanel.Dock="Top" Margin="5,25,5,15">
+                                            <StackPanel.Style>
+                                                <Style TargetType="StackPanel">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=ReviewViewer, Path=IsControlVisible, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
