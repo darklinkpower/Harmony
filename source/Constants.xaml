@@ -188,7 +188,8 @@
     <BitmapImage x:Key="SNKNeoGeoPocketColorPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/snk_neogeopocket_color.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="VectrexPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/vectrex.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="XboxSeriesPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox_series.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-
+    <BitmapImage x:Key="PcWindowsPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/pc_windows.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    
     <!--Platform Name Banners-->
     <BitmapImage x:Key="MicrosoftMsxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="MicrosoftMsx2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX2.png'}" popt:Freeze="True" CacheOption="OnLoad" />

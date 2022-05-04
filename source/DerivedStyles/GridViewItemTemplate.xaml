@@ -379,9 +379,6 @@
                                                 <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="317a5e2e-eac1-48bc-adb3-fb9e321afd3f">
                                                     <Setter Property="Source" Value="{StaticResource RiotBannerBitmap}" />
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="00000000-0000-0000-0000-000000000000">
-                                                    <Setter Property="Source" Value="{StaticResource PlayniteLibraryBannerBitmap}" />
-                                                </DataTrigger>
                                                 <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="e4ac81cb-1b1a-4ec9-8639-9a9633989a72">
                                                     <Setter Property="Source" Value="{StaticResource NintendoLibraryBannerBitmap}" />
                                                 </DataTrigger>
@@ -399,6 +396,31 @@
                                     </Image.Style>
                                 </Image>
 
+                                <Image x:Name="PcPlatformBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
+                                       RenderOptions.BitmapScalingMode="Fant"
+                                       Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
+                                       Stretch="Uniform" StretchDirection="Both">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Source" Value="{x:Null}" />
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding ElementName=BannersEnabled, Path=Tag}" Value="True" />
+                                                        <Condition Binding="{Binding ElementName=PlatformSpecificationId, Path=Text}" Value="pc_windows" />
+                                                        <Condition Binding="{Binding ElementName=PlatformBanner, Path=Visibility}" Value="Collapsed" />
+                                                        <Condition Binding="{Binding ElementName=PlatformNameBanner, Path=Visibility}" Value="Collapsed" />
+                                                        <Condition Binding="{Binding ElementName=LibraryBanner, Path=Visibility}" Value="Collapsed" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="{StaticResource PcWindowsPlatformBannerBitmap}" />
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                                
                                 <Image x:Name="UnknownBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Opacity="{DynamicResource GridViewCoverLibraryBannerOpacity}"
@@ -414,8 +436,9 @@
                                                         <Condition Binding="{Binding ElementName=PlatformBanner, Path=Visibility}" Value="Collapsed" />
                                                         <Condition Binding="{Binding ElementName=PlatformNameBanner, Path=Visibility}" Value="Collapsed" />
                                                         <Condition Binding="{Binding ElementName=LibraryBanner, Path=Visibility}" Value="Collapsed" />
+                                                        <Condition Binding="{Binding ElementName=PcPlatformBanner, Path=Visibility}" Value="Collapsed" />
                                                     </MultiDataTrigger.Conditions>
-                                                    <Setter Property="Source" Value="{StaticResource UnknownLibraryBannerBitmap}" />
+                                                    <Setter Property="Source" Value="{StaticResource PlayniteLibraryBannerBitmap}" />
                                                     <Setter Property="Visibility" Value="Visible" />
                                                 </MultiDataTrigger>
                                             </Style.Triggers>
