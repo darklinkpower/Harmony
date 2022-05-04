@@ -781,7 +781,17 @@
                                             </TabItem>
                                             <!--#endregion-->
                                             <!--#region ReviewViewer-->
-                                            <TabItem Visibility="{PluginStatus Plugin=Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1, Status=Installed}" >
+                                            <TabItem>
+                                                <TabItem.Style>
+                                                    <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{PluginSettings Plugin=ReviewViewer, Path=IsControlVisible, FallbackValue=False}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TabItem.Style>
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCReview_Viewer_ReviewsLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
