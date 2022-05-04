@@ -192,6 +192,14 @@
     <!--Platform Name Banners-->
     <BitmapImage x:Key="MicrosoftMsxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX.png'}" popt:Freeze="True" CacheOption="OnLoad" />
     <BitmapImage x:Key="MicrosoftMsx2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX2.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="AndroidPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/Android.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="ArcadePlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/Arcade.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="IOSPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/iOS.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="NECPC9801PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/NECPC9801.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="PhilipsCDiPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/PhilipsCDi.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="PICO8PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/PICO8.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="SegaNAOMIPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/SegaNAOMI.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    <BitmapImage x:Key="WebPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/Web.png'}" popt:Freeze="True" CacheOption="OnLoad" />
 
     <!--PluginId Banners-->
     <BitmapImage x:Key="PlayniteLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000000-0000-0000-0000-000000000000.png'}" popt:Freeze="True" CacheOption="OnLoad" />

@@ -281,6 +281,30 @@
                                                 <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="Microsoft MSX2">
                                                     <Setter Property="Source" Value="{StaticResource MicrosoftMsx2PlatformBannerBitmap}" />
                                                 </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="Android">
+                                                    <Setter Property="Source" Value="{StaticResource AndroidPlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="Arcade">
+                                                    <Setter Property="Source" Value="{StaticResource ArcadePlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="iOS">
+                                                    <Setter Property="Source" Value="{StaticResource IOSPlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="NEC PC-9801">
+                                                    <Setter Property="Source" Value="{StaticResource NECPC9801PlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="Philips CD-i">
+                                                    <Setter Property="Source" Value="{StaticResource PhilipsCDiPlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="PICO-8">
+                                                    <Setter Property="Source" Value="{StaticResource PICO8PlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="Sega NAOMI">
+                                                    <Setter Property="Source" Value="{StaticResource SegaNAOMIPlatformBannerBitmap}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PlatformName, Path=Text}" Value="Web">
+                                                    <Setter Property="Source" Value="{StaticResource WebPlatformBannerBitmap}" />
+                                                </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
                                     </Image.Style>
