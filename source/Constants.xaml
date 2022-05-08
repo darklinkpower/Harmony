@@ -17,7 +17,7 @@
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">False</sys:Boolean>
     <sys:Double x:Key="GridViewCoverLibraryBannerOpacity">1.0</sys:Double>
-    <sys:Boolean x:Key="GridViewEnablePlayingBorderAnimation">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnablePlayingBorderAnimation">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
     <!--region end-->
     
@@ -130,7 +130,7 @@
     <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
                     Opacity="1" popt:Freeze="True"/>
     <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/white_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
-                    Opacity="0.5" popt:Freeze="True"/>
+                    Opacity="1.0" popt:Freeze="True"/>
 
     <sys:Int32 x:Key="BannersBitmapDecodeWidth">300</sys:Int32>
     <sys:Int32 x:Key="BannersBitmapDecodeHeight">50</sys:Int32>

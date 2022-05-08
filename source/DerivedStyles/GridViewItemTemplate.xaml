@@ -561,17 +561,23 @@
     </Style>
 
     <Style x:Key="PlayingBorderAnimation" TargetType="Border">
-        <Setter Property="Opacity" Value="-0.10" />
-        <Setter Property="Visibility" Value="Collapsed" />
-        <Setter Property="Background" Value="#ffffff" />
+        <Setter Property="Opacity" Value="0.00" />
+        <Setter Property="Visibility" Value="{DynamicResource WhiteNoiseBrush}" />
         <Style.Triggers>
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
                 <Setter Property="Visibility" Value="Visible" />
                 <DataTrigger.EnterActions>
                     <BeginStoryboard x:Name="BorderStoryboard">
-                        <Storyboard RepeatBehavior="Forever">
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                                             To="0.25" Duration="0:00:1.60" AutoReverse="True"/>
+                        <Storyboard RepeatBehavior="Forever" Timeline.DesiredFrameRate="10">
+                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                           Storyboard.TargetProperty="Opacity"
+                                                           RepeatBehavior="Forever"
+                                                           AutoReverse="True">
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.00" Value="0" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:01.50" Value="0.25" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:01.60" Value="0.25" />
+                            </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.EnterActions>
@@ -598,7 +604,7 @@
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
-                        <Storyboard>
+                        <Storyboard Timeline.DesiredFrameRate="20">
                             <DoubleAnimation
                                     Storyboard.TargetProperty="Opacity"
                                     To="0.90"
