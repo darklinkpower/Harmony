@@ -431,7 +431,17 @@
                                         </StackPanel>
 
                                         <StackPanel Name="PART_ElemDescription"
-                                                    DockPanel.Dock="Top" Margin="5,25,5,0">
+                                                    Tag="{DynamicResource GridViewPlaceDescriptionAtBottom}" Margin="5,25,5,0">
+                                            <StackPanel.Style>
+                                                <Style TargetType="{x:Type StackPanel}">
+                                                    <Setter Property="DockPanel.Dock" Value="Top" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                            <Setter Property="DockPanel.Dock" Value="Bottom" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </StackPanel.Style>
                                             <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}"
                                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5" />
