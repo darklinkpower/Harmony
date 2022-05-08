@@ -449,10 +449,24 @@
                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
                                     <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
-                                    <Border Name="AnimatedIsGamePlayingBorder" Tag="False"
-                                            Style="{DynamicResource PlayingBorderAnimation}" IsHitTestVisible="False" />
-                                    <TextBlock Name="EnablePlayingBorderAnimation" Visibility="Collapsed"
-                                               Tag="{DynamicResource GridViewEnablePlayingBorderAnimation}" />
+                                    <Image x:Name="GlowPlayingBorder" Stretch="Fill" IsHitTestVisible="False"
+                                           Opacity="1.00"
+                                           Tag="False" RenderOptions.BitmapScalingMode="Fant">
+                                        <Image.Style>
+                                            <Style TargetType="Image">
+                                                <Setter Property="Source" Value="{x:Null}" />
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                        <Setter Property="Source" Value="{StaticResource InnerGlowBitmap}" />
+                                                        <Setter Property="Visibility" Value="Visible" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Image.Style>
+                                    </Image>
+                                    <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed"
+                                               Tag="{DynamicResource GridViewEnablePlayingGlowBorder}" />
                                     <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
                                             Style="{DynamicResource AnimatedCoverShineBackground}" />
                                     <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed"
@@ -524,10 +538,10 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsVisible}" Value="True" />
-                                <Condition Binding="{Binding ElementName=EnablePlayingBorderAnimation, Path=Tag}" Value="True" />
+                                <Condition Binding="{Binding ElementName=EnablePlayingGlowBorder, Path=Tag}" Value="True" />
                                 <Condition Binding="{Binding IsRunning}" Value="True" />
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Tag" Value="True" TargetName="AnimatedIsGamePlayingBorder" />
+                            <Setter Property="Tag" Value="True" TargetName="GlowPlayingBorder" />
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
