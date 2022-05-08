@@ -237,3 +237,9 @@ Packages:
       - 'GridView: Hide Reviews Viewer section for games not from Steam or PC games'
       - 'GridView: PC games without a library plugin banner will use a PC platform banner'
       - 'GridView: Reduce memory used by banner images'
+  - Version: 2.30
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-05-07
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.30/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_30.pthm
+    Changelog:
+      - 'Grid View: Added a highlight animation to covers of games that are running. Enabled by default, can be enabled or disabled with ThemeModifier extension'
