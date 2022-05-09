@@ -17,6 +17,7 @@
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">False</sys:Boolean>
     <sys:Double x:Key="GridViewCoverLibraryBannerOpacity">1.0</sys:Double>
+    <sys:Boolean x:Key="GridViewCoverUseRoundedCorners">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
@@ -40,6 +41,11 @@
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TopPanelItemsCornerRadius">12</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">5,5,0,0</CornerRadius>
+    <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,5,5</CornerRadius>
+    <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">7</CornerRadius>
+    <CornerRadius x:Key="DetailsViewCoverCornerRadius">5</CornerRadius>
     <Thickness x:Key="SidebarItemPadding">8</Thickness>
     
     <Color x:Key="BlackColor">#FF000000</Color>
@@ -62,6 +68,7 @@
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
 
+    <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#282828" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#e6303644" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />

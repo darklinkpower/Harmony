@@ -14,11 +14,48 @@
                         <StackPanel Name="PART_PanelHost"
                                     d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                             <Grid Width="{Settings GridItemWidth}">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=Mask, Path=Tag}" Value="True">
+                                                <Setter Property="OpacityMask">
+                                                    <Setter.Value>
+                                                        <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
 
+                                <Border Grid.RowSpan="2" Name="Mask" Background="{DynamicResource GridViewItemMaskBackgroundBrush}"
+                                        Tag="{DynamicResource GridViewCoverUseRoundedCorners}"
+                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                        BorderThickness="0">
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverCornerRadius}" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Settings ShowGridItemBackground}" Value="True" />
+                                                        <Condition Binding="{Settings ShowNamesUnderCovers}" Value="True" />
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverGridBackgroundDisabledCornerRadius}" />
+                                                </MultiDataTrigger>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
+                                                    <Setter Property="CornerRadius" Value="0,0,0,0" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                </Border>
+                                
                                 <TextBlock x:Name="BannersEnabled"
                                            Visibility="Collapsed"
                                            Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}" />
@@ -502,6 +539,16 @@
                                 </Grid>
                             </Grid>
                             <Border x:Name="ShowGameNameBorder" Background="Transparent">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="0" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=Mask, Path=Tag}" Value="True">
+                                                <Setter Property="CornerRadius" Value="{DynamicResource GridViewShowGameNameCornerRadius}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
                                 <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
                                    Foreground="{DynamicResource TextBrush}"
                                    Style="{DynamicResource BaseTextBlockStyle}"                                                                   

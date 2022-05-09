@@ -19,7 +19,19 @@
                     <Grid Background="{DynamicResource GridItemBackgroundBrush}"
                           Margin="{Settings ItemSpacingMargin}"
                           x:Name="ItemGrid">
-                        <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3"/>
+                        <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3"
+                                Tag="{DynamicResource GridViewCoverUseRoundedCorners}">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="0" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Mode=OneWay}" Value="True">
+                                            <Setter Property="CornerRadius" Value="{DynamicResource GridViewSelectionBorderCornerRadius}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                        </Border>
                         <ContentPresenter />
                     </Grid>
                     <ControlTemplate.Triggers>
