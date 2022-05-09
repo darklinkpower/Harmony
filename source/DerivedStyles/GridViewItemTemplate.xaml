@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:p="clr-namespace:Playnite;assembly=Playnite"
                     mc:Ignorable="d">
 
     <Style x:Key="GridViewItemTemplate" TargetType="{x:Type GameListItem}">
@@ -410,7 +411,7 @@
                                         </Style>
                                     </Image.Style>
                                 </Image>
-                                
+
                                 <Image x:Name="UnknownBanner" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center"
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
@@ -449,22 +450,7 @@
                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
                                     <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
-                                    <Image x:Name="GlowPlayingBorder" Stretch="Fill" IsHitTestVisible="False"
-                                           Opacity="1.00"
-                                           Tag="False" RenderOptions.BitmapScalingMode="Fant">
-                                        <Image.Style>
-                                            <Style TargetType="Image">
-                                                <Setter Property="Source" Value="{x:Null}" />
-                                                <Setter Property="Visibility" Value="Collapsed" />
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
-                                                        <Setter Property="Source" Value="{StaticResource InnerGlowBitmap}" />
-                                                        <Setter Property="Visibility" Value="Visible" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Image.Style>
-                                    </Image>
+                                    <Border x:Name="GlowPlayingBorder" Visibility="Collapsed"/>
                                     <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed"
                                                Tag="{DynamicResource GridViewEnablePlayingGlowBorder}" />
                                     <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
@@ -472,7 +458,7 @@
                                     <TextBlock Name="EnableHighlightAnimation" Visibility="Collapsed"
                                                Tag="{DynamicResource GridViewEnableCoverShineAnimation}" />
                                 </Grid>
-                                
+
                                 <Grid Grid.Row="1" Height="{Settings GridItemHeight}">
                                     <Border Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
                                     <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
@@ -538,10 +524,31 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsVisible}" Value="True" />
+                                <Condition Binding="{Binding Source={x:Static p:PlayniteApplication.Current}, Path=IsActive}" Value="True" />
                                 <Condition Binding="{Binding ElementName=EnablePlayingGlowBorder, Path=Tag}" Value="True" />
                                 <Condition Binding="{Binding IsRunning}" Value="True" />
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Tag" Value="True" TargetName="GlowPlayingBorder" />
+                            <Setter Property="Background" Value="{DynamicResource WhiteNoiseBrush}" TargetName="GlowPlayingBorder" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="GlowPlayingBorder" />
+                            <MultiDataTrigger.EnterActions>
+                                <BeginStoryboard x:Name="Flashing">
+                                    <Storyboard RepeatBehavior="Forever">
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                                                       Storyboard.TargetName="GlowPlayingBorder"
+                                                                       Storyboard.TargetProperty="Opacity"
+                                                                       RepeatBehavior="Forever"
+                                                                       AutoReverse="True">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.00" Value="0" />
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0" />
+                                            <SplineDoubleKeyFrame KeyTime="00:00:01.60" Value="0.25" />
+                                            <SplineDoubleKeyFrame KeyTime="00:00:01.70" Value="0.25" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.EnterActions>
+                            <MultiDataTrigger.ExitActions>
+                                <RemoveStoryboard BeginStoryboardName="Flashing"/>
+                            </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
@@ -573,35 +580,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style x:Key="PlayingBorderAnimation" TargetType="Border">
-        <Setter Property="Opacity" Value="0.00" />
-        <Setter Property="Visibility" Value="{DynamicResource WhiteNoiseBrush}" />
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
-                <Setter Property="Visibility" Value="Visible" />
-                <DataTrigger.EnterActions>
-                    <BeginStoryboard x:Name="BorderStoryboard">
-                        <Storyboard RepeatBehavior="Forever" Timeline.DesiredFrameRate="10">
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetProperty="Opacity"
-                                                           RepeatBehavior="Forever"
-                                                           AutoReverse="True">
-                                <SplineDoubleKeyFrame KeyTime="00:00:00.00" Value="0" />
-                                <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0" />
-                                <SplineDoubleKeyFrame KeyTime="00:00:01.50" Value="0.25" />
-                                <SplineDoubleKeyFrame KeyTime="00:00:01.60" Value="0.25" />
-                            </DoubleAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </DataTrigger.EnterActions>
-                <DataTrigger.ExitActions>
-                    <StopStoryboard BeginStoryboardName="BorderStoryboard" />
-                </DataTrigger.ExitActions>
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
-
+    
     <Style x:Key="AnimatedCoverShineBackground" TargetType="Border">
         <Setter Property="Opacity" Value="0.00" />
         <Setter Property="Background">

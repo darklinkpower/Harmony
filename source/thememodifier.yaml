@@ -14,7 +14,7 @@ Constants:
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid'
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'
-    - GridViewEnablePlayingGlowBorder: 'Show glow border on covers in games that are running'
+    - GridViewEnablePlayingGlowBorder: 'Show glow animation on covers in games that are running'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon in game covers'
     - GridViewCoverDisplayLibraryBanner: 'Show game platforms and library banners on covers'
     - GridViewCoverLibraryBannerOpacity(0.5, 1.0): 'Opacity of library banner'
