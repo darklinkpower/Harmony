@@ -251,3 +251,10 @@ Packages:
       - 'Grid View: Added ThemeModifier option to place Description at the bottom (After extensions sections). Disabled by default.'
       - 'Grid View: Improved performance of cover highlight animations'
       - 'Grid View: Made glow border of playing games static. Can be enabled with ThemeModifier extension'
+  - Version: 2.32
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-05-09
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.32/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_32.pthm
+    Changelog:
+      - 'Grid View: Added ThemeModifier extension option to use rounded covers'
+      - 'Grid View: Removed playing game border and added animation instead (Again...). Can be enabled with ThemeModifier extension'
