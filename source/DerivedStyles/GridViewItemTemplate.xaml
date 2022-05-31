@@ -420,6 +420,9 @@
                                                 <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="42ff71aa-34dc-4b12-86b6-1328136c958f">
                                                     <Setter Property="Source" Value="{StaticResource GroupeesLibraryBannerBitmap}" />
                                                 </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PluginId, Path=Text}" Value="b28970a8-37b0-4461-aa33-628024643e73">
+                                                    <Setter Property="Source" Value="{StaticResource GamersGateLibraryBannerBitmap}" />
+                                                </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
                                     </Image.Style>
