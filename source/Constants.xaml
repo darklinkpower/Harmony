@@ -67,6 +67,7 @@
     <Color x:Key="PanelSeparatorColor">#474f5c</Color>
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
+    <Color x:Key="DataChangeNotifColor">#ffa500</Color>
 
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#282828" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#e6303644" />
@@ -91,7 +92,8 @@
     <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
     <SolidColorBrush x:Key="GlyphHighlightLightBrush" Color="{DynamicResource GlyphHighlightLightColor}" />
     <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource MainColorDark}" />
-
+    <SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
+    
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
     <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />

@@ -27,7 +27,8 @@
                                       Style="{DynamicResource DetailsScrollViewer}"
                                       d:DesignWidth="1280"
                                       d:DesignHeight="1550"
-                                      d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
+                                      d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}"
+                                      x:Name="PART_ScrollViewHost">
                             <Grid Margin="0,0,0,20">
 
                                 <!-- Background Image -->
@@ -209,7 +210,7 @@
                                                         <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20"/>
                                                     </Image.Effect>
                                                 </Image>
-                                                <TextBlock FontFamily="{DynamicResource FontFamily}" Text="{Binding Game.DisplayName}" 
+                                                <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
                                                            DockPanel.Dock="Left" FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
                                                            Tag="{DynamicResource DetailsViewDisplayGameNameIfLogoVisible}"
                                                            TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
