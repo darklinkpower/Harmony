@@ -8,6 +8,7 @@
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="LocSource.xaml" />
         <ResourceDictionary Source="GlobalResources.xaml" />
+        <ResourceDictionary Source="ControlGalleryView.xaml" />
         <ResourceDictionary Source="Constants.xaml" />
         <ResourceDictionary Source="Common.xaml" />
         <ResourceDictionary Source="Media.xaml" />
@@ -60,6 +61,7 @@
         <ResourceDictionary Source="CustomControls/SearchBox.xaml" />
         <ResourceDictionary Source="CustomControls/TopPanelItem.xaml" />
         <ResourceDictionary Source="CustomControls/PathSelectionBox.xaml" />
+        <ResourceDictionary Source="CustomControls/HotKeyBox.xaml" />
         <!--Derived Styles-->
         <ResourceDictionary Source="DerivedStyles/TextBlockGameScore.xaml" />
         <ResourceDictionary Source="DerivedStyles/PropertyItemButton.xaml" />
@@ -94,6 +96,7 @@
         <ResourceDictionary Source="Views/LibraryListView.xaml" />
         <ResourceDictionary Source="Views/Library.xaml" />
         <ResourceDictionary Source="Views/MainWindow.xaml" />
+        <ResourceDictionary Source="Views/SearchView.xaml" />
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Application.Resources>

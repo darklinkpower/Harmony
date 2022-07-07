@@ -52,6 +52,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="PhotoSauce.MagicScaler">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PhotoSauce.MagicScaler.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -76,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="theme.yaml" />
-    <None Include="thememodifier.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -85,6 +88,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="GlobalResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ControlGalleryView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
@@ -288,6 +295,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="CustomControls\HotKeyBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="DerivedStyles\TextBlockGameScore.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -413,6 +424,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\SearchView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
