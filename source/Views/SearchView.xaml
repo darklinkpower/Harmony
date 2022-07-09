@@ -44,6 +44,7 @@
                     <Image VerticalAlignment="Center" Height="18" Width="18"
                            RenderOptions.BitmapScalingMode="Fant" Margin="5,0,5,0"
                            Source="{Binding GameView.LibraryIcon}"
+                           Opacity="0.90"
                            Visibility="{Binding Source, RelativeSource={RelativeSource Self}, Converter={StaticResource NullToVisibilityConverter}}"/>
                     <TextBlock Text="&#xef22;" FontFamily="{StaticResource FontIcoFont}" FontSize="16" VerticalAlignment="Center"
                                Visibility="{Binding Game.Hidden, Converter={StaticResource BooleanToVisibilityConverter}}"
@@ -68,7 +69,7 @@
             </Viewbox>
             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center" >
                 <TextBlock Text="{Binding Item.Name}" VerticalAlignment="Center"
-                           FontWeight="Normal" FontSize="{DynamicResource FontSizeLarge}" />
+                           FontWeight="SemiBold" FontSize="{DynamicResource FontSizeLarge}" />
                 <TextBlock Text="{Binding Item.Description}"
                            Foreground="{DynamicResource TextBrushDarker}"
                            Margin="0,5,0,0" VerticalAlignment="Center"
@@ -94,8 +95,9 @@
     </Style>
 
     <Style x:Key="SearchWindowActionButton" TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />        
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="Margin" Value="5,0,5,0" />
+        <Setter Property="Padding" Value="16,8,16,8" />
     </Style>
 
     <Style x:Key="SearchWindowInfoButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
@@ -124,7 +126,7 @@
 
     <Style x:Key="SearchWindowStyle" TargetType="WindowBase" BasedOn="{StaticResource StandardWindowStyle}">
         <Setter Property="Background" Value="{DynamicResource NormalBrushDark}" />
-        <Setter Property="Width" Value="800" />
+        <Setter Property="Width" Value="720" />
         <Setter Property="SizeToContent" Value="Height" />
     </Style>
 
@@ -142,6 +144,7 @@
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarger}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
@@ -154,13 +157,15 @@
 
     <Style x:Key="SearchWindowSearchHint" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
         <Setter Property="Margin" Value="10" />
+        <Setter Property="Foreground" Value="LightGray" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
     </Style>
 
     <Style x:Key="SearchWindowList" TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="MaxHeight" Value="600" />
+        <Setter Property="MaxHeight" Value="520" />
+        <Setter Property="Margin" Value="0,20,0,0" />
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="{x:Type ListBoxItem}">
@@ -172,15 +177,18 @@
                     <Setter Property="HorizontalAlignment" Value="Stretch" />
                     <Setter Property="VerticalAlignment" Value="Stretch" />
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Margin" Value="10,0,5,0" />
+                    <Setter Property="Cursor" Value="Hand" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type ListBoxItem}">
                                 <Grid>
-                                    <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                            Background="#003f59" CornerRadius="{DynamicResource ControlCornerRadius}" />
+                                    <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed" Opacity="0.60"
+                                            Background="{DynamicResource HighlightGlyphBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" />
                                     <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                            Background="#003f59" CornerRadius="{DynamicResource ControlCornerRadius}"/>
-                                    <Border Padding="{TemplateBinding Padding}" Background="Transparent">
+                                            Background="{DynamicResource HighlightGlyphBrush}" CornerRadius="{DynamicResource ControlCornerRadius}"/>
+                                    <Border Padding="{TemplateBinding Padding}" Background="Transparent"
+                                            BorderThickness="0,1,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}">
                                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                               Margin="3,0,0,0" />
