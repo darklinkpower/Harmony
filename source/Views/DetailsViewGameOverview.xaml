@@ -138,7 +138,7 @@
                                     </Grid.RowDefinitions>
                                     <Grid MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="1">
                                         <!--#region Logo & Cover Image-->
-                                        
+
                                         <Border x:Name="ExtraMetadataLoader_LogoLoaderControlGrid"
                                                 VerticalAlignment="Stretch"
                                                 HorizontalAlignment="Stretch"
@@ -159,7 +159,7 @@
                                             </Border.Style>
                                             <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
                                         </Border>
-                                        
+
                                         <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
                                             <Border>
                                                 <Border.Style>
@@ -194,7 +194,7 @@
                                                     </Style>
                                                 </ContentControl.Style>
                                             </ContentControl>
-                                            
+
                                             <Grid.Effect>
                                                 <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
                                             </Grid.Effect>
@@ -676,7 +676,7 @@
                                                         ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                                                 </StackPanel>
                                             </TabItem>
-                                            
+
                                             <TabItem Name="PART_ElemNotes">
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
@@ -831,16 +831,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style TargetType="ContentControl" >
-        <Setter Property="Visibility" Value="Visible" />
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=true}" Value="false" >
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
-
+    
     <Style TargetType="TextBlock" x:Key="DetailsViewTabHeaderStyle">
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="FontWeight" Value="Normal" />
