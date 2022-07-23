@@ -139,6 +139,7 @@
 
     <ControlTemplate x:Key="SearchWindowFilterNotification" TargetType="ContentControl">
         <Border Background="{DynamicResource NormalBrushDark}"
+                CornerRadius="{DynamicResource ControlCornerRadius}"
                 HorizontalAlignment="Stretch">
             <TextBlock FontSize="{DynamicResource FontSizeLarge}" VerticalAlignment="Center"
                        Style="{DynamicResource BaseTextBlockStyle}"
