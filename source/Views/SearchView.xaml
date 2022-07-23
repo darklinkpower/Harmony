@@ -66,10 +66,14 @@
     
     <DataTemplate x:Key="SearchWindowSearchItemTemplate">
         <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
-            <Viewbox Width="32" Height="32" VerticalAlignment="Center">
-                <ContentControl Focusable="False" Content="{Binding ItemIcon}"
-                                VerticalAlignment="Center" Margin="4" />
-            </Viewbox>
+            <Border Width="80"
+                    Visibility="{Binding ItemIcon, Converter={StaticResource NullToVisibilityConverter}}">
+                <Viewbox MaxWidth="80" Height="32" VerticalAlignment="Center"
+                         HorizontalAlignment="Left">
+                    <ContentControl Focusable="False" Content="{Binding ItemIcon}"
+                                    VerticalAlignment="Center" Margin="4" />
+                </Viewbox>
+            </Border>
             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center" >
                 <TextBlock Text="{Binding Item.Name}" VerticalAlignment="Center"
                            FontWeight="SemiBold" FontSize="{DynamicResource FontSizeLarge}" />
