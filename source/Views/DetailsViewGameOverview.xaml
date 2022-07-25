@@ -831,16 +831,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    <Style TargetType="TextBlock" x:Key="DetailsViewTabHeaderStyle">
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
-        <Setter Property="FontWeight" Value="Normal" />
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type TabItem}}}" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
-                <Setter Property="FontWeight" Value="Normal" />
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
-    
+
 </ResourceDictionary>
