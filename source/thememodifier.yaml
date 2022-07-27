@@ -7,15 +7,15 @@ Constants:
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - DetailsViewLibraryGameShowFavorite: 'Show favorites icon in game list'
-    - "Grid View"
+    - "Grid View Details"
     - GridViewPlaceDescriptionAtBottom: 'Place game description at the bottom'
     - GridViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - GridViewDetailsIconsVisibility: 'Visibility of icons in details'
     - GridViewAllowUseOfLogos: 'Allow use of Extra Metadata Loader logos'
     - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid'
+    - "Grid View Covers"
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'
     - GridViewEnablePlayingGlowBorder: 'Show glow animation on covers in games that are running'
-    - GridViewLibraryGameShowFavorite: 'Show favorites icon in game covers'
-    - GridViewCoverDisplayLibraryBanner: 'Show game platforms and library banners on covers'
-    - GridViewCoverLibraryBannerOpacity(0.5, 1.0): 'Opacity of library banner'
+    - GridViewLibraryGameShowFavorite: 'Show favorites icon'
+    - GridViewCoverDisplayLibraryBanner: 'Show game platforms and library banners'
     - GridViewCoverUseRoundedCorners: 'Use rounded corners for game covers'
