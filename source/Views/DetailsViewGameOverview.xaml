@@ -312,7 +312,7 @@
                                         </DockPanel.Resources>
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0">
                                             <Viewbox Stretch="Uniform" Height="35">
-                                                <TextBlock Text="&#xEC45;" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEC45;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
                                             </Viewbox>
                                             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}"/>
@@ -321,7 +321,7 @@
                                         </DockPanel>
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0">
                                             <Viewbox Stretch="Uniform" Height="35">
-                                                <TextBlock Text="&#xEEDC;" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEEDC;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
                                             </Viewbox>
                                             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}"/>
@@ -330,7 +330,7 @@
                                         </DockPanel>
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="15,0,0,0">
                                             <Viewbox Stretch="Uniform" Height="40">
-                                                <TextBlock Text="&#xEED6;" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEED6;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
                                             </Viewbox>
                                             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
@@ -349,7 +349,7 @@
                                                 </Style>
                                             </DockPanel.Style>
                                             <Viewbox Stretch="Uniform" Height="30">
-                                                <TextBlock Text="&#xEDD7;" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEDD7;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
                                             </Viewbox>
 
                                             <StackPanel Margin="15,0,0,0" VerticalAlignment="Center">
@@ -404,7 +404,7 @@
                                                 </Style>
                                             </DockPanel.Style>
                                             <Viewbox Stretch="Uniform" Height="30">
-                                                <Path Stretch="Fill" Fill="{DynamicResource TextBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
+                                                <Path Stretch="Fill" Fill="{DynamicResource GlyphBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
                                                     v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
                                                     h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
                                             </Viewbox>
@@ -430,11 +430,16 @@
                                             <!--#region Game Details-->
                                             <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" />
-                                            <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="21" AutoLayoutColumns="2" Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
+                                            <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="21" AutoLayoutColumns="2"
+                                                    Tag="{DynamicResource GridViewDetailsIconsVisibility}"
+                                                    Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
                                                 <Grid.Resources>
                                                     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                     <Style x:Key="Icon" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                                         <Setter Property="Width" Value="24"/>
+                                                        <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
+                                                        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                                        <Setter Property="Visibility" Value="{Binding ElementName=GridEx, Path=Tag}" />
                                                     </Style>
                                                     <Style TargetType="Label">
                                                         <Setter Property="FontWeight" Value="Normal" />
@@ -442,164 +447,144 @@
                                                         <Setter Property="Margin" Value="0,0,0,0" />
                                                     </Style>
                                                 </Grid.Resources>
+
                                                 <Label Name="PART_ElemLibrary" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF65;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCGameProviderTitle}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <Button Name="PART_ButtonLibrary" VerticalAlignment="Center" />
                                                 <Label Name="PART_ElemSource" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEF65;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF65;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCSourceLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <Button Name="PART_ButtonSource" VerticalAlignment="Center" />
                                                 <Label Name="PART_ElemPlatform" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEEEE;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEEEE;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCGamePlatformTitle}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsPlatforms" />
+
                                                 <Label Name="PART_ElemCategories" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF74;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCGameCategoriesTitle}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsCategories" />
+
                                                 <Label Name="PART_ElemGenres" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF74;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCGenreLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsGenres" />
+
                                                 <Label Name="PART_ElemReleaseDate" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEC45;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCGameReleaseDateTitle}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
+
                                                 <Label Name="PART_ElemDevelopers" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEEF3;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCDeveloperLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsDevelopers" />
+
                                                 <Label Name="PART_ElemPublishers" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEEF3;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEEF3;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCPublisherLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsPublishers" />
+
                                                 <Label Name="PART_ElemAgeRating" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF1A;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCAgeRatingLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsAgeRatings" />
+
                                                 <Label Name="PART_ElemSeries" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEEEF;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEEEF;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCSeriesLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsSeries" />
+
                                                 <Label Name="PART_ElemRegion" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xF02C;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xF02C;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCRegionLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsRegions" />
+
                                                 <Label Name="PART_ElemVersion" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEFD1;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEFD1;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCVersionLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <Button Name="PART_ButtonVersion" VerticalAlignment="Center" />
+
                                                 <Label Name="PART_ElemCommunityScore" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xF000;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCCommunityScore}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <TextBlock Name="PART_TextCommunityScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+
                                                 <Label Name="PART_ElemCriticScore" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xF000;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCCriticScore}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+
                                                 <Label Name="PART_ElemUserScore" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xF000;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xF000;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCUserScore}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+
                                                 <Label Name="PART_ElemFeatures" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEF74;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF74;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCFeaturesLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsFeatures" />
+
                                                 <Label Name="PART_ElemTags" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEC85;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEC85;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCTagsLabel}" />
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsTags" />
+
                                                 <Label Name="PART_ElemLinks" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEF71;" Style="{StaticResource Icon}" 
-                                                                   FontFamily="{StaticResource FontIcoFont}" 
-                                                                   Visibility="{DynamicResource DetailsViewDetailsIconsVisibility}" />
+                                                        <TextBlock Text="&#xEF71;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCLinksLabel}" />
                                                     </StackPanel>
                                                 </Label>
