@@ -15,7 +15,7 @@
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
                                         <Setter Property="BorderBrush" Value="{DynamicResource HighlightGlyphBrush}" />
-                                        <Setter Property="BorderThickness" Value="0,0,1,0" />
+                                        <Setter Property="BorderThickness" Value="0,0,0,0" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
