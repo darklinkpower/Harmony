@@ -78,6 +78,14 @@
                                 <DockPanel DockPanel.Dock="Top">
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
                                            RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0" />
+                                    
+                                    <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                                    DockPanel.Dock="Right" VerticalAlignment="Center">
+                                        <ContentControl.Resources>
+                                            <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
+                                        </ContentControl.Resources>
+                                    </ContentControl>
+                                    
                                     <TextBlock Name="PART_TextDisplayName" FontSize="{DynamicResource FontSizeLarger}"
                                                TextWrapping="Wrap" DockPanel.Dock="Left"
                                                Tag="{DynamicResource GridViewDisplayGameNameIfLogoVisible}"

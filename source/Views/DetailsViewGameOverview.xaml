@@ -296,6 +296,12 @@
                                                 </ContentControl>
                                                 <ContentControl x:Name="SystemChecker_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
                                                 <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
+                                                <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                                                DockPanel.Dock="Left" VerticalAlignment="Center">
+                                                    <ContentControl.Resources>
+                                                        <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
+                                                    </ContentControl.Resources>
+                                                </ContentControl>
                                             </DockPanel>
                                         </StackPanel>
                                     </DockPanel>
