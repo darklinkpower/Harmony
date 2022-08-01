@@ -21,7 +21,7 @@
                             <RowDefinition Height="*" x:Name="RowDefinition1" />
                         </Grid.RowDefinitions>
                         <Border x:Name="HeaderBorder" Background="Transparent"
-                                BorderThickness="0,0,0,0" BorderBrush="{DynamicResource NormalBorderBrush}">
+                                BorderThickness="0,0,0,1" BorderBrush="{DynamicResource HighlightGlyphBrush}">
                             <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Panel.ZIndex="1" Width="Auto" Height="Auto"
                                       KeyboardNavigation.TabIndex="1" RenderTransformOrigin="0.5,0.5">
                                 <TabPanel.LayoutTransform>
@@ -109,7 +109,7 @@
                             <RowDefinition Height="*" x:Name="RowDefinition1" />
                         </Grid.RowDefinitions>
                         <Border x:Name="HeaderBorder" Background="Transparent"
-                                BorderThickness="0,0,0,0" BorderBrush="{DynamicResource NormalBorderBrush}">
+                                BorderThickness="0,0,0,1" BorderBrush="{DynamicResource HighlightGlyphBrush}">
                             <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Panel.ZIndex="1" Width="Auto" Height="Auto"
                                       KeyboardNavigation.TabIndex="1" RenderTransformOrigin="0.5,0.5">
                                 <TabPanel.LayoutTransform>
