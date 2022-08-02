@@ -245,6 +245,7 @@
                                                     <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonMoreActions" Content="{DynamicResource LOCMoreAction}" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
                                                 </Grid>
                                                 <Button DockPanel.Dock="Left" x:Name="PART_ButtonEditGame" Content="&#xEDED;" VerticalAlignment="Top" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" />
+                                                <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0" />
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginButton" Margin="10,0,0,0"
                                                             Height="40" MaxWidth="150" DockPanel.Dock="Left">
                                                     <ContentControl.Style>
