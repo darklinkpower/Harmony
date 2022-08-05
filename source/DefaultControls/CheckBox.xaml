@@ -18,8 +18,8 @@
                 <ControlTemplate TargetType="{x:Type CheckBox}">
                     <Border Background="Transparent"
                             Padding="{TemplateBinding Padding}">
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Width="18" Height="18">
+                        <DockPanel>
+                            <Grid Width="18" Height="18" VerticalAlignment="Center">
                                 <Border BorderThickness="{TemplateBinding BorderThickness}"
                                         CornerRadius="0.5"
                                         Background="{TemplateBinding Background}"
@@ -34,7 +34,7 @@
                                 </Viewbox>
                             </Grid>
                             <ContentPresenter RecognizesAccessKey="True" Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                        </StackPanel>
+                        </DockPanel>
                     </Border>                    
                     <ControlTemplate.Triggers>
                         <MultiTrigger>
