@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="theme.yaml" />
+    <None Include="themeExtras.yaml" />
     <None Include="thememodifier.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

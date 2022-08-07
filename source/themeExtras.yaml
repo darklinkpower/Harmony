@@ -1,11 +1,7 @@
 ThemeId: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
-Recommendations:
-- AddonName: DuplicateHider
-  AddonId: felixkmh_DuplicateHider_Plugin
-  Features:
 PersistentPaths:
 - Images/Banners
-BannerBySpecIdPath: Images/Banners/PlatformSpecId
-BannerByPlatformNamePath: Images/Banners/PlatformName
+BannersBySpecIdPath: Images/Banners/PlatformSpecId
+BannersByPlatformNamePath: Images/Banners/PlatformName
 BannersByPluginIdPath: Images/Banners/PluginId
 DefaultBannerPath: Images/Banners/UnknownLibrary.png
