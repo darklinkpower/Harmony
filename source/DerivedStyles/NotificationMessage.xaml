@@ -13,10 +13,16 @@
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="NotificationMessageBorder" d:DataContext="{x:Static DesignMainViewModel.DesignNotificationIntance}"
                         Style="{DynamicResource HighlightBorder}" Background="{DynamicResource GlyphBrush}" BorderThickness="0">
-                        <TextBlock Text="{Binding Text}"
-                                   Style="{DynamicResource BaseTextBlockStyle}"
-                                   Margin="6" TextWrapping="Wrap"
-                                   MinHeight="38" Foreground="{DynamicResource TextBrushDark}"/>
+                        <DockPanel>
+                            <Button DockPanel.Dock="Right" Padding="6,0,6,0"
+                                    Content="r" FontFamily="Marlett"
+                                    VerticalAlignment="Stretch" BorderThickness="0"
+                                    Command="{Binding CloseCommand}"/>
+                            <TextBlock Text="{Binding Text}"
+                                       Style="{DynamicResource BaseTextBlockStyle}"
+                                       Margin="6,6,0,6" TextWrapping="Wrap"
+                                       MinHeight="38" DockPanel.Dock="Left" />
+                        </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
