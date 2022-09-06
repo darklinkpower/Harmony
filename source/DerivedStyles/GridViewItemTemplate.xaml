@@ -165,7 +165,7 @@
                                 <Condition Binding="{Binding ElementName=EnablePlayingGlowBorder, Path=Tag}" Value="True" />
                                 <Condition Binding="{Binding IsRunning}" Value="True" />
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" Value="{DynamicResource WhiteNoiseBrush}" TargetName="GlowPlayingBorder" />
+                            <Setter Property="Background" Value="{DynamicResource DarkNoiseBrush}" TargetName="GlowPlayingBorder" />
                             <Setter Property="Visibility" Value="Visible" TargetName="GlowPlayingBorder" />
                             <MultiDataTrigger.EnterActions>
                                 <BeginStoryboard x:Name="Flashing">
@@ -177,8 +177,8 @@
                                                                        AutoReverse="True">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00.00" Value="0" />
                                             <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0" />
-                                            <SplineDoubleKeyFrame KeyTime="00:00:01.60" Value="0.25" />
-                                            <SplineDoubleKeyFrame KeyTime="00:00:01.70" Value="0.25" />
+                                            <SplineDoubleKeyFrame KeyTime="00:00:01.60" Value="0.50" />
+                                            <SplineDoubleKeyFrame KeyTime="00:00:01.70" Value="0.50" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </BeginStoryboard>
