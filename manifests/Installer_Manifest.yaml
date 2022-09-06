@@ -258,3 +258,22 @@ Packages:
     Changelog:
       - 'Grid View: Added ThemeModifier extension option to use rounded covers'
       - 'Grid View: Removed playing game border and added animation instead (Again...). Can be enabled with ThemeModifier extension'
+  - Version: 2.33
+    RequiredApiVersion: 2.2.0
+    ReleaseDate: 2022-09-06
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.33/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_33.pthm
+    Changelog:
+      - 'Updated to Playnite 10 changes and made relevant modifications'
+      - 'Added GamersGate library plugin banner'
+      - 'DetailsView and GridView: Add support to display current players on Steam via NewsViewer extension control'
+      - 'DetailsView and GridView: Add support to PlayState extension game status switcher button'
+      - 'DetailsView and GridView: Changed icons color'
+      - 'DetailsView: Style modifications to expanders headers'
+      - 'DetailsView: Style modifications to game list items'
+      - 'Extension manifests changes'
+      - 'GridView: Playing game highlight will now darken the game cover'
+      - 'GridView: Removed theme banners implementation and added support to display banners with ThemeExtras extension'
+      - 'GridView: Style modifications to expanders headers'
+      - 'Reduce corner radius of controls'
+      - 'TabControl: Increase header border thickness'
+      - 'Misc changes and fixes'
