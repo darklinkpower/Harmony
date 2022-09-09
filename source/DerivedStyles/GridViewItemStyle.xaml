@@ -19,6 +19,7 @@
                     <Grid Background="{DynamicResource GridItemBackgroundBrush}"
                           Margin="{Settings ItemSpacingMargin}"
                           x:Name="ItemGrid">
+                        <ContentPresenter />
                         <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3"
                                 Tag="{DynamicResource GridViewCoverUseRoundedCorners}">
                             <Border.Style>
@@ -32,7 +33,6 @@
                                 </Style>
                             </Border.Style>
                         </Border>
-                        <ContentPresenter />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

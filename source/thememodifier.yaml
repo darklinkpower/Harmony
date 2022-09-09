@@ -19,3 +19,4 @@ Constants:
     - GridViewLibraryGameShowFavorite: 'Show favorites icon'
     - GridViewCoverDisplayLibraryBanner: 'Show banners (Requires ThemeExtras extension)'
     - GridViewCoverUseRoundedCorners: 'Use rounded corners for game covers'
+    - GridViewCoverDisplayDropShadowEffect: 'Use dropshadow effect'
