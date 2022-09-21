@@ -364,7 +364,8 @@
     </Style>
 
     <Style TargetType="Border" x:Key="DropShadowBorderStyle">
-        <Setter Property="Background" Value="{DynamicResource GridViewItemMaskBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource GridViewItemMaskBackgroundBrush}" />
+        <Setter Property="BorderThickness" Value="8" />
         <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverCornerRadius}" />
         <Setter Property="Grid.RowSpan" Value="1" />
         <Setter Property="CacheMode">
