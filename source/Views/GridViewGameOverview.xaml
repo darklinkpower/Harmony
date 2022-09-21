@@ -181,7 +181,7 @@
                                             <GridEx Margin="0,5,0,10"
                                                     ColumnCount="2" StarColumns="1"
                                                     Tag="{DynamicResource GridViewDetailsIconsVisibility}"
-                                                    RowCount="21" AutoLayoutColumns="2">
+                                                    RowCount="24" AutoLayoutColumns="2">
                                                 <Grid.Resources>
                                                     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                     <Style x:Key="Icon" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
@@ -211,6 +211,14 @@
                                                 </Label>
                                                 <TextBlock Name="PART_TextLastActivity" VerticalAlignment="Center" />
 
+                                                <Label Name="PART_ElemRecentActivity" >
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="&#xEC45;" Style="{DynamicResource Icon}" />
+                                                        <TextBlock Text="{DynamicResource LOCRecentActivityLabel}" />
+                                                    </StackPanel>
+                                                </Label>
+                                                <TextBlock Name="PART_TextRecentActivity" VerticalAlignment="Center" />
+                                                
                                                 <Label Name="PART_ElemCompletionStatus" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEED6;" Style="{DynamicResource Icon}" />
@@ -219,6 +227,22 @@
                                                 </Label>
                                                 <Button Name="PART_ButtonCompletionStatus" VerticalAlignment="Center" />
 
+                                                <Label Name="PART_ElemInstallDirectory" >
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="&#xef43;" Style="{DynamicResource Icon}" />
+                                                        <TextBlock Text="{DynamicResource LOCGameInstallDirTitle}" />
+                                                    </StackPanel>
+                                                </Label>
+                                                <Button Name="PART_ButtonInstallDirectory" VerticalAlignment="Center" />
+
+                                                <Label Name="PART_ElemInstallSize" >
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="&#xef43;" Style="{DynamicResource Icon}" />
+                                                        <TextBlock Text="{DynamicResource LOCInstallSizeLabel}" />
+                                                    </StackPanel>
+                                                </Label>
+                                                <TextBlock Name="PART_TextInstallSize" VerticalAlignment="Center" />
+                                                
                                                 <Label Name="PART_ElemLibrary" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEF65;" Style="{DynamicResource Icon}" />
