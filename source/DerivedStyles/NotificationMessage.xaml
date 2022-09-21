@@ -19,6 +19,7 @@
                                     VerticalAlignment="Stretch" BorderThickness="0"
                                     Command="{Binding CloseCommand}"/>
                             <TextBlock Text="{Binding Text}"
+                                       Foreground="{DynamicResource TextBrushDark}"
                                        Style="{DynamicResource BaseTextBlockStyle}"
                                        Margin="6,6,0,6" TextWrapping="Wrap"
                                        MinHeight="38" DockPanel.Dock="Left" />
