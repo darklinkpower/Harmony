@@ -285,3 +285,9 @@ Packages:
       - 'GridView: Added shadow effect to covers. Disabled by default. Can be configured with ThemeModifier extension'
       - 'NotificationMessage: Change text foreground color'
       - 'Update to Playnite 10.1 changes'
+  - Version: 2.35
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-09-25
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.35/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_35.pthm
+    Changelog:
+      - 'Grid View: Fix darken of uninstalled games setting not working'
