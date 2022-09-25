@@ -87,7 +87,7 @@
                                                        TextTrimming="CharacterEllipsis" TextAlignment="Center"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
-                                        <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" VerticalAlignment="Bottom" />
+                                        <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
                                         <Border x:Name="GlowPlayingBorder" Visibility="Collapsed"/>
                                         <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed"
                                                    Tag="{DynamicResource GridViewEnablePlayingGlowBorder}" />
