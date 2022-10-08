@@ -468,7 +468,7 @@
                                                 <TextBlock Name="PART_TextRecentActivity" VerticalAlignment="Center" />
                                                 <Label Name="PART_ElemInstallDirectory" >
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xef43;" Style="{DynamicResource Icon}" />
+                                                        <TextBlock Text="&#xEC5B;" Style="{DynamicResource Icon}" />
                                                         <TextBlock Text="{DynamicResource LOCGameInstallDirTitle}" />
                                                     </StackPanel>
                                                 </Label>
