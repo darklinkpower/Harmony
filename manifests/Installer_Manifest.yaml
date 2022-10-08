@@ -291,3 +291,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.35/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_35.pthm
     Changelog:
       - 'Grid View: Fix darken of uninstalled games setting not working'
+  - Version: 2.36
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-08
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.36/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_36.pthm
+    Changelog:
+      - 'Added additional platform banners'
+      - 'Details: Changed icon used for Install Directory'
+      - 'Fix options to hide game name from details if logo is displayed not working'
+      - 'GridView: Fix banners from some platforms not being detected and displayed'
