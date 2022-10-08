@@ -85,13 +85,11 @@
                                             <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
                                         </ContentControl.Resources>
                                     </ContentControl>
-                                    
-                                    <TextBlock Name="PART_TextDisplayName" FontSize="{DynamicResource FontSizeLarger}"
-                                               TextWrapping="Wrap" DockPanel.Dock="Left"
-                                               Tag="{DynamicResource GridViewDisplayGameNameIfLogoVisible}"
-                                               VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
+
+                                    <Border DockPanel.Dock="Left" Margin="0,0,10,0"
+                                            Tag="{DynamicResource GridViewDisplayGameNameIfLogoVisible}">
+                                        <Border.Style>
+                                            <Style TargetType="Border">
                                                 <Setter Property="Visibility" Value="Visible" />
                                                 <Style.Triggers>
                                                     <MultiDataTrigger>
@@ -105,11 +103,15 @@
                                                     </MultiDataTrigger>
                                                 </Style.Triggers>
                                             </Style>
-                                        </TextBlock.Style>
-                                        <TextBlock.Effect>
-                                            <DropShadowEffect ShadowDepth="3"/>
-                                        </TextBlock.Effect>
-                                    </TextBlock>
+                                        </Border.Style>
+                                        <TextBlock Name="PART_TextDisplayName" FontSize="{DynamicResource FontSizeLarger}"
+                                                   TextWrapping="Wrap" 
+                                                   VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
+                                            <TextBlock.Effect>
+                                                <DropShadowEffect ShadowDepth="3"/>
+                                            </TextBlock.Effect>
+                                        </TextBlock>
+                                    </Border>
                                 </DockPanel>
 
                                 <Grid DockPanel.Dock="Top" Margin="0,10,0,10">
