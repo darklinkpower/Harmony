@@ -300,3 +300,9 @@ Packages:
       - 'Details: Changed icon used for Install Directory'
       - 'Fix options to hide game name from details if logo is displayed not working'
       - 'GridView: Fix banners from some platforms not being detected and displayed'
+  - Version: 2.37
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-11
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.37/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_37.pthm
+    Changelog:
+      - 'Fix theme failing to load for some Playnite installs'
