@@ -49,6 +49,5 @@
     <BitmapImage x:Key="DefaultGameCover" UriSource="{ThemeFile 'Images/custom_cover_background.png'}" popt:Freeze="True" />
 
     <BitmapImage x:Key="PowerShellIcon" UriSource="{ThemeFile 'Images/powershell.ico'}" popt:Freeze="True" />
-    <BitmapImage x:Key="PythonIcon" UriSource="{ThemeFile 'Images/python.ico'}" popt:Freeze="True" />
     <BitmapImage x:Key="CsharpIcon" UriSource="{ThemeFile 'Images/csharp.ico'}" popt:Freeze="True" />
 </ResourceDictionary>
