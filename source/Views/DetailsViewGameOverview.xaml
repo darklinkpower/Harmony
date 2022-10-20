@@ -56,7 +56,17 @@
                                     </WrapPanel.Style>
                                     <Grid>
                                         <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                        <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" IsHitTestVisible="False" />
+                                        <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
+                                                Opacity="0.40">
+                                            <Border.OpacityMask>
+                                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="#F2FFFFFF" Offset="-0.1"/>
+                                                        <GradientStop Color="#B3FFFFFF" Offset="0.8"/>
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Border.OpacityMask>
+                                        </Border>
                                     </Grid>
                                     <WrapPanel.OpacityMask>
                                         <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
@@ -87,7 +97,17 @@
                                     <Grid>
                                         <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
                                                     HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                        <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" IsHitTestVisible="False" />
+                                        <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
+                                                Opacity="0.40">
+                                            <Border.OpacityMask>
+                                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="#F2FFFFFF" Offset="-0.1"/>
+                                                        <GradientStop Color="#B3FFFFFF" Offset="0.8"/>
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Border.OpacityMask>
+                                        </Border>
                                     </Grid>
                                     <WrapPanel.OpacityMask>
                                         <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
@@ -124,7 +144,17 @@
                                     </WrapPanel.OpacityMask>
                                     <Grid>
                                         <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
-                                        <Border Background="{DynamicResource DetailsViewImageDarkenBrush}" IsHitTestVisible="False" />
+                                        <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
+                                                Opacity="0.40">
+                                            <Border.OpacityMask>
+                                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="#F2FFFFFF" Offset="-0.1"/>
+                                                        <GradientStop Color="#B3FFFFFF" Offset="0.8"/>
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Border.OpacityMask>
+                                        </Border>
                                     </Grid>
                                 </WrapPanel>
 
