@@ -47,13 +47,13 @@
     </Style>
 
     <Style TargetType="{x:Type Button}" x:Key="PlayersCountButtonStyle">
-        <Setter Property="Background" Value="{DynamicResource GlyphBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+        <Setter Property="Background" Value="{DynamicResource TextBrushDark}"/>
+        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="FontFamily" Value="{DynamicResource FontFamily}" />
-        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Padding" Value="7,2,7,2" />
         <Setter Property="Margin" Value="10,0,0,0" />

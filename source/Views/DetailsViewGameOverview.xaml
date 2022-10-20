@@ -238,6 +238,12 @@
                                                     </TextBlock>
                                                 </Border>
                                                 
+                                                <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
+                                                                DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                    <ContentControl.Resources>
+                                                        <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
+                                                    </ContentControl.Resources>
+                                                </ContentControl>
                                             </DockPanel>
                                             <DockPanel Margin="0,15,0,0" LastChildFill="False">
                                                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" DockPanel.Dock="Left">
@@ -302,12 +308,8 @@
                                                 </ContentControl>
                                                 <ContentControl x:Name="SystemChecker_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
                                                 <ContentControl x:Name="CheckLocalizations_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"/>
-                                                <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
-                                                                DockPanel.Dock="Left" VerticalAlignment="Center">
-                                                    <ContentControl.Resources>
-                                                        <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
-                                                    </ContentControl.Resources>
-                                                </ContentControl>
+                                                <ContentControl x:Name="LibraryManagement_PluginFeaturesIconList" Height="35" Margin="10,0,0,0"
+                                                                VerticalAlignment="Bottom" Opacity="0.85" />
                                             </DockPanel>
                                         </StackPanel>
                                     </DockPanel>
