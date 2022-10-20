@@ -199,6 +199,7 @@
                                                 <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
                                             </Grid.Effect>
                                         </Grid>
+                                        <!--GridConverterGridPanelCloseButton-->
                                         <!--#regionend-->
                                     </Grid>
                                     <DockPanel Margin="0,20,0,15" MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="2" Background="Transparent">
@@ -442,8 +443,7 @@
                                             <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" />
                                             <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="24" AutoLayoutColumns="2"
-                                                    Tag="{DynamicResource GridViewDetailsIconsVisibility}"
-                                                    Background="{DynamicResource DetailsViewWrapBackgroundsBrush}">
+                                                    Tag="{DynamicResource GridViewDetailsIconsVisibility}">
                                                 <Grid.Resources>
                                                     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
                                                     <Style x:Key="Icon" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
