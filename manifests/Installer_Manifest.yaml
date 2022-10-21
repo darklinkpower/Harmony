@@ -306,3 +306,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.37/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_37.pthm
     Changelog:
       - 'Fix theme failing to load for some Playnite installs'
+  - Version: 2.38
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-20
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.38/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_38.pthm
+    Changelog:
+      - 'DetailsView: Add support to display LibraryManagement extension Features icons'
+      - 'Fix button to close Grid View details Panel not being available when using the Details To Grid View Converter extension'
