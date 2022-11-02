@@ -21,6 +21,16 @@
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
+    <sys:Int32 x:Key="GridViewSectionOrderDetails">0</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderVideo">1</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderNotes">2</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderDescription">3</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderSuccessStory">4</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderHowLongToBeat">5</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderScreenshotsVisualizer">6</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderGameActivity">7</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderReviewViewer">8</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderNewsViewer">9</sys:Int32>
     <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
