@@ -57,7 +57,7 @@
                                     <Grid>
                                         <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
                                         <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
-                                                Opacity="0.40">
+                                                Opacity="{DynamicResource DetailsBackgroundDarkenLayerOpacity}">
                                             <Border.OpacityMask>
                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                     <LinearGradientBrush.GradientStops>
@@ -98,7 +98,7 @@
                                         <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
                                                     HorizontalAlignment="Center" VerticalAlignment="Top" />
                                         <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
-                                                Opacity="0.40">
+                                                Opacity="{DynamicResource DetailsBackgroundDarkenLayerOpacity}">
                                             <Border.OpacityMask>
                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                     <LinearGradientBrush.GradientStops>
@@ -145,7 +145,7 @@
                                     <Grid>
                                         <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControlAlternative" />
                                         <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
-                                                Opacity="0.40">
+                                                Opacity="{DynamicResource DetailsBackgroundDarkenLayerOpacity}">
                                             <Border.OpacityMask>
                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                     <LinearGradientBrush.GradientStops>
