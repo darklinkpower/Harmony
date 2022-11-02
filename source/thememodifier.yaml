@@ -13,6 +13,17 @@ Constants:
     - GridViewAllowUseOfLogos: 'Allow use of logos (Requires Extra Metadata Loader extension)'
     - GridViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid (Requires HowLongToBeat extension)'
+    - "Grid View Details sections order"
+    - GridViewSectionOrderDetails(0,12): 'Game Details'
+    - GridViewSectionOrderVideo(0,12): 'ExtraMetadata extension video'
+    - GridViewSectionOrderNotes(0,12): 'Game Notes'
+    - GridViewSectionOrderDescription(0,12): 'Game Description'
+    - GridViewSectionOrderSuccessStory(0,12): 'SuccessStory extension'
+    - GridViewSectionOrderHowLongToBeat(0,12): 'HowLongToBeat extension'
+    - GridViewSectionOrderScreenshotsVisualizer(0,12): 'ScreenshotsVisualizer extension'
+    - GridViewSectionOrderGameActivity(0,12): 'GameActivity extension'
+    - GridViewSectionOrderReviewViewer(0,12): 'ReviewViewer extension'
+    - GridViewSectionOrderNewsViewer(0,12): 'NewsViewer extension'
     - "Grid View Covers"
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'
     - GridViewEnablePlayingGlowBorder: 'Show glow animation if game is running'
