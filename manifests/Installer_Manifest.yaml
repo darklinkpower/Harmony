@@ -313,3 +313,13 @@ Packages:
     Changelog:
       - 'DetailsView: Add support to display LibraryManagement extension Features icons'
       - 'Fix button to close Grid View details Panel not being available when using the Details To Grid View Converter extension'
+  - Version: 2.39
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-11-01
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.39/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_39.pthm
+    Changelog:
+      - 'DetailsView: Added option with ThemeModifier extension to configure how much should the background image be darkened'
+      - 'GridView: Added support to change the order of sections in details with ThemeModifier extension'
+      - 'GridView: Added support to collapse the details view sections'
+      - 'GridView: Fix panels borders being too thick when using the details view layout with the Details to Grid View Converter extension'
+      - 'SearchBar: Fix view scrollbar aligning to the right when text of element in search is too long'
