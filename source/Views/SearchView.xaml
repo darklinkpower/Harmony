@@ -209,12 +209,11 @@
                     <Setter Property="HorizontalAlignment" Value="Stretch" />
                     <Setter Property="VerticalAlignment" Value="Stretch" />
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                    <Setter Property="Margin" Value="10,0,5,0" />
                     <Setter Property="Cursor" Value="Hand" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                                <Grid>
+                                <Grid Margin="10,0,5,0">
                                     <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed" Opacity="0.60"
                                             Background="{DynamicResource HighlightGlyphBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" />
                                     <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
