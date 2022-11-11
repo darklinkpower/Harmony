@@ -323,3 +323,9 @@ Packages:
       - 'GridView: Added support to collapse the details view sections'
       - 'GridView: Fix panels borders being too thick when using the details view layout with the Details to Grid View Converter extension'
       - 'SearchBar: Fix view scrollbar aligning to the right when text of element in search is too long'
+  - Version: 2.40
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2022-11-10
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.40/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_40.pthm
+    Changelog:
+      - 'Update to Playnite 10.4 changes (API 2.4.0)'
