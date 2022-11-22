@@ -29,7 +29,7 @@ Constants:
     - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'
     - GridViewEnablePlayingGlowBorder: 'Show glow animation if game is running'
     - GridViewLibraryGameShowFavorite: 'Show favorites icon'
-    - GridViewLibraryGameCoverVerticalAlignment: 'Choose the vertival alignment of game covers'
+    - GridViewLibraryGameCoverVerticalAlignment: 'Choose the vertical alignment of game covers'
     - GridViewCoverDisplayLibraryBanner: 'Show banners (Requires ThemeExtras extension)'
     - GridViewCoverUseRoundedCorners: 'Use rounded corners for game covers (Can cause performance degradation)'
     - GridViewCoverDisplayDropShadowEffect: 'Use dropshadow effect (Can cause performance degradation)'
