@@ -76,7 +76,7 @@
 
                                     <Image Name="PART_ImageCover" Grid.Row="1" Height="{Settings GridItemHeight}"
                                            RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
-                                           HorizontalAlignment="Center" VerticalAlignment="Top"
+                                           HorizontalAlignment="Center" VerticalAlignment="{DynamicResource GridViewLibraryGameCoverVerticalAlignment}"
                                            Stretch="{Settings CoverArtStretch}" />
 
                                     <Grid Grid.RowSpan="2">
