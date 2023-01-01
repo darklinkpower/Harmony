@@ -32,6 +32,7 @@
     <sys:Int32 x:Key="GridViewSectionOrderGameActivity">7</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderReviewViewer">8</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNewsViewer">9</sys:Int32>
+    <sys:Boolean x:Key="GridViewCoverZoomOnHover">True</sys:Boolean>
     <!--region end-->
     
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
