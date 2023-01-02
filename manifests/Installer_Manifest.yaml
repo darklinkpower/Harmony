@@ -329,3 +329,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.40/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_40.pthm
     Changelog:
       - 'Update to Playnite 10.4 changes (API 2.4.0)'
+  - Version: 2.41
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-02
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.41/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_41.pthm
+    Changelog:
+      - 'Fix game background image blur bleeding into sidebar area'
+      - 'Grid View: Added ThemeModifier extension option to disable zoom on hover for covers'
