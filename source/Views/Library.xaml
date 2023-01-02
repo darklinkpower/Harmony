@@ -19,7 +19,7 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <FadeImage x:Name="PART_ImageBackground"
+                        <FadeImage x:Name="PART_ImageBackground" ClipToBounds="True"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
 
