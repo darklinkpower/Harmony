@@ -128,7 +128,8 @@
                                             Content="{DynamicResource LOCMoreAction}"
                                             Height="40" Grid.Column="1" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}"/>
                                     <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="0,0,5,0">
-                                        <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0" />
+                                        <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0"
+                                                        Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                         <Button x:Name="PART_ButtonEditGame"
                                                 Margin="10,0,0,0" Height="40" Focusable="False"
                                                 Content="&#xeded;" FontFamily="{DynamicResource FontIcoFont}">
