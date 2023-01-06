@@ -665,6 +665,34 @@
                                             </StackPanel>
                                         </Expander>
                                         <!--#endregion -->
+
+                                        <!--#region CheckDlc-->
+                                        <Expander Grid.Row="{DynamicResource GridViewSectionOrderCheckDlc}"
+                                                  IsExpanded="True"
+                                                  Visibility="{PluginSettings Plugin=CheckDlc, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                  Margin="0,0,5,0">
+                                            <Expander.Header>
+                                                <TextBlock Text="DLC" Style="{DynamicResource BaseTextBlockStyle}"
+                                                           Cursor="Hand"
+                                                           FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" />
+                                            </Expander.Header>
+                                            <StackPanel Margin="0,0,0,25">
+                                                <StackPanel.Resources>
+                                                    <Style TargetType="ListBox">
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                        <Setter Property="BorderThickness" Value="0" />
+                                                    </Style>
+                                                </StackPanel.Resources>
+                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <ContentControl x:Name="CheckDlc_PluginButton" MinHeight="20" MinWidth="120"
+                                                                HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,10"
+                                                                Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                <ContentControl x:Name="CheckDlc_PluginListDlcAll" Height="700" Margin="0,0,0,10"/>
+                                                <ContentControl x:Name="CheckDlc_PluginListDlcOwned" Height="700" Margin="0,0,0,10"/>
+                                                <ContentControl x:Name="CheckDlc_PluginListDlcNotOwned" Height="700" Margin="0,0,0,10"/>
+                                            </StackPanel>
+                                        </Expander>
+                                        <!--#endregion -->
                                     </Grid>
                                 </ScrollViewer>
                             </DockPanel>

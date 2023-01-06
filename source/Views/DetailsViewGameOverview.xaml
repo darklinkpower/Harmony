@@ -312,6 +312,8 @@
                                                         </Style>
                                                     </ContentControl.Style>
                                                 </ContentControl>
+                                                <ContentControl x:Name="CheckDlc_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left"
+                                                                Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                                 <ContentControl x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" DockPanel.Dock="Left" >
                                                     <ContentControl.Style>
                                                         <Style TargetType="ContentControl">
@@ -867,6 +869,24 @@
                                                 </TabItem.Style>
                                                 <StackPanel Orientation="Vertical" Margin="0,15,0,0">
                                                     <ContentControl x:Name="NewsViewer_NewsViewerControl" Margin="0,5,0,5" FontWeight="Normal"/>
+                                                </StackPanel>
+                                            </TabItem>
+                                            <!--#endregion-->
+                                            <!--#region CheckDlc-->
+                                            <TabItem Visibility="{PluginSettings Plugin=CheckDlc, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                <TabItem.Header>
+                                                    <TextBlock Text="DLC" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
+                                                </TabItem.Header>
+                                                <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+                                                    <StackPanel.Resources>
+                                                        <Style TargetType="ListBox">
+                                                            <Setter Property="Background" Value="Transparent" />
+                                                            <Setter Property="BorderThickness" Value="0" />
+                                                        </Style>
+                                                    </StackPanel.Resources>
+                                                    <ContentControl x:Name="CheckDlc_PluginListDlcAll" Height="700" Margin="0,5,0,5"/>
+                                                    <ContentControl x:Name="CheckDlc_PluginListDlcOwned" Height="700" Margin="0,5,0,5"/>
+                                                    <ContentControl x:Name="CheckDlc_PluginListDlcNotOwned" Height="700" Margin="0,5,0,5"/>
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#endregion-->
