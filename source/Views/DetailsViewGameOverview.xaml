@@ -267,6 +267,11 @@
                                                         </TextBlock.Effect>
                                                     </TextBlock>
                                                 </Border>
+
+                                                <ContentControl x:Name="CheckLocalizations_PluginFlags" Height="30" Margin="0,0,0,0"
+                                                            Visibility="{PluginSettings Plugin=CheckLocalizations, Path=EnableIntegrationFlags, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                            Opacity="0.85" />
                                                 
                                                 <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
                                                                 DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
