@@ -88,7 +88,8 @@
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                         <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
-                                        <Border x:Name="GlowPlayingBorder" Visibility="Collapsed"/>
+                                        <Border x:Name="GlowPlayingBorder" Visibility="Collapsed" Tag="False"
+                                                Style="{DynamicResource CoverIsPlayingAnimatedBackground}" />
                                         <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed"
                                                    Tag="{DynamicResource GridViewEnablePlayingGlowBorder}" />
                                         <Border Name="ShineBackground" Tag="False" IsHitTestVisible="False"
@@ -178,27 +179,8 @@
                                 <Condition Binding="{Binding ElementName=EnablePlayingGlowBorder, Path=Tag}" Value="True" />
                                 <Condition Binding="{Binding IsRunning}" Value="True" />
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" Value="{DynamicResource DarkNoiseBrush}" TargetName="GlowPlayingBorder" />
+                            <Setter Property="Tag" Value="True" TargetName="GlowPlayingBorder" />
                             <Setter Property="Visibility" Value="Visible" TargetName="GlowPlayingBorder" />
-                            <MultiDataTrigger.EnterActions>
-                                <BeginStoryboard x:Name="Flashing">
-                                    <Storyboard RepeatBehavior="Forever">
-                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                                       Storyboard.TargetName="GlowPlayingBorder"
-                                                                       Storyboard.TargetProperty="Opacity"
-                                                                       RepeatBehavior="Forever"
-                                                                       AutoReverse="True">
-                                            <SplineDoubleKeyFrame KeyTime="00:00:00.00" Value="0" />
-                                            <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0" />
-                                            <SplineDoubleKeyFrame KeyTime="00:00:01.60" Value="0.50" />
-                                            <SplineDoubleKeyFrame KeyTime="00:00:01.70" Value="0.50" />
-                                        </DoubleAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </MultiDataTrigger.EnterActions>
-                            <MultiDataTrigger.ExitActions>
-                                <RemoveStoryboard BeginStoryboardName="Flashing"/>
-                            </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
@@ -229,6 +211,44 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="CoverIsPlayingAnimatedBackground" TargetType="Border">
+        <Style.Resources>
+            <Color x:Key="BackgroundColor1">#26ffffff</Color>
+            <Color x:Key="BackgroundColor2">#00000000</Color>
+            <Color x:Key="BackgroundColor3">#99000000</Color>
+        </Style.Resources>
+        <Setter Property="Background" x:Name="AnimatedBackground">
+            <Setter.Value>
+                <SolidColorBrush Color="{StaticResource BackgroundColor2}" />
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard x:Name="Animation">
+                        <Storyboard Timeline.DesiredFrameRate="20">
+                            <ColorAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                    FillBehavior="HoldEnd"
+                                    AutoReverse="True" RepeatBehavior="Forever">
+                                <ColorAnimationUsingKeyFrames.KeyFrames>
+                                    <LinearColorKeyFrame Value="{StaticResource BackgroundColor1}" KeyTime="00:00:00.00" />
+                                    <LinearColorKeyFrame Value="{StaticResource BackgroundColor1}" KeyTime="00:00:00.10" />
+                                    <LinearColorKeyFrame Value="{StaticResource BackgroundColor2}" KeyTime="00:00:00.80" />
+                                    <LinearColorKeyFrame Value="{StaticResource BackgroundColor3}" KeyTime="00:00:01.50" />
+                                    <LinearColorKeyFrame Value="{StaticResource BackgroundColor3}" KeyTime="00:00:01.55" />
+                                </ColorAnimationUsingKeyFrames.KeyFrames>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <RemoveStoryboard BeginStoryboardName="Animation"/>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
     
     <Style x:Key="AnimatedCoverShineBackground" TargetType="Border">
