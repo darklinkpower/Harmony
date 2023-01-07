@@ -336,3 +336,11 @@ Packages:
     Changelog:
       - 'Fix game background image blur bleeding into sidebar area'
       - 'Grid View: Added ThemeModifier extension option to disable zoom on hover for covers'
+  - Version: 2.42
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-06
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.42/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_42.pthm
+    Changelog:
+      - 'Details View and Grid View: Added support for custom UI elements of CheckDLC extension'
+      - 'DetailsView: Support to display game supported languages via CheckLocalization extension support'
+      - 'Grid View: Changes to animation in game cover when game is running'
