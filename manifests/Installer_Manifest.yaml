@@ -344,3 +344,11 @@ Packages:
       - 'Details View and Grid View: Added support for custom UI elements of CheckDLC extension'
       - 'DetailsView: Support to display game supported languages via CheckLocalization extension support'
       - 'Grid View: Changes to animation in game cover when game is running'
+  - Version: 2.43
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-02-15
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.43/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_43.pthm
+    Changelog:
+      - 'Details View: Added option for ThemeModifier extension to configure if background image should fade to transparency'
+      - 'Grid View: Adjustments to darkening layer of uninstalled games'
+      - 'Update extension links'
