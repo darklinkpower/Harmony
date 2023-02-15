@@ -87,7 +87,7 @@
                                                        TextTrimming="CharacterEllipsis" TextAlignment="Center"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
-                                        <Border Background="#AA000000" x:Name="BorderMouseOver" Visibility="Collapsed" />
+                                        <Border Background="#000000" x:Name="BorderMouseOver" Visibility="Collapsed" Opacity="0.70" />
                                         <Border x:Name="GlowPlayingBorder" Visibility="Collapsed" Tag="False"
                                                 Style="{DynamicResource CoverIsPlayingAnimatedBackground}" />
                                         <TextBlock Name="EnablePlayingGlowBorder" Visibility="Collapsed"
@@ -195,6 +195,40 @@
                                 <Condition Binding="{Settings DarkenUninstalledGamesGrid}" Value="True" />
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Visibility" Value="Visible" TargetName="BorderMouseOver" />
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=BorderMouseOver, Path=Visibility}" Value="Visible" />
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0.00" Storyboard.TargetName="BorderMouseOver"
+                                            Duration="0:0:0.30">
+                                            <DoubleAnimation.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.EnterActions>
+                            <MultiDataTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0.70" Storyboard.TargetName="BorderMouseOver"
+                                            Duration="0:0:0.30">
+                                            <DoubleAnimation.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.ExitActions>
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
