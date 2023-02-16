@@ -2,14 +2,17 @@
 # Harmony
 Clean theme with modern design for [Playnite](https://github.com/JosefNemec/Playnite) Desktop Mode.
 
-Playnite forum thread: https://playnite.link/forum/thread-457.html
-
 ## Tips and donations
 All the work I do for Playnite extensions is and will always be free!
 
 I make extensions and themes to learn, have fun and to give to the community so donations are not required or requested. If you find the work being done useful and you are and in a position that allows it, you can consider making a tip to support the different Playnite related projects I work on, every little bit helps.
 
 <a href='https://ko-fi.com/darklinkpower' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## Support
+
+- If you found a bug or want to request a feature, please open a new issue in the [Issues Tracker](https://github.com/darklinkpower/Harmony/issues)
+- For general support, please contact me in the channel dedicated to themes support in the [Playnite Discord](https://discord.com/channels/365863063296933888/808419347105447957)
 
 ## Theme goals
 - Use a simple pallete and have better contrast and hierarchies using color without the need of borders.
