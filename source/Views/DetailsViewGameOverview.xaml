@@ -457,7 +457,7 @@
                                             <!--#region Game Details-->
                                             <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
                                             <Separator Background="{DynamicResource HighlightGlyphBrush}" />
-                                            <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="24" AutoLayoutColumns="2"
+                                            <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="25" AutoLayoutColumns="2"
                                                     Tag="{DynamicResource GridViewDetailsIconsVisibility}">
                                                 <Grid.Resources>
                                                     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
@@ -481,6 +481,13 @@
                                                     </StackPanel>
                                                 </Label>
                                                 <TextBlock Name="PART_TextRecentActivity" VerticalAlignment="Center" />
+                                                <Label Name="PART_ElemAdded" >
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="&#xEC45;" Style="{DynamicResource Icon}" />
+                                                        <TextBlock Text="{DynamicResource LOCDateAddedLabel}" />
+                                                    </StackPanel>
+                                                </Label>
+                                                <TextBlock Name="PART_TextAdded" VerticalAlignment="Center" />
                                                 <Label Name="PART_ElemInstallDirectory" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEC5B;" Style="{DynamicResource Icon}" />
@@ -495,6 +502,13 @@
                                                     </StackPanel>
                                                 </Label>
                                                 <TextBlock Name="PART_TextInstallSize" VerticalAlignment="Center" />
+                                                <Label Name="PART_ElemReleaseDate" >
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="&#xEC45;" Style="{DynamicResource Icon}" />
+                                                        <TextBlock Text="{DynamicResource LOCGameReleaseDateTitle}" />
+                                                    </StackPanel>
+                                                </Label>
+                                                <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
                                                 <Label Name="PART_ElemLibrary" >
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock Text="&#xEF65;" Style="{DynamicResource Icon}" />
@@ -532,14 +546,6 @@
                                                     </StackPanel>
                                                 </Label>
                                                 <ItemsControl Name="PART_ItemsGenres" />
-
-                                                <Label Name="PART_ElemReleaseDate" >
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="&#xEC45;" Style="{DynamicResource Icon}" />
-                                                        <TextBlock Text="{DynamicResource LOCGameReleaseDateTitle}" />
-                                                    </StackPanel>
-                                                </Label>
-                                                <Button Name="PART_ButtonReleaseDate" VerticalAlignment="Center" />
 
                                                 <Label Name="PART_ElemDevelopers" >
                                                     <StackPanel Orientation="Horizontal">
