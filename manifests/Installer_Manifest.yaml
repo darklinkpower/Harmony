@@ -352,3 +352,10 @@ Packages:
       - 'Details View: Added option for ThemeModifier extension to configure if background image should fade to transparency'
       - 'Grid View: Adjustments to darkening layer of uninstalled games'
       - 'Update extension links'
+  - Version: 2.44
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-03-15
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.44/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_44.pthm
+    Changelog:
+      - 'Details View and Grid View: Support to display game added date'
+      - 'Grid View: Made notes background transparent'
