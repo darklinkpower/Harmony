@@ -359,3 +359,10 @@ Packages:
     Changelog:
       - 'Details View and Grid View: Support to display game added date'
       - 'Grid View: Made notes background transparent'
+  - Version: 2.45
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-07-19
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.45/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_45.pthm
+    Changelog:
+      - 'Grid View: Fix Cover controls not displaying on hover on certain circumstances'
+      - 'Grid View: Replaced Origin banner with EA App library banner'
