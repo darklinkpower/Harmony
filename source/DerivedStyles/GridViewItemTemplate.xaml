@@ -10,7 +10,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GameListItem}">
-                    <Border BorderThickness="{Settings GridItemMargin}" BorderBrush="{DynamicResource ButtonBackgroundBrush}">
+                    <Border BorderThickness="{Settings GridItemMargin}" BorderBrush="{DynamicResource ButtonBackgroundBrush}"
+                            Background="Transparent">
                         <StackPanel Name="PART_PanelHost"
                                     d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                             <Grid>
