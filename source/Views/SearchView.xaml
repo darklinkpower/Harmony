@@ -89,7 +89,7 @@
                 <ControlTemplate TargetType="{x:Type SearchWindowSearchItem}">
                     <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
                         <Viewbox MaxWidth="80" Height="32" VerticalAlignment="Center">
-                            <ContentControl Name="PART_ContentIcon"
+                            <ContentControl Name="PART_ContentIcon" MaxWidth="80"
                                             Focusable="False" VerticalAlignment="Center" Margin="4" />
                         </Viewbox>
                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center" >
