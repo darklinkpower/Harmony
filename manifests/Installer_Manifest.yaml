@@ -366,3 +366,11 @@ Packages:
     Changelog:
       - 'Grid View: Fix Cover controls not displaying on hover on certain circumstances'
       - 'Grid View: Replaced Origin banner with EA App library banner'
+  - Version: 2.46
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-08-07
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.46/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_46.pthm
+    Changelog:
+      - 'Grid View: Add DuplicateHider extension selector to game details'
+      - 'Grid View: Library view items layout changes to improve performance. Duplicate Hider extension selector on covers removed for performance reasons.'
+      - 'SearchView: Fix some items images not properly scaling'
