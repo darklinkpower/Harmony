@@ -114,6 +114,13 @@
                                     </Border>
                                 </DockPanel>
 
+                                <ContentControl DockPanel.Dock="Top" x:Name="DuplicateHider_SourceSelector" 
+                                        HorizontalAlignment="Right"
+                                        VerticalContentAlignment="Center"   
+                                        Margin="0,0,0,0"  
+                                        Height="24"
+                                        RenderOptions.BitmapScalingMode="Fant" />
+                                
                                 <Grid DockPanel.Dock="Top" Margin="0,10,0,10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" MaxWidth="150" />
