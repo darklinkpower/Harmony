@@ -52,13 +52,6 @@
                                     <RowDefinition Height="{Binding ElementName=ThemeExtras_Banner, Path=Height, TargetNullValue=0, FallbackValue=0}" />
                                     <RowDefinition Height="{Settings GridItemHeight}" />
                                 </Grid.RowDefinitions>
-                                <TextBlock x:Name="DropShadowVisibilityProxy"
-                                           Visibility="Collapsed"
-                                           Tag="{DynamicResource GridViewCoverDisplayDropShadowEffect}" />
-                                <Border Style="{DynamicResource DropShadowBorderStyle}"
-                                        Visibility="{Binding ElementName=DropShadowVisibilityProxy, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                        Tag="{DynamicResource GridViewCoverUseRoundedCorners}" />
-
                                 <Border Grid.RowSpan="2" Style="{StaticResource VisualBrushBorderMask}" Name="Mask"
                                             Tag="{DynamicResource GridViewCoverUseRoundedCorners}" />
 
@@ -408,11 +401,10 @@
         <Setter Property="BorderBrush" Value="{DynamicResource GridViewItemMaskBackgroundBrush}" />
         <Setter Property="BorderThickness" Value="8" />
         <Setter Property="CornerRadius" Value="{DynamicResource GridViewCoverCornerRadius}" />
-        <Setter Property="Grid.RowSpan" Value="1" />
         <Setter Property="CacheMode">
             <Setter.Value>
                 <BitmapCache EnableClearType="False"
-                             RenderAtScale="1"
+                             RenderAtScale="0.5"
                              SnapsToDevicePixels="False" />
             </Setter.Value>
         </Setter>
@@ -424,13 +416,6 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <MultiDataTrigger>
-                <MultiDataTrigger.Conditions>
-                    <Condition Binding="{Settings ShowGridItemBackground}" Value="True" />
-                    <Condition Binding="{Settings ShowNamesUnderCovers}" Value="True" />
-                </MultiDataTrigger.Conditions>
-                <Setter Property="Grid.RowSpan" Value="2" />
-            </MultiDataTrigger>
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
                 <Setter Property="CornerRadius" Value="0,0,0,0" />
             </DataTrigger>

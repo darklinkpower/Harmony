@@ -18,7 +18,14 @@
                     <Grid Background="{DynamicResource GridItemBackgroundBrush}"
                           Margin="{Settings ItemSpacingMargin}"
                           x:Name="ItemGrid">
-                        <ContentPresenter />
+                        <TextBlock x:Name="DropShadowVisibilityProxy"
+                                   Visibility="Collapsed"
+                                   Tag="{DynamicResource GridViewCoverDisplayDropShadowEffect}" />
+                        <Border Style="{DynamicResource DropShadowBorderStyle}"
+                                Width="{Binding ElementName=Content, Path=Width}" Height="{Binding ElementName=Content, Path=Height}"
+                                Visibility="{Binding ElementName=DropShadowVisibilityProxy, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                Tag="{DynamicResource GridViewCoverUseRoundedCorners}" />
+                        <ContentPresenter x:Name="Content" />
                         <TextBlock x:Name="ZoomOnHoverProxy" Visibility="Collapsed"
                                    Tag="{DynamicResource GridViewCoverZoomOnHover}" />
                         <Border x:Name="SelectionBorder" BorderThickness="3" Margin="-3"
