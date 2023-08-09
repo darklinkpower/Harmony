@@ -87,13 +87,13 @@
                                 </Grid>
 
                                 <Border Grid.Row="1" Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
-                                <TextBlock Grid.Row="1" Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}"
-                                                       Opacity="0.75" FontSize="16"
-                                                       Margin="8,5,5,5"
-                                                       VerticalAlignment="Center"
-                                                       DockPanel.Dock="Right"
-                                                       FontFamily="{DynamicResource FontIcoFont}"
-                                                       Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
+                                <TextBlock Grid.Row="1" Text="&#xF000;" Foreground="{DynamicResource GlyphBrush}" ClipToBounds="True"
+                                           Opacity="0.90" FontSize="16"
+                                           Margin="8,5,5,5"
+                                           VerticalAlignment="Top"
+                                           HorizontalAlignment="Right"
+                                           FontFamily="{DynamicResource FontIcoFont}"
+                                           Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock" >
                                             <Setter Property="Visibility" Value="Collapsed" />
@@ -104,6 +104,12 @@
                                                         <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Visibility" Value="Visible" />
+                                                    <Setter Property="Effect">
+                                                        <Setter.Value>
+                                                            <DropShadowEffect RenderingBias="Performance"
+                                                                              BlurRadius="6" ShadowDepth="0" Color="#000000" />
+                                                        </Setter.Value>
+                                                    </Setter>
                                                 </MultiDataTrigger>
                                             </Style.Triggers>
                                         </Style>
