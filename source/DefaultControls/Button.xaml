@@ -56,7 +56,6 @@
         <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Padding" Value="7,2,7,2" />
-        <Setter Property="Margin" Value="10,0,0,0" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
