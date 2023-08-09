@@ -374,3 +374,13 @@ Packages:
       - 'Grid View: Add DuplicateHider extension selector to game details'
       - 'Grid View: Library view items layout changes to improve performance. Duplicate Hider extension selector on covers removed for performance reasons.'
       - 'SearchView: Fix some items images not properly scaling'
+  - Version: 2.47
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-08-09
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.47/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_47.pthm
+    Changelog:
+      - 'Details View: Added DuplicateHider extension selector to game details'
+      - 'Grid View: Improved performance when covers dropshadows are enabled'
+      - 'Grid View: Improved performance when covers dropshadows are enabled'
+      - 'Grid View: Fix favorite icon not being incorrectly placed on game cover'
+      - 'Grid View: Fix covers rounded corners not applying when dropshadow effect is also enabled'
