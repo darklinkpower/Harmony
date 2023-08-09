@@ -83,7 +83,7 @@
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
 
-    <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#282828" />
+    <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#e6303644" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
