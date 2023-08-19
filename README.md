@@ -30,20 +30,26 @@ Option B: Download the latest packaged `pthm` theme file from the [Releases page
 
 Option C: Download from the Addons browser in Playnite.
 
-## Functionalities and features
-- Full support for features available in the default Playnite Desktop themes
-- Customization: Customization of certain aspects of the theme can be done via custom integration of the [ThemeModifier](https://playnite.link/addons.html#playnite-thememodifier-plugin) extension.
-- Achievements: via custom integration of the [SuccessStory](https://playnite.link/addons.html#playnite-successstory-plugin) extension.
-- Alternative background images: via custom integration of the [BackgroundChanger](https://playnite.link/addons.html#playnite-backgroundchanger-plugin) extension.
-- HowLongToBeat data: via custom integration of the [HowLongToBeat](https://playnite.link/addons.html#playnite-howlongtobeat-plugin) extension.
-- Game statistics: via custom integration of the [GameActivity](https://playnite.link/addons.html#playnite-gameactivity-plugin) extension.
-- Screenshots: via custom integration of the [ScreenshotsVisualizer](https://playnite.link/addons.html#playnite-screenshotsvisualizer-plugin) extension.
-- Duplicate copies handling: via custom integration of the [DuplicateHider](https://playnite.link/addons.html#felixkmh_DuplicateHider_Plugin) extension.
-- Logos: download of logos for use in the theme via [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
-- Videos: download of trailer and microtrailer videos for use in the theme via [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
-- Game news: via custom integration of the [News Viewer](https://playnite.link/addons.html#NewsViewer_15e03ffe-90f6-4e8e-bd4d-94514777481d) extension.
-- Game reviews: via custom integration of the [Review Viewer](https://playnite.link/addons.html#playnite-screenshotsvisualizer-plugin) extension.
-- Banners and other functionality: via custom integration of the [ThemeExtras](https://playnite.link/addons.html#felixkmh_Extras_Plugin) extension.
+
+## Extensions support
+The theme provides extensive support for a wide range of available Playnite extensions, enhancing its functionality even further.
+
+- **Achievements:** [SuccessStory](https://playnite.link/addons.html#playnite-successstory-plugin) extension.
+- **Alternative background images:** [BackgroundChanger](https://playnite.link/addons.html#playnite-backgroundchanger-plugin) extension.
+- **Duplicate copies handling:** [DuplicateHider](https://playnite.link/addons.html#felixkmh_DuplicateHider_Plugin) extension.
+- **Features icons:** [Library Management](https://playnite.link/addons.html#playnite-librarymanagement-plugin) extension.
+- **Game cover banners and other functionality:** [ThemeExtras](https://playnite.link/addons.html#felixkmh_Extras_Plugin) extension.
+- **Game statistics:** [GameActivity](https://playnite.link/addons.html#playnite-gameactivity-plugin) extension.
+- **HowLongToBeat data:** [HowLongToBeat](https://playnite.link/addons.html#playnite-howlongtobeat-plugin) extension.
+- **Logos:** [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
+- **Screenshots:** [ScreenshotsVisualizer](https://playnite.link/addons.html#playnite-screenshotsvisualizer-plugin) extension.
+- **Steam Game news:** [Steam News and Players Viewer](https://playnite.link/addons.html#NewsViewer_15e03ffe-90f6-4e8e-bd4d-94514777481d) extension.
+- **Steam Game reviews:** [Review Viewer](https://playnite.link/addons.html#Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd1) extension.
+- **Steam players online counter:** [Steam News and Players Viewer](https://playnite.link/addons.html#NewsViewer_15e03ffe-90f6-4e8e-bd4d-94514777481d) extension.
+- **Theme customization options:** Customization of certain aspects of the theme can be done via custom integration of the [ThemeModifier](https://playnite.link/addons.html#playnite-thememodifier-plugin) extension.
+- **Videos:** [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
+
+...and more...
   
 ## Screenshots
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_01.webp)
