@@ -12,10 +12,9 @@
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
                         <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                BorderThickness="4,0,0,0" BorderBrush="{DynamicResource HighlightGlyphBrush}"/>
+                                Background="{DynamicResource GlyphBrush}" Opacity="0.25" BorderThickness="0" />
                         <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                Background="{DynamicResource GlyphBrush}" Opacity="0.15" BorderThickness="0" />
-                        <Border x:Name="NoiseRectangle" Background="{DynamicResource DarkNoiseBrush}" Visibility="Collapsed" Opacity="0.4" />
+                                BorderThickness="4,0,0,0" BorderBrush="{DynamicResource GlyphBrush}" />
                         <Border Padding="{TemplateBinding Padding}" Background="Transparent">
                             <ContentPresenter />
                         </Border>
@@ -41,15 +40,10 @@
                         </DataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="HoverRectangle" />
-                            <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
-                            <Setter Property="Visibility" Value="Visible" TargetName="NoiseRectangle" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" TargetName="HoverRectangle" />
                             <Setter Property="Visibility" Value="Visible" TargetName="HoverRectangle" />
-                            <Setter Property="Visibility" Value="Visible" TargetName="NoiseRectangle" />
                             <Setter Property="Visibility" Value="Visible" TargetName="SelectedRectangle" />
-                            <Setter Property="Opacity" Value="0.30" TargetName="SelectedRectangle" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

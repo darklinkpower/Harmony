@@ -38,7 +38,7 @@
                             
                             <DockPanel>
                                 <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
-                                         DockPanel.Dock="{Settings SidebarPosition}" />                             
+                                         DockPanel.Dock="{Settings SidebarPosition}" />
                                 <ContentControl Name="PART_ContentView"
                                                 DockPanel.Dock="Top" />
                             </DockPanel>                            

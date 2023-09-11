@@ -222,6 +222,7 @@
                                                             <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
                                                             <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
                                                             <Setter Property="Visibility" Value="{Binding ElementName=GridEx, Path=Tag}" />
+                                                            <Setter Property="Opacity" Value="0.7" />
                                                         </Style>
                                                         <Style TargetType="Label">
                                                             <Setter Property="FontWeight" Value="Normal" />

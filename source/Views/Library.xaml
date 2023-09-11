@@ -19,38 +19,28 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <FadeImage x:Name="PART_ImageBackground" ClipToBounds="True"
-                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+                        <FadeImage x:Name="PART_ImageBackground"
+                                   ImageDarkeningBrush="#990E0E0E"
+                                   ClipToBounds="True"
+                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                                    HorizontalAlignment="Center" VerticalAlignment="Top" />
 
-                        <Border x:Name="NoiseBorder" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                Tag="{DynamicResource LibraryUseNoiseOpacityLayer}"
-                                Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False">
-                            <Border.Style>
-                                <Style TargetType="Border">
-                                    <Setter Property="Visibility" Value="Visible" />
-                                    <Setter Property="OpacityMask">
-                                        <Setter.Value>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1.0">
-                                                <LinearGradientBrush.GradientStops>
-                                                    <GradientStop Color="#80FFFFFF" Offset="0.2"/>
-                                                    <GradientStop Color="#F2FFFFFF" Offset="0.8"/>
-                                                </LinearGradientBrush.GradientStops>
-                                            </LinearGradientBrush>
-                                        </Setter.Value>
-                                    </Setter>
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding ElementName=PART_ImageBackground, Path=ActualHeight}" Value="0">
-                                            <Setter Property="Visibility" Value="Collapsed" />
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="False" >
-                                            <Setter Property="Visibility" Value="Collapsed" />
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Border.Style>
-                        </Border>
+                        <Border Grid.RowSpan="2"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="{DynamicResource DarkNoiseBrush}"
+                                Opacity="0.25"/>
                         
+                        <Border Grid.RowSpan="2"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="#000000"
+                                Opacity="0.45"/>
+
+                        <Border Grid.RowSpan="2"
+                                x:Name="ImageBackgroundNoise"
+                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                Background="{DynamicResource NoiseBrush}"
+                                Opacity="0.025"/>
+
                         <TopPanel DockPanel.Dock="Top" Grid.Row="0" />
                         
                         <DockPanel Grid.Row="1">

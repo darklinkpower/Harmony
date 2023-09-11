@@ -79,6 +79,10 @@
                                                 </LinearGradientBrush>
                                             </Border.OpacityMask>
                                         </Border>
+                                        <Border x:Name="ImageBackgroundNoise"
+                                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                                Background="{DynamicResource NoiseBrush}"
+                                                Opacity="0.025"/>
                                     </Grid>
                                 </WrapPanel>
 
@@ -203,6 +207,8 @@
                                         </Border>
 
                                         <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                            <Border Name="Mask" Background="White" CornerRadius="6" />
+
                                             <Border>
                                                 <Border.Style>
                                                     <Style TargetType="Border">
@@ -215,12 +221,12 @@
                                                     </Style>
                                                 </Border.Style>
                                                 <Image Name="PART_ImageCover" Height="{Settings GameDetailsCoverHeight}" 
-                                                    StretchDirection="Both" Stretch="Uniform" 
-                                                    RenderOptions.BitmapScalingMode="Fant" />
+                                                       StretchDirection="Both" Stretch="Uniform" 
+                                                       RenderOptions.BitmapScalingMode="Fant" />
                                             </Border>
 
                                             <ContentControl x:Name="BackgroundChanger_PluginCoverImage"
-                                                            Height="{Settings GameDetailsCoverHeight}">
+                                                        Height="{Settings GameDetailsCoverHeight}">
                                                 <ContentControl.Style>
                                                     <Style TargetType="ContentControl">
                                                         <Setter Property="Visibility" Value="Collapsed" />
@@ -236,10 +242,12 @@
                                                     </Style>
                                                 </ContentControl.Style>
                                             </ContentControl>
-
                                             <Grid.Effect>
                                                 <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
                                             </Grid.Effect>
+                                            <Grid.OpacityMask>
+                                                <VisualBrush Visual="{Binding ElementName=Mask}" />
+                                            </Grid.OpacityMask>
                                         </Grid>
                                         <!--GridConverterGridPanelCloseButton-->
                                         <!--#regionend-->
@@ -336,8 +344,13 @@
                                     <DockPanel MaxWidth="{DynamicResource DetailsViewDetailsMaxWidth}" Grid.Row="3" MinHeight="90">
                                         <DockPanel.Resources>
                                             <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
+                                            <Style x:Key="IconsTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+                                                <Setter Property="Opacity" Value="0.7" />
+                                                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                                <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
+                                            </Style>
                                             <Style TargetType="Label">
-                                                <Setter Property="FontWeight" Value="Bold" />
+                                                <Setter Property="FontWeight" Value="Medium" />
                                                 <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                                                 <Setter Property="Margin" Value="-5,0,0,0" />
                                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -346,7 +359,7 @@
                                         </DockPanel.Resources>
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}" Margin="0,0,0,0">
                                             <Viewbox Stretch="Uniform" Height="35">
-                                                <TextBlock Text="&#xEC45;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEC45;" Style="{DynamicResource IconsTextBlockStyle}"/>
                                             </Viewbox>
                                             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemLastPlayed" Content="{DynamicResource LOCLastPlayed}"/>
@@ -355,7 +368,7 @@
                                         </DockPanel>
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}" Margin="15,0,0,0">
                                             <Viewbox Stretch="Uniform" Height="35">
-                                                <TextBlock Text="&#xEEDC;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEEDC;" Style="{DynamicResource IconsTextBlockStyle}"/>
                                             </Viewbox>
                                             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemPlayTime" Content="{DynamicResource LOCTimePlayed}"/>
@@ -364,7 +377,7 @@
                                         </DockPanel>
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="15,0,0,0">
                                             <Viewbox Stretch="Uniform" Height="40">
-                                                <TextBlock Text="&#xEED6;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEED6;" Style="{DynamicResource IconsTextBlockStyle}"/>
                                             </Viewbox>
                                             <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                 <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
@@ -383,7 +396,7 @@
                                                 </Style>
                                             </DockPanel.Style>
                                             <Viewbox Stretch="Uniform" Height="30">
-                                                <TextBlock Text="&#xEDD7;" Foreground="{DynamicResource GlyphBrush}" FontFamily="{StaticResource FontIcoFont}"/>
+                                                <TextBlock Text="&#xEDD7;" Style="{DynamicResource IconsTextBlockStyle}"/>
                                             </Viewbox>
 
                                             <StackPanel Margin="15,0,0,0" VerticalAlignment="Center">
@@ -438,7 +451,7 @@
                                                 </Style>
                                             </DockPanel.Style>
                                             <Viewbox Stretch="Uniform" Height="30">
-                                                <Path Stretch="Fill" Fill="{DynamicResource GlyphBrush}" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
+                                                <Path Stretch="Fill" Fill="{DynamicResource GlyphBrush}" Opacity="0.7" Data="m 157.80154 541.46802 v -400 h 97.14286 97.14286 
                                                     v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
                                                     h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
                                             </Viewbox>
@@ -473,6 +486,7 @@
                                                         <Setter Property="FontFamily" Value="{StaticResource FontIcoFont}" />
                                                         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
                                                         <Setter Property="Visibility" Value="{Binding ElementName=GridEx, Path=Tag}" />
+                                                        <Setter Property="Opacity" Value="0.7" />
                                                     </Style>
                                                     <Style TargetType="Label">
                                                         <Setter Property="FontWeight" Value="Normal" />

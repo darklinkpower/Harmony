@@ -5,6 +5,7 @@
         <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
         <Setter Property="Margin" Value="0,4,0,4" />
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+        <Setter Property="Opacity" Value="0.7" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -17,8 +18,8 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                 <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Opacity" Value="1" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />

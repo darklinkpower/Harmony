@@ -53,7 +53,6 @@
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsEnabled" Value="True" />
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="DefaultBorder" />
                             <Setter Property="Opacity" TargetName="Grid" Value="0.5" />
@@ -67,7 +66,7 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#8CF6DD" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#2d323c" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
@@ -83,7 +82,7 @@
     </Style>
 
     <Style x:Key="ContextButtonViews" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="#2f3543" />
+        <Setter Property="Background" Value="#363742" />
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
@@ -114,14 +113,14 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#464D5D" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#363742" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#2f3543" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#363742" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
@@ -130,7 +129,7 @@
     </Style>
 
     <Style x:Key="MoreActionButtonViews" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="#2f3543" />
+        <Setter Property="Background" Value="#363742" />
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="0" />
@@ -168,7 +167,7 @@
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty="(Background).(SolidColorBrush.Color)">
-                            <ColorAnimation To="#2f3543" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
+                            <ColorAnimation To="#363742" Duration="0:0:0.2" FillBehavior="HoldEnd"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
