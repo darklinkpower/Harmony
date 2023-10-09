@@ -54,7 +54,13 @@
                         <Border Padding="{TemplateBinding Padding}" Background="Transparent">
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                              Margin="3,0,0,0" />
+                                              Margin="3,0,0,0">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
