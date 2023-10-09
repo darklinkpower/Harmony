@@ -35,13 +35,17 @@
                                     </ThicknessAnimationUsingKeyFrames>
                                 </Storyboard>
                             </Grid.Resources>
-                            
-                            <DockPanel>
-                                <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
-                                         DockPanel.Dock="{Settings SidebarPosition}" />
+
+                            <Grid>
                                 <ContentControl Name="PART_ContentView"
                                                 DockPanel.Dock="Top" />
-                            </DockPanel>                            
+                                <DockPanel>
+                                    <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
+                                         DockPanel.Dock="{Settings SidebarPosition}" />
+
+                                </DockPanel>
+                            </Grid>
+                         
                             <NotificationPanel x:Name="PART_Notifications"  
                                                WindowChrome.IsHitTestVisibleInChrome="True"
                                                Width="260"

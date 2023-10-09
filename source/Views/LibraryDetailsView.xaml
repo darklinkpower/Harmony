@@ -10,10 +10,11 @@
                 <ControlTemplate TargetType="{x:Type LibraryDetailsView}">
                     <DockPanel d:DesignWidth="1280" d:DesignHeight="960"
                                d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
-                        <Grid DockPanel.Dock="{Settings DetailsListPosition}"
+                        <Grid DockPanel.Dock="{Settings DetailsListPosition}" 
                               Width="{Settings DetailsListWitdh}">
                             <ExtendedListBox x:Name="PART_ListGames"
                                     BorderBrush="{DynamicResource PanelSeparatorBrush}"
+                                    Background="{DynamicResource PanelBackgroundBrush}"
                                     ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                     ScrollViewer.PanningMode="VerticalOnly">

@@ -3,13 +3,13 @@
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                     mc:Ignorable="d">
-    
+
     <Style TargetType="{x:Type Sidebar}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Sidebar}">
                     <Border BorderThickness="0,0,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}"
-                            x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}" Background="{DynamicResource SidebarBackgroundBrush}">
+                            x:Name="BorderContentHolder" Margin="{TemplateBinding Padding}" Background="{DynamicResource PanelBackgroundBrush}">
                         <DockPanel x:Name="DockContentHolder">                            
                             <Border x:Name="PART_ElemMainMenu" Background="Transparent"
                                     Width="40" Height="40" Margin="3,0,0,5"
@@ -27,9 +27,13 @@
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Left">
+                            <Setter Property="HorizontalAlignment" Value="Left" />
+                        </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
                             <Setter Property="Margin" Value="0,20,3,5" TargetName="PART_ElemMainMenu" />
                             <Setter Property="BorderThickness" Value="0,0,0,0" TargetName="BorderContentHolder" />
+                            <Setter Property="HorizontalAlignment" Value="Right" />
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
                             <Setter Property="Margin" Value="0,0,5,0" TargetName="PART_ElemMainMenu" />
@@ -38,6 +42,7 @@
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="ScrollSidebarItems" />
                             <Setter Property="Margin" Value="0,0,100,0" TargetName="ScrollSidebarItems" />
                             <Setter Property="Orientation" Value="Horizontal" TargetName="PART_PanelSideBarItems" />
+                            <Setter Property="VerticalAlignment" Value="Top" />
                         </DataTrigger>
                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                             <Setter Property="Margin" Value="3,0,5,0" TargetName="PART_ElemMainMenu" />
@@ -45,6 +50,7 @@
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="PART_ElemMainMenu" />
                             <Setter Property="DockPanel.Dock" Value="Left" TargetName="ScrollSidebarItems" />
                             <Setter Property="Orientation" Value="Horizontal" TargetName="PART_PanelSideBarItems" />
+                            <Setter Property="VerticalAlignment" Value="Bottom" />
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

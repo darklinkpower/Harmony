@@ -80,7 +80,7 @@
     <Color x:Key="PopupBorderColor">#262c38</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
-    <Color x:Key="PanelSeparatorColor">#8267717f</Color>
+    <Color x:Key="PanelSeparatorColor">#40262c38</Color>
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
@@ -112,7 +112,10 @@
     <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource TextColorDark}" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
-    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="{DynamicResource PanelSeparatorColor}" />
+    <SolidColorBrush x:Key="PanelSeparatorBrush1" Color="{DynamicResource PanelSeparatorColor}" />
+    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="#40262c38" />
+    <SolidColorBrush x:Key="PanelSeparatorImageBackgroundEnabledBrush" Color="#474f5c" />
+    <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#40262c38" />
     <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />

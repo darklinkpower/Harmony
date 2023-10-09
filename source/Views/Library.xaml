@@ -5,7 +5,6 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type Library}">
-        <Setter Property="Background" Value="Yellow" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Library}">
@@ -41,24 +40,43 @@
                                 Background="{DynamicResource NoiseBrush}"
                                 Opacity="0.025"/>
 
-                        <TopPanel DockPanel.Dock="Top" Grid.Row="0" />
-                        
-                        <DockPanel Grid.Row="1">
-                            <FilterPanel x:Name="PART_FilterPanel"
+                        <DockPanel Grid.RowSpan="2">
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel">
+                                    <Setter Property="Margin" Value="44,0,0,0" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
+                                            <Setter Property="Margin" Value="0,0,44,0" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
+                                            <Setter Property="Margin" Value="0,45,0,0" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
+                                            <Setter Property="Margin" Value="0,0,0,44" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+
+                            <TopPanel DockPanel.Dock="Top" />
+                            <DockPanel DockPanel.Dock="Top" >
+                                <FilterPanel x:Name="PART_FilterPanel"
                                          DockPanel.Dock="{Settings FilterPanelPosition}"
                                          Width="{Settings FilterPanelWitdh}"
                                          Visibility="{Settings FilterPanelVisible}"/>
 
-                            <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
+                                <ExplorerPanel Visibility="{Settings ExplorerPanelVisible}"
                                            DockPanel.Dock="{Settings ExplorerPanelPosition}"
                                            Width="{Settings ExplorerPanelWitdh}"/>
-                            
-                            <Grid DockPanel.Dock="Left">                                
-                                <LibraryDetailsView x:Name="PART_ViewDetails" />
-                                <LibraryGridView x:Name="PART_ViewGrid" />
-                                <LibraryListView x:Name="PART_ViewList" />
-                            </Grid>
+
+                                <Grid DockPanel.Dock="Left">
+                                    <LibraryDetailsView x:Name="PART_ViewDetails" />
+                                    <LibraryGridView x:Name="PART_ViewGrid" />
+                                    <LibraryListView x:Name="PART_ViewList" />
+                                </Grid>
+                            </DockPanel>
                         </DockPanel>
+
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

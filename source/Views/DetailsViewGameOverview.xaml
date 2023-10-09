@@ -9,7 +9,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DetailsViewGameOverview}">
-                    <Border>
+                    <Border Background="{DynamicResource PanelBackgroundBrush}">
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderBrush" Value="{DynamicResource PanelSeparatorBrush}" />
@@ -719,7 +719,8 @@
                                             </StackPanel>
                                             <!--#endregion-->
                                         </StackPanel>
-                                        <TabControl Margin="10,4,0,0" Style="{DynamicResource TabControlDetailsView}">
+                                        <TabControl Margin="10,4,0,0" Style="{DynamicResource TabControlDetailsView}"
+                                                    Focusable="False">
                                             <TabItem Name="PART_ElemDescription">
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
@@ -736,15 +737,36 @@
                                                 </StackPanel>
                                             </TabItem>
 
-                                            <TabItem Name="PART_ElemNotes">
+                                            <TabItem Visibility="{Binding ElementName=NotesVisibilityProxy, Path=Tag}">
                                                 <TabItem.Header>
                                                     <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                                 </TabItem.Header>
                                                 <StackPanel Margin="0,16,0,0">
+
+                                                    <TextBlock x:Name="NotesVisibilityProxy" Visibility="Collapsed">
+                                                        <TextBlock.Style>
+                                                            <Style TargetType="TextBlock">
+                                                                <Setter Property="Tag" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_TextNotes, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, FallbackValue=False}" Value="True">
+                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBlock.Style>
+                                                    </TextBlock>
+
                                                     <TextBox Name="PART_TextNotes" IsReadOnly="True"
-                                                     BorderThickness="0"
-                                                     AcceptsReturn="True" TextWrapping="Wrap"
-                                                     Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
+                                                             BorderThickness="0"
+                                                             AcceptsReturn="True" TextWrapping="Wrap"
+                                                             Margin="-1,5,-1,5" Padding="0" Background="Transparent" FontWeight="Normal"/>
+
+                                                    <ContentControl x:Name="PlayNotes_NotesViewerControl"
+                                                                    Visibility="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}"
+                                                                    Margin="0,10,0,0" />
                                                 </StackPanel>
                                             </TabItem>
 

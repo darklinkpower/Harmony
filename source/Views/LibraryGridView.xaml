@@ -26,7 +26,8 @@
                             <GridViewGameOverview x:Name="PART_ControlGameView"
                                               Width="{Settings GrdiDetailsWitdh}"
                                               DockPanel.Dock="{Settings GridViewDetailsPosition}" />
-                            <Grid DockPanel.Dock="Left">
+                            <Grid DockPanel.Dock="Left"
+                                  Background="{DynamicResource PanelBackgroundBrush}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="Auto" />

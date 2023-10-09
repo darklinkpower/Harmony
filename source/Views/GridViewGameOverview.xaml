@@ -10,6 +10,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GridViewGameOverview}">
                     <Border Padding="10,0,5,10" BorderBrush="{DynamicResource HighlightGlyphBrush}"
+                            Background="{DynamicResource PanelBackgroundBrush}"
                             d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                         <Border.Style>
                             <Style TargetType="Border">
@@ -470,23 +471,42 @@
                                         </Expander>
                                         <!--#endregion -->
 
-                                        <Expander Name="PART_ElemNotes"
-                                                  Grid.Row="{DynamicResource GridViewSectionOrderNotes}"
-                                                  IsExpanded="True"
+                                        <Border Grid.Row="{DynamicResource GridViewSectionOrderNotes}">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding ElementName=PART_TextNotes, Path=Visibility}" Value="Visible">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, FallbackValue=False}" Value="True">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+
+                                            <Expander IsExpanded="True"
                                                   Margin="0,0,5,0">
-                                            <Expander.Header>
-                                                <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource BaseTextBlockStyle}"
+                                                <Expander.Header>
+                                                    <TextBlock Text="{DynamicResource LOCNotesLabel}" Style="{DynamicResource BaseTextBlockStyle}"
                                                            Cursor="Hand"
                                                            FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" />
-                                            </Expander.Header>
-                                            <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
-                                                <TextBox Name="PART_TextNotes" IsReadOnly="True"
+                                                </Expander.Header>
+                                                <StackPanel Margin="0,0,0,25">
+                                                    <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                    <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0" Background="Transparent"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
                                                      Margin="-1,0,-1,0" Padding="0"/>
-                                            </StackPanel>
-                                        </Expander>
+
+                                                    <ContentControl x:Name="PlayNotes_NotesViewerControl"
+                                                                    Visibility="{PluginSettings Plugin=PlayNotes, Path=IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}"
+                                                                    Margin="0,10,0,0" />
+                                                </StackPanel>
+                                            </Expander>
+                                        </Border>
+
 
                                         <Expander Name="PART_ElemDescription"
                                                   Grid.Row="{DynamicResource GridViewSectionOrderDescription}"
