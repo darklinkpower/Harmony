@@ -390,3 +390,13 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.48/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_48.pthm
     Changelog:
       - 'TopPanel: Adjustment to items padding'
+  - Version: 2.49
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-10
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.49/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_49.pthm
+    Changelog:
+      - 'NOTE IMPORTANT READ: This release contains a major set of changes that I have been working on for some time and it is still does not contain all the changes I planned. There may also be some bugs. If you are not okay with this please do not update and if you do and do not like it, revert back by installing the older version on GitHub.'
+      - 'Changed: Almost all the elements in the theme went through changes of different degrees'
+      - 'Added support for Play Notes extension'
+      - 'Details  View: Remove Description text justify'
+      - 'ListBox and Explorer Panel: Trim text if it does not fit in available width'
