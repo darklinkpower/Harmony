@@ -54,6 +54,9 @@
                                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                                             <Setter Property="Margin" Value="0,0,0,44" />
                                         </DataTrigger>
+                                        <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
+                                            <Setter Property="Margin" Value="0,0,0,0" />
+                                        </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
                             </DockPanel.Style>
