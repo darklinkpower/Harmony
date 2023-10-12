@@ -12,6 +12,9 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{DynamicResource BottomButtonHighlightBrush}" />
             </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background" Value="{DynamicResource BottomButtonHighlightBrush}" />
+            </Trigger>
         </Style.Triggers>
     </Style>
 </ResourceDictionary>
