@@ -30,27 +30,13 @@
                                       x:Name="PART_ScrollViewHost">
                             <Grid Margin="0,0,0,20">
 
-                                <!-- Background Image -->
-                                <WrapPanel Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
-                                    <WrapPanel.Style>
-                                        <Style TargetType="{x:Type WrapPanel}">
-                                            <Setter Property="Visibility" Value="Visible" />
+                                <Border x:Name="BackgroundImageSection"
+                                        Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
+                                    <Border.Style>
+                                        <Style TargetType="Border">
                                             <Style.Triggers>
-                                                <MultiDataTrigger>
-                                                    <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True" />
-                                                        <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableBackgroundImage, FallbackValue=False}" Value="True" />
-                                                    </MultiDataTrigger.Conditions>
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </MultiDataTrigger>
-                                                <MultiDataTrigger>
-                                                    <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableAlternativeDetailsVideoPlayer, FallbackValue=False}" Value="True" />
-                                                        <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=IsVideoPlaying, FallbackValue=False}" Value="True" />
-                                                    </MultiDataTrigger.Conditions>
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </MultiDataTrigger>
                                                 <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible" />
                                                     <Setter Property="OpacityMask">
                                                         <Setter.Value>
                                                             <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
@@ -62,35 +48,7 @@
                                                         </Setter.Value>
                                                     </Setter>
                                                 </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </WrapPanel.Style>
-                                    <Grid>
-                                        <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                                        <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
-                                                Opacity="{DynamicResource DetailsBackgroundDarkenLayerOpacity}">
-                                            <Border.OpacityMask>
-                                                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                                                    <LinearGradientBrush.GradientStops>
-                                                        <GradientStop Color="#F2FFFFFF" Offset="-0.1"/>
-                                                        <GradientStop Color="#B3FFFFFF" Offset="0.8"/>
-                                                    </LinearGradientBrush.GradientStops>
-                                                </LinearGradientBrush>
-                                            </Border.OpacityMask>
-                                        </Border>
-                                        <Border x:Name="ImageBackgroundNoise"
-                                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                                Background="{DynamicResource NoiseBrush}"
-                                                Opacity="0.025"/>
-                                    </Grid>
-                                </WrapPanel>
 
-                                <!-- BackgroundChanger plugin background -->
-                                <WrapPanel Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
-                                    <WrapPanel.Style>
-                                        <Style TargetType="{x:Type WrapPanel}">
-                                            <Setter Property="Visibility" Value="Visible" />
-                                            <Style.Triggers>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{PluginSettings Plugin=ExtraMetadataLoader, Path=EnableAlternativeDetailsVideoPlayer, FallbackValue=False}" Value="True" />
@@ -98,26 +56,60 @@
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                 </MultiDataTrigger>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
-                                                    <Setter Property="OpacityMask">
-                                                        <Setter.Value>
-                                                            <RadialGradientBrush GradientOrigin="0.5,0" Center="0.5,0" RadiusX="2" RadiusY="0.9">
-                                                                <RadialGradientBrush.GradientStops>
-                                                                    <GradientStop Color="Black" Offset="0.3" />
-                                                                    <GradientStop Color="Transparent" Offset="1" />
-                                                                </RadialGradientBrush.GradientStops>
-                                                            </RadialGradientBrush>
-                                                        </Setter.Value>
-                                                    </Setter>
-                                                </DataTrigger>
+                                                
                                             </Style.Triggers>
                                         </Style>
-                                    </WrapPanel.Style>
-                                    <Grid>
+                                    </Border.Style>
+
+                                    <Grid >
+                                        <Grid.Style>
+                                            <Style TargetType="{x:Type Grid}">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
+                                                        <Setter Property="OpacityMask">
+                                                            <Setter.Value>
+                                                                <VisualBrush Visual="{Binding ElementName=HeaderMask}"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Grid.Style>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="{Binding ElementName=PART_ImageBackground, Path=Height}" />
+                                            <RowDefinition Height="{Binding ElementName=BackgroundChanger_PluginBackgroundImage, Path=Height}" />
+                                        </Grid.RowDefinitions>
+                                        <Border Name="HeaderMask" CornerRadius="20"
+                                            Grid.RowSpan="2"
+                                            Background="#000000" />
+
+                                        <Border x:Name="PART_ImageBackground_Wrapper">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                    <Style.Triggers>
+                                                        <MultiDataTrigger>
+                                                            <MultiDataTrigger.Conditions>
+                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=HasDataBackground, FallbackValue=False}" Value="True" />
+                                                                <Condition Binding="{PluginSettings Plugin=BackgroundChanger, Path=EnableBackgroundImage, FallbackValue=False}" Value="True" />
+                                                            </MultiDataTrigger.Conditions>
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                        </MultiDataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+
+                                            <FadeImage x:Name="PART_ImageBackground" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </Border>
+
                                         <ContentControl x:Name="BackgroundChanger_PluginBackgroundImage"
+                                                    Grid.Row="1"
                                                     HorizontalAlignment="Center" VerticalAlignment="Top" />
+
                                         <Border Background="{StaticResource DarkNoiseBrush}" IsHitTestVisible="False"
-                                                Opacity="{DynamicResource DetailsBackgroundDarkenLayerOpacity}">
+                                            Grid.RowSpan="2"
+                                            Opacity="{DynamicResource DetailsBackgroundDarkenLayerOpacity}">
                                             <Border.OpacityMask>
                                                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                                                     <LinearGradientBrush.GradientStops>
@@ -127,9 +119,16 @@
                                                 </LinearGradientBrush>
                                             </Border.OpacityMask>
                                         </Border>
-                                    </Grid>
-                                </WrapPanel>
 
+                                        <Border x:Name="ImageBackgroundNoise"
+                                            Grid.RowSpan="2"
+                                            Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
+                                            Background="{DynamicResource NoiseBrush}"
+                                            Opacity="0.025"/>
+                                    </Grid>
+
+                                </Border>
+                                
                                 <!-- ExtraMetadataLoader alternative video player -->
                                 <WrapPanel Tag="{DynamicResource DetailsViewBackgroundImageUseOpacityMask}">
                                     <WrapPanel.Style>
