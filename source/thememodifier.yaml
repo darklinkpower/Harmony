@@ -4,7 +4,7 @@ Constants:
     - "Details View"
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
-    - DetailsViewDetailsMaxWidth(1024,1600): 'Maximum width of details'
+    - DetailsViewDetailsMaxWidth(1024,2400): 'Maximum width of details'
     - DetailsBackgroundDarkenLayerOpacity(0.0,1.0): 'Darken amount of background image'
     - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of logos (Requires Extra Metadata Loader extension)'
