@@ -58,7 +58,7 @@
                             </Grid.Resources>
                             <TextBlock Text=">" x:Name="CollapsedIcon"
                                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                                       FontSize="18" MinWidth="20" FontWeight="Bold" Margin="5,0,5,0"
+                                       FontSize="12" MinWidth="20" FontWeight="Medium" Margin="5,0,5,0"
                                        Grid.Column="0" TextAlignment="Center" FontFamily="MS UI Gothic" RenderTransformOrigin="0.5,0.5">
                             </TextBlock>
                             <ContentPresenter Grid.Column="1" VerticalAlignment="Center"
