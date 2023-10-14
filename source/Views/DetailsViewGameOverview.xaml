@@ -308,9 +308,9 @@
                                                         <ColumnDefinition Width="*" />
                                                         <ColumnDefinition Width="*" />
                                                     </Grid.ColumnDefinitions>
-                                                    <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonPlayAction" Height="40" Style="{DynamicResource PlayButtonViews}" />
+                                                    <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonPlayAction" Height="40" Style="{DynamicResource PlayButton}" />
                                                     <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonContextAction" Height="40" Style="{DynamicResource ContextButtonViews}" />
-                                                    <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonMoreActions" Content="{DynamicResource LOCMoreAction}" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}" Padding="0" />
+                                                    <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="PART_ButtonMoreActions" Content="{DynamicResource LOCMoreAction}" Margin="10,0,0,0" Style="{DynamicResource ContextButtonViews}" Padding="0" />
                                                 </Grid>
                                                 <Button DockPanel.Dock="Left" x:Name="PART_ButtonEditGame" Content="&#xEDED;" VerticalAlignment="Top" Margin="10,0,0,0" Height="40" Width="40" Focusable="False" FontFamily="{DynamicResource FontIcoFont}" />
                                                 <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0"
@@ -468,10 +468,15 @@
                                                     <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                                                 </Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
+                                                <Style TargetType="Separator">
+                                                    <Setter Property="Margin" Value="0,0,0,0" />
+                                                    <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
+                                                    <Setter Property="Opacity" Value="{DynamicResource GlyphColorObscureOpacity}" />
+                                                </Style>
                                             </StackPanel.Resources>
                                             <!--#region Game Details-->
                                             <TextBlock Text="{DynamicResource LOCGameDetails}" Margin="0,15,0,5" FontWeight="Bold" Style="{DynamicResource BaseTextBlockStyle}" />
-                                            <Separator Background="{DynamicResource HighlightGlyphBrush}" />
+                                            <Separator />
                                             <GridEx Margin="0,5,0,10" ColumnCount="2" StarColumns="1" RowCount="25" AutoLayoutColumns="2"
                                                     Tag="{DynamicResource GridViewDetailsIconsVisibility}">
                                                 <Grid.Resources>
@@ -692,7 +697,7 @@
                                                     </StackPanel.Style>
                                                     <TextBlock Text="Unlocked Achievements" Margin="0,15,0,5"
                                                                FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
-                                                    <Separator Background="{DynamicResource HighlightGlyphBrush}" />
+                                                    <Separator />
                                                     <StackPanel x:Name="PART_Achievements_ListCompactUnlocked"/>
                                                 </StackPanel>
                                                 <StackPanel>
@@ -708,7 +713,7 @@
                                                     </StackPanel.Style>
                                                     <TextBlock Text="Locked Achievements" Margin="0,15,0,5"
                                                                FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}" Style="{DynamicResource BaseTextBlockStyle}" />
-                                                    <Separator Background="{DynamicResource HighlightGlyphBrush}" />
+                                                    <Separator />
                                                     <StackPanel x:Name="PART_Achievements_ListCompactLocked"/>
                                                 </StackPanel>
                                             </StackPanel>

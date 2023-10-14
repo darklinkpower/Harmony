@@ -365,44 +365,6 @@
         </Style.Triggers>
     </Style>
     
-    <Style
-        x:Key="DuplicateHider_IconContentControlStyle1"
-        BasedOn="{StaticResource {x:Type ContentControl}}"
-        TargetType="ContentControl">
-        <Setter Property="BorderBrush" Value="{x:Null}" />
-        <Setter Property="Foreground" Value="{x:Null}" />
-        <Setter Property="Background" Value="{x:Null}" />
-        <Setter Property="Padding" Value="0,0,0,0" />
-        <Setter Property="Margin" Value="0,0,0,0" />
-        <Setter Property="BorderThickness" Value="0,0,0,0" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="ClipToBounds" Value="False"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Grid>
-                        <Border x:Name="IconBackground" CornerRadius="8" Background="{DynamicResource OpaqueGrayHighlightBrush}" Opacity="0.0" Visibility="Hidden">
-                        </Border>
-                        <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="Fant" Margin="3" Opacity="0.95"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
-                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueGrayHighlightBrush}" TargetName="IconBackground"/>
-                            <Setter Property="Border.Opacity" Value="0.75" TargetName="IconBackground"/>
-                        </Trigger>
-                        <DataTrigger Binding="{Binding IsCurrent}" Value="True">
-                            <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
-                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueGrayHighlightBrush}" TargetName="IconBackground" />
-                            <Setter Property="Border.Opacity" Value="1" TargetName="IconBackground"/>
-                        </DataTrigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style TargetType="Border" x:Key="DropShadowBorderStyle">
         <Setter Property="BorderBrush" Value="{DynamicResource GridViewItemMaskBackgroundBrush}" />
         <Setter Property="BorderThickness" Value="8" />

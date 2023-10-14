@@ -42,7 +42,8 @@
     <ControlTemplate x:Key="{x:Static MenuItem.TopLevelHeaderTemplateKey}" TargetType="{x:Type MenuItem}">
         <Border x:Name="Border">
             <Grid>
-                <Border x:Name="HoverBorder" Background="{DynamicResource HoverBrush}" Visibility="Collapsed"  />
+                <Border x:Name="HoverBorder" Background="{DynamicResource GlyphBrush}"
+                        Opacity="{DynamicResource GlyphColorObscureOpacity}" Visibility="Collapsed"  />
                 <TextBlock VerticalAlignment="Center" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
                            Foreground="{TemplateBinding Foreground}">
                     <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
@@ -80,7 +81,8 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Border x:Name="HoverBorder" Grid.Column="0" Grid.ColumnSpan="4"
-                    Background="{DynamicResource HoverBrush}" Visibility="Collapsed"  />
+                    Background="{DynamicResource GlyphBrush}"
+                    Opacity="{DynamicResource GlyphColorObscureOpacity}" Visibility="Collapsed"  />
             <ContentPresenter x:Name="Icon" Grid.Column="0" Margin="4,0,-5,0"
                               MaxHeight="16" MaxWidth="16"
                               VerticalAlignment="Center" ContentSource="Icon" />
@@ -127,7 +129,9 @@
 
     <!-- SubmenuItem -->
     <ControlTemplate x:Key="{x:Static MenuItem.SubmenuItemTemplateKey}" TargetType="{x:Type MenuItem}">
-        <Border x:Name="HoverBorder" Background="{DynamicResource HoverBrush}">
+        <Grid>
+            <Border x:Name="HoverBorder" Background="{DynamicResource GlyphBrush}"
+                    Opacity="{DynamicResource GlyphColorObscureOpacity}" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" SharedSizeGroup="MenuItemIconColumnGroup" />
@@ -148,7 +152,7 @@
                            TextAlignment="Left" HorizontalAlignment="Stretch"
                            VerticalAlignment="Center" Margin="20,5,10,5" Opacity="0.6" />
             </Grid>
-        </Border>
+        </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="Icon" Value="{x:Null}">
                 <Setter Property="Visibility" Value="Collapsed" TargetName="Icon" />

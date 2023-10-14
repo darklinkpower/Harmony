@@ -48,7 +48,8 @@
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
                         <Border x:Name="HoverRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                Background="{DynamicResource HoverBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" />
+                                Opacity="{DynamicResource GlyphColorObscureOpacity}"
+                                Background="{DynamicResource GlyphBrush}" CornerRadius="{DynamicResource ControlCornerRadius}" />
                         <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
                                 Background="{DynamicResource GlyphBrush}" CornerRadius="{DynamicResource ControlCornerRadius}"/>
                         <Border Padding="{TemplateBinding Padding}" Background="Transparent">

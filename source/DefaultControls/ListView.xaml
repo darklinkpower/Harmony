@@ -126,7 +126,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
                     <Grid>
-                        <Rectangle x:Name="HoverRectangle" Visibility="Collapsed" Fill="{DynamicResource HoverBrush}" />
+                        <Rectangle x:Name="HoverRectangle" Visibility="Collapsed" Fill="{DynamicResource GlyphBrush}"
+                                   Opacity="{DynamicResource GlyphColorObscureOpacity}" />
                         <Rectangle x:Name="SelectedRectangle" Visibility="Collapsed" Fill="{DynamicResource GlyphBrush}" />
                         <Border Padding="{TemplateBinding Padding}" Background="Transparent">
                             <GridViewRowPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Stretch" />

@@ -93,19 +93,9 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="DuplicateHider_IconContentControlStyle"
-        BasedOn="{StaticResource {x:Type ContentControl}}"
-        TargetType="ContentControl">
-        <Style.Resources>
-            <DropShadowEffect
-                x:Key="glowEffect"
-                BlurRadius="8"
-                Opacity="1"
-                RenderingBias="Quality"
-                ShadowDepth="0"
-                Color="{DynamicResource GlyphColor}" />
-        </Style.Resources>
+    <Style x:Key="DuplicateHider_IconContentControlStyle"
+           BasedOn="{StaticResource {x:Type ContentControl}}"
+           TargetType="ContentControl">
         <Setter Property="BorderBrush" Value="{x:Null}" />
         <Setter Property="Foreground" Value="{x:Null}" />
         <Setter Property="Background" Value="{x:Null}" />
@@ -120,8 +110,7 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Grid>
-                        <Border x:Name="IconBackground" CornerRadius="8" Background="{DynamicResource OpaqueHighlightBrush}" Opacity="1" Visibility="Hidden">
-                        </Border>
+                        <Border x:Name="IconBackground" CornerRadius="8" Background="{DynamicResource GlyphBrush}" Opacity="1" Visibility="Hidden" />
                         <StackPanel Orientation="Horizontal" Opacity="{Binding Game.IsInstalled, Converter={StaticResource OpacityBoolConverter}}">
                             <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="Fant" Margin="3"/>
                             <TextBlock x:Name="SourceText" Text="{Binding SourceName}" Style="{DynamicResource BaseTextBlockStyle}" VerticalAlignment="Center"
@@ -136,9 +125,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
-                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueHighlightBrushBright}" TargetName="IconBackground"/>
-                            <Setter Property="Border.Opacity" Value="1" TargetName="IconBackground"/>
-                            <Setter Property="Effect" Value="{StaticResource glowEffect}" />
+                            <Setter Property="Border.Opacity" Value="{DynamicResource GlyphColorObscureOpacity}" TargetName="IconBackground"/>
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
@@ -164,8 +151,7 @@
                         </Trigger>
                         <DataTrigger Binding="{Binding IsCurrent}" Value="True">
                             <Setter Property="Border.Visibility" Value="Visible" TargetName="IconBackground"/>
-                            <Setter Property="Border.Background" Value="{DynamicResource OpaqueHighlightBrush}" TargetName="IconBackground"/>
-                            <Setter Property="Border.Opacity" Value="1" TargetName="IconBackground"/>
+                            <Setter Property="Border.Opacity" Value="0.7" TargetName="IconBackground"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

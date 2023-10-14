@@ -126,12 +126,12 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Button Name="PART_ButtonPlayAction" Grid.Column="0"
-                                            Height="40" Style="{DynamicResource PlayButtonViews}"/>
+                                            Height="40" Style="{DynamicResource PlayButton}"/>
                                     <Button Name="PART_ButtonContextAction"
                                             Height="40" Grid.Column="0" Style="{DynamicResource ContextButtonViews}"/>
                                     <Button Name="PART_ButtonMoreActions"
                                             Content="{DynamicResource LOCMoreAction}"
-                                            Height="40" Grid.Column="1" Margin="10,0,0,0" Style="{DynamicResource MoreActionButtonViews}"/>
+                                            Height="40" Grid.Column="1" Margin="10,0,0,0" Style="{DynamicResource ContextButtonViews}"/>
                                     <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="0,0,5,0">
                                         <ContentControl x:Name="PlayState_GameStateSwitchControl" Margin="10,0,0,0"
                                                         Visibility="{PluginSettings Plugin=PlayState, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}" />
@@ -188,6 +188,13 @@
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
+                                        <Grid.Resources>
+                                            <Style TargetType="Separator">
+                                                <Setter Property="Margin" Value="0,5,0,5" />
+                                                <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
+                                                <Setter Property="Opacity" Value="{DynamicResource GlyphColorObscureOpacity}" />
+                                            </Style>
+                                        </Grid.Resources>
                                         <Expander Grid.Row="{DynamicResource GridViewSectionOrderDetails}"
                                                   IsExpanded="True"
                                                   Margin="0,0,5,0">
@@ -208,7 +215,7 @@
                                                     </Style>
                                                     <Style TargetType="Button" BasedOn="{StaticResource PropertyItemButton}" />
                                                 </StackPanel.Resources>
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <GridEx Margin="0,5,0,10"
                                                         ColumnCount="2" StarColumns="1"
                                                         Tag="{DynamicResource GridViewDetailsIconsVisibility}"
@@ -456,7 +463,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <Grid>
                                                     <!--Rectangle used to expand the panel while the video loads-->
                                                     <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
@@ -491,7 +498,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                                 </Expander.Header>
                                                 <StackPanel Margin="0,0,0,25">
-                                                    <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                    <Separator />
                                                     <TextBox Name="PART_TextNotes" IsReadOnly="True"
                                                      BorderThickness="0" Background="Transparent"
                                                      AcceptsReturn="True" TextWrapping="Wrap"
@@ -515,7 +522,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <HtmlTextView Name="PART_HtmlDescription"
                                                               HtmlFontSize="{DynamicResource FontSize}"
                                                               HtmlFontFamily="{DynamicResource FontFamily}"
@@ -537,7 +544,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <DockPanel Margin="0,10,0,0">
                                                     <ContentControl DockPanel.Dock="Left" x:Name="SuccessStory_PluginButton" Height="40" VerticalAlignment="Center"/>
                                                     <ContentControl x:Name="SuccessStory_PluginProgressBar" Margin="5,5,20,0" VerticalAlignment="Center" Height="28" />
@@ -561,7 +568,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <DockPanel>
                                                     <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" VerticalAlignment="Top"/>
                                                     <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
@@ -641,7 +648,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginSinglePicture" Margin="0,10,20,0" />
                                                 <ContentControl x:Name="ScreenshotsVisualizer_PluginListScreenshots" Margin="0,10,20,0" />
                                             </StackPanel>
@@ -659,7 +666,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <ContentControl x:Name="GameActivity_PluginButton" />
                                                 <ContentControl x:Name="GameActivity_PluginChartTime" Margin="0,5,0,0" />
                                             </StackPanel>
@@ -677,7 +684,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <ContentControl x:Name="ReviewViewer_ReviewsControl" Margin="0,5,10,5"/>
                                             </StackPanel>
                                         </Expander>
@@ -694,7 +701,7 @@
                                                            FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                                             </Expander.Header>
                                             <StackPanel Margin="0,0,0,25">
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <ContentControl x:Name="NewsViewer_NewsViewerControl" Margin="0,0,10,0" />
                                             </StackPanel>
                                         </Expander>
@@ -717,7 +724,7 @@
                                                         <Setter Property="BorderThickness" Value="0" />
                                                     </Style>
                                                 </StackPanel.Resources>
-                                                <Separator Background="{DynamicResource HighlightGlyphBrush}" Margin="0,5,0,5"/>
+                                                <Separator />
                                                 <ContentControl x:Name="CheckDlc_PluginButton" MinHeight="20" MinWidth="120"
                                                                 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,10"
                                                                 Visibility="{PluginSettings Plugin=CheckDlc, Path=EnableIntegrationButton, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"/>
