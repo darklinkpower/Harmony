@@ -36,7 +36,8 @@
     <sys:Int32 x:Key="GridViewSectionOrderCheckDlc">10</sys:Int32>
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">True</sys:Boolean>
     <!--region end-->
-    
+
+    <sys:Double x:Key="GlyphColorObscureOpacity">0.5</sys:Double>
     <sys:Double x:Key="FontSizeSmall">12</sys:Double>
     <sys:Double x:Key="FontSize">14</sys:Double>
     <sys:Double x:Key="FontSizeLarge">15</sys:Double>
@@ -69,7 +70,7 @@
     <Color x:Key="TextColor">#f0f5ff</Color>
     <Color x:Key="TextColorDarker">#a3a3a3</Color>
     <Color x:Key="TextColorDark">#2d323c</Color>
-    <Color x:Key="MainColor">#262c38</Color>
+    <Color x:Key="MainColor">#1c1836</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#324f53</Color>
     <Color x:Key="GlyphColor">#4fe3c0</Color>
@@ -113,9 +114,9 @@
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource TextColorDark}" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
     <SolidColorBrush x:Key="PanelSeparatorBrush1" Color="{DynamicResource PanelSeparatorColor}" />
-    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="#40262c38" />
+    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="#CC3a3b46" />
     <SolidColorBrush x:Key="PanelSeparatorImageBackgroundEnabledBrush" Color="#474f5c" />
-    <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#40262c38" />
+    <SolidColorBrush x:Key="PanelBackgroundBrush" Color="Transparent" />
     <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
     <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
