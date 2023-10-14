@@ -9,6 +9,7 @@
         <Setter Property="Padding" Value="3" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />    
         <Setter Property="Template">
             <Setter.Value>
