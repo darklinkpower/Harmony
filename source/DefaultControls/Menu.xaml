@@ -103,6 +103,7 @@
             <Popup IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right"
                    Focusable="False" AllowsTransparency="True">
                 <Border BorderBrush="{DynamicResource PopupBorderBrush}" Background="{DynamicResource PopupBackgroundBrush}"
+                        CornerRadius="{DynamicResource GeneralMenuCornerRadius}" Padding="{DynamicResource PopupMenuPadding}"
                         BorderThickness="{DynamicResource PopupBorderThickness}">
                     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                         <StackPanel Grid.IsSharedSizeScope="True" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
