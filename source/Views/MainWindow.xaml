@@ -37,8 +37,29 @@
                             </Grid.Resources>
 
                             <Grid>
-                                <ContentControl Name="PART_ContentView"
-                                                DockPanel.Dock="Top" />
+                                <Border Tag="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue=''}">
+                                    <Border.Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="Margin" Value="44,0,0,0" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
+                                                    <Setter Property="Margin" Value="0,0,44,0" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
+                                                    <Setter Property="Margin" Value="0,45,0,0" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
+                                                    <Setter Property="Margin" Value="0,0,0,44" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
+                                                    <Setter Property="Margin" Value="0,0,0,0" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <ContentControl Name="PART_ContentView" />
+                                </Border>
                                 <DockPanel>
                                     <Sidebar x:Name="PART_Sidebar" Panel.ZIndex="999"
                                          DockPanel.Dock="{Settings SidebarPosition}" />

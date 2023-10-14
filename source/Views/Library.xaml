@@ -5,6 +5,7 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type Library}">
+        <Setter Property="Tag" Value="Library" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Library}">
@@ -41,26 +42,6 @@
                                 Opacity="0.025"/>
 
                         <DockPanel Grid.RowSpan="2">
-                            <DockPanel.Style>
-                                <Style TargetType="DockPanel">
-                                    <Setter Property="Margin" Value="44,0,0,0" />
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
-                                            <Setter Property="Margin" Value="0,0,44,0" />
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
-                                            <Setter Property="Margin" Value="0,45,0,0" />
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
-                                            <Setter Property="Margin" Value="0,0,0,44" />
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
-                                            <Setter Property="Margin" Value="0,0,0,0" />
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </DockPanel.Style>
-
                             <TopPanel DockPanel.Dock="Top" />
                             <DockPanel DockPanel.Dock="Top" >
                                 <FilterPanel x:Name="PART_FilterPanel"
