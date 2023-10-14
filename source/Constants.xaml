@@ -22,7 +22,7 @@
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
-    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.40</sys:Double>
+    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.45</sys:Double>
     <sys:Int32 x:Key="GridViewSectionOrderDetails">0</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderVideo">1</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNotes">2</sys:Int32>
