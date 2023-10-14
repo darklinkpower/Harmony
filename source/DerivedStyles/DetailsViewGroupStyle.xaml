@@ -9,17 +9,34 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GroupItem}">
-                    <ExpanderEx BorderThickness="0" SaveGameGroupId="{Binding Name, Mode=OneWay}"
-                                IsExpanded="True">
-                        <ExpanderEx.Header>
-                            <Grid>
-                                <Border BorderThickness="0,0,0,1" BorderBrush="{DynamicResource GlyphBrush}"
-                                        Opacity="0.15" Margin="0,0,15,0" />
+                    <Grid Margin="0,0,0,2">
+                        <Border BorderBrush="{DynamicResource GlyphBrush}" Opacity="0.12"
+                                Background="{DynamicResource DarkNoiseBrush}"
+                                BorderThickness="1"
+                                CornerRadius="{DynamicResource ControlCornerRadius}"/>
+                        <ExpanderEx BorderThickness="0" SaveGameGroupId="{Binding Name, Mode=OneWay}"
+                                    VerticalAlignment="Center"
+                                    Margin="2"
+                                    IsExpanded="True">
+                            <ExpanderEx.Header>
                                 <Border Padding="3">
                                     <DockPanel Background="Transparent">
                                         <DockPanel.ContextMenu>
                                             <GameGroupMenu />
                                         </DockPanel.ContextMenu>
+
+                                        <Border DockPanel.Dock="Right" CornerRadius="7" Background="{DynamicResource ControlBackgroundBrush}" Width="Auto"
+                                                Padding="7,2,7,2">
+                                            <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat={}{0}}"
+                                                   Foreground="{DynamicResource GlyphBrush}"
+                                                   FontSize="12" FontWeight="Normal"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Style="{DynamicResource BaseTextBlockStyle}"
+                                                   TextAlignment="Center"
+                                                   Visibility="{Settings ShowGroupCount}"
+                                                   Margin="7,0,7,0"/>
+                                        </Border>
+
                                         <TextBlock DockPanel.Dock="Left"
                                                    VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    TextAlignment="Center" Margin="0,0,5,0">
@@ -37,18 +54,14 @@
                                                 </Style>
                                             </TextBlock.Style>
                                         </TextBlock>
-                                        <TextBlock Text="{Binding Items.Count, Mode=OneWay, StringFormat=({0})}"
-                                                   Foreground="{DynamicResource GlyphBrush}"
-                                                   VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                   Style="{DynamicResource BaseTextBlockStyle}"
-                                                   DockPanel.Dock="Left" TextAlignment="Center"
-                                                   Visibility="{Settings ShowGroupCount}"/>
                                     </DockPanel>
                                 </Border>
-                            </Grid>
-                        </ExpanderEx.Header>
-                        <ItemsPresenter />
-                    </ExpanderEx>
+                            </ExpanderEx.Header>
+                            <ItemsPresenter DockPanel.Dock="Left" />
+                        </ExpanderEx>
+                    </Grid>
+
+
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
