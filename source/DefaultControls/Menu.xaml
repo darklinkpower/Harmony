@@ -71,6 +71,40 @@
         </Border>
     </ControlTemplate>
 
+    <Style x:Key="AnimatedWidthBorder" TargetType="Border">
+        <Setter Property="Width" Value="0" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag, FallbackValue=False}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width"
+                                             FillBehavior="HoldEnd"
+                                             From="7" To="0" Duration="0:0:0.08"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AnimatedOpacityBorder" TargetType="Border">
+        <Setter Property="Opacity" Value="1" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag, FallbackValue=False}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             FillBehavior="HoldEnd"
+                                             From="0" To="1" Duration="0:0:0.16"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
     <!-- SubmenuHeader -->
     <ControlTemplate x:Key="{x:Static MenuItem.SubmenuHeaderTemplateKey}" TargetType="{x:Type MenuItem}">
         <Grid Background="Transparent">
@@ -100,15 +134,23 @@
             <Grid Grid.Column="3" Margin="0,0,5,0">
                 <TextBlock FontFamily="Marlett" Text="4" VerticalAlignment="Center" Style="{DynamicResource BaseTextBlockStyle}" />
             </Grid>
-            <Popup IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right"
+            <Popup x:Name="Popup" IsOpen="{Binding Path=IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" Placement="Right"
                    Focusable="False" AllowsTransparency="True">
-                <Border BorderBrush="{DynamicResource PopupBorderBrush}" Background="{DynamicResource PopupBackgroundBrush}"
-                        CornerRadius="{DynamicResource GeneralMenuCornerRadius}" Padding="{DynamicResource PopupMenuPadding}"
-                        BorderThickness="{DynamicResource PopupBorderThickness}">
-                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                        <StackPanel Grid.IsSharedSizeScope="True" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
-                    </ScrollViewer>
-                </Border>
+                <StackPanel Orientation="Horizontal">
+                    <Border x:Name="PopupAnimationBorder1" Tag="{Binding ElementName=Popup, Path=IsOpen}"
+                            Style="{DynamicResource AnimatedWidthBorder}" />
+                    <Border x:Name="PopupBorder" BorderBrush="{DynamicResource PopupBorderBrush}" Background="{DynamicResource PopupBackgroundBrush}"
+                            CornerRadius="{DynamicResource PopupCornerRadius}" Padding="{DynamicResource PopupMenuPadding}"
+                            BorderThickness="{DynamicResource PopupBorderThickness}"
+                            Tag="{Binding ElementName=Popup, Path=IsOpen}"
+                            Style="{DynamicResource AnimatedOpacityBorder}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <StackPanel Grid.IsSharedSizeScope="True" IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
+                        </ScrollViewer>
+                    </Border>
+                    <Border x:Name="PopupAnimationBorder2" Tag="{Binding ElementName=Popup, Path=IsOpen}"
+                            Style="{DynamicResource AnimatedWidthBorder}" />
+                </StackPanel>
             </Popup>
         </Grid>
         <ControlTemplate.Triggers>

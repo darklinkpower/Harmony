@@ -169,8 +169,8 @@
                             <Setter Property="Visibility" Value="Visible" TargetName="GlowPlayingBorder" />
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" TargetName="ShowGameName" />
-                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="ShowGameNameBorder" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="ShowGameName" />
+                            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
                             <Setter Property="Content" Value="&#xef08;" TargetName="PART_ButtonPlay" />

@@ -62,14 +62,37 @@
                 <Popup Placement="Bottom" Focusable="False" AllowsTransparency="True" Name="Popup"
                        IsOpen="{Binding IsChecked, ElementName=MainToggle, Mode=TwoWay, Delay=100}" StaysOpen="False"
                        MaxHeight="300" MinWidth="{Binding ActualWidth, ElementName=MainToggle}">
-                    <Border Background="{DynamicResource PopupBackgroundBrush}"
-                            BorderThickness="{DynamicResource PopupBorderThickness}"
-                            BorderBrush="{DynamicResource PopupBorderBrush}">
-                        <ItemsControl x:Name="PART_ItemsPanel" />
-                    </Border>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" x:Name="PopupAnimationBorder" />
+                        <Border Grid.Row="1" x:Name="PopupBorder" Background="{DynamicResource PopupBackgroundBrush}"
+                                BorderThickness="{DynamicResource PopupBorderThickness}"
+                                BorderBrush="{DynamicResource PopupBorderBrush}">
+                            <ItemsControl x:Name="PART_ItemsPanel" />
+                        </Border>
+                    </Grid>
                 </Popup>
             </Grid>
         </Border>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding ElementName=Popup, Path=IsOpen}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PopupBorder" Storyboard.TargetProperty="Opacity"
+                                             FillBehavior="HoldEnd"
+                                             From="0" To="1" Duration="0:0:0.16"/>
+                            <DoubleAnimation Storyboard.TargetName="PopupAnimationBorder" Storyboard.TargetProperty="Height"
+                                             FillBehavior="HoldEnd"
+                                             From="7" To="0" Duration="0:0:0.08"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <Style x:Key="FilterSelectionBoxItemStyle" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type CheckBox}}">

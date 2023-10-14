@@ -15,8 +15,8 @@
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
-    <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
-    <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverUseRoundedCorners">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverDisplayDropShadowEffect">False</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
@@ -55,6 +55,7 @@
     <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">14</CornerRadius>
     <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
     <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="PopupCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="GeneralMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
     <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
@@ -137,11 +138,8 @@
         <GradientStop Color="Transparent" Offset="0.7"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="WindowBackgourndBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="{DynamicResource MainColor}" Offset="0.0" />
-        <GradientStop Color="{DynamicResource MainColor}" Offset="1.0" />
-    </LinearGradientBrush>
-
+    <SolidColorBrush x:Key="WindowBackgourndBrush" Color="{DynamicResource MainColor}" />
+    
     <Color x:Key="TopPanelItemBackgroundColor">Transparent</Color>
     <Color x:Key="TopPanelItemHoverBackgroundColor">Transparent</Color>
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#2e2c2f</Color>
