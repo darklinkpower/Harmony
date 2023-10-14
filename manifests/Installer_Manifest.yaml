@@ -400,3 +400,28 @@ Packages:
       - 'Added support for Play Notes extension'
       - 'Details  View: Remove Description text justify'
       - 'ListBox and Explorer Panel: Trim text if it does not fit in available width'
+  - Version: 2.50
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-14
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.50/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_50.pthm
+    Changelog:
+      - 'Theme overhaul finished. Changelog only contains some of the changes'
+      - 'Changing the Glyph brush with the Theme Modifier extension will now result in color changes across all the theme without exceptions to achieve consistent visuals.'
+      - 'Windows: Change window background color to a dark purple. If wanted, it can be changed back to the previous color with ThemeModifier extension by changing WindowBackgourndBrush to #262c38'
+      - 'Details View: Apply rounded corners to background image when layout separators are disabled'
+      - 'Details View: Increase maximum value for Details View width option in ThemeModifier extension'
+      - 'Details View: Layout, small visual changes and fix details row not wrapping when there is not enough width available'
+      - 'Details View: Make games list border use rounded corners'
+      - 'Details View: Visual changes to groups in games list'
+      - 'Expander: Make icons smaller'
+      - 'Fix Download Metadata button being unreadable when focused'
+      - 'Fix incorrect margins when opening non-library views in main window'
+      - 'Fix Play Button text being unreadable when hovered'
+      - 'General: Use opacity and offset animations when displaying menus and popups'
+      - 'Grid View: Enable rounded corners by default'
+      - 'Grid View: Make text in expander headers lighter'
+      - 'Library: Fix sidebar area being displayed even when it has been disabled'
+      - 'ListBox: Use rounder corners for panel and items'
+      - 'Menus: Use rounded corners'
+      - 'Restore support to draw separator panels if option is enabled'
+      - 'Window: Change cursor to hand when hovering window buttons'
