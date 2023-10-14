@@ -16,8 +16,7 @@
                                 <Setter Property="BorderThickness" Value="20,20,20,20" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                        <Setter Property="BorderBrush" Value="{DynamicResource HighlightGlyphBrush}" />
-                                        <Setter Property="BorderThickness" Value="1,0,1,0" />
+                                        <Setter Property="BorderBrush" Value="Transparent" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -281,11 +280,7 @@
                                                     </Border.Style>
                                                     <TextBlock FontFamily="{DynamicResource FontFamily}" Name="PART_TextDisplayName"
                                                                FontSize="{DynamicResource FontSizeLargest}" Margin="0,0,10,0" 
-                                                               TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
-                                                        <TextBlock.Effect>
-                                                            <DropShadowEffect ShadowDepth="2" RenderingBias="Quality" />
-                                                        </TextBlock.Effect>
-                                                    </TextBlock>
+                                                               TextWrapping="Wrap" VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}" />
                                                 </Border>
 
                                                 <ContentControl x:Name="DuplicateHider_SourceSelector" 

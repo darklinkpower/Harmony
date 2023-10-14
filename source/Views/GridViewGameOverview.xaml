@@ -9,18 +9,18 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GridViewGameOverview}">
-                    <Border Padding="10,0,5,10" BorderBrush="{DynamicResource HighlightGlyphBrush}"
-                            Background="{DynamicResource PanelBackgroundBrush}"
+                    <Border Padding="10,0,5,10" Background="{DynamicResource PanelBackgroundBrush}"
                             d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}">
                         <Border.Style>
                             <Style TargetType="Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource PanelSeparatorBrush}" />
                                 <Setter Property="BorderThickness" Value="1,0,0,0" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings GridViewDetailsPosition}" Value="Left">
                                         <Setter Property="BorderThickness" Value="0,0,1,0" />
                                     </DataTrigger>
-                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="True">
-                                        <Setter Property="BorderThickness" Value="0" />
+                                    <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
+                                        <Setter Property="BorderBrush" Value="Transparent" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -106,12 +106,9 @@
                                             </Style>
                                         </Border.Style>
                                         <TextBlock Name="PART_TextDisplayName" FontSize="{DynamicResource FontSizeLarger}"
+                                                   FontFamily="{DynamicResource FontFamily}"
                                                    TextWrapping="Wrap" 
-                                                   VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}">
-                                            <TextBlock.Effect>
-                                                <DropShadowEffect ShadowDepth="3"/>
-                                            </TextBlock.Effect>
-                                        </TextBlock>
+                                                   VerticalAlignment="Center" Foreground="{DynamicResource TextBrush}" />
                                     </Border>
                                 </DockPanel>
 

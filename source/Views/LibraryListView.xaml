@@ -8,14 +8,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type LibraryListView}">
-                    <Border BorderBrush="{DynamicResource PanelSeparatorBrush}"
-                            Background="{DynamicResource PanelBackgroundBrush}">
+                    <Border Background="{DynamicResource PanelBackgroundBrush}">
                         <Border.Style>
                             <Style TargetType="Border">
                                 <Setter Property="BorderThickness" Value="20,20,20,20" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource PanelSeparatorBrush}" />
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                        <Setter Property="BorderThickness" Value="0" />
+                                        <Setter Property="BorderBrush" Value="Transparent" />
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>

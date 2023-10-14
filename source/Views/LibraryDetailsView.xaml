@@ -13,7 +13,6 @@
                         <Grid DockPanel.Dock="{Settings DetailsListPosition}" 
                               Width="{Settings DetailsListWitdh}">
                             <ExtendedListBox x:Name="PART_ListGames"
-                                    BorderBrush="{DynamicResource PanelSeparatorBrush}"
                                     Background="{DynamicResource PanelBackgroundBrush}"
                                     ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
@@ -21,6 +20,7 @@
                                 <ExtendedListBox.Style>
                                     <Style TargetType="ExtendedListBox" BasedOn="{StaticResource {x:Type ExtendedListBox}}">
                                         <Setter Property="BorderThickness" Value="0,0,1,0" />
+                                        <Setter Property="BorderBrush" Value="{DynamicResource PanelSeparatorBrush}" />
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Settings DetailsListPosition}" Value="Left">
                                                 <Setter Property="BorderThickness" Value="20,20,0,20" />
@@ -29,7 +29,7 @@
                                                 <Setter Property="BorderThickness" Value="0,20,20,20" />
                                             </DataTrigger>
                                             <DataTrigger Binding="{Settings ShowPanelSeparators}" Value="False">
-                                                <Setter Property="BorderThickness" Value="0" />
+                                                <Setter Property="BorderBrush" Value="Transparent" />
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
