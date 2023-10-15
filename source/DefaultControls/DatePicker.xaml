@@ -15,6 +15,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="CalendarItem">
                     <Border Background="{TemplateBinding Background}"
+                            CornerRadius="{DynamicResource PopupCornerRadius}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             BorderBrush="{TemplateBinding BorderBrush}">
                         <DockPanel Name="PART_Root" LastChildFill="True" Margin="0,0,0,5">
@@ -189,6 +190,7 @@
         <Setter Property="CalendarStyle" Value="{StaticResource CalendarStyle}" />
         <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}" />
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Padding" Value="3" />
         <Setter Property="Template">
             <Setter.Value>
@@ -196,7 +198,7 @@
                     <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{DynamicResource ControlCornerRadius}"
-                            Padding="{TemplateBinding Padding}" Background="{DynamicResource ButtonBackgroundBrush}">
+                            Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
                         <DockPanel>
                             <Popup x:Name="PART_Popup" StaysOpen="False"
                                    AllowsTransparency="True" Placement="Bottom"
