@@ -425,3 +425,12 @@ Packages:
       - 'Menus: Use rounded corners'
       - 'Restore support to draw separator panels if option is enabled'
       - 'Window: Change cursor to hand when hovering window buttons'
+  - Version: 2.51
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-15
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.51/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_51.pthm
+    Changelog:
+      - 'Added: ThemeModifier extension option to use a blurred game background image with low performance requirements'
+      - 'Changed: Date picker popup will now use rounded corners'
+      - 'Changed: Window game background image will now display behind the sidebar'
+      - 'Fixed: Date picker textbox in edit window using a diferent background color'
