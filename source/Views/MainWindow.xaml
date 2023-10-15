@@ -37,7 +37,7 @@
                             </Grid.Resources>
 
                             <Grid>
-                                <Border Tag="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue=''}">
+                                <Border>
                                     <Border.Style>
                                         <Style TargetType="Border">
                                             <Setter Property="Margin" Value="44,0,0,0" />
@@ -53,6 +53,9 @@
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
                                                     <Setter Property="Margin" Value="0,0,0,0" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue='', FallbackValue=''}" Value="Library">
+                                                    <Setter Property="Margin" Value="0" />
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
