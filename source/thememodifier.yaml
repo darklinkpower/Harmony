@@ -1,5 +1,6 @@
 Constants:
     - "Library"
+    - LibraryUseLowPerformanceBlurBackground: 'Use low performance blurred game background image'
     - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'
     - "Details View"
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'

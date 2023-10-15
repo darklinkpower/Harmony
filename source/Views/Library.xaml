@@ -19,16 +19,51 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
+                        <Viewbox x:Name="LowPerformanceBlurBackground" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
+                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
+                                       HighQualityBlur="False" SourceUpdateDelay="150"
+                                       IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
+                                       Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
+                                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                                <FadeImage.Style>
+                                    <Style TargetType="FadeImage">
+                                        <Setter Property="Source" Value="{Binding ElementName=PART_ImageBackground, Path=Source}" />
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=LibraryUseLowPerformanceBlurBackground, Path=Tag}" Value="False">
+                                                <Setter Property="Source" Value="{x:Null}" />
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </FadeImage.Style>
+                            </FadeImage>
+                        </Viewbox>
+
+                        <TextBlock x:Name="LibraryUseLowPerformanceBlurBackground"
+                                   Tag="{DynamicResource LibraryUseLowPerformanceBlurBackground}"
+                                   Visibility="Collapsed" />
+
                         <FadeImage x:Name="PART_ImageBackground"
-                                   ImageDarkeningBrush="#990E0E0E"
                                    ClipToBounds="True"
                                    Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                   HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                   HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <FadeImage.Style>
+                                <Style TargetType="FadeImage">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=LibraryUseLowPerformanceBlurBackground, Path=Tag}" Value="True">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </FadeImage.Style>
+                        </FadeImage>
 
                         <Border Grid.RowSpan="2"
                                 Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
                                 Background="{DynamicResource DarkNoiseBrush}"
-                                Opacity="0.25"/>
+                                Opacity="0.35"/>
                         
                         <Border Grid.RowSpan="2"
                                 Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
@@ -39,7 +74,7 @@
                                 x:Name="ImageBackgroundNoise"
                                 Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
                                 Background="{DynamicResource NoiseBrush}"
-                                Opacity="0.025"/>
+                                Opacity="0.020"/>
 
                         <DockPanel Grid.RowSpan="2">
                             <DockPanel.Style>
@@ -54,6 +89,9 @@
                                         </DataTrigger>
                                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
                                             <Setter Property="Margin" Value="0,0,0,44" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
+                                            <Setter Property="Margin" Value="0,0,0,0" />
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
