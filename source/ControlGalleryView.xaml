@@ -9,7 +9,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <DockPanel Background="{DynamicResource WindowBackgourndBrush}"
+                    <DockPanel Background="{DynamicResource WindowBackgroundBrush}"
                                d:DesignWidth="800" d:DesignHeight="700">
                         <Menu DockPanel.Dock="Top">
                             <MenuItem Header="_File">

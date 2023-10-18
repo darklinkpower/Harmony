@@ -3,7 +3,7 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <Style x:Key="MainWindowStyle" TargetType="WindowBase">
-        <Setter Property="Background" Value="{DynamicResource WindowBackgourndBrush}" />
+        <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
         <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />

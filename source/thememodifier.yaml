@@ -1,4 +1,8 @@
 Constants:
+    - "Colors"
+    - GlyphBrush: 'Primary Color'
+    - WindowBackgroundBrush: 'Window background color'
+    - PlayButtonTextBrush: 'Play button text color'
     - "Library"
     - LibraryUseLowPerformanceBlurBackground: 'Use low performance blurred game background image'
     - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'
@@ -16,6 +20,14 @@ Constants:
     - GridViewAllowUseOfLogos: 'Allow use of logos (Requires Extra Metadata Loader extension)'
     - GridViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - GridViewShowHltbDataGrid: 'Show HowLongToBeat data grid (Requires HowLongToBeat extension)'
+    - "Grid View Covers"
+    - GridViewCoverZoomOnHover: 'Zoom when hovered'
+    - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'
+    - GridViewEnablePlayingGlowBorder: 'Show glow animation if game is running'
+    - GridViewLibraryGameShowFavorite: 'Show favorites icon'
+    - GridViewCoverDisplayLibraryBanner: 'Show banners (Requires ThemeExtras extension)'
+    - GridViewCoverUseRoundedCorners: 'Use rounded corners for game covers (Can cause performance degradation)'
+    - GridViewCoverDisplayDropShadowEffect: 'Use dropshadow effect (Can cause performance degradation)'
     - "Grid View Details sections order"
     - GridViewSectionOrderDetails(0,12): 'Game Details'
     - GridViewSectionOrderVideo(0,12): 'ExtraMetadata extension video'
@@ -28,11 +40,3 @@ Constants:
     - GridViewSectionOrderReviewViewer(0,12): 'ReviewViewer extension'
     - GridViewSectionOrderNewsViewer(0,12): 'NewsViewer extension'
     - GridViewSectionOrderCheckDlc(0,12): 'CheckDlc extension'
-    - "Grid View Covers"
-    - GridViewCoverZoomOnHover: 'Zoom when hovered'
-    - GridViewEnableCoverShineAnimation: 'Enable cover highlight animation on hover'
-    - GridViewEnablePlayingGlowBorder: 'Show glow animation if game is running'
-    - GridViewLibraryGameShowFavorite: 'Show favorites icon'
-    - GridViewCoverDisplayLibraryBanner: 'Show banners (Requires ThemeExtras extension)'
-    - GridViewCoverUseRoundedCorners: 'Use rounded corners for game covers (Can cause performance degradation)'
-    - GridViewCoverDisplayDropShadowEffect: 'Use dropshadow effect (Can cause performance degradation)'
