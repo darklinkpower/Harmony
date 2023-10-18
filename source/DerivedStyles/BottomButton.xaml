@@ -7,7 +7,7 @@
         <Setter Property="Padding" Value="15,8,15,8" />
         <Setter Property="MinWidth" Value="70" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+        <Setter Property="Foreground" Value="{DynamicResource PlayButtonTextBrush}" />
         <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="Tag" Value="False" />
         <Setter Property="Template">
@@ -19,14 +19,16 @@
                                 Opacity="1" CornerRadius="{DynamicResource ControlCornerRadius}"/>
                         <Border x:Name="HighlightBorder" Background="White"
                                 Opacity="0" CornerRadius="{DynamicResource ControlCornerRadius}" />
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          RecognizesAccessKey="True" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Value="True">
                             <DataTrigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="HighlightBorder" Storyboard.TargetProperty="Opacity" To="0.1" Duration="0:0:0.2" />
+                                        <DoubleAnimation Storyboard.TargetName="HighlightBorder" Storyboard.TargetProperty="Opacity" To="0.25" Duration="0:0:0.2" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </DataTrigger.EnterActions>
