@@ -6,6 +6,7 @@
         <Setter Property="Background" Value="{DynamicResource PopupBackgroundBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource PopupBorderBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource PopupBorderThickness}" />
+        <Setter Property="Padding" Value="{DynamicResource PopupMenuPadding}" />
         <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="Template">
             <Setter.Value>
@@ -13,6 +14,7 @@
                     <Border BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="{DynamicResource GeneralMenuCornerRadius}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}"
                             Grid.IsSharedSizeScope="True">
                         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                             <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Cycle"/>
