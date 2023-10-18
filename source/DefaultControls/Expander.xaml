@@ -32,7 +32,7 @@
                                         <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}}"  Value="True">
                                             <DataTrigger.EnterActions>
                                                 <BeginStoryboard>
-                                                    <Storyboard>
+                                                    <Storyboard Timeline.DesiredFrameRate="20">
                                                         <DoubleAnimation
                                                             Storyboard.TargetProperty="RenderTransform.Angle"
                                                             To="90"
@@ -43,7 +43,7 @@
                                             </DataTrigger.EnterActions>
                                             <DataTrigger.ExitActions>
                                                 <BeginStoryboard>
-                                                    <Storyboard>
+                                                    <Storyboard Timeline.DesiredFrameRate="20">
                                                         <DoubleAnimation
                                                             Storyboard.TargetProperty="RenderTransform.Angle"
                                                             To="0"
