@@ -9,8 +9,8 @@
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="BorderThickness" Value="3,0,0,0" />
-        <Setter Property="Width" Value="44" />
-        <Setter Property="Height" Value="44" />
+        <Setter Property="Width" Value="42" />
+        <Setter Property="Height" Value="42" />
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Opacity" Value="{DynamicResource GlyphColorObscureOpacity}" />
         <Setter Property="Template">
