@@ -14,7 +14,7 @@
         <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="25" CornerRadius="20" ResizeBorderThickness="10"
+                <WindowChrome CaptionHeight="25" CornerRadius="20" ResizeBorderThickness="5"
                               NonClientFrameEdges ="None" UseAeroCaptionButtons="False" GlassFrameThickness="0"/>
             </Setter.Value>
         </Setter>
