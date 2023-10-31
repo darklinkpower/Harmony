@@ -434,3 +434,16 @@ Packages:
       - 'Changed: Date picker popup will now use rounded corners'
       - 'Changed: Window game background image will now display behind the sidebar'
       - 'Fixed: Date picker textbox in edit window using a diferent background color'
+  - Version: 2.52
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-10-30
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.52/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_52.pthm
+    Changelog:
+      - 'Added: Legendary library plugin banner'
+      - 'Added: support to change colors of Play button text color, window background and primary color in ThemeModifier extension'
+      - 'Changed: Adjust separator color'
+      - 'Changed: Notification mouseover color'
+      - 'Changed: Make unfavorite icon in game menu yellow'
+      - 'Changed: Reduce sidebar items size slightly'
+      - 'Improved: performance when rounded corners are enabled'
+      - 'Fixed: Bottom button text sometimes not being centered'
