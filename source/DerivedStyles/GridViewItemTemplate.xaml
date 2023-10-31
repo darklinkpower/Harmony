@@ -136,7 +136,8 @@
                                 </Viewbox>
                             </Grid>
                             
-                            <Border x:Name="ShowGameNameBorder" Background="Transparent">
+                            <Border x:Name="ShowGameNameBorder" Background="Transparent"
+                                    Visibility="{Settings ShowNamesUnderCovers}">
                                 <Border.Style>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="0" />
@@ -148,13 +149,12 @@
                                     </Style>
                                 </Border.Style>
                                 <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
-                                               Foreground="{DynamicResource TextBrush}"
-                                               Style="{DynamicResource BaseTextBlockStyle}"                                                                   
-                                               TextAlignment="Center" TextTrimming="CharacterEllipsis"
-                                               VerticalAlignment="Center"
-                                               Padding="2,5,2,5" Grid.Row="1" Grid.Column="0"
-                                               Width="{Settings GridItemWidth}" 
-                                               Visibility="{Settings ShowNamesUnderCovers}"/>
+                                           Foreground="{DynamicResource TextBrush}"
+                                           Style="{DynamicResource BaseTextBlockStyle}"                                                                   
+                                           TextAlignment="Center" TextTrimming="CharacterEllipsis"
+                                           VerticalAlignment="Center"
+                                           Padding="2,5,2,5"
+                                           Width="{Settings GridItemWidth}" />
                             </Border>
                         </StackPanel>
                     </Border>
