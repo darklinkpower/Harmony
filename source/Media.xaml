@@ -20,7 +20,7 @@
     <TextBlock x:Key="InstallSizeIcon" Text="&#xef43;" FontFamily="{DynamicResource FontIcoFont}" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="DesktopShortcutIcon" Text="&#xef20;" FontFamily="{DynamicResource FontIcoFont}" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="AddFavoritesIcon" Text="&#xef25;" FontFamily="{DynamicResource FontIcoFont}" Foreground="Yellow" FontWeight="Light"/>
-    <TextBlock x:Key="RemoveFavoritesIcon" Text="&#xef25;" FontFamily="{DynamicResource FontIcoFont}" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
+    <TextBlock x:Key="RemoveFavoritesIcon" Text="&#xef25;" FontFamily="{DynamicResource FontIcoFont}" Foreground="Yellow" FontWeight="Light"/>
     <TextBlock x:Key="HideIcon" Text="&#xef22;" FontFamily="{DynamicResource FontIcoFont}" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="UnHideIcon" Text="&#xef21;" FontFamily="{DynamicResource FontIcoFont}" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
     <TextBlock x:Key="EditGameIcon" Text="&#xeded;" FontFamily="{DynamicResource FontIcoFont}" Foreground="{DynamicResource TextBrush}" FontWeight="Light"/>
