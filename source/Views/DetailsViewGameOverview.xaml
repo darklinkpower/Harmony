@@ -864,6 +864,69 @@
                                                 </StackPanel>
                                             </TabItem>
                                             <!--#endregion-->
+
+                                            <TabItem Visibility="{Binding ElementName=GameRelationsVisibilityProxy, Path=Tag}">
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOCGameRelations_RelatedGamesLabel}"
+                                                               Style="{DynamicResource DetailsViewTabHeaderStyle}" />
+                                                </TabItem.Header>
+                                                <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+                                                    <TextBlock x:Name="GameRelationsVisibilityProxy" Visibility="Collapsed">
+                                                        <TextBlock.Style>
+                                                            <Style TargetType="TextBlock">
+                                                                <Setter Property="Tag" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=Panel_GameRelations_SimilarGamesControl, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=Panel_GameRelations_SameSeriesControl, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=Panel_GameRelations_SameDeveloperControl, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=Panel_GameRelations_SamePublisherControl, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Tag" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBlock.Style>
+                                                    </TextBlock>
+                                                    <Expander x:Name="Panel_GameRelations_SimilarGamesControl"
+                                                              Header="{DynamicResource LOCGameRelations_SimilarGamesLabel}"
+                                                              IsExpanded="True"
+                                                              Margin="0,10,0,0"
+                                                              Visibility="{PluginSettings Plugin=GameRelations, Path=SimilarGamesControlSettings.IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}">
+                                                        <ContentControl x:Name="GameRelations_SimilarGamesControl" Margin="0,10,0,0" />
+                                                    </Expander>
+
+                                                    <Expander x:Name="Panel_GameRelations_SameSeriesControl"
+                                                              Header="{DynamicResource LOCGameRelations_SameSeriesLabel}"
+                                                              IsExpanded="True"
+                                                              Margin="0,10,0,0"
+                                                              Visibility="{PluginSettings Plugin=GameRelations, Path=SameSeriesControlSettings.IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}">
+                                                        <ContentControl x:Name="GameRelations_SameSeriesControl" Margin="0,10,0,0" />
+                                                    </Expander>
+
+                                                    <Expander x:Name="Panel_GameRelations_SameDeveloperControl"
+                                                              Header="{DynamicResource LOCGameRelations_SameDeveloperLabel}"
+                                                              IsExpanded="True"
+                                                              Margin="0,10,0,0"
+                                                              Visibility="{PluginSettings Plugin=GameRelations, Path=SameDeveloperControlSettings.IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}">
+                                                        <ContentControl x:Name="GameRelations_SameDeveloperControl" Margin="0,10,0,0" />
+                                                    </Expander>
+
+                                                    <Expander x:Name="Panel_GameRelations_SamePublisherControl"
+                                                              Header="{DynamicResource LOCGameRelations_SamePublisherLabel}"
+                                                              IsExpanded="True"
+                                                              Margin="0,10,0,0"
+                                                              Visibility="{PluginSettings Plugin=GameRelations, Path=SamePublisherControlSettings.IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}">
+                                                        <ContentControl x:Name="GameRelations_SamePublisherControl" Margin="0,10,0,0" />
+                                                    </Expander>
+                                                </StackPanel>
+                                            </TabItem>
+                                            
+                                            
                                         </TabControl>
                                     </DockPanel>
                                 </Grid>
