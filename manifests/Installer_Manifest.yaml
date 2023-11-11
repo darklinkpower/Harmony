@@ -447,3 +447,9 @@ Packages:
       - 'Changed: Reduce sidebar items size slightly'
       - 'Improved: performance when rounded corners are enabled'
       - 'Fixed: Bottom button text sometimes not being centered'
+  - Version: 2.53
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2023-11-10
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.53/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_53.pthm
+    Changelog:
+      - 'Added: Support for Game Relations extension'
