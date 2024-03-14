@@ -3,6 +3,8 @@ Constants:
     - GlyphBrush: 'Primary Color'
     - WindowBackgroundBrush: 'Window background color'
     - PlayButtonTextBrush: 'Play button text color'
+    - "Top Panel"
+    - ShowNavigationButtons: 'Show navigation buttons'
     - "Library"
     - LibraryUseLowPerformanceBlurBackground: 'Use low performance blurred game background image'
     - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'

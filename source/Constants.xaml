@@ -37,6 +37,7 @@
     <sys:Int32 x:Key="GridViewSectionOrderCheckDlc">10</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderGameRelations">11</sys:Int32>
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">True</sys:Boolean>
+    <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
     <!--region end-->
 
     <sys:Double x:Key="GlyphColorObscureOpacity">0.5</sys:Double>

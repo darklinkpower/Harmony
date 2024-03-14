@@ -206,7 +206,6 @@
                                        Height="40" RenderOptions.BitmapScalingMode="Fant"
                                        Margin="10,0,5,0"/>
                             </Border>
-
                             <Border DockPanel.Dock="Left"
                                     Visibility="{Binding ElementName=PART_TextMainSearch}">
                                 <Border.Style>
@@ -225,6 +224,17 @@
                                        Width="250" />
                             </Border>
 
+                            <Border Tag="{DynamicResource ShowNavigationButtons}"
+                                    DockPanel.Dock="Left"
+                                    Visibility="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <StackPanel Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin}"
+                                            Margin="{Binding ElementName=PART_ToggleNotifications, Path=Margin}"
+                                            Orientation="Horizontal">
+                                    <Button Style="{DynamicResource TopPanelNavigateBackButtonStyle}" Command="{PluginSettings Plugin=ThemeExtras, Path=Commands.BackCommand, FallbackValue={x:Null}}" />
+                                    <Button Style="{DynamicResource TopPanelNavigateForwardButtonStyle}" Command="{PluginSettings Plugin=ThemeExtras, Path=Commands.ForwardCommand, FallbackValue={x:Null}}" />
+                                </StackPanel>
+                            </Border>
+                            
                             <Border DockPanel.Dock="Left"
                                     Margin="15,6,0,6"
                                     Padding="15,0,15,0"
