@@ -430,7 +430,23 @@
                                                             <TextBlock Text="{DynamicResource LOCLinksLabel}" />
                                                         </StackPanel>
                                                     </Label>
-                                                    <ItemsControl Name="PART_ItemsLinks" />
+                                                    <ItemsControl ItemsSource="{Binding Game.Links}"
+                                                                  Visibility="{Binding ElementName=PART_ElemLinks, Path=Visibility}">
+                                                        <ItemsControl.ItemsPanel>
+                                                            <ItemsPanelTemplate>
+                                                                <StackPanel/>
+                                                            </ItemsPanelTemplate>
+                                                        </ItemsControl.ItemsPanel>
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate DataType="{x:Type Link}">
+                                                                <Button Content="{Binding Name}"
+                                                                        Style="{StaticResource PropertyItemLinkButton}"
+                                                                        ToolTip="{Binding Url}"
+                                                                        Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.OpenLinkCommand}"
+                                                                        CommandParameter="{Binding}"/>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>
                                                 </GridEx>
                                             </StackPanel>
                                         </Expander>

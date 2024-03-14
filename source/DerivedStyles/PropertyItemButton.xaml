@@ -26,4 +26,27 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="PropertyItemLinkButton" TargetType="Button" BasedOn="{StaticResource PropertyItemButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <DockPanel>
+                        <Viewbox DockPanel.Dock="Left" Margin="0,0,5,0" Width="18" Height="18"
+                                 VerticalAlignment="Center"
+                                 Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                 RenderOptions.ClearTypeHint="Enabled" RenderOptions.BitmapScalingMode="Fant">
+                            <ContentControl Content="{Binding Value, TargetNullValue={StaticResource LinksIcon}}"
+                                            DataContext="{Binding Url, Converter={PluginConverter Plugin=ThemeExtras, Converter=UrlToAsyncIconConverter}}"/>
+                        </Viewbox>
+                        <TextBlock DockPanel.Dock="Left" FontSize="{TemplateBinding FontSize}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   Text="{TemplateBinding Content, Converter={StaticResource ObjectToStringConverter}}"
+                                   TextTrimming="CharacterEllipsis"
+                                   TextWrapping="{TemplateBinding TextBlock.TextWrapping}"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
