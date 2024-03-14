@@ -126,4 +126,23 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="ThemeExtrasUserControlCompStatusStyle" TargetType="UserControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox MinWidth="115"
+                                  ItemsSource="{Binding CompletionStatusOptions}" SelectedItem="{Binding Value}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate DataType="{x:Type CompletionStatus}">
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

@@ -367,15 +367,45 @@
                                                     <TextBlock Name="PART_TextPlayTime"/>
                                                 </StackPanel>
                                             </DockPanel>
-                                            <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemCompletionStatus, Mode=OneWay}" Margin="0,0,15,0">
+                                            
+                                            <DockPanel Margin="0,0,15,0">
+                                                <DockPanel.Style>
+                                                    <Style TargetType="DockPanel">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding ElementName=PART_ButtonCompletionStatus, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding ElementName=ThemeExtras_SettableCompletionStatus, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Settings DetailsVisibility.CompletionStatus}" Value="False">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </DockPanel.Style>
                                                 <Viewbox Stretch="Uniform" Height="40">
                                                     <TextBlock Text="&#xEED6;" Style="{DynamicResource IconsTextBlockStyle}"/>
                                                 </Viewbox>
+
                                                 <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
                                                     <Label Name="PART_ElemCompletionStatus" Content="{DynamicResource LOCCompletionStatus}" />
-                                                    <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
+
+                                                    <Border Tag="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                            Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
+                                                        <Button Name="PART_ButtonCompletionStatus" Style="{StaticResource PropertyItemButton}" Margin="0" />
+                                                    </Border>
+
+                                                    <ContentControl Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                                    x:Name="ThemeExtras_SettableCompletionStatus">
+                                                        <ContentControl.Resources>
+                                                            <Style TargetType="UserControl" BasedOn="{StaticResource ThemeExtrasUserControlCompStatusStyle}" />
+                                                        </ContentControl.Resources>
+                                                    </ContentControl>
                                                 </StackPanel>
                                             </DockPanel>
+                                            
                                             <DockPanel Margin="0,0,15,0">
                                                 <DockPanel.Style>
                                                     <Style TargetType="{x:Type DockPanel}">

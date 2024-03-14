@@ -270,14 +270,44 @@
                                                         </StackPanel>
                                                     </Label>
                                                     <TextBlock Name="PART_TextAdded" VerticalAlignment="Center" />
-                                                    
-                                                    <Label Name="PART_ElemCompletionStatus" >
+
+                                                    <Label Visibility="{Binding ElementName=CompStatusElemsGrid, Path=Visibility}">
                                                         <StackPanel Orientation="Horizontal">
                                                             <TextBlock Text="&#xEED6;" Style="{DynamicResource Icon}" />
                                                             <TextBlock Text="{DynamicResource LOCCompletionStatus}" />
                                                         </StackPanel>
                                                     </Label>
-                                                    <Button Name="PART_ButtonCompletionStatus" VerticalAlignment="Center" />
+                                                    <Grid x:Name="CompStatusElemsGrid" VerticalAlignment="Center">
+                                                        <Grid.Style>
+                                                            <Style TargetType="Grid">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding ElementName=PART_ButtonCompletionStatus, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding ElementName=ThemeExtras_SettableCompletionStatus, Path=Visibility}" Value="Visible">
+                                                                        <Setter Property="Visibility" Value="Visible" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Settings DetailsVisibility.CompletionStatus}" Value="False">
+                                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Grid.Style>
+
+                                                        <ContentControl Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                                        HorizontalAlignment="Left"
+                                                                        x:Name="ThemeExtras_SettableCompletionStatus">
+                                                            <ContentControl.Resources>
+                                                                <Style TargetType="UserControl" BasedOn="{StaticResource ThemeExtrasUserControlCompStatusStyle}" />
+                                                            </ContentControl.Resources>
+                                                        </ContentControl>
+
+                                                        <Border Tag="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+                                                                Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
+                                                            <Button Name="PART_ButtonCompletionStatus" VerticalAlignment="Center" />
+                                                        </Border>
+                                                    </Grid>
 
                                                     <Label Name="PART_ElemInstallDirectory" >
                                                         <StackPanel Orientation="Horizontal">
