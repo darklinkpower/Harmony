@@ -43,5 +43,50 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="PanelFavoriteToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="IsChecked" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Border x:Name="Border" BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"                            
+                                CornerRadius="{DynamicResource ControlCornerRadius}"
+                                Style="{DynamicResource HighlightBorder}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Padding="10,5,10,5">
+                            <TextBlock x:Name="FavoriteIcon" Text="&#xE735;"
+                                       FontSize="{DynamicResource FontSize}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       FontFamily="Segoe MDL2 Assets"
+                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource Self}}" Value="False">
+                            <Setter Property="TextBlock.Text" Value="&#xE734;" TargetName="FavoriteIcon" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#464d5d" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background" Value="#464d5d" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
     
 </ResourceDictionary>
