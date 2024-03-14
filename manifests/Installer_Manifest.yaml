@@ -453,3 +453,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.53/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_53.pthm
     Changelog:
       - 'Added: Support for Game Relations extension'
+  - Version: 2.54
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-03-14
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.54/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_54.pthm
+    Changelog:
+      - 'Added: Button to toggle favorite status in game details when using the ThemeExtras extension.'
+      - 'Added: Dropdown menu in game details to change the completion status when using the ThemeExtras extension.'
+      - 'Added: Display website icons next to links on game details when using the ThemeExtras extension.'
+      - 'Added: Navigation buttons in TopPanel when using the ThemeExtras extension. Can be disabled with ThemeModifier extension.'
