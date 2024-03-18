@@ -462,3 +462,10 @@ Packages:
       - 'Added: Dropdown menu in game details to change the completion status when using the ThemeExtras extension.'
       - 'Added: Display website icons next to links on game details when using the ThemeExtras extension.'
       - 'Added: Navigation buttons in TopPanel when using the ThemeExtras extension. Can be disabled with ThemeModifier extension.'
+  - Version: 2.55
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-03-17
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.55/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_55.pthm
+    Changelog:
+      - 'Changed: Added rounded corners to EML video player'
+      - 'Changed: Changed default cover image aspect ratio to 2:3'
