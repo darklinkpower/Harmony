@@ -520,7 +520,17 @@
                                                     <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
                                                         <Rectangle Width="16" Height="9" Fill="Transparent" IsHitTestVisible="False" />
                                                     </Viewbox>
-                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" />
+                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl">
+                                                        <ContentControl.OpacityMask>
+                                                            <VisualBrush>
+                                                                <VisualBrush.Visual>
+                                                                    <Border Background="Black" CornerRadius="6"
+                                                                            Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ContentControl}}"
+                                                                            Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=ContentControl}}" />
+                                                                </VisualBrush.Visual>
+                                                            </VisualBrush>
+                                                        </ContentControl.OpacityMask>
+                                                    </ContentControl>
                                                 </Grid>
                                             </StackPanel>
                                         </Expander>

@@ -836,7 +836,17 @@
                                                     </Style>
                                                 </TabItem.Style>
                                                 <StackPanel Margin="0,16,0,0">
-                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" VerticalAlignment="Top"/>
+                                                    <ContentControl x:Name="ExtraMetadataLoader_VideoLoaderControl" VerticalAlignment="Top">
+                                                        <ContentControl.OpacityMask>
+                                                            <VisualBrush>
+                                                                <VisualBrush.Visual>
+                                                                    <Border Background="Black" CornerRadius="6"
+                                                                            Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ContentControl}}"
+                                                                            Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=ContentControl}}" />
+                                                                </VisualBrush.Visual>
+                                                            </VisualBrush>
+                                                        </ContentControl.OpacityMask>
+                                                    </ContentControl>
                                                 </StackPanel>
                                             </TabItem>
 
