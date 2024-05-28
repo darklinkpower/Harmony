@@ -18,8 +18,25 @@
                 <ControlTemplate TargetType="{x:Type SidebarItem}">
                     <Grid>
                         <ProgressBar x:Name="PART_ProgressStatus"
-                                     BorderThickness="0" Background="Transparent"
-                                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                     Margin="2,0,2,0"
+                                     BorderThickness="0" Background="{DynamicResource ControlBackgroundBrush}"
+                                     Foreground="{DynamicResource GlyphBrush}"
+                                     Height="4"
+                                     HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                            <ProgressBar.Style>
+                                <Style TargetType="ProgressBar">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Value, ElementName=PART_ProgressStatus}" Value="0">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Value, ElementName=PART_ProgressStatus}" Value="100">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ProgressBar.Style>
+                        </ProgressBar>
                         <Border Background="{TemplateBinding Background}"
                                 Padding="{Binding IconPadding}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
