@@ -28,14 +28,15 @@
     <sys:Int32 x:Key="GridViewSectionOrderVideo">1</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNotes">2</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderDescription">3</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderSuccessStory">4</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderHowLongToBeat">5</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderScreenshotsVisualizer">6</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderGameActivity">7</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderReviewViewer">8</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderNewsViewer">9</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderCheckDlc">10</sys:Int32>
-    <sys:Int32 x:Key="GridViewSectionOrderGameRelations">11</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderVndb">4</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderSuccessStory">5</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderHowLongToBeat">6</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderScreenshotsVisualizer">7</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderGameActivity">8</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderReviewViewer">9</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderNewsViewer">10</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderCheckDlc">11</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderGameRelations">12</sys:Int32>
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">True</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
     <!--region end-->
