@@ -469,3 +469,10 @@ Packages:
     Changelog:
       - 'Changed: Added rounded corners to EML video player'
       - 'Changed: Changed default cover image aspect ratio to 2:3'
+  - Version: 2.56
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-05-28
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.56/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_56.pthm
+    Changelog:
+      - 'Added: support for panel of VNDB Nexus extension. Note: if there is overlap of extension sections, reset the order with the ThemeModifier extension options.'
+      - 'Changed: Made progress bar of items in the sidebar smaller'
