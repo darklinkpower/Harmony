@@ -764,7 +764,7 @@
                                             </StackPanel>
                                             <!--#endregion-->
                                         </StackPanel>
-                                        <TabControl Margin="0,4,10,0" Style="{DynamicResource TabControlDetailsView}"
+                                        <TabControl Margin="0,15,10,0" Style="{DynamicResource TabControlDetailsView}"
                                                     Focusable="False">
                                             <TabItem Name="PART_ElemDescription">
                                                 <TabItem.Header>
@@ -815,6 +815,16 @@
                                                 </StackPanel>
                                             </TabItem>
 
+                                            <TabItem Visibility="{PluginSettings Plugin=SteamScreenshots, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                <TabItem.Header>
+                                                    <TextBlock Text="{DynamicResource LOC_SteamScreenshots_SteamScreenshotsLabel}"
+                                                           Style="{DynamicResource DetailsViewTabHeaderStyle}" />
+                                                </TabItem.Header>
+                                                <StackPanel Orientation="Vertical" Background="{TemplateBinding Background}" Margin="0,15,0,0">
+                                                    <ContentControl x:Name="SteamScreenshots_SteamScreenshotsViewControl" Margin="0,10,0,0" FontWeight="Normal"/>
+                                                </StackPanel>
+                                            </TabItem>
+                                            
                                             <TabItem Visibility="{PluginSettings Plugin=VNDBNexus, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                 <TabItem.Header>
                                                     <TextBlock Text="VNDB"

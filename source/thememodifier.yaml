@@ -1,6 +1,7 @@
 Constants:
     - "Colors"
     - GlyphBrush: 'Primary Color'
+    - ControlBackgroundBrush: 'Elements background color'
     - WindowBackgroundBrush: 'Window background color'
     - PlayButtonTextBrush: 'Play button text color'
     - "Top Panel"
@@ -44,3 +45,4 @@ Constants:
     - GridViewSectionOrderNewsViewer(0,14): 'NewsViewer extension'
     - GridViewSectionOrderCheckDlc(0,14): 'CheckDlc extension'
     - GridViewSectionOrderGameRelations(0,14): 'Game Relations extension'
+    - GridViewSectionOrderSteamScreenshots(0,14): 'Steam Screenshots extension'
