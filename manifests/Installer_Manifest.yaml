@@ -476,3 +476,9 @@ Packages:
     Changelog:
       - 'Added: support for panel of VNDB Nexus extension. Note: if there is overlap of extension sections, reset the order with the ThemeModifier extension options.'
       - 'Changed: Made progress bar of items in the sidebar smaller'
+  - Version: 2.57
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-05-31
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.57/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_57.pthm
+    Changelog:
+      - 'Added: Support for Steam Screenshots extension'
