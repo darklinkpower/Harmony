@@ -482,3 +482,10 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.57/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_57.pthm
     Changelog:
       - 'Added: Support for Steam Screenshots extension'
+  - Version: 2.58
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-21
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.58/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_58.pthm
+    Changelog:
+      - 'Changed: the default value in some theme options'
+      - 'Fixed: HLTB rows showing even if they have no data after its latest update'
