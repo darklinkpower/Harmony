@@ -650,11 +650,10 @@
                                                     <ContentControl DockPanel.Dock="Left" x:Name="HowLongToBeat_PluginButton" VerticalAlignment="Top"/>
                                                     <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="5,5,0,0" VerticalAlignment="Center"/>
                                                 </DockPanel>
-                                                <GridEx Name="HltbDataGrid" ColumnCount="2"
-                                                        Margin="0,15,0,0"
-                                                        AutoLayoutColumns="2" RowCount="6"
-                                                        Tag="{DynamicResource GridViewShowHltbDataGrid}">
-                                                    <GridEx.Style>
+                                                <ContentControl ContentTemplate="{DynamicResource HltbDataGridTemplate}"
+                                                                Margin="0,15,0,0"
+                                                                Tag="{DynamicResource GridViewShowHltbDataGrid}">
+                                                    <ContentControl.Style>
                                                         <Style>
                                                             <Setter Property="Control.Visibility" Value="Collapsed" />
                                                             <Style.Triggers>
@@ -667,49 +666,8 @@
                                                                 </MultiDataTrigger>
                                                             </Style.Triggers>
                                                         </Style>
-                                                    </GridEx.Style>
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatMainStory}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=MainStoryFormat, Path=Visibility}" />
-                                                    <TextBlock Name="MainStoryFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=MainStoryFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatMainExtra}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=MainExtraFormat, Path=Visibility}" />
-                                                    <TextBlock Name="MainExtraFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=MainExtraFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatCompletionist}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=CompletionistFormat, Path=Visibility}" />
-                                                    <TextBlock Name="CompletionistFormat"
-                                                           Style="{DynamicResource HltbGridTextStyle}"
-                                                           Text="{PluginSettings Plugin=HowLongToBeat, Path=CompletionistFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatSolo}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=SoloFormat, Path=Visibility}" />
-                                                    <TextBlock Name="SoloFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=SoloFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatCoOp}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=CoOpFormat, Path=Visibility}" />
-                                                    <TextBlock Name="CoOpFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=CoOpFormat, FallbackValue=--}"/>
-
-                                                    <Label Content="{DynamicResource LOCHowLongToBeatVs}"
-                                                           Style="{DynamicResource HltbGridLabelStyle}"
-                                                           Visibility="{Binding ElementName=VsFormat, Path=Visibility}" />
-                                                    <TextBlock Name="VsFormat"
-                                                               Style="{DynamicResource HltbGridTextStyle}"
-                                                               Text="{PluginSettings Plugin=HowLongToBeat, Path=VsFormat, FallbackValue=--}"/>
-                                                </GridEx>
+                                                    </ContentControl.Style>
+                                                </ContentControl>
                                             </StackPanel>
                                         </Expander>
                                         <!--#endregion -->
@@ -905,18 +863,4 @@
         </Setter>
     </Style>
 
-    <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" x:Key="HltbGridTextStyle">
-        <Setter Property="Margin" Value="20,5,0,5" />
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text, FallbackValue=--}" Value="--">
-                <Setter Property="Visibility" Value="Collapsed" />
-            </DataTrigger>
-        </Style.Triggers>
-    </Style>
-
-    <Style TargetType="Label" x:Key="HltbGridLabelStyle">
-        <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
-        <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}"/>
-        <Setter Property="VerticalAlignment" Value="Center" />
-    </Style>
 </ResourceDictionary>
