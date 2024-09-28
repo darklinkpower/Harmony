@@ -191,7 +191,37 @@
                                             <ContentControl x:Name="ExtraMetadataLoader_LogoLoaderControl" />
                                         </Border>
 
-                                        <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                        <Border Background="Transparent"
+                                                        Visibility="{Binding ElementName=CoverGridContainer, Path=Visibility}"
+                                                        HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                                        Width="{Binding ElementName=CoverGridContainer, Path=ActualWidth}"
+                                                        Height="{Binding ElementName=CoverGridContainer, Path=ActualHeight}"
+                                                        Padding="0.5">
+                                            <Border Background="Transparent"
+                                                        CornerRadius="{DynamicResource DetailsViewCoverCornerRadius}"
+                                                        BorderThickness="8" BorderBrush="#0d0d0d">
+                                                <Border.Effect>
+                                                    <DropShadowEffect BlurRadius="15" RenderingBias="Performance"
+                                                                          ShadowDepth="0" Color="#0d0d0d" Opacity="0.3" />
+                                                </Border.Effect>
+                                            </Border>
+                                        </Border>
+                                        
+                                        <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                              Name="CoverGridContainer">
+                                            <Grid.Style>
+                                                <Style TargetType="Grid">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding ElementName=PART_ImageCover, Path=Visibility}" Value="Visible">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding ElementName=BackgroundChanger_PluginCoverImage, Path=Visibility}" Value="Visible">
+                                                            <Setter Property="Visibility" Value="Visible" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Grid.Style>
                                             <Border Name="Mask" Background="White" CornerRadius="6" />
 
                                             <Border>
@@ -227,9 +257,6 @@
                                                     </Style>
                                                 </ContentControl.Style>
                                             </ContentControl>
-                                            <Grid.Effect>
-                                                <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#0d0d0d" Opacity="0.20" />
-                                            </Grid.Effect>
                                             <Grid.OpacityMask>
                                                 <VisualBrush Visual="{Binding ElementName=Mask}" />
                                             </Grid.OpacityMask>
