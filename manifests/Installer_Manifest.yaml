@@ -489,3 +489,9 @@ Packages:
     Changelog:
       - 'Changed: the default value in some theme options'
       - 'Fixed: HLTB rows showing even if they have no data after its latest update'
+  - Version: 2.59
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-09-28
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.59/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_59.pthm
+    Changelog:
+      - 'Details View: Fix dropshadow effect on cover image causing it to be blurry'
