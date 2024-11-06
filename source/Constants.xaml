@@ -1,7 +1,8 @@
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
-                    xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <!--Theme settings region start-->
     <sys:Boolean x:Key="LibraryUseLowPerformanceBlurBackground">False</sys:Boolean>
@@ -23,7 +24,7 @@
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
-    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.45</sys:Double>
+    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.65</sys:Double>
     <sys:Int32 x:Key="GridViewSectionOrderDetails">0</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderVideo">1</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNotes">2</sys:Int32>
@@ -71,25 +72,28 @@
     <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">7</CornerRadius>
     <CornerRadius x:Key="DetailsViewCoverCornerRadius">5</CornerRadius>
     <Thickness x:Key="SidebarItemPadding">8</Thickness>
-    
+
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
     <Color x:Key="TextColor">#f0f5ff</Color>
     <Color x:Key="TextColorDarker">#a3a3a3</Color>
     <Color x:Key="TextColorDark">#2d323c</Color>
+    <Color x:Key="PlayButtonTextColor">#16171a</Color>
     <Color x:Key="MainColor">#1c1836</Color>
     <Color x:Key="WindowColor">#1c1836</Color>
+    <Color x:Key="SidebarBackgroundColor">#0Df2f2f2</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#324f53</Color>
     <Color x:Key="GlyphColor">#4fe3c0</Color>
-    <Color x:Key="GlyphColorSecondary">#2f3543</Color><!---->
+    <Color x:Key="GlyphColorSecondary">#2f3543</Color>
+    <!---->
     <Color x:Key="HighlightGlyphColor">#324f53</Color>
     <Color x:Key="BottomButtonHighlightColor">#90f0d9</Color>
-    <Color x:Key="PopupBackgroundColor">#2f3543</Color>
+    <Color x:Key="PopupBackgroundColor">#32353b</Color>
     <Color x:Key="PopupBorderColor">#262c38</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
-    <Color x:Key="PanelSeparatorColor">#40262c38</Color>
+    <Color x:Key="PanelSeparatorColor">#0Df2f2f2</Color>
     <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
@@ -97,9 +101,10 @@
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#CC3a3b46" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
+    <SolidColorBrush x:Key="TextBrushOpacity75" Color="{DynamicResource TextColor}" Opacity="0.75" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
-    <SolidColorBrush x:Key="PlayButtonTextBrush" Color="{DynamicResource TextColorDark}" />
+    <SolidColorBrush x:Key="PlayButtonTextBrush" Color="{DynamicResource PlayButtonTextColor}" />
     <SolidColorBrush x:Key="NormalBrush" Color="{DynamicResource HoverColor}" />
     <SolidColorBrush x:Key="NormalBrushDark" Color="{DynamicResource MainColorDark}" />
     <SolidColorBrush x:Key="NormalBorderBrush" Color="Transparent" />
@@ -113,7 +118,7 @@
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource TextColorDark}" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
     <SolidColorBrush x:Key="PanelSeparatorBrush1" Color="{DynamicResource PanelSeparatorColor}" />
-    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="#CC3a3b46" />
+    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="#0Df2f2f2" />
     <SolidColorBrush x:Key="PanelSeparatorImageBackgroundEnabledBrush" Color="#474f5c" />
     <SolidColorBrush x:Key="PanelBackgroundBrush" Color="Transparent" />
     <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
@@ -123,22 +128,26 @@
     <SolidColorBrush x:Key="GlyphHighlightLightBrush" Color="{DynamicResource GlyphHighlightLightColor}" />
     <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource MainColorDark}" />
     <SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
-    
+
     <SolidColorBrush x:Key="PositiveRatingBrush" Color="#78ffa0" />
     <SolidColorBrush x:Key="NegativeRatingBrush" Color="#c85429" />
     <SolidColorBrush x:Key="MixedRatingBrush" Color="#fffca1" />
 
     <SolidColorBrush x:Key="WarningBrush" Color="#c85429" />
 
-    <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
-        <GradientStop Color="Transparent" Offset="0"/>
-        <GradientStop Color="Transparent" Offset="0.7"/>
+    <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1">
+        <GradientStop Offset="0" Color="Transparent" />
+        <GradientStop Offset="0.7" Color="Transparent" />
     </LinearGradientBrush>
 
     <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource WindowColor}" />
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{DynamicResource SidebarBackgroundColor}" />
+    <SolidColorBrush x:Key="SidebarItemBackgroundBrush" Color="{DynamicResource SidebarBackgroundColor}" />
+    <SolidColorBrush x:Key="DetailsViewBarBackgroundBrush" Color="#0Fcfcfcf" />
     
+    <!--#0d0d0f-->
     <Color x:Key="TopPanelItemBackgroundColor">Transparent</Color>
-    <Color x:Key="TopPanelItemHoverBackgroundColor">Transparent</Color>
+    <Color x:Key="TopPanelItemHoverBackgroundColor">#3d3123</Color>
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#2e2c2f</Color>
     <Color x:Key="TopPanelFilterToggleBackgroundColor">Transparent</Color>
 
@@ -147,15 +156,23 @@
     <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelFilterToggleBackgroundBrush" Color="{DynamicResource TopPanelFilterToggleBackgroundColor}" />
 
-    <SolidColorBrush x:Key="OpaqueHighlightBrush" Color="{DynamicResource GlyphColor}" Opacity="0.25" />
-    <SolidColorBrush x:Key="OpaqueHighlightBrushBright" Color="{DynamicResource GlyphColorSecondary}" Opacity="0.25"/>
-    <SolidColorBrush x:Key="OpaqueGrayHighlightBrush" Color="{DynamicResource GlyphColor}" Opacity="0.25" />
-    
-    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" Opacity="0.4"/>
-    
+    <SolidColorBrush x:Key="OpaqueHighlightBrush"
+        Opacity="0.25"
+        Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="OpaqueHighlightBrushBright"
+        Opacity="0.25"
+        Color="{DynamicResource GlyphColorSecondary}" />
+    <SolidColorBrush x:Key="OpaqueGrayHighlightBrush"
+        Opacity="0.25"
+        Color="{DynamicResource GlyphColor}" />
+
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency"
+        Opacity="0.4"
+        Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" />
+
     <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.6" EndPoint="0.5,1">
-        <GradientStop Color="#00000000" Offset="0.0" />
-        <GradientStop Color="#D9000000" Offset="1.0" />
+        <GradientStop Offset="0.0" Color="#00000000" />
+        <GradientStop Offset="1.0" Color="#D9000000" />
     </LinearGradientBrush>
 
     <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
@@ -163,13 +180,31 @@
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#26b7ff" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#adff2f" />
     <sys:String x:Key="DefaultLinkIcon">&#xEF71;</sys:String>
-    <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
-    <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
-                    Opacity="1" popt:Freeze="True"/>
-    <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/white_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
-                    Opacity="1.0" popt:Freeze="True"/>
-    <ImageBrush x:Key="NoiseBrush" ImageSource="{ThemeFile 'Images/noise.png'}" TileMode="Tile" Viewport="0,0,512,512" ViewportUnits="Absolute"
-                    Opacity="1.0" popt:Freeze="True"/>
-    <BitmapImage x:Key="InnerGlowBitmap" UriSource="{ThemeFile 'Images/innerglow.png'}" popt:Freeze="True" CacheOption="OnLoad" />
-    
+    <!--Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
+    <ImageBrush x:Key="DarkNoiseBrush"
+        popt:Freeze="True"
+        ImageSource="{ThemeFile 'Images/dark_noise.png'}"
+        Opacity="1"
+        TileMode="Tile"
+        Viewport="0,0,100,100"
+        ViewportUnits="Absolute" />
+    <ImageBrush x:Key="WhiteNoiseBrush"
+        popt:Freeze="True"
+        ImageSource="{ThemeFile 'Images/white_noise.png'}"
+        Opacity="1.0"
+        TileMode="Tile"
+        Viewport="0,0,100,100"
+        ViewportUnits="Absolute" />
+    <ImageBrush x:Key="NoiseBrush"
+        popt:Freeze="True"
+        ImageSource="{ThemeFile 'Images/noise.png'}"
+        Opacity="1.0"
+        TileMode="Tile"
+        Viewport="0,0,512,512"
+        ViewportUnits="Absolute" />
+    <BitmapImage x:Key="InnerGlowBitmap"
+        popt:Freeze="True"
+        CacheOption="OnLoad"
+        UriSource="{ThemeFile 'Images/innerglow.png'}" />
+
 </ResourceDictionary>

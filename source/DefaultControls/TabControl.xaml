@@ -21,7 +21,7 @@
                             <RowDefinition Height="*" x:Name="RowDefinition1" />
                         </Grid.RowDefinitions>
                         <Border x:Name="HeaderBorder" Background="Transparent"
-                                BorderThickness="0,0,0,1" BorderBrush="{DynamicResource GlyphBrush}">
+                                BorderThickness="0,0,0,1" BorderBrush="Transparent">
                             <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Panel.ZIndex="1" Width="Auto" Height="Auto"
                                       KeyboardNavigation.TabIndex="1" RenderTransformOrigin="0.5,0.5">
                                 <TabPanel.LayoutTransform>
@@ -109,7 +109,7 @@
                             <RowDefinition Height="*" x:Name="RowDefinition1" />
                         </Grid.RowDefinitions>
                         <Border x:Name="HeaderBorder" Background="Transparent"
-                                BorderThickness="0,0,0,1" BorderBrush="{DynamicResource GlyphBrush}">
+                                BorderThickness="0,0,0,1" BorderBrush="Transparent">
                             <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Panel.ZIndex="1" Width="Auto" Height="Auto"
                                       KeyboardNavigation.TabIndex="1" RenderTransformOrigin="0.5,0.5">
                                 <TabPanel.LayoutTransform>
@@ -186,15 +186,18 @@
     
     <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Foreground" Value="#80f9fafa" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabItem}">
                     <Grid x:Name="TabGrid">
                         <Border x:Name="SelectedBorder" Margin="1,0,1,0"
                                 SnapsToDevicePixels="True" Opacity="0"
+                                HorizontalAlignment="Center"
+                                Width="24"
                                 BorderThickness="0,0,0,2" BorderBrush="{DynamicResource GlyphBrush}"/>
                         <TextBlock x:Name="TextContent" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
+                                   FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}"
                                    Foreground="{TemplateBinding Foreground}" Cursor="Hand">
                             <ContentPresenter x:Name="ContentSite" RecognizesAccessKey="True" ContentSource="Header"
                                               HorizontalAlignment="Center" Margin="5" VerticalAlignment="Center" />
@@ -211,12 +214,11 @@
                             <Setter Property="BorderThickness" Value="0,2,0,0" TargetName="SelectedBorder" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="{DynamicResource GlyphColorObscureOpacity}" TargetName="SelectedBorder" />
-                            <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="TextContent"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Opacity" Value="1" TargetName="SelectedBorder" />
-                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" TargetName="TextContent"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="TextContent"/>
                             <Setter Property="Opacity" Value="1" TargetName="TextContent"/>
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">

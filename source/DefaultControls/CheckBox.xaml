@@ -11,7 +11,7 @@
         <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource MainPanelBackgroundBrush}" />
-        <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -19,17 +19,17 @@
                     <Border Background="Transparent"
                             Padding="{TemplateBinding Padding}">
                         <DockPanel>
-                            <Grid Width="18" Height="18" VerticalAlignment="Center">
+                            <Grid Width="16" Height="16" VerticalAlignment="Center">
                                 <Border BorderThickness="{TemplateBinding BorderThickness}"
-                                        CornerRadius="0.5"
+                                        CornerRadius="3"
                                         Background="{TemplateBinding Background}"
                                         BorderBrush="{TemplateBinding BorderBrush}" />
-                                <Viewbox x:Name="CheckIcon" Visibility="Collapsed" Margin="2">
-                                    <TextBlock Text="b" FontFamily="Marlett" Foreground="{DynamicResource GlyphBrush}"
+                                <Viewbox x:Name="CheckIcon" Visibility="Collapsed" Margin="1">
+                                    <TextBlock Text="b" FontFamily="Marlett" Foreground="{DynamicResource PlayButtonTextBrush}"
                                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Viewbox>
-                                <Viewbox x:Name="IndeterminateIcon" Visibility="Collapsed" Margin="2">
-                                    <TextBlock Text="g" FontFamily="Marlett" Foreground="{DynamicResource GlyphBrush}"
+                                <Viewbox x:Name="IndeterminateIcon" Visibility="Collapsed" Margin="1">
+                                    <TextBlock Text="g" FontFamily="Marlett" Foreground="{DynamicResource PlayButtonTextBrush}"
                                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Viewbox>
                             </Grid>
@@ -44,14 +44,17 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Visibility" Value="Visible" TargetName="IndeterminateIcon"/>
                         </MultiTrigger>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="CheckIcon" />
-                        </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" />
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
                             <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="CheckIcon" />
+                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

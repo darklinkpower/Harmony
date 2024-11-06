@@ -12,19 +12,27 @@
                     <Grid d:DesignWidth="1500" d:DesignHeight="960"
                           d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <Viewbox x:Name="LowPerformanceBlurBackground" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Stretch="UniformToFill">
-                            <FadeImage Name="BlurGameBackground" ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
-                                       HighQualityBlur="False" SourceUpdateDelay="150"
-                                       IsBlurEnabled="True" AnimationEnabled="{Settings BackgroundImageAnimation}"
-                                       Height="96" RenderOptions.BitmapScalingMode="LowQuality" BlurAmount="10"
-                                       HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Viewbox
+                            HorizontalAlignment="Center"
+                            RenderOptions.BitmapScalingMode="LowQuality"
+                            Stretch="UniformToFill">
+                            <FadeImage Name="BlurGameBackground"
+                                Height="96"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                AnimationEnabled="{Settings BackgroundImageAnimation}"
+                                BlurAmount="10"
+                                HighQualityBlur="False"
+                                ImageDarkeningBrush="{Binding ElementName=PART_ImageBackground, Path=ImageDarkeningBrush}"
+                                IsBlurEnabled="True"
+                                RenderOptions.BitmapScalingMode="LowQuality"
+                                SourceUpdateDelay="150">
                                 <FadeImage.Style>
                                     <Style TargetType="FadeImage">
                                         <Setter Property="Source" Value="{Binding ElementName=PART_ImageBackground, Path=Source}" />
@@ -41,13 +49,16 @@
                         </Viewbox>
 
                         <TextBlock x:Name="LibraryUseLowPerformanceBlurBackground"
-                                   Tag="{DynamicResource LibraryUseLowPerformanceBlurBackground}"
-                                   Visibility="Collapsed" />
+                            Tag="{DynamicResource LibraryUseLowPerformanceBlurBackground}"
+                            Visibility="Collapsed" />
 
                         <FadeImage x:Name="PART_ImageBackground"
-                                   ClipToBounds="True"
-                                   Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                   HorizontalAlignment="Center" VerticalAlignment="Top">
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
                             <FadeImage.Style>
                                 <Style TargetType="FadeImage">
                                     <Setter Property="Visibility" Value="Visible" />
@@ -60,35 +71,42 @@
                             </FadeImage.Style>
                         </FadeImage>
 
-                        <Border Grid.RowSpan="2"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="{DynamicResource DarkNoiseBrush}"
-                                Opacity="0.35"/>
-                        
-                        <Border Grid.RowSpan="2"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="#000000"
-                                Opacity="0.45"/>
+                        <Grid Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}">
+                            <Grid.CacheMode>
+                                <BitmapCache
+                                    EnableClearType="False"
+                                    RenderAtScale="0.85"
+                                    SnapsToDevicePixels="False" />
+                            </Grid.CacheMode>
+                            <Border
+                                Background="{StaticResource DarkNoiseBrush}"
+                                Opacity="0.35"
+                                RenderOptions.BitmapScalingMode="LowQuality" />
 
-                        <Border Grid.RowSpan="2"
-                                x:Name="ImageBackgroundNoise"
-                                Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}"
-                                Background="{DynamicResource NoiseBrush}"
-                                Opacity="0.020"/>
+                            <Border
+                                Background="#000000"
+                                Opacity="0.45"
+                                RenderOptions.BitmapScalingMode="LowQuality" />
+
+                            <Border
+                                Background="{StaticResource NoiseBrush}"
+                                Opacity="0.020"
+                                RenderOptions.BitmapScalingMode="LowQuality" />
+                        </Grid>
 
                         <DockPanel Grid.RowSpan="2">
                             <DockPanel.Style>
                                 <Style TargetType="DockPanel">
-                                    <Setter Property="Margin" Value="44,0,0,0" />
+                                    <Setter Property="Margin" Value="67,0,0,0" />
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
-                                            <Setter Property="Margin" Value="0,0,44,0" />
+                                            <Setter Property="Margin" Value="0,0,67,0" />
                                         </DataTrigger>
                                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
-                                            <Setter Property="Margin" Value="0,45,0,0" />
+                                            <Setter Property="Margin" Value="0,59,0,0" />
                                         </DataTrigger>
                                         <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
-                                            <Setter Property="Margin" Value="0,0,0,44" />
+                                            <Setter Property="Margin" Value="0,0,0,59" />
                                         </DataTrigger>
                                         <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
                                             <Setter Property="Margin" Value="0,0,0,0" />

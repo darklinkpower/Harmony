@@ -18,7 +18,18 @@
                                 Opacity="1" CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}" />
                         <Border x:Name="HighlightBorder" Background="White"
                                 Opacity="0" CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}" />
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                        <DockPanel Margin="20,0,20,0">
+                            <Border CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}" Padding="6"
+                                HorizontalAlignment="Left" VerticalAlignment="Center" 
+                                Background="{DynamicResource PlayButtonTextBrush}">
+                                <TextBlock Foreground="{DynamicResource GlyphBrush}" Text="&#xEC74;"
+                                           FontSize="8"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       FontFamily="{DynamicResource FontIcoFont}" />
+                            </Border>
+                            <ContentPresenter HorizontalAlignment="Center"  Margin="0"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                        </DockPanel>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

@@ -92,7 +92,7 @@
                                           DockPanel.Dock="Left" VerticalAlignment="Center" />
                             </DockPanel>                            
                             <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
-                                      DockPanel.Dock="Top" Padding="0,0,0,15">
+                                      DockPanel.Dock="Top" Padding="0,15,0,15">
                                 <StackPanel x:Name="PART_PanelItemsHost" />
                             </ScrollViewer>
                         </DockPanel>

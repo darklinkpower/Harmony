@@ -40,16 +40,16 @@
                                 <Border>
                                     <Border.Style>
                                         <Style TargetType="Border">
-                                            <Setter Property="Margin" Value="44,0,0,0" />
+                                            <Setter Property="Margin" Value="67,0,0,0" />
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Settings SidebarPosition}" Value="Right">
-                                                    <Setter Property="Margin" Value="0,0,44,0" />
+                                                    <Setter Property="Margin" Value="0,0,67,0" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
-                                                    <Setter Property="Margin" Value="0,45,0,0" />
+                                                    <Setter Property="Margin" Value="0,59,0,0" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Settings SidebarPosition}" Value="Bottom">
-                                                    <Setter Property="Margin" Value="0,0,0,44" />
+                                                    <Setter Property="Margin" Value="0,0,0,59" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Settings ShowSidebar}" Value="False">
                                                     <Setter Property="Margin" Value="0,0,0,0" />
