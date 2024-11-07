@@ -193,8 +193,7 @@
                     <Grid x:Name="TabGrid">
                         <Border x:Name="SelectedBorder" Margin="1,0,1,0"
                                 SnapsToDevicePixels="True" Opacity="0"
-                                HorizontalAlignment="Center"
-                                Width="24"
+                                Width="24" HorizontalAlignment="Center"
                                 BorderThickness="0,0,0,2" BorderBrush="{DynamicResource GlyphBrush}"/>
                         <TextBlock x:Name="TextContent" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
                                    FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}"
@@ -206,9 +205,11 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="TabStripPlacement" Value="Left">
                             <Setter Property="BorderThickness" Value="0,0,2,0" TargetName="SelectedBorder" />
+                            <Setter Property="HorizontalAlignment" Value="Right" TargetName="SelectedBorder" />
                         </Trigger>
                         <Trigger Property="TabStripPlacement" Value="Right">
                             <Setter Property="BorderThickness" Value="2,0,0,0" TargetName="SelectedBorder" />
+                            <Setter Property="HorizontalAlignment" Value="Left" TargetName="SelectedBorder" />
                         </Trigger>
                         <Trigger Property="TabStripPlacement" Value="Bottom">
                             <Setter Property="BorderThickness" Value="0,2,0,0" TargetName="SelectedBorder" />
