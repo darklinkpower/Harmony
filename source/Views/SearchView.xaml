@@ -156,7 +156,7 @@
     </Style>
 
     <Style x:Key="SearchWindowStyle" TargetType="WindowBase" BasedOn="{StaticResource StandardWindowStyle}">
-        <Setter Property="Background" Value="{DynamicResource NormalBrushDark}" />
+        <Setter Property="Background" Value="{DynamicResource PopupBackgroundBrush}" />
         <Setter Property="Width" Value="720" />
         <Setter Property="SizeToContent" Value="Height" />
     </Style>
@@ -196,6 +196,7 @@
 
     <Style x:Key="SearchWindowList" TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="MaxHeight" Value="520" />
         <Setter Property="Margin" Value="0,20,0,0" />
