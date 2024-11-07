@@ -15,7 +15,7 @@ Constants:
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,2400): 'Maximum width of details'
     - DetailsBackgroundDarkenLayerOpacity(0.0,1.0): 'Darken amount of background image'
-    - DetailsViewDetailsIconsVisibility: 'Visibility of icons in details'
+    - DetailsViewDetailsDisplayIcons: 'Display icons in details'
     - DetailsViewAllowUseOfLogos: 'Allow use of logos (Requires Extra Metadata Loader extension)'
     - DetailsViewLibraryGameShowFavorite: 'Show favorites icon in game list'
     - "Grid View Details"
