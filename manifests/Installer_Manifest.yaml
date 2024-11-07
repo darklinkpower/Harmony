@@ -495,3 +495,13 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.59/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_59.pthm
     Changelog:
       - 'Details View: Fix dropshadow effect on cover image causing it to be blurry'
+  - Version: 2.60
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-06
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.60/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_60.pthm
+    Changelog:
+      - 'Added: Game cover banners for library plugins: ATLauncher Instance Library, Big Fish Games library integration, EmuLibrary, Fanatical library integration, Game Jolt library integration, GameVault Library Integration, GOG OSS library integration, Google Play Games on PC Library, Humble Keys Library, LANCommander library integration, Meta Quest/Oculus Library Plugin, MultiMC Library Importer, Nile (Amazon) library integration, NowPlaying Game Cacher, RAWG library importer, RobotCache library integration, RomM Library Importer, Viveport library importer.'
+      - 'Added: Option to display colored background for horizontal section using the ThemeModifer extension'
+      - 'Changed: Design changes to Details View visuals and layout'
+      - 'Fixed: Panel separator between Library and Details on Grid View not displaying when using Details to Grid View Converter extension'
+      - 'Misc changes and polishing across the entire theme'
