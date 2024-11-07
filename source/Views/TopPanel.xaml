@@ -207,7 +207,7 @@
                                        Margin="10,0,5,0"/>
                             </Border>
                             <Border DockPanel.Dock="Left"
-                                    Visibility="{Binding ElementName=PART_TextMainSearch}">
+                                    Visibility="{Binding ElementName=PART_TextMainSearch, Path=Visibility}">
                                 <Border.Style>
                                     <Style TargetType="Border">
                                         <Setter Property="Padding" Value="20,6,0,6" />
