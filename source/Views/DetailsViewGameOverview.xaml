@@ -318,9 +318,22 @@
                                                 </ContentControl>
                                             </DockPanel>
 
-                                            <Border Padding="0,10,0,0"
-                                                    Background="Transparent"
+                                            <Border Tag="{DynamicResource DetailsViewDisplayHorizontalBackground}"
                                                     CornerRadius="{DynamicResource ControlCornerRadiusViewPlayButtons}">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                        <Setter Property="Padding" Value="0,0,0,0" />
+                                                        <Setter Property="Margin" Value="0,20,0,0" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="True" >
+                                                                <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
+                                                                <Setter Property="Padding" Value="20,10,20,0" />
+                                                                <Setter Property="Margin" Value="0,20,0,10" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Border.Style>
                                                 <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                                                     <WrapPanel.Resources>
                                                         <Style BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="TextBlock" />
@@ -417,10 +430,10 @@
                                                                         Tag="{PluginStatus Plugin=felixkmh_Extras_Plugin,
                                                                                            Status=Installed}"
                                                                                            Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource InvertedBooleanToVisibilityConverter}}">
-                                                                            <Button Name="PART_ButtonCompletionStatus"
+                                                                        <Button Name="PART_ButtonCompletionStatus"
                                                                             Margin="0"
                                                                             Style="{StaticResource PropertyItemButton}" />
-                                                                        </Border>
+                                                                    </Border>
 
                                                                     <ContentControl x:Name="ThemeExtras_SettableCompletionStatus"
                                                                         VerticalAlignment="Center"
@@ -512,11 +525,8 @@
                                                             </DockPanel>
                                                         </StackPanel>
                                                     </DockPanel>
-
                                                 </WrapPanel>
                                             </Border>
-
-
 
                                             <DockPanel Margin="0,20,0,0" LastChildFill="False">
                                                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="0,0,20,0" DockPanel.Dock="Left">

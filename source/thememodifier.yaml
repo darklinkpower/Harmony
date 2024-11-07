@@ -11,6 +11,7 @@ Constants:
     - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'
     - "Details View"
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'
+    - DetailsViewDisplayHorizontalBackground: 'Use colored background behind horizontal elements section'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,2400): 'Maximum width of details'
     - DetailsBackgroundDarkenLayerOpacity(0.0,1.0): 'Darken amount of background image'
