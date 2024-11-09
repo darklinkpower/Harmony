@@ -505,3 +505,10 @@ Packages:
       - 'Changed: Design changes to Details View visuals and layout'
       - 'Fixed: Panel separator between Library and Details on Grid View not displaying when using Details to Grid View Converter extension'
       - 'Misc changes and polishing across the entire theme'
+  - Version: 2.61
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-09
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.61/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_61.pthm
+    Changelog:
+      - 'Fixed: option to disable icons in details view not working'
+      - 'Minor fixes'
