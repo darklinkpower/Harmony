@@ -512,3 +512,10 @@ Packages:
     Changelog:
       - 'Fixed: option to disable icons in details view not working'
       - 'Minor fixes'
+  - Version: 2.62
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-13
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.62/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_62.pthm
+    Changelog:
+      - 'Added: Game cover banner for Riot Games Library plugin'
+      - 'Added: Support to use web view component from Web Explorer extension'
