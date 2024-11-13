@@ -40,6 +40,8 @@
     <sys:Int32 x:Key="GridViewSectionOrderCheckDlc">11</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderGameRelations">12</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderSteamScreenshots">13</sys:Int32>
+    <sys:Int32 x:Key="GridViewSectionOrderWeb">14</sys:Int32>
+    <sys:Double x:Key="WebExplorerControlHeight">800</sys:Double>
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">False</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
     <!--region end-->

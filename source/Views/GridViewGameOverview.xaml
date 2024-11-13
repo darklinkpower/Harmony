@@ -193,6 +193,11 @@
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
                                         <Grid.Resources>
                                             <Style TargetType="Separator">
@@ -850,6 +855,23 @@
                                             <StackPanel Margin="0,0,0,25">
                                                 <Separator />
                                                 <ContentControl x:Name="SteamScreenshots_SteamScreenshotsViewControl" Margin="0,10,20,0" />
+                                            </StackPanel>
+                                        </Expander>
+
+                                        <Expander Grid.Row="{DynamicResource GridViewSectionOrderWeb}"
+                                                  IsExpanded="True"
+                                                  Visibility="{Binding ElementName=WebExplorer_BrowserHostViewControl, Path=Content.IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, TargetNullValue=Collapsed, FallbackValue=Collapsed}"
+                                                  Margin="0,0,5,0">
+                                            <Expander.Header>
+                                                <TextBlock Text="{DynamicResource LOCWebExplorer_WebLabel}" Style="{DynamicResource BaseTextBlockStyle}"
+                                                           Cursor="Hand"
+                                                           FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
+                                            </Expander.Header>
+                                            <StackPanel Margin="0,0,0,25">
+                                                <Separator />
+                                                <ContentControl x:Name="WebExplorer_BrowserHostViewControl"
+                                                                Height="{DynamicResource WebExplorerControlHeight}"
+                                                                Margin="0,5,0,5" />
                                             </StackPanel>
                                         </Expander>
                                         

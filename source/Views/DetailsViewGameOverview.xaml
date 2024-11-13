@@ -1066,8 +1066,23 @@
                                                     </Expander>
                                                 </StackPanel>
                                             </TabItem>
-                                            
-                                            
+
+                                            <!--#region WebExplorer-->
+                                            <TabItem Header="{DynamicResource LOCWebExplorer_WebLabel}"
+                                                     Visibility="{Binding ElementName=WebExplorer_BrowserHostViewControl, Path=Content.IsControlVisible, Converter={StaticResource BooleanToVisibilityConverter}, TargetNullValue=Collapsed, FallbackValue=Collapsed}">
+                                                <Grid Margin="0,15,0,50">
+                                                    <Border Background="{DynamicResource ControlBackgroundBrush}"
+                                                            VerticalAlignment="Top" Opacity="0.5"
+                                                            Height="{DynamicResource WebExplorerControlHeight}"
+                                                            CornerRadius="{DynamicResource ControlCornerRadius}"/>
+                                                    <ContentControl x:Name="WebExplorer_BrowserHostViewControl"
+                                                                    VerticalAlignment="Top"
+                                                                    Height="{DynamicResource WebExplorerControlHeight}"
+                                                                    Margin="0,5,0,5" />
+                                                </Grid>
+                                                
+                                            </TabItem>
+                                            <!--#endregion-->
                                         </TabControl>
                                     </DockPanel>
                                 </Grid>
