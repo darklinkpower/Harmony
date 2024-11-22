@@ -435,7 +435,19 @@
                                                             <TextBlock Text="{DynamicResource LOCCommunityScore}" />
                                                         </StackPanel>
                                                     </Label>
-                                                    <TextBlock Name="PART_TextCommunityScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                                    <StackPanel Orientation="Horizontal"
+                                                                Visibility="{Binding ElementName=PART_TextCommunityScore, Path=Visibility}">
+                                                        <TextBlock Name="PART_TextCommunityScore" VerticalAlignment="Center"
+                                                                   Style="{DynamicResource TextBlockGameScore}" />
+                                                        <ContentControl Content="{Binding Game.CommunityScore}"
+                                                                        Padding="6,0,0,4"
+                                                                        HorizontalAlignment="Left"
+                                                                        VerticalAlignment="Center"
+                                                                        Background="Transparent"
+                                                                        Foreground="{Binding ElementName=PART_TextCommunityScore, Path=Foreground}"
+                                                                        Height="{Binding ElementName=PART_TextCommunityScore, Path=ActualHeight}"
+                                                                        ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
+                                                    </StackPanel>
 
                                                     <Label Name="PART_ElemCriticScore" >
                                                         <StackPanel Orientation="Horizontal">
@@ -443,7 +455,19 @@
                                                             <TextBlock Text="{DynamicResource LOCCriticScore}" />
                                                         </StackPanel>
                                                     </Label>
-                                                    <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                                    <StackPanel Orientation="Horizontal"
+                                                                Visibility="{Binding ElementName=PART_TextCriticScore, Path=Visibility}">
+                                                        <TextBlock Name="PART_TextCriticScore" VerticalAlignment="Center"
+                                                                   Style="{DynamicResource TextBlockGameScore}" />
+                                                        <ContentControl Content="{Binding Game.CriticScore}"
+                                                                        Padding="6,0,0,4"
+                                                                        HorizontalAlignment="Left"
+                                                                        VerticalAlignment="Center"
+                                                                        Background="Transparent"
+                                                                        Foreground="{Binding ElementName=PART_TextCriticScore, Path=Foreground}"
+                                                                        Height="{Binding ElementName=PART_TextCriticScore, Path=ActualHeight}"
+                                                                        ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
+                                                    </StackPanel>
 
                                                     <Label Name="PART_ElemUserScore" >
                                                         <StackPanel Orientation="Horizontal">
@@ -451,7 +475,19 @@
                                                             <TextBlock Text="{DynamicResource LOCUserScore}" />
                                                         </StackPanel>
                                                     </Label>
-                                                    <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center" Style="{DynamicResource TextBlockGameScore}" />
+                                                    <StackPanel Orientation="Horizontal"
+                                                                Visibility="{Binding ElementName=PART_TextUserScore, Path=Visibility}">
+                                                        <TextBlock Name="PART_TextUserScore" VerticalAlignment="Center"
+                                                                   Style="{DynamicResource TextBlockGameScore}" />
+                                                        <ContentControl Content="{Binding Game.UserScore}"
+                                                                        Padding="6,0,0,4"
+                                                                        HorizontalAlignment="Left"
+                                                                        VerticalAlignment="Center"
+                                                                        Background="Transparent"
+                                                                        Foreground="{Binding ElementName=PART_TextUserScore, Path=Foreground}"
+                                                                        Height="{Binding ElementName=PART_TextUserScore, Path=ActualHeight}"
+                                                                        ContentTemplate="{StaticResource FiveStarScoreTemplate}"/>
+                                                    </StackPanel>
 
                                                     <Label Name="PART_ElemFeatures" >
                                                         <StackPanel Orientation="Horizontal">

@@ -210,4 +210,47 @@
         CacheOption="OnLoad"
         UriSource="{ThemeFile 'Images/innerglow.png'}" />
 
+    <Geometry x:Key="StarShapeGeometry">M17.7835 1.05234C17.8961 0.714958 18.3733 0.714958 18.4859 1.05234L22.4334 12.8804C22.4839 13.0316 22.6253 13.1335 22.7846 13.1335H35.5375C35.8985 13.1335 36.0461 13.5975 35.7513 13.806L25.4512 21.0917C25.318 21.1859 25.2622 21.3563 25.3138 21.5112L29.2521 33.3116C29.3654 33.651 28.9792 33.9377 28.6871 33.7311L18.3485 26.4182C18.2204 26.3276 18.049 26.3276 17.9209 26.4182L7.58236 33.7311C7.29026 33.9377 6.90407 33.651 7.01734 33.3116L10.9556 21.5112C11.0073 21.3563 10.9515 21.1859 10.8182 21.0917L0.518159 13.806C0.223381 13.5975 0.370904 13.1335 0.731971 13.1335H13.4848C13.6441 13.1335 13.7856 13.0316 13.836 12.8804L17.7835 1.05234Z</Geometry>
+    <DataTemplate x:Key="StarItemTemplate">
+        <Path Data="{StaticResource StarShapeGeometry}"
+              Stroke="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}, FallbackValue=Gold}" 
+              StrokeThickness="2"
+              SnapsToDevicePixels="True"
+              Fill="{Binding Path=Background, RelativeSource={RelativeSource AncestorType=ContentControl}}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="FiveStarTemplate">
+        <StackPanel Orientation="Horizontal">
+            <ContentPresenter ContentTemplate="{StaticResource StarItemTemplate}" />
+            <ContentPresenter ContentTemplate="{StaticResource StarItemTemplate}" Margin="5,0,0,0"/>
+            <ContentPresenter ContentTemplate="{StaticResource StarItemTemplate}" Margin="5,0,0,0"/>
+            <ContentPresenter ContentTemplate="{StaticResource StarItemTemplate}" Margin="5,0,0,0"/>
+            <ContentPresenter ContentTemplate="{StaticResource StarItemTemplate}" Margin="5,0,0,0"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FiveStarScoreTemplate">
+        <Viewbox HorizontalAlignment="Left" VerticalAlignment="Stretch"
+                 SnapsToDevicePixels="True"
+                 Margin="{Binding Path=Padding, RelativeSource={RelativeSource AncestorType=ContentControl}}">
+            <Grid x:Name="GridScore" Tag="{Binding}"
+                  Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource NullToVisibilityConverter}}">
+                <TextBlock x:Name="StarsOverlayProxy" Visibility="Collapsed"
+                           Text="{Binding ElementName=GridScore, Path=Tag, TargetNullValue=0}" />
+                <Viewbox Width="100" HorizontalAlignment="Left">
+                    <ContentControl Background="{Binding Path=Background, RelativeSource={RelativeSource AncestorType=ContentControl}}"
+                                    Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}"
+                                    ContentTemplate="{StaticResource FiveStarTemplate}" />
+                </Viewbox>
+                <Border Width="{Binding ElementName=StarsOverlayProxy, Path=Text}" HorizontalAlignment="Left">
+                    <Viewbox Width="100" HorizontalAlignment="Left">
+                        <ContentControl Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}"
+                                        Background="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}"
+                                        ContentTemplate="{StaticResource FiveStarTemplate}" />
+                    </Viewbox>
+                </Border>
+            </Grid>
+        </Viewbox>
+    </DataTemplate>
+    
 </ResourceDictionary>
