@@ -519,3 +519,10 @@ Packages:
     Changelog:
       - 'Added: Game cover banner for Riot Games Library plugin'
       - 'Added: Support to use web view component from Web Explorer extension'
+  - Version: 2.63
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2024-11-22
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.63/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_63.pthm
+    Changelog:
+      - 'Added: Star ratings from 0 to 5 will now be displayed alongside the critic, user and community numerical scores, providing a clearer visual representation of the game ratings'
+      - 'Changed: Icons on Details View & Grid View will now be displayed with rounded corners'
