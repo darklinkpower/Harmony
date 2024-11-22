@@ -78,7 +78,11 @@
                                 </Grid>
                                 <DockPanel DockPanel.Dock="Top">
                                     <Image Name="PART_ImageIcon" DockPanel.Dock="Left" MaxHeight="32" MaxWidth="32"
-                                           RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0" />
+                                           RenderOptions.BitmapScalingMode="Fant" Margin="0,0,10,0">
+                                        <Image.Clip>
+                                            <RectangleGeometry RadiusX="4" RadiusY="4" Rect="0,0,32,32" />
+                                        </Image.Clip>
+                                    </Image>
                                     
                                     <ContentControl x:Name="NewsViewer_PlayersInGameViewerControl"
                                                     DockPanel.Dock="Right" VerticalAlignment="Center">
