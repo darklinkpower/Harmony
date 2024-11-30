@@ -15,9 +15,9 @@ body:
       label: Pre-Request Checklist
       description: Please confirm the following before submitting your request
       options:
-        - label: "I have checked Playnite's settings (e.g., Appearance) and confirmed that this change cannot be made there."
+        - label: "I have checked Playnite's settings (e.g., in Settings -> Appearance) and confirmed that this change cannot be made there."
           required: true
-        - label: "I have checked that this option is not already available using the ThemeModifier extension."
+        - label: "I have checked that this cannot be changed with an option provided by the theme using the [ThemeModifier plugin](https://playnite.link/addons.html#playnite-thememodifier-plugin)."
           required: true
   - type: textarea
     attributes:
