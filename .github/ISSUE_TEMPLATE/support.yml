@@ -13,7 +13,7 @@ body:
   - type: checkboxes
     attributes:
       label: Pre-Request Checklist
-      description: Please confirm the following before submitting your request:
+      description: Please confirm the following before submitting your request
       options:
         - label: "I have checked Playnite's settings (e.g., Appearance) and confirmed that this change cannot be made there."
           required: true
