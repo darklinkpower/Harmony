@@ -1,0 +1,33 @@
+name: Support request
+description: Create a support ticket
+labels: ['support']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Search for existing issues first**
+        Before creating a new support request, please use the issue search in the repository to check if this problem or request has already been opened. This helps to avoid duplicates and speeds up response times.
+
+        **Instructions**
+        Please change the placeholder title automatically filled in the template and provide the information requested in the sections below. Fields marked with a * are required.
+  - type: checkboxes
+    attributes:
+      label: Pre-Request Checklist
+      description: Please confirm the following before submitting your request:
+      options:
+        - label: I have checked Playnite's settings (e.g., Appearance) and confirmed that this change cannot be made there.
+          required: true
+        - label: I have checked that the them doesn't already provide this as an option using the ThemeModifier extension.
+          required: true
+  - type: textarea
+    attributes:
+      label: Support Request Description
+      description: Provide a clear and concise description of the issue or support request, including any relevant details.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: Add screenshots, if applicable, to help explain the problem. This is especially useful for UI-related issues.
+    validations:
+      required: false
