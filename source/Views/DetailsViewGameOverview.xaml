@@ -316,6 +316,12 @@
                                                         <Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}" />
                                                     </ContentControl.Resources>
                                                 </ContentControl>
+
+                                                <ContentControl x:Name="GogSecondClassWatcher_SecondClassWatcherControl"
+                                                                DockPanel.Dock="Left" HorizontalAlignment="Left"
+                                                            VerticalAlignment="Center"
+                                                            Visibility="{PluginSettings Plugin=GogSecondClassWatcher, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            Margin="10,0,0,0"/>
                                             </DockPanel>
 
                                             <Border Tag="{DynamicResource DetailsViewDisplayHorizontalBackground}"

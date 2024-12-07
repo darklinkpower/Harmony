@@ -116,13 +116,25 @@
                                     </Border>
                                 </DockPanel>
 
-                                <ContentControl DockPanel.Dock="Top" x:Name="DuplicateHider_SourceSelector" 
-                                        HorizontalAlignment="Right"
-                                        VerticalContentAlignment="Center"   
+                                <DockPanel Margin="0,5,0,0" DockPanel.Dock="Top" LastChildFill="False">
+                                    <ContentControl x:Name="DuplicateHider_SourceSelector" 
+                                        Visibility="{PluginSettings Plugin=DuplicateHider, Path=EnableUiIntegration, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                        DockPanel.Dock="Right"
+                                                    HorizontalAlignment="Right"
+                                        VerticalContentAlignment="Center"
+                                                    VerticalAlignment="Center"
                                         Margin="0,0,0,0"  
                                         Height="24"
                                         RenderOptions.BitmapScalingMode="Fant" />
-                                
+
+                                    <ContentControl x:Name="GogSecondClassWatcher_SecondClassWatcherControl"
+                                                    DockPanel.Dock="Right"
+                                                    HorizontalAlignment="Right"
+                                                            VerticalAlignment="Center"
+                                                            Visibility="{PluginSettings Plugin=GogSecondClassWatcher, Path=IsControlVisible, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                            Margin="0,0,10,0"/>
+                                </DockPanel>
+
                                 <Grid DockPanel.Dock="Top" Margin="0,10,0,10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" MaxWidth="150" />
