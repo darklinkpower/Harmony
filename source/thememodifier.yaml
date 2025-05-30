@@ -3,7 +3,6 @@ Constants:
     - GlyphBrush: 'Primary Color'
     - ControlBackgroundBrush: 'Elements background color'
     - WindowBackgroundBrush: 'Window background color'
-    - PlayButtonTextBrush: 'Play button text color'
     - "Top Panel"
     - ShowNavigationButtons: 'Show navigation buttons'
     - "Library"

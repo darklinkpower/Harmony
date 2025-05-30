@@ -4,4 +4,5 @@ PersistentPaths:
 BannersBySpecIdPath: Images/Banners/PlatformSpecId
 BannersByPlatformNamePath: Images/Banners/PlatformName
 BannersByPluginIdPath: Images/Banners/PluginId
+BannersBySourceNamePath: Images/Banners/SourceName
 DefaultBannerPath: Images/Banners/UnknownLibrary.png
