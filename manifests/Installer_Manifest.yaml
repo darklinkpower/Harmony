@@ -532,3 +532,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.64/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_64.pthm
     Changelog:
       - 'Added: Support to display GOG Second Class Watcher extension data on Details View and Grid View'
+  - Version: 2.65
+    RequiredApiVersion: 2.5.0
+    ReleaseDate: 2025-05-30
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.65/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_65.pthm
+    Changelog:
+      - 'Updated ThemeExtras game banners: Added banners for Stove and Hikari Field Importer library plugins, added Microsoft Store source banner, and recreated Steam banner to reduce color banding and blurriness.'
