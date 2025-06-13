@@ -538,3 +538,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.65/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_65.pthm
     Changelog:
       - 'Updated ThemeExtras game banners: Added banners for Stove and Hikari Field Importer library plugins, added Microsoft Store source banner, and recreated Steam banner to reduce color banding and blurriness.'
+  - Version: 2.66
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-13
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.66/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_66.pthm
+    Changelog:
+      - 'Update to theme changes in Playnite v10.36'
