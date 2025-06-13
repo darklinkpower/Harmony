@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Theme</RootNamespace>
     <AssemblyName>Theme</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -80,9 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="theme.yaml" />
-    <None Include="themeExtras.yaml" />
-    <None Include="thememodifier.yaml" />
-    <None Include="themeGridConverter.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
