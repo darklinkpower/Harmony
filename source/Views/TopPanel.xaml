@@ -221,7 +221,7 @@
                                 <SearchBox x:Name="PART_TextMainSearch"
                                        Style="{DynamicResource TopPanelSearchBox}"
                                        WindowChrome.IsHitTestVisibleInChrome="True"
-                                       Width="250" />
+                                       Width="{DynamicResource TopPanelSearchBoxWidthHarmony}" />
                             </Border>
 
                             <Border Tag="{DynamicResource ShowNavigationButtons}"
@@ -238,6 +238,7 @@
                             <Border DockPanel.Dock="Left"
                                     Margin="15,6,0,6"
                                     Padding="15,0,15,0"
+                                    
                                     CornerRadius="12">
                                 <DockPanel>
                                     <StackPanel x:Name="PART_PanelMainItems" Orientation="Horizontal"
@@ -256,6 +257,7 @@
                             <Border DockPanel.Dock="{Settings PluginTopPanelAlignment}"
                                     Margin="15,6,12,6"
                                     Padding="15,0,15,0"
+                                    
                                     CornerRadius="12">
                                 <StackPanel x:Name="PART_PanelMainPluginItems" Orientation="Horizontal"
                                         VerticalAlignment="Stretch" />

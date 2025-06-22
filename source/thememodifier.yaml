@@ -2,15 +2,19 @@ Constants:
     - "Colors"
     - GlyphBrush: 'Primary Color'
     - ControlBackgroundBrush: 'Elements background color'
-    - WindowBackgroundBrush: 'Window background color'
+    - MainWindowBackgroundBrush: 'Main Window background color'
+    - WindowBackgroundBrush: 'Windows background color'
     - "Top Panel"
     - ShowNavigationButtons: 'Show navigation buttons'
+    - TopPanelSearchBoxWidthHarmony(80,600): 'Width of Search box'
     - "Library"
     - LibraryUseLowPerformanceBlurBackground: 'Use low performance blurred game background image'
     - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'
     - "Details View"
+    - DetailsViewDetailsAlignRight: 'Align details column to the right'
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'
-    - DetailsViewDisplayHorizontalBackground: 'Use colored background behind horizontal elements section'
+    - DetailsViewHorizontalPanelOpaqueBackground: 'Enable background overlay for the horizontal panel'
+    - DetailsViewMainPanelsOpaqueBackground: 'Enable background overlay for the main panels'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'
     - DetailsViewDetailsMaxWidth(1024,2400): 'Maximum width of details'
     - DetailsBackgroundDarkenLayerOpacity(0.0,1.0): 'Darken amount of background image'
@@ -18,6 +22,10 @@ Constants:
     - DetailsViewAllowUseOfLogos: 'Allow use of logos (Requires Extra Metadata Loader extension)'
     - DetailsViewLibraryGameShowFavorite: 'Show favorites icon in game list'
     - WebExplorerControlHeight(400,1800): 'Web view component height (Requires Web Explorer extension)'
+    - "Details View order of Panels"
+    - DetailsViewVideoPanelPosition(0,2): 'Video and Screenshots'
+    - DetailsViewNewsPanelPosition(0,2): 'News'
+    - DetailsViewDescriptionOtherPanelPosition(0,2): 'Description and others'
     - "Grid View Details"
     - GridViewPlaceDescriptionAtBottom: 'Place game description at the bottom'
     - GridViewDetailsIconsVisibility: 'Visibility of icons in details'

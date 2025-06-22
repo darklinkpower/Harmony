@@ -37,6 +37,18 @@
                             </Grid.Resources>
 
                             <Grid>
+                                <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue='', FallbackValue=''}" Value="Library">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
                                 <Border>
                                     <Border.Style>
                                         <Style TargetType="Border">

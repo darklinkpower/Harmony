@@ -58,7 +58,9 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
                             HorizontalAlignment="Center"
+                                   ImageDarkeningBrush="#000000"
                             VerticalAlignment="Top">
+
                             <FadeImage.Style>
                                 <Style TargetType="FadeImage">
                                     <Setter Property="Visibility" Value="Visible" />
@@ -71,29 +73,7 @@
                             </FadeImage.Style>
                         </FadeImage>
 
-                        <Grid Visibility="{Binding ElementName=PART_ImageBackground, Path=Source, Converter={StaticResource NullToVisibilityConverter}}">
-                            <Grid.CacheMode>
-                                <BitmapCache
-                                    EnableClearType="False"
-                                    RenderAtScale="0.85"
-                                    SnapsToDevicePixels="False" />
-                            </Grid.CacheMode>
-                            <Border
-                                Background="{StaticResource DarkNoiseBrush}"
-                                Opacity="0.35"
-                                RenderOptions.BitmapScalingMode="LowQuality" />
-
-                            <Border
-                                Background="#000000"
-                                Opacity="0.45"
-                                RenderOptions.BitmapScalingMode="LowQuality" />
-
-                            <Border
-                                Background="{StaticResource NoiseBrush}"
-                                Opacity="0.020"
-                                RenderOptions.BitmapScalingMode="LowQuality" />
-                        </Grid>
-
+                        <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill" />
                         <DockPanel Grid.RowSpan="2">
                             <DockPanel.Style>
                                 <Style TargetType="DockPanel">

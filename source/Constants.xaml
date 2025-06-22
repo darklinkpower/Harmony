@@ -9,7 +9,8 @@
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
     <sys:Boolean x:Key="DetailsViewBackgroundImageUseOpacityMask">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
-    <sys:Boolean x:Key="DetailsViewDisplayHorizontalBackground">False</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewHorizontalPanelOpaqueBackground">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewMainPanelsOpaqueBackground">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDetailsDisplayIcons">True</sys:Boolean>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
@@ -26,6 +27,10 @@
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
     <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.65</sys:Double>
+    <sys:Boolean x:Key="DetailsViewDetailsAlignRight">False</sys:Boolean>
+    <sys:Int32 x:Key="DetailsViewVideoPanelPosition">0</sys:Int32>
+    <sys:Int32 x:Key="DetailsViewNewsPanelPosition">1</sys:Int32>
+    <sys:Int32 x:Key="DetailsViewDescriptionOtherPanelPosition">2</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderDetails">0</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderVideo">1</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderNotes">2</sys:Int32>
@@ -42,6 +47,7 @@
     <sys:Int32 x:Key="GridViewSectionOrderSteamScreenshots">13</sys:Int32>
     <sys:Int32 x:Key="GridViewSectionOrderWeb">14</sys:Int32>
     <sys:Double x:Key="WebExplorerControlHeight">800</sys:Double>
+    <sys:Double x:Key="TopPanelSearchBoxWidthHarmony">250</sys:Double>
     <sys:Boolean x:Key="GridViewCoverZoomOnHover">False</sys:Boolean>
     <sys:Boolean x:Key="ShowNavigationButtons">True</sys:Boolean>
     <!--region end-->
@@ -83,7 +89,8 @@
     <Color x:Key="TextColorDark">#2d323c</Color>
     <Color x:Key="PlayButtonTextColor">#16171a</Color>
     <Color x:Key="MainColor">#1c1836</Color>
-    <Color x:Key="WindowColor">#1c1836</Color>
+    <Color x:Key="MainWindowColor">#1c1836</Color>
+    <Color x:Key="WindowColor">#1a1a1a</Color>
     <Color x:Key="SidebarBackgroundColor">#0Df2f2f2</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#324f53</Color>
@@ -92,7 +99,7 @@
     <!---->
     <Color x:Key="HighlightGlyphColor">#324f53</Color>
     <Color x:Key="BottomButtonHighlightColor">#90f0d9</Color>
-    <Color x:Key="PopupBackgroundColor">#32353b</Color>
+    <Color x:Key="PopupBackgroundColor">#33343d</Color>
     <Color x:Key="PopupBorderColor">#262c38</Color>
     <Color x:Key="BackgroundToneColor">#262c38</Color>
     <Color x:Key="GridItemBackgroundColor">Transparent</Color>
@@ -144,6 +151,7 @@
     </LinearGradientBrush>
 
     <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource WindowColor}" />
+    <SolidColorBrush x:Key="MainWindowBackgroundBrush" Color="{DynamicResource MainWindowColor}" />
     <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{DynamicResource SidebarBackgroundColor}" />
     <SolidColorBrush x:Key="SidebarItemBackgroundBrush" Color="{DynamicResource SidebarBackgroundColor}" />
     <SolidColorBrush x:Key="DetailsViewBarBackgroundBrush" Color="#0Fcfcfcf" />
@@ -182,6 +190,32 @@
     <SolidColorBrush x:Key="LibraryDetailsViewNotInstalledForegroundBrush" Color="#a3aab9" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#26b7ff" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#adff2f" />
+
+    <Style x:Key="VerticalAccentBarStyle" TargetType="Border">
+        <Setter Property="Visibility" Value="Visible" />
+        <Setter Property="Opacity" Value="0.40" />
+        <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Width" Value="2" />
+        <Setter Property="Margin" Value="20,0,20,0" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    
+    <ImageBrush x:Key="DetailsViewPanelBackgroundBrush"
+        popt:Freeze="True"
+        ImageSource="{ThemeFile 'Images/white_noise.png'}"
+        Opacity="0.1"
+        TileMode="Tile"
+        Viewport="0,0,100,100"
+        ViewportUnits="Absolute" />
+    <!--<SolidColorBrush x:Key="DetailsViewPanelBackgroundBrush" Color="#1acfcfcf" />-->
+    <!--<LinearGradientBrush x:Key="DetailsViewPanelBackgroundBrush" StartPoint="1,0" EndPoint="1,1">
+        <GradientStop Color="#1a808080" Offset="0.6" />
+        <GradientStop Color="#1aFFFFFF" Offset="1.0" />
+    </LinearGradientBrush>-->
+    
     <sys:String x:Key="DefaultLinkIcon">&#xEF71;</sys:String>
     <!--Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
     <ImageBrush x:Key="DarkNoiseBrush"
@@ -209,7 +243,9 @@
         popt:Freeze="True"
         CacheOption="OnLoad"
         UriSource="{ThemeFile 'Images/innerglow.png'}" />
-
+    <BitmapImage x:Key="MainWindowOverlayImage"
+             UriSource="{ThemeFile 'Images/MainWindowOverlay.png'}"
+             CacheOption="OnLoad" />
     <Geometry x:Key="StarShapeGeometry">M17.7835 1.05234C17.8961 0.714958 18.3733 0.714958 18.4859 1.05234L22.4334 12.8804C22.4839 13.0316 22.6253 13.1335 22.7846 13.1335H35.5375C35.8985 13.1335 36.0461 13.5975 35.7513 13.806L25.4512 21.0917C25.318 21.1859 25.2622 21.3563 25.3138 21.5112L29.2521 33.3116C29.3654 33.651 28.9792 33.9377 28.6871 33.7311L18.3485 26.4182C18.2204 26.3276 18.049 26.3276 17.9209 26.4182L7.58236 33.7311C7.29026 33.9377 6.90407 33.651 7.01734 33.3116L10.9556 21.5112C11.0073 21.3563 10.9515 21.1859 10.8182 21.0917L0.518159 13.806C0.223381 13.5975 0.370904 13.1335 0.731971 13.1335H13.4848C13.6441 13.1335 13.7856 13.0316 13.836 12.8804L17.7835 1.05234Z</Geometry>
     <DataTemplate x:Key="StarItemTemplate">
         <Path Data="{StaticResource StarShapeGeometry}"
@@ -218,7 +254,7 @@
               SnapsToDevicePixels="True"
               Fill="{Binding Path=Background, RelativeSource={RelativeSource AncestorType=ContentControl}}" />
     </DataTemplate>
-
+    
     <DataTemplate x:Key="FiveStarTemplate">
         <StackPanel Orientation="Horizontal">
             <ContentPresenter ContentTemplate="{StaticResource StarItemTemplate}" />

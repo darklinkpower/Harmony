@@ -38,18 +38,18 @@
                         </ProgressBar>
                         <Border BorderBrush="Transparent"
                                 Background="Transparent"
-                                BorderThickness="2"
+                                BorderThickness="0"
                                 CornerRadius="12"
                                 x:Name="MouseOverBorder"
                                 Padding="4">
-                            <Border Background="{TemplateBinding Background}"
+                            <Border Background="Transparent"
                                     Width="36" Height="36"
                                     CornerRadius="{DynamicResource ControlCornerRadius}"
                                     Padding="8"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     BorderBrush="{TemplateBinding BorderBrush}">
                                 <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center">
-                                    <ContentPresenter x:Name="Content" Opacity="0.56" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                    <ContentPresenter x:Name="Content" Opacity="0.40" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                                 </Viewbox>
                             </Border>
                         </Border>
@@ -72,7 +72,7 @@
                 <Setter Property="Foreground" Value="#fbfbfb" />
             </Trigger>
             <DataTrigger Binding="{Binding Selected}" Value="True">
-                <Setter Property="Foreground" Value="#fbfbfb" />
+                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
             </DataTrigger>
             <DataTrigger Binding="{Settings SidebarPosition}" Value="Top">
                 <Setter Property="Margin" Value="15,5,0,5" />
