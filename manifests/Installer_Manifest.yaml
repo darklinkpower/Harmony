@@ -544,3 +544,14 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.66/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_66.pthm
     Changelog:
       - 'Update to theme changes in Playnite v10.36'
+  - Version: 2.67
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-21
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.67/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_67.pthm
+    Changelog:
+      - 'Details View: General visual and layout changes'
+      - 'Details View: Added option to align Details column to the right'
+      - 'Details View: Added option to enable background overlays for both the horizontal and main panels'
+      - 'Main Window: Added option to change the color of the main window background'
+      - 'Top Panel: Added option to configure the width of the search box'
+      - 'Note: Added options can be configured using the ThemeModifier extension'
