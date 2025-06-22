@@ -397,7 +397,8 @@
                                                             <Setter Property="HorizontalContentAlignment" Value="Left" />
                                                         </Style>
                                                     </WrapPanel.Resources>
-                                                    <DockPanel Margin="0,0,0,15" Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}">
+                                                    <DockPanel x:Name="LastPlayedHorizontalPanel"
+                                                               Margin="0,0,0,15" Visibility="{Binding Visibility, ElementName=PART_ElemLastPlayed, Mode=OneWay}">
                                                         <Viewbox HorizontalAlignment="Center"
                                                                     Width="22"
                                                                     Margin="0,0,5,0"
@@ -413,10 +414,31 @@
                                                                    Style="{DynamicResource DetailsViewHeaderLabelStyle}" />
                                                             <TextBlock Name="PART_TextLastActivity" Style="{DynamicResource DetailsViewSubtextTextStyle}" />
                                                         </StackPanel>
-                                                        <Border Style="{DynamicResource VerticalAccentBarStyle}" />
+                                                        <Border>
+                                                            <Border.Style>
+                                                                <Style TargetType="Border" BasedOn="{StaticResource VerticalAccentBarStyle}">
+                                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding ElementName=PlayTimeHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding ElementName=CompletionStatusHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding ElementName=HltbHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding ElementName=SuccessStoryHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Border.Style>
+                                                        </Border>
                                                     </DockPanel>
 
-                                                    <DockPanel Margin="0,0,0,15"
+                                                    <DockPanel x:Name="PlayTimeHorizontalPanel"
+                                                               Margin="0,0,0,15"
                                                            Visibility="{Binding Visibility, ElementName=PART_ElemPlayTime, Mode=OneWay}">
                                                         <Viewbox Width="22"
                                                                  Margin="0,0,5,0"
@@ -435,10 +457,28 @@
                                                             <TextBlock Name="PART_TextPlayTime" Style="{DynamicResource DetailsViewSubtextTextStyle}" />
                                                         </StackPanel>
 
-                                                        <Border Style="{DynamicResource VerticalAccentBarStyle}" />
+                                                        <Border>
+                                                            <Border.Style>
+                                                                <Style TargetType="Border" BasedOn="{StaticResource VerticalAccentBarStyle}">
+                                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding ElementName=CompletionStatusHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding ElementName=HltbHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding ElementName=SuccessStoryHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Border.Style>
+                                                        </Border>
                                                     </DockPanel>
 
-                                                    <DockPanel Margin="0,0,0,15">
+                                                    <DockPanel x:Name="CompletionStatusHorizontalPanel"
+                                                               Margin="0,0,0,15">
                                                         <DockPanel.Style>
                                                             <Style TargetType="DockPanel">
                                                                 <Setter Property="Visibility" Value="Collapsed" />
@@ -490,10 +530,25 @@
                                                             </StackPanel>
 
                                                         </DockPanel>
-                                                        <Border Style="{DynamicResource VerticalAccentBarStyle}" />
+                                                        <Border>
+                                                            <Border.Style>
+                                                                <Style TargetType="Border" BasedOn="{StaticResource VerticalAccentBarStyle}">
+                                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding ElementName=HltbHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                        <DataTrigger Binding="{Binding ElementName=SuccessStoryHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Border.Style>
+                                                        </Border>
                                                     </DockPanel>
 
-                                                    <DockPanel Margin="0,0,0,15" Visibility="{PluginSettings Plugin=HowLongToBeat, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                    <DockPanel x:Name="HltbHorizontalPanel"
+                                                               Margin="0,0,0,15" Visibility="{PluginSettings Plugin=HowLongToBeat, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                         <Viewbox Width="22"
                                                                  MaxHeight="20"
                                                                     Margin="0,0,5,0"
@@ -509,10 +564,22 @@
                                                                             HorizontalAlignment="Left"
                                                                             Width="220" />
                                                         </StackPanel>
-                                                        <Border Style="{DynamicResource VerticalAccentBarStyle}" />
+                                                        <Border>
+                                                            <Border.Style>
+                                                                <Style TargetType="Border" BasedOn="{StaticResource VerticalAccentBarStyle}">
+                                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding ElementName=SuccessStoryHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                            <Setter Property="Visibility" Value="Visible" />
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Border.Style>
+                                                        </Border>
                                                     </DockPanel>
 
-                                                    <DockPanel Margin="0,0,0,15" Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                    <DockPanel x:Name="SuccessStoryHorizontalPanel"
+                                                               Margin="0,0,0,15" Visibility="{PluginSettings Plugin=SuccessStory, Path=HasData, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                         <Viewbox VerticalAlignment="Center"
                                                                     Width="22"
                                                                     Margin="0,0,5,0"
