@@ -75,8 +75,33 @@ The theme provides extensive support for a wide range of available Playnite exte
 - **Videos:** [Extra Metadata Loader](https://playnite.link/addons.html#ExtraMetadataLoader_705fdbca-e1fc-4004-b839-1d040b8b4429) extension.
 
 ...and more...
-  
+
+## Configuring the theme
+
+The theme provides extensive customization options that go beyond what is normally available in Playnite.
+
+- **General settings:** Customize various elements using the [ThemeModifier](https://playnite.link/addons.html#playnite-thememodifier-plugin) extension.
+- **Grid View layout:** Use the Details View layout in Grid View with the [Details to Grid View Converter](https://playnite.link/addons.html#ThemesDetailsViewToGridViewConverter_ef8a7226-eedc-478d-a506-92ee6c088aa3) extension.
+
 ## Screenshots
+
+<details>
+<summary>Click to view the theme settings used in these screenshots</summary>
+
+
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_01.jpg)
+
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_02.jpg)
+
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_03.jpg)
+
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_04.jpg)
+
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_05.jpg)
+
+![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_06.jpg)
+</details>
+
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_01.webp)
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_02.webp)
@@ -84,3 +109,4 @@ The theme provides extensive support for a wide range of available Playnite exte
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_03.webp)
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/screenshot_04.webp)
+<sub>Shown using the <a href="#configuring-the-theme">Details to Grid View Converter</a> extension</sub>
