@@ -555,3 +555,9 @@ Packages:
       - 'Main Window: Added option to change the color of the main window background'
       - 'Top Panel: Added option to configure the width of the search box'
       - 'Note: Added options can be configured using the ThemeModifier extension'
+  - Version: 2.68
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-21
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.68/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_68.pthm
+    Changelog:
+      - 'Details View: Fix incorrect margin inside the Video panel'
