@@ -376,11 +376,27 @@
                                                         <Setter Property="Background" Value="Transparent" />
                                                         <Setter Property="Padding" Value="0,0,0,0" />
                                                         <Setter Property="Margin" Value="0,30,0,0" />
+                                                        <Setter Property="Visibility" Value="Collapsed" />
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, FallbackValue=False}" Value="True" >
                                                                 <Setter Property="Padding" Value="15,15,15,0" />
                                                                 <Setter Property="Margin" Value="0,20,0,10" />
                                                                 <Setter Property="Background" Value="{DynamicResource DetailsViewPanelBackgroundBrush}" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding ElementName=LastPlayedHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding ElementName=PlayTimeHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding ElementName=CompletionStatusHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding ElementName=HltbHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding ElementName=SuccessStoryHorizontalPanel, Path=Visibility}" Value="Visible">
+                                                                <Setter Property="Visibility" Value="Visible" />
                                                             </DataTrigger>
                                                         </Style.Triggers>
                                                     </Style>
