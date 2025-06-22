@@ -86,7 +86,7 @@ The theme provides extensive customization options that go beyond what is normal
 ## Screenshots
 
 <details>
-<summary>Click to view the theme settings used in these screenshots</summary>
+<summary>Click to view the appearance settings used in these screenshots</summary>
 
 
 ![Screenshot](https://raw.githubusercontent.com/darklinkpower/Harmony/master/screenshots/settings_01.jpg)
