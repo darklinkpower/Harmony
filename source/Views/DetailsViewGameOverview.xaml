@@ -1069,7 +1069,7 @@
                                                                 </Style.Triggers>
                                                             </Style>
                                                         </TabItem.Style>
-                                                        <StackPanel Margin="0,16,0,0">
+                                                        <Grid Margin="0,16,0,0">
                                                             <!--Rectangle used to expand the panel while the video loads-->
                                                             <Viewbox Stretch="Uniform" Visibility="{Binding ElementName=VideoFeed, Path=Visibility}">
                                                                 <Rectangle Width="16" Height="9" Fill="Transparent" IsHitTestVisible="False" />
@@ -1085,7 +1085,7 @@
                                                                     </VisualBrush>
                                                                 </ContentControl.OpacityMask>
                                                             </ContentControl>
-                                                        </StackPanel>
+                                                        </Grid>
                                                     </TabItem>
 
                                                     <TabItem x:Name="SteamScreenshotsTabItem" Header="{DynamicResource LOC_SteamScreenshots_SteamScreenshotsLabel}"
