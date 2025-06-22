@@ -43,7 +43,7 @@
     </Style>
 
     <Style TargetType="{x:Type Button}" x:Key="PlayersCountButtonStyle">
-        <Setter Property="Background" Value="{DynamicResource TextBrushDark}"/>
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0" />
