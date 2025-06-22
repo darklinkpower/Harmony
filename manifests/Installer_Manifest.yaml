@@ -561,3 +561,11 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.68/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_68.pthm
     Changelog:
       - 'Details View: Fix incorrect margin inside the Video panel'
+  - Version: 2.69
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-06-22
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.69/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_69.pthm
+    Changelog:
+      - 'Details View: Fix displaying horizontal panel when there are no visible elements in it'
+      - 'Details View: Fix displaying vertical separators in horizontal panel when there are no items on its right'
+      - 'Details View: Minor color change to Players button background color.'
