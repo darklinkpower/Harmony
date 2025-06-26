@@ -10,6 +10,7 @@
         <Setter Property="Foreground" Value="{DynamicResource PlayButtonTextBrush}" />
         <Setter Property="Background" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="Tag" Value="False" />
+        <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
