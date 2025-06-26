@@ -14,7 +14,7 @@
         <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="25" CornerRadius="20" ResizeBorderThickness="5"
+                <WindowChrome CaptionHeight="30" CornerRadius="20" ResizeBorderThickness="5"
                               NonClientFrameEdges ="None" UseAeroCaptionButtons="False" GlassFrameThickness="0"/>
             </Setter.Value>
         </Setter>
@@ -29,11 +29,11 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}">
                             <Grid>
-                                <ContentPresenter Margin="0,25,0,0"/>
+                                <ContentPresenter Margin="0,30,0,0"/>
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                                     <DockPanel DockPanel.Dock="Top" LastChildFill="False">
-                                        <TextBlock Text="{TemplateBinding Title}" DockPanel.Dock="Left" Margin="10,3,0,0" VerticalAlignment="Center"
-                                                   Opacity="0.75" Style="{DynamicResource BaseTextBlockStyle}" x:Name="PART_TextTitle" />
+                                        <TextBlock Text="{TemplateBinding Title}" DockPanel.Dock="Left" Margin="10,5,0,0" VerticalAlignment="Center"
+                                                   FontWeight="Medium" Style="{DynamicResource BaseTextBlockStyle}" x:Name="PART_TextTitle" />
                                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,3,5,0">
                                             <Button Style="{DynamicResource WindowBarButton}" Content="&#xEF9A;" x:Name="PART_ButtonMinimize"/>
                                             <Button Style="{DynamicResource WindowBarButton}" Content="&#xEFD5;" x:Name="PART_ButtonMaximize" />
