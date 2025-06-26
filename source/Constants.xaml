@@ -26,7 +26,7 @@
     <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Boolean x:Key="LibraryUseNoiseOpacityLayer">True</sys:Boolean>
-    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.65</sys:Double>
+    <sys:Double x:Key="DetailsBackgroundDarkenLayerOpacity">0.30</sys:Double>
     <sys:Boolean x:Key="DetailsViewDetailsAlignRight">False</sys:Boolean>
     <sys:Int32 x:Key="DetailsViewVideoPanelPosition">0</sys:Int32>
     <sys:Int32 x:Key="DetailsViewNewsPanelPosition">1</sys:Int32>
