@@ -34,10 +34,10 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#464d5d" />
+                <Setter Property="Background" Value="{DynamicResource ButtonMouseOverBackgroundBrush}" />
             </Trigger>
             <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Background" Value="#464d5d" />
+                <Setter Property="Background" Value="{DynamicResource ButtonMouseOverBackgroundBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>

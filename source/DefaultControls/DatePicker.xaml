@@ -33,7 +33,7 @@
                             <Button x:Name="PART_HeaderButton" DockPanel.Dock="Top"
                                     Padding="2" Height="30" Focusable="False"
                                     BorderThickness="0" Background="Transparent"/>
-                            <Border Background="{DynamicResource ButtonBackgroundBrush}"
+                            <Border Background="{DynamicResource ControlBackgroundBrush}"
                                     CornerRadius="{DynamicResource ControlCornerRadius}"
                                     Margin="0,0,0,20">
                                 <Grid>

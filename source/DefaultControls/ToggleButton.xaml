@@ -7,7 +7,7 @@
                     mc:Ignorable="d">
 
     <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource BaseStyle}">
-        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}" />
+        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource GlyphBrush}" />
         <Setter Property="BorderThickness" Value="{DynamicResource ControlBorderThickness}" />
@@ -81,10 +81,10 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#464d5d" />
+                <Setter Property="Background" Value="{DynamicResource ButtonMouseOverBackgroundBrush}" />
             </Trigger>
             <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Background" Value="#464d5d" />
+                <Setter Property="Background" Value="{DynamicResource ButtonMouseOverBackgroundBrush}" />
             </Trigger>
         </Style.Triggers>
     </Style>
