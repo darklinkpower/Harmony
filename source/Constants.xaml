@@ -90,7 +90,7 @@
     <Color x:Key="PlayButtonTextColor">#16171a</Color>
     <Color x:Key="MainColor">#1c1836</Color>
     <Color x:Key="MainWindowColor">#1c1836</Color>
-    <Color x:Key="WindowColor">#1a1a1a</Color>
+    <Color x:Key="WindowColor">#1F2026</Color>
     <Color x:Key="SidebarBackgroundColor">#0Df2f2f2</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#324f53</Color>
@@ -112,7 +112,7 @@
     <Color x:Key="ThumbFillHoverColor">#cacaca</Color>
     
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
-    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#CC3a3b46" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#407b7c96" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushOpacity75" Color="{DynamicResource TextColor}" Opacity="0.75" />
     <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
@@ -129,6 +129,7 @@
     <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource PopupBorderColor}" />
     <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource TextColorDark}" />
+    <SolidColorBrush x:Key="ButtonMouseOverBackgroundBrush" Color="#363742" />
     <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
     <SolidColorBrush x:Key="PanelSeparatorBrush1" Color="{DynamicResource PanelSeparatorColor}" />
     <SolidColorBrush x:Key="PanelSeparatorBrush" Color="#0Df2f2f2" />
