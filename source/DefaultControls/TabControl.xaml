@@ -196,6 +196,7 @@
                                 Width="24" HorizontalAlignment="Center"
                                 BorderThickness="0,0,0,2" BorderBrush="{DynamicResource GlyphBrush}"/>
                         <TextBlock x:Name="TextContent" Padding="5" Style="{DynamicResource BaseTextBlockStyle}"
+                                   HorizontalAlignment="Center"
                                    FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}"
                                    Foreground="{TemplateBinding Foreground}" Cursor="Hand">
                             <ContentPresenter x:Name="ContentSite" RecognizesAccessKey="True" ContentSource="Header"
