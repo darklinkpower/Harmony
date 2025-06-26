@@ -108,6 +108,9 @@
     <Color x:Key="GlyphHighlightLightColor">#8cf6dd</Color>
     <Color x:Key="DataChangeNotifColor">#ffa500</Color>
 
+    <Color x:Key="ThumbFillColor">White</Color>
+    <Color x:Key="ThumbFillHoverColor">#cacaca</Color>
+    
     <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#1e1e1e" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#CC3a3b46" />
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
@@ -162,6 +165,9 @@
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#2e2c2f</Color>
     <Color x:Key="TopPanelFilterToggleBackgroundColor">Transparent</Color>
 
+    <SolidColorBrush x:Key="ThumbFillBrush" Color="{DynamicResource ThumbFillColor}" />
+    <SolidColorBrush x:Key="ThumbFillBrushHover" Color="{DynamicResource ThumbFillHoverColor}" />
+    
     <sys:Double x:Key="TopPanelItemOpacity">0.56</sys:Double>
     <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
