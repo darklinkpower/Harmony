@@ -34,7 +34,7 @@
                             <Grid>
                                 <ContentPresenter Margin="0,0,0,0" />
                                 <DockPanel DockPanel.Dock="Top" LastChildFill="False">
-                                    <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                                    <DockPanel DockPanel.Dock="Top" LastChildFill="False" VerticalAlignment="Center" Margin="0,10,10,0">
                                         <TextBlock x:Name="PART_TextTitle"
                                             Margin="10,3,0,0"
                                             VerticalAlignment="Center"
@@ -42,18 +42,18 @@
                                             Opacity="0.75"
                                             Style="{DynamicResource BaseTextBlockStyle}"
                                             Text="{TemplateBinding Title}" />
-                                        <StackPanel
+                                        <StackPanel VerticalAlignment="Center"
                                             Margin="0,3,5,0"
                                             DockPanel.Dock="Right"
                                             Orientation="Horizontal">
                                             <Button x:Name="PART_ButtonMinimize"
-                                                Content="0"
+                                                Content="&#xEF9A;"
                                                 Style="{DynamicResource WindowBarButton}" />
                                             <Button x:Name="PART_ButtonMaximize"
-                                                Content="1"
+                                                Content="&#xEFD5;"
                                                 Style="{DynamicResource WindowBarButton}" />
                                             <Button x:Name="PART_ButtonClose"
-                                                Content="r"
+                                                Content="&#xEEE1;"
                                                 Style="{DynamicResource WindowBarButton}" />
                                         </StackPanel>
                                     </DockPanel>
@@ -63,7 +63,7 @@
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowState" Value="Maximized">
-                            <Setter TargetName="PART_ButtonMaximize" Property="Content" Value="2" />
+                            <Setter TargetName="PART_ButtonMaximize" Property="Content" Value="&#xEF8C;" />
                             <Setter TargetName="WindowBorder" Property="Padding" Value="8" />
                         </Trigger>
                         <DataTrigger Binding="{Binding HasChildWindow, Mode=OneWay, RelativeSource={RelativeSource Self}, TargetNullValue=False}" Value="True">
