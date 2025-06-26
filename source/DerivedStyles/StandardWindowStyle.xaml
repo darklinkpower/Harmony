@@ -35,9 +35,9 @@
                                         <TextBlock Text="{TemplateBinding Title}" DockPanel.Dock="Left" Margin="10,3,0,0" VerticalAlignment="Center"
                                                    Opacity="0.75" Style="{DynamicResource BaseTextBlockStyle}" x:Name="PART_TextTitle" />
                                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,3,5,0">
-                                            <Button Style="{DynamicResource WindowBarButton}" Content="0" x:Name="PART_ButtonMinimize"/>
-                                            <Button Style="{DynamicResource WindowBarButton}" Content="1" x:Name="PART_ButtonMaximize" />
-                                            <Button Style="{DynamicResource WindowBarButton}" Content="r" x:Name="PART_ButtonClose"/>
+                                            <Button Style="{DynamicResource WindowBarButton}" Content="&#xEF9A;" x:Name="PART_ButtonMinimize"/>
+                                            <Button Style="{DynamicResource WindowBarButton}" Content="&#xEFD5;" x:Name="PART_ButtonMaximize" />
+                                            <Button Style="{DynamicResource WindowBarButton}" Content="&#xEEE1;" x:Name="PART_ButtonClose"/>
                                         </StackPanel>
                                     </DockPanel>
                                 </DockPanel>
@@ -46,7 +46,7 @@
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowState" Value="Maximized">
-                            <Setter Property="Content" Value="2" TargetName="PART_ButtonMaximize"/>
+                            <Setter Property="Content" Value="&#xEF8C;" TargetName="PART_ButtonMaximize"/>
                             <Setter Property="Padding" Value="8" TargetName="WindowBorder"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding HasChildWindow, Mode=OneWay, RelativeSource={RelativeSource Self}, TargetNullValue=False}" Value="True">

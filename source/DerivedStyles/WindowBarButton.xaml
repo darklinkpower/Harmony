@@ -10,11 +10,12 @@
         <Setter Property="Focusable" Value="False" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />    
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Opacity" Value="{DynamicResource TopPanelItemOpacity}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <TextBlock FontFamily="Marlett"
+                    <TextBlock FontFamily="{DynamicResource FontIcoFont}"
                                Foreground="{TemplateBinding Foreground}"
                                FontSize="16"
                                Padding="{TemplateBinding Padding}"
@@ -24,10 +25,10 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Opacity" Value="1.0" />
             </Trigger>
             <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                <Setter Property="Opacity" Value="1.0" />
             </Trigger>
         </Style.Triggers>
     </Style>

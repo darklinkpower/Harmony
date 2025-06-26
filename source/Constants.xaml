@@ -162,6 +162,7 @@
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#2e2c2f</Color>
     <Color x:Key="TopPanelFilterToggleBackgroundColor">Transparent</Color>
 
+    <sys:Double x:Key="TopPanelItemOpacity">0.56</sys:Double>
     <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />
