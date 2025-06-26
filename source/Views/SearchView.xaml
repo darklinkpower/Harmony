@@ -9,6 +9,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type SearchWindowGameItem}">
                     <DockPanel Margin="5,5,5,5">
+                        <DockPanel.Style>
+                            <Style TargetType="DockPanel">
+                                <Setter Property="Opacity" Value="1.0" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding GameView.IsInstalled}" Value="False">
+                                        <Setter Property="Opacity" Value="0.50" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DockPanel.Style>
                         <Image Name="PART_ImageGameIcon"
                                VerticalAlignment="Center" Height="32" Width="32" DockPanel.Dock="Left"
                                RenderOptions.BitmapScalingMode="Fant" >
@@ -26,18 +36,8 @@
                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center" DockPanel.Dock="Left">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Name="PART_TextName"
-                                           FontWeight="SemiBold" FontSize="{DynamicResource FontSizeLarge}"
-                                           VerticalAlignment="Center" Margin="0,0,5,0">
-                                    <TextBlock.Style>
-                                        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding GameView.IsInstalled}" Value="False">
-                                                    <Setter Property="Foreground" Value="{DynamicResource TextBrushDarker}" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </TextBlock.Style>
-                                </TextBlock>
+                                           FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}"
+                                           VerticalAlignment="Center" Margin="0,0,5,0" />
                                 <Image Name="PART_ImageLibraryIcon"
                                        VerticalAlignment="Center" Height="18" Width="18"
                                        Opacity="0.90"
@@ -50,7 +50,7 @@
                             <ItemsControl Name="PART_ItemsAdditionalInfo" Margin="0,5,0,0">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Foreground="{DynamicResource TextBrushDarker}">
+                                        <TextBlock Foreground="{DynamicResource TextBrush}" Opacity="0.50">
                                             <TextBlock.Style>
                                                 <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                                     <Setter Property="Margin" Value="5,0,0,0" />
@@ -94,9 +94,10 @@
                         </Viewbox>
                         <StackPanel Margin="10,0,0,0" VerticalAlignment="Center" >
                             <TextBlock Name="PART_TextName"
-                                       VerticalAlignment="Center" FontWeight="SemiBold" FontSize="{DynamicResource FontSizeLarge}" />
+                                       VerticalAlignment="Center" FontWeight="Medium" FontSize="{DynamicResource FontSizeLarge}" />
                             <TextBlock Name="PART_TextDescription"
-                                       Foreground="{DynamicResource TextBrushDarker}"
+                                       Foreground="{DynamicResource TextBrush}"
+                                       Opacity="0.50"
                                        Margin="0,5,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </StackPanel>
@@ -175,29 +176,29 @@
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="FontSize" Value="{DynamicResource FontSizeLarger}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
     <Style x:Key="SearchWindowSearchDescription" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
         <Setter Property="Margin" Value="5,0,0,0" />
-        <Setter Property="Foreground" Value="LightGray" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushOpacity75}" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
     </Style>
 
     <Style x:Key="SearchWindowSearchHint" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
         <Setter Property="Margin" Value="10" />
-        <Setter Property="Foreground" Value="LightGray" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrushOpacity75}" />
         <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="FontSize" Value="{DynamicResource FontSizeLarge}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSize}" />
     </Style>
 
     <Style x:Key="SearchWindowList" TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderThickness" Value="0,0,0,0" />
         <Setter Property="MaxHeight" Value="520" />
         <Setter Property="Margin" Value="0,20,0,0" />
         <Setter Property="ItemContainerStyle">
@@ -221,6 +222,8 @@
                                     <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
                                             Opacity="{DynamicResource GlyphColorObscureOpacity}"
                                             Background="{DynamicResource GlyphBrush}" CornerRadius="{DynamicResource ControlCornerRadius}"/>
+                                    <!--<Border BorderThickness="0,1,0,0" BorderBrush="{DynamicResource GlyphBrush}"
+                                            Opacity="{DynamicResource GlyphColorObscureOpacity}"/>-->
                                     <Border Padding="{TemplateBinding Padding}" Background="Transparent"
                                             BorderThickness="0,1,0,0" BorderBrush="{DynamicResource PanelSeparatorBrush}">
                                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
