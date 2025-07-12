@@ -94,7 +94,7 @@
     <Color x:Key="SidebarBackgroundColor">#0Df2f2f2</Color>
     <Color x:Key="MainColorDark">#2f3543</Color>
     <Color x:Key="HoverColor">#324f53</Color>
-    <Color x:Key="GlyphColor">#4fe3c0</Color>
+    <Color x:Key="GlyphColor">#e3da4f</Color>
     <Color x:Key="GlyphColorSecondary">#2f3543</Color>
     <!---->
     <Color x:Key="HighlightGlyphColor">#324f53</Color>
