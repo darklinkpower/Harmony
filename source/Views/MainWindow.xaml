@@ -37,12 +37,16 @@
                             </Grid.Resources>
 
                             <Grid>
-                                <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill">
+                                <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill"
+                                       Tag="{DynamicResource MainWindowEnableFadeAndNoiseOverlay}">
                                     <Image.Style>
                                         <Style TargetType="Image">
                                             <Setter Property="Visibility" Value="Visible" />
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding ElementName=PART_ContentView, Path=DataContext.ActiveView.Tag, TargetNullValue='', FallbackValue=''}" Value="Library">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                 </DataTrigger>
                                             </Style.Triggers>

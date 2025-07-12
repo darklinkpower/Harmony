@@ -73,7 +73,9 @@
                             </FadeImage.Style>
                         </FadeImage>
 
-                        <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill" />
+                        <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill"
+                               Tag="{DynamicResource MainWindowEnableFadeAndNoiseOverlay}"
+                               Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <DockPanel Grid.RowSpan="2">
                             <DockPanel.Style>
                                 <Style TargetType="DockPanel">

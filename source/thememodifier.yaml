@@ -2,14 +2,15 @@ Constants:
     - "Colors"
     - GlyphBrush: 'Primary Color'
     - ControlBackgroundBrush: 'Elements background color'
+    - "Main Window"
     - MainWindowBackgroundBrush: 'Main Window background color'
+    - LibraryUseLowPerformanceBlurBackground: 'Replace game background image with performance-friendly blurred image'
+    - MainWindowEnableFadeAndNoiseOverlay: 'Enable fade and noise overlay'
+    - "Windows"
     - WindowBackgroundBrush: 'Windows background color'
     - "Top Panel"
     - ShowNavigationButtons: 'Show navigation buttons'
     - TopPanelSearchBoxWidthHarmony(80,600): 'Width of Search box'
-    - "Library"
-    - LibraryUseLowPerformanceBlurBackground: 'Use low performance blurred game background image'
-    - LibraryUseNoiseOpacityLayer: 'Use noise opacity layer'
     - "Details View"
     - DetailsViewDetailsAlignRight: 'Align details column to the right'
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'
