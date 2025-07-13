@@ -74,6 +74,7 @@
                         </FadeImage>
 
                         <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill"
+                               Opacity="{DynamicResource MainWindowFadeAndNoiseOverlayOpacity}"
                                Tag="{DynamicResource MainWindowEnableFadeAndNoiseOverlay}"
                                Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <DockPanel Grid.RowSpan="2">

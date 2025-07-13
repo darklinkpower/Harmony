@@ -38,6 +38,7 @@
 
                             <Grid>
                                 <Image Source="{StaticResource MainWindowOverlayImage}" Stretch="Fill"
+                                       Opacity="{DynamicResource MainWindowFadeAndNoiseOverlayOpacity}"
                                        Tag="{DynamicResource MainWindowEnableFadeAndNoiseOverlay}">
                                     <Image.Style>
                                         <Style TargetType="Image">
