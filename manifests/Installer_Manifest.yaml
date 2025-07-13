@@ -569,3 +569,23 @@ Packages:
       - 'Details View: Fix displaying horizontal panel when there are no visible elements in it'
       - 'Details View: Fix displaying vertical separators in horizontal panel when there are no items on its right'
       - 'Details View: Minor color change to Players button background color.'
+  - Version: 2.70
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-07-12
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.70/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_70.pthm
+    Changelog:
+      - 'Added: Option to enable or disable the fade overlay in the main window'
+      - 'Added: Option to adjust the opacity of the fade overlay in the main window'
+      - 'Changed: Theme main color to #e3da4f (Yellow). If someone prefers the previous color, it can be changed back by using the ThemeModifier extension and setting the main color to #4fe3c0'
+      - 'Changed: Added small margin to the games list in Library Details view'
+      - 'Changed: Focused and hover background color of buttons'
+      - 'Changed: Default darkening of background image in Details View from 0.65 to 0.30 for better visibility'
+      - 'Changed: Background colors of various controls and the standard window color'
+      - 'Changed: Play button background now uses the main theme color when a game is running'
+      - 'Changed: Slider thumb to a circular shape'
+      - 'Changed: Window title styling in the standard window style'
+      - 'Changed: Icons and styling of the Close, Minimize, Maximize, and Restore buttons'
+      - 'Changed: Miscellaneous styling in the Keyboard Search View'
+      - 'Changed: Font weight of bottom buttons to Medium'
+      - 'Fixed: Issue where the plugin feature icons area in Game Overview was still being reserved even when no icons were displayed'
+      - 'Fixed: Tab headers not being vertically centered when wrapped into multiple rows'
