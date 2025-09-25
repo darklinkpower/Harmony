@@ -1,4 +1,4 @@
-AddonId: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
+﻿AddonId: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
 Packages:
   - Version: 2.0.1
     RequiredApiVersion: 2.0
@@ -589,3 +589,9 @@ Packages:
       - 'Changed: Font weight of bottom buttons to Medium'
       - 'Fixed: Issue where the plugin feature icons area in Game Overview was still being reserved even when no icons were displayed'
       - 'Fixed: Tab headers not being vertically centered when wrapped into multiple rows'
+  - Version: 2.71
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-09-25
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.71/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_71.pthm
+    Changelog:
+      - 'Add banner image for HoYoPlay library plugin games'
