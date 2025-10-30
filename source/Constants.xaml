@@ -18,6 +18,7 @@
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
+    <VerticalAlignment x:Key="GridViewLibraryGameCoverVerticalAlignment">Top</VerticalAlignment>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">True</sys:Boolean>

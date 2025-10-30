@@ -60,7 +60,7 @@
                                     <Image Name="PART_ImageCover" Height="{Settings GridItemHeight}"
                                            SnapsToDevicePixels="True"
                                            RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
-                                           HorizontalAlignment="Center" VerticalAlignment="Top"
+                                           HorizontalAlignment="Center" VerticalAlignment="{DynamicResource GridViewLibraryGameCoverVerticalAlignment}"
                                            Stretch="{Settings CoverArtStretch}" />
 
                                 </StackPanel>
