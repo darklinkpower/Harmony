@@ -156,6 +156,51 @@
                                            Padding="2,5,2,5"
                                            Width="{Settings GridItemWidth}" />
                             </Border>
+
+                            <DockPanel Width="{Settings GridItemWidth}"
+                                       Tag="{DynamicResource GridViewCoverSubtitleVisibility}"
+                                       Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Visible}">
+                                <TextBlock Text="&#xEEDC;" FontSize="{DynamicResource FontSizeSmall}"
+                                            FontFamily="{StaticResource FontIcoFont}"
+                                            TextAlignment="Left" VerticalAlignment="Center"
+                                            Padding="2,4,2,5" Margin="0,0,0,-2"
+                                            Foreground="{DynamicResource GlyphBrush}" />
+                                <TextBlock Text="{Binding Playtime, Mode=OneWay, Converter={StaticResource PlayTimeToStringConverter}, IsAsync=True}"
+                                            FontSize="{DynamicResource FontSizeSmall}"
+                                            Style="{DynamicResource BaseTextBlockStyle}"                                                                   
+                                            TextAlignment="Left" TextTrimming="CharacterEllipsis"
+                                            VerticalAlignment="Center"
+                                            Padding="3,4,2,2" />
+                            </DockPanel>
+                            <DockPanel Width="{Settings GridItemWidth}"
+                                        Tag="{DynamicResource GridViewCoverCompStatusSubtitleVisibility}">
+                                <DockPanel.Style>
+                                    <Style TargetType="DockPanel">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding CompletionStatus.Name, TargetNullValue='', FallbackValue=''}" Value=''>
+                                                <Setter Property="Visibility" Value="Hidden" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="False">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DockPanel.Style>
+                                <TextBlock Text="&#xEC74;" FontSize="{DynamicResource FontSizeSmall}"
+                                            FontFamily="{StaticResource FontIcoFont}"
+                                            TextAlignment="Left" VerticalAlignment="Center"
+                                            Padding="2,4,2,5" Margin="0,0,0,-2"
+                                            Foreground="{DynamicResource GlyphBrush}" />
+                                <TextBlock x:Name="CompletionStatusName" Text="{Binding CompletionStatus.Name, Mode=OneWay, IsAsync=True}"
+                                            ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                                            FontSize="{DynamicResource FontSizeSmall}"
+                                            Style="{DynamicResource BaseTextBlockStyle}"
+                                            TextAlignment="Left" TextTrimming="CharacterEllipsis"
+                                            VerticalAlignment="Center"
+                                            Padding="3,4,2,2" />
+                            </DockPanel>
+
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>

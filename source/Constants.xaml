@@ -14,6 +14,8 @@
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDetailsDisplayIcons">True</sys:Boolean>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
+    <sys:Boolean x:Key="GridViewCoverSubtitleVisibility">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewCoverCompStatusSubtitleVisibility">False</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
