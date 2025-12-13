@@ -1,4 +1,4 @@
-﻿AddonId: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
+AddonId: Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047
 Packages:
   - Version: 2.0.1
     RequiredApiVersion: 2.0
@@ -595,3 +595,9 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.71/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_71.pthm
     Changelog:
       - 'Add banner image for HoYoPlay library plugin games'
+  - Version: 2.72
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2025-12-13
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.72/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_72.pthm
+    Changelog:
+      - 'Grid View: Added options to display playtime and completion status under covers. Options can be changed via ThemeModifier extension'
