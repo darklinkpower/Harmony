@@ -150,6 +150,7 @@
                                 </Border.Style>
                                 <TextBlock x:Name="ShowGameName" Text="{Binding DisplayName}"
                                            Foreground="{DynamicResource TextBrush}"
+                                           FontWeight="Medium"
                                            Style="{DynamicResource BaseTextBlockStyle}"                                                                   
                                            TextAlignment="Center" TextTrimming="CharacterEllipsis"
                                            VerticalAlignment="Center"
