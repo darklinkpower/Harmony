@@ -42,6 +42,7 @@
                                     RenderOptions.BitmapScalingMode="Fant" />
                             <Image Name="PART_ImageIcon"
                                    Height="{Settings DetailsViewListIconSize}"
+                                   Width="{Settings DetailsViewListIconSize}"
                                    RenderOptions.BitmapScalingMode="Fant"
                                    DockPanel.Dock="Left" Margin="0,0,8,0" />
                             <TextBlock Text="{Binding DisplayName}" TextTrimming="CharacterEllipsis" x:Name="DisplayName"
