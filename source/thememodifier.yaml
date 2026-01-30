@@ -15,6 +15,7 @@ Constants:
     - "Details View"
     - DetailsViewDetailsAlignRight: 'Align details column to the right'
     - DetailsViewBackgroundImageUseOpacityMask: 'Fade background image to transparency'
+    - DetailsViewBackgroundImageDisplayNoiseMask: 'Display noise mask on top of background image'
     - DetailsViewHorizontalPanelOpaqueBackground: 'Enable background overlay for the horizontal panel'
     - DetailsViewMainPanelsOpaqueBackground: 'Enable background overlay for the main panels'
     - DetailsViewDisplayGameNameIfLogoVisible: 'Display game name if logo is visible'

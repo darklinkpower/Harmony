@@ -11,6 +11,7 @@
     <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewHorizontalPanelOpaqueBackground">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewMainPanelsOpaqueBackground">True</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewBackgroundImageDisplayNoiseMask">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDetailsDisplayIcons">True</sys:Boolean>
     <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>

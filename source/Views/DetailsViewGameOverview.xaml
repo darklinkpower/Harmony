@@ -128,6 +128,8 @@
 
                                     <Border x:Name="ImageBackgroundNoise"
                                             Grid.RowSpan="2"
+                                            Tag="{DynamicResource DetailsViewBackgroundImageDisplayNoiseMask}"
+                                            Visibility="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}"
                                             Background="{DynamicResource NoiseBrush}"
                                             Opacity="0.03"/>
                                 </Grid>
