@@ -601,3 +601,12 @@ Packages:
     PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.72/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_72.pthm
     Changelog:
       - 'Grid View: Added options to display playtime and completion status under covers. Options can be changed via ThemeModifier extension'
+  - Version: 2.73
+    RequiredApiVersion: 2.8.0
+    ReleaseDate: 2026-01-29
+    PackageUrl: https://github.com/darklinkpower/Harmony/releases/download/2.73/Harmony_d49ef7bc-49de-4fd0-9a67-bd1f26b56047_2_73.pthm
+    Changelog:
+      - 'Details View: Added option to disable noise mask for background image'
+      - 'Details View: Make icons width the same as the height to prevent misalignments'
+      - 'Details ViewItemTemplate: Fix game icons being blurry in library list'
+      - 'Grid View: Changed game names to medium weight'
