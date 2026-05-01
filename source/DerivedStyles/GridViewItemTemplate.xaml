@@ -126,9 +126,22 @@
                                 <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Center"
                                                  Name="GameControls"  Visibility="Collapsed">
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Name="PART_ButtonPlay" Style="{StaticResource SimpleButton}"
-                                                        Margin="20,0,2,5" VerticalAlignment="Center"
-                                                        Content="&#xec74;" FontFamily="{StaticResource FontIcoFont}" />
+                                        <Button Name="PART_ButtonPlay" Margin="20,0,2,5" VerticalAlignment="Center"
+                                                        FontFamily="{StaticResource FontIcoFont}">
+                                            <Button.Style>
+												<Style TargetType="Button" BasedOn="{StaticResource SimpleButton}">
+													<Setter Property="Content" Value="&#xec74;" />
+													<Style.Triggers>
+														<DataTrigger Binding="{Binding IsLaunching}" Value="True">
+															<Setter Property="Content" Value="&#xeffc;" />
+														</DataTrigger>
+														<DataTrigger Binding="{Binding IsRunning}" Value="True">
+															<Setter Property="Content" Value="&#xeffc;" />
+														</DataTrigger>
+													</Style.Triggers>
+												</Style>
+											</Button.Style>
+                                        </Button>
                                         <Button Name="PART_ButtonInfo" Style="{StaticResource SimpleButton}"
                                                         Margin="2,0,20,5" VerticalAlignment="Center"
                                                         Content="&#xef4f;" FontFamily="{StaticResource FontIcoFont}" />
